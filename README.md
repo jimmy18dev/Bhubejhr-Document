@@ -8,8 +8,9 @@ Document and QR-Code Project with Chao Phraya Abhaibhubej Hospital.
 - Facebook login with Graph API 2.11
 - Mobile Friendly Support Android and iOS Devices.
 
-## Important!:
+## Important!!!:
 - PHP Require version 5.6 or higher.
+- Require Mod_Rewrite
 - Install in root or subdomain only (example.com, demo.exmaple.com)
 - Not Working in Subdirectory (example.com/demo)
 
@@ -28,9 +29,9 @@ define("TITLE" 			,'Document with QR Code');
 define("DESCRIPTION" 	,'Create, share and edit text documents with online word processing');
 ```
 
-- Change SECRET_KEY
+- Add SECRET_KEY Example: 7517493301e9770cda3hgty67d88e2e5
 ```
-define("SECRET_KEY" ,'7517493301e9770cda3hgty67d88e2e5');
+define("SECRET_KEY" ,'xxxx');
 ```
 
 - Facebook Login - Setup and Getting Started [Facebook developers](https://developers.facebook.com)
@@ -43,6 +44,13 @@ define("GRAPH_VERSION" 	,'v2.8');
 - Rename config.exmaple.php to config.php
 - Create new folder "files"
 - Done!
+
+## More Config
+- Redirect HTTP to HTTPS Open .htaccess and remove # (line 2 and 3)
+```
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+```
 
 ## Built With
 

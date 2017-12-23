@@ -8,9 +8,10 @@
 <li>Facebook login with Graph API 2.11</li>
 <li>Mobile Friendly Support Android and iOS Devices.</li>
 </ul>
-<h2 id="important-">Important!:</h2>
+<h2 id="important-">Important!!!:</h2>
 <ul>
 <li>PHP Require version 5.6 or higher.</li>
+<li>Require Mod_Rewrite</li>
 <li>Install in root or subdomain only (example.com, demo.exmaple.com)</li>
 <li>Not Working in Subdirectory (example.com/demo)</li>
 </ul>
@@ -26,8 +27,8 @@ define(&quot;DB_PASS&quot;         ,&quot;xxxx&quot;);</code></pre>
 <pre><code>define(&quot;TITLE&quot;             ,&#39;Document with QR Code&#39;);
 define(&quot;DESCRIPTION&quot;     ,&#39;Create, share and edit text documents with online word processing&#39;);</code></pre>
 </li>
-<li><p>Change SECRET_KEY</p>
-<pre><code>define(&quot;SECRET_KEY&quot; ,&#39;7517493301e9770cda3hgty67d88e2e5&#39;);</code></pre>
+<li><p>Add SECRET_KEY Example: 7517493301e9770cda3hgty67d88e2e5</p>
+<pre><code>define(&quot;SECRET_KEY&quot; ,&#39;xxxx&#39;);</code></pre>
 </li>
 <li><p>Facebook Login - Setup and Getting Started <a href="https://developers.facebook.com">Facebook developers</a></p>
 <pre><code>define(&quot;APP_ID&quot;         ,&#39;xxxx&#39;);
@@ -38,6 +39,12 @@ define(&quot;GRAPH_VERSION&quot;     ,&#39;v2.8&#39;);</code></pre>
 </li>
 <li>Create new folder &quot;files&quot;</li>
 <li>Done!</li>
+</ul>
+<h2 id="more-config">More Config</h2>
+<ul>
+<li>Redirect HTTP to HTTPS Open .htaccess and remove # (line 2 and 3)<pre><code>RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]</code></pre>
+</li>
 </ul>
 <h2 id="built-with">Built With</h2>
 <ul>
