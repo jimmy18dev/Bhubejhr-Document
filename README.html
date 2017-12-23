@@ -17,26 +17,25 @@
 <h2 id="installation-">Installation:</h2>
 <ul>
 <li>Import database form /database/database.sql</li>
-<li>Change config file
-```
-// DATABASE CONNECTION SEUTUP
-define(&quot;DB_NAME&quot;         ,&quot;xxxx&quot;);
+<li><p>Open confile/config.exmaple.php and edit...</p>
+<pre><code>define(&quot;DB_NAME&quot;         ,&quot;xxxx&quot;);
 define(&quot;DB_USER&quot;        ,&quot;xxxx&quot;);
-define(&quot;DB_PASS&quot;         ,&quot;xxxx&quot;);</li>
-</ul>
-<p>// SITE SETUP
-define(&quot;TITLE&quot;             ,&#39;Document with QR Code&#39;);
-define(&quot;DESCRIPTION&quot;     ,&#39;Create, share and edit text documents with online word processing&#39;);</p>
-<p>// SITE SECRET KEY
-define(&quot;SECRET_KEY&quot;        ,&#39;7517493301e9770cda3hgty67d88e2e5&#39;);</p>
-<p>// Facebook App Setting
-define(&quot;APP_ID&quot;         ,&#39;xxxx&#39;);
-define(&quot;APP_SECRET&quot;     ,&#39;xxxx&#39;);
+define(&quot;DB_PASS&quot;         ,&quot;xxxx&quot;);</code></pre>
+</li>
+<li><p>Change title and description </p>
+<pre><code>define(&quot;TITLE&quot;             ,&#39;Document with QR Code&#39;);
+define(&quot;DESCRIPTION&quot;     ,&#39;Create, share and edit text documents with online word processing&#39;);</code></pre>
+</li>
+<li><p>Change SECRET_KEY</p>
+<pre><code>define(&quot;SECRET_KEY&quot; ,&#39;7517493301e9770cda3hgty67d88e2e5&#39;);</code></pre>
+</li>
+<li><p>Facebook Login - Setup and Getting Started <a href="https://developers.facebook.com">Facebook developers</a></p>
+<pre><code>define(&quot;APP_ID&quot;         ,&#39;xxxx&#39;);
 define(&quot;ADMIN_ID&quot;         ,&#39;xxxx&#39;);
-define(&quot;GRAPH_VERSION&quot;     ,&#39;v2.8&#39;);
-```</p>
-<ul>
-<li>Rename config.exmaple.php to config.php</li>
+define(&quot;GRAPH_VERSION&quot;     ,&#39;v2.8&#39;);</code></pre>
+</li>
+<li><p>Rename config.exmaple.php to config.php</p>
+</li>
 <li>Create new folder &quot;files&quot;</li>
 <li>Done!</li>
 </ul>

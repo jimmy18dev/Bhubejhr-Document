@@ -15,26 +15,31 @@ Document and QR-Code Project with Chao Phraya Abhaibhubej Hospital.
 
 ## Installation:
 - Import database form /database/database.sql
-- Change config file
+- Open confile/config.exmaple.php and edit...
 ```
-// DATABASE CONNECTION SEUTUP
 define("DB_NAME" 		,"xxxx");
 define("DB_USER"		,"xxxx");
 define("DB_PASS" 		,"xxxx");
+```
 
-// SITE SETUP
+- Change title and description 
+```
 define("TITLE" 			,'Document with QR Code');
 define("DESCRIPTION" 	,'Create, share and edit text documents with online word processing');
+```
 
-// SITE SECRET KEY
-define("SECRET_KEY"		,'7517493301e9770cda3hgty67d88e2e5');
+- Change SECRET_KEY
+```
+define("SECRET_KEY" ,'7517493301e9770cda3hgty67d88e2e5');
+```
 
-// Facebook App Setting
+- Facebook Login - Setup and Getting Started [Facebook developers](https://developers.facebook.com)
+```
 define("APP_ID" 		,'xxxx');
-define("APP_SECRET" 	,'xxxx');
 define("ADMIN_ID" 		,'xxxx');
 define("GRAPH_VERSION" 	,'v2.8');
 ```
+
 - Rename config.exmaple.php to config.php
 - Create new folder "files"
 - Done!
