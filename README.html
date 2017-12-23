@@ -1,25 +1,32 @@
 <h1 id="bhubejhr-document-qr-code-">Bhubejhr Document (QR-Code)</h1>
 <p>Document and QR-Code Project with Chao Phraya Abhaibhubej Hospital.</p>
-<h1 id="important-">Important!:</h1>
+<h2 id="feature-">Feature:</h2>
+<ul>
+<li>Store documents files (pdf,xls,xlsx,doc,docx,txt,ppt,pptx,zip)</li>
+<li>Generate QR Code automatically when file uploaded.</li>
+<li>File Permissions (Public, Member, Private)</li>
+<li>Facebook login with Graph API 2.11</li>
+<li>Mobile Friendly Support Android and iOS Devices.</li>
+</ul>
+<h2 id="important-">Important!:</h2>
 <ul>
 <li>PHP Require version 5.6 or higher.</li>
 <li>Install in root or subdomain only (example.com, demo.exmaple.com)</li>
 <li>Not Working in Subdirectory (example.com/demo)</li>
 </ul>
-<h1 id="installation-">Installation:</h1>
+<h2 id="installation-">Installation:</h2>
 <ul>
 <li>Import database form /database/database.sql</li>
 <li>Change config file
 ```
 // DATABASE CONNECTION SEUTUP
-define(&quot;DB_HOST&quot;         ,&quot;localhost&quot;);
 define(&quot;DB_NAME&quot;         ,&quot;xxxx&quot;);
 define(&quot;DB_USER&quot;        ,&quot;xxxx&quot;);
 define(&quot;DB_PASS&quot;         ,&quot;xxxx&quot;);</li>
 </ul>
 <p>// SITE SETUP
 define(&quot;TITLE&quot;             ,&#39;Document with QR Code&#39;);
-define(&quot;DESCRIPTION&quot;    ,&#39;Create, share and edit text documents with online word processing&#39;);</p>
+define(&quot;DESCRIPTION&quot;     ,&#39;Create, share and edit text documents with online word processing&#39;);</p>
 <p>// SITE SECRET KEY
 define(&quot;SECRET_KEY&quot;        ,&#39;7517493301e9770cda3hgty67d88e2e5&#39;);</p>
 <p>// Facebook App Setting
@@ -30,5 +37,14 @@ define(&quot;GRAPH_VERSION&quot;     ,&#39;v2.8&#39;);
 ```</p>
 <ul>
 <li>Rename config.exmaple.php to config.php</li>
+<li>Create new folder &quot;files&quot;</li>
 <li>Done!</li>
+</ul>
+<h2 id="built-with">Built With</h2>
+<ul>
+<li><a href="http://fontawesome.io">Font Awesome 4.7</a> - The iconic font and CSS toolkit</li>
+<li><a href="http://phpqrcode.sourceforge.net">PHP QR Code</a> - PHP QR Code is open source (LGPL)</li>
+<li><a href="http://numeraljs.com">Numeral.js v. 2.0.6</a> - A javascript library for formatting and manipulating numbers.</li>
+<li><a href="http://malsup.com/jquery/form/">jQuery Form Plugin</a> - The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.</li>
+<li><a href="http://culttt.com/2012/10/01/roll-your-own-pdo-php-class/">PDO PHP Class</a> - Roll your own PDO PHP Class</li>
 </ul>
