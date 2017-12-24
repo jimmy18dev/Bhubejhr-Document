@@ -261,8 +261,8 @@ class User{
         // session_set_cookie_params('600'); // 10 minutes.
 
         // Sets the session name to the one set above.
-        session_name($session_name);
-        session_start();             // Start the PHP session
+        // session_name($session_name);
+        // session_start();             // Start the PHP session
         // session_regenerate_id(true); // regenerated the session, delete the old one.
     }
 

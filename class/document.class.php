@@ -125,6 +125,10 @@ class Document{
             LEFT JOIN category AS category ON document.category_id = category.id ';
         $where = 'WHERE 1=1 ';
 
+        $where_user         = '';
+        $where_category     = '';
+        $where_keyword      = '';
+
         if(!empty($user_id) && isset($user_id)){
             $where_user = 'AND document.user_id = :user_id ';
         }

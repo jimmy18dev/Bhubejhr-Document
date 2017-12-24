@@ -40,7 +40,7 @@ if(isset($_FILES['file'])){
 
         $file_id = $document->create($user->id,$category_id,$filename,$description,$full_filename,$file_ext,$file_size);
 
-        $qrcode_content = DOMAIN.'document/'.$file_id;
+        $qrcode_content = DOMAIN.'/document/'.$file_id;
         $qrcode_filename = 'image/qrcode/'.$full_filename.'.png';
         
         QRcode::png($qrcode_content,$qrcode_filename);
