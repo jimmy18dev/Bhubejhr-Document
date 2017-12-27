@@ -20,16 +20,6 @@ $(document).ready(function(){
 		});		
 	});
 
-	$('#toggleBtn').click(function(){
-		$('#panel').addClass('toggle');
-		$overlay.addClass('open');
-
-		$overlay.click(function(){
-			$('#panel').removeClass('toggle');
-			$overlay.removeClass('open');
-		});
-	});
-
 	$btnProfile.click(function(){
 		$menuProfile.addClass('open');
 	});
@@ -38,4 +28,20 @@ $(document).ready(function(){
 	$progressbar.width('0%');
 	$progressbar.animate({width:'100%'},500);
 	$progressbar.fadeOut();
+
+	$headerbar = $('#headerbar');
+	$document = $(document);
+
+	$document.scroll(function() {
+		if ($document.scrollTop() >= 50) {
+			// $element.addClass(className);
+			$headerbar.addClass('shadow');
+			console.clear();
+			console.log('$document.scrollTop()'+$document.scrollTop());
+		} else {
+			console.clear();
+			console.log('Min');
+			$headerbar.removeClass('shadow');
+		}
+});
 });

@@ -31,12 +31,12 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 
 <header class="header">
 	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<div class="title">เอกสารทั้งหมดของคุณ</div>
 </header>
 
 <div class="container">
 	<div class="section">
 		<?php if(count($files) > 0){?>
-		<div class="topic">เอกสารทั้งหมดของคุณ</div>
 		<div class="list">
 			<?php
 			foreach ($files as $data)

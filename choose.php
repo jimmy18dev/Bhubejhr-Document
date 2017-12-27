@@ -32,11 +32,11 @@ $categories = $category->listAll();
 <header class="header light">
 	<!-- <a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>ยกเลิก</a> -->
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
+	<div class="title">กรุณาเลือกประเภท...</div>
 </header>
 
 <div class="container">
 	<div class="section">
-		<div class="topic center">กรุณาเลือกประเภท...</div>
 
 		<div class="list border">
 			<?php foreach ($categories as $var) {?>
