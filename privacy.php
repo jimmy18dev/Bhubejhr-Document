@@ -57,7 +57,7 @@ if($user->id != $document->owner_id){
 	<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
 	
 	<div class="form-items control">
-		<button id="btnPrivacySave">บันทึก<i class="fa fa-check" aria-hidden="true"></i></button>
+		<button id="btnPrivacySave">บันทึก<i class="fa fa-angle-right" aria-hidden="true"></i></button>
 	</div>
 </div>
 

@@ -159,9 +159,13 @@ class Document{
         $dataset = $this->db->resultset();
 
         foreach ($dataset as $k => $var) {
-            $dataset[$k]['file_type']           = $this->docType($var['file_type']);;
-            $dataset[$k]['file_create_time']    = $this->db->datetimeformat($var['file_create_time'],'fulldate');
-            $dataset[$k]['file_edit_time']      = $this->db->datetimeformat($var['file_edit_time'],'fulldatetime');
+            $dataset[$k]['file_type']               = $this->docType($var['file_type']);
+            $dataset[$k]['file_create_timestamp']   = $this->db->datetimeformat($var['file_create_time'],'timestamp');
+            $dataset[$k]['file_edit_timestamp']     = $this->db->datetimeformat($var['file_edit_time'],'timestamp');
+            $dataset[$k]['file_create_time']        = $this->db->datetimeformat($var['file_create_time'],'fulldatetime');
+            $dataset[$k]['file_edit_time']          = $this->db->datetimeformat($var['file_edit_time'],'fulldatetime');
+            $dataset[$k]['file_create_time_fb']     = $this->db->datetimeformat($var['file_create_time'],'facebook');
+            $dataset[$k]['file_edit_time_fb']       = $this->db->datetimeformat($var['file_edit_time'],'facebook');
         }
         return $dataset;
     }
@@ -184,7 +188,10 @@ class Document{
     }
 
     public function create($user_id,$category_id,$title,$description,$file_name,$file_type,$file_size){
-        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time)');
+
+        $now = date('Y-m-d H:i:s');
+        
+        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time,edit_time) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time,:edit_time)');
         $this->db->bind(':user_id',$user_id);
         $this->db->bind(':category_id',$category_id);
         $this->db->bind(':title',$title);
@@ -192,7 +199,8 @@ class Document{
         $this->db->bind(':file_name',$file_name);
         $this->db->bind(':file_type',$file_type);
         $this->db->bind(':file_size',$file_size);
-        $this->db->bind(':create_time',date('Y-m-d H:i:s'));
+        $this->db->bind(':create_time',$now);
+        $this->db->bind(':edit_time',$now);
         $this->db->execute();
         return $this->db->lastInsertId();
     }

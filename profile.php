@@ -30,7 +30,7 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 <body>
 
 <header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 </header>
 
 <div class="container">

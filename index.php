@@ -34,7 +34,6 @@ foreach ($feeds as $k => $var) {
 <meta name="viewport" content="initial-scale=1,maximum-scale=1">
 
 <?php include'favicon.php';?>
-<title><?php echo $page_title;?></title>
 
 <?php
 $p_title 	= TITLE;
@@ -57,6 +56,8 @@ $p_url 		= DOMAIN;
 <meta itemprop="description" content="<?php echo $p_desc;?>">
 <meta itemprop="image" content="<?php echo OGIMAGE;?>">
 
+<title><?php echo $p_title;?></title>
+
 <base href="<?php echo DOMAIN;?>">
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
@@ -66,11 +67,17 @@ $p_url 		= DOMAIN;
 <?php include_once 'header.php';?>
 
 <div class="container">
+	<div class="menu">
+		<a href="search.php" class="items"><i class="fa fa-search" aria-hidden="true"></i>ค้นหาไฟล์</a>
+		<a href="create/choose" class="items"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
+		<a href="categories.php" class="items"><i class="fa fa-folder" aria-hidden="true"></i>หมวดหมู่</a>
+	</div>
+	
 	<?php foreach ($feeds as $var){?>
 	<?php if($var['totalitems']>0){?>
 	<div class="section">
 		<div class="topic"><a href="category/<?php echo $var['category_id'];?>"><?php echo $var['category_name'];?></a></div>
-		<div class="list shadow">
+		<div class="list">
 			<?php
 			if($var['totalitems']>0){
 				foreach ($var['dataset'] as $data)
@@ -83,46 +90,7 @@ $p_url 		= DOMAIN;
 	<?php }?>
 </div>
 
-
-<?php if(false){?>
-<table class="list">
-	<?php foreach ($files as $var){?>
-	<tr id="file<?php echo $var['file_id']?>" data-id="<?php echo $var['file_id'];?>" data-name="<?php echo $var['file_title'];?>">
-		<td><?php echo $var['file_id'];?></td>
-		<td>
-			<?php echo $var['file_type'];?>
-			<?php if($var['file_type']=='pdf'){?>
-			<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-			<?php }else if($var['file_type']=='doc'){?>
-			<i class="fa fa-file-word-o" aria-hidden="true"></i>
-			<?php }else if($var['file_type']=='doc'){?>
-			<i class="fa fa-file-image-o" aria-hidden="true"></i>
-			<?php }else if($var['file_type']=='xlsx'){?>
-			<i class="fa fa-file-excel-o" aria-hidden="true"></i>
-			<?php }else{?>
-			<i class="fa fa-file-o" aria-hidden="true"></i>
-			<?php }?>
-		</td>
-		<td><?php echo $var['file_category_name'];?></td>
-		<td><a href="file.php?id=<?php echo $var['file_id'];?>"><?php echo $var['file_title'];?></a></td>
-		<td><img src="image/qrcode/<?php echo $var['file_name'];?>.png"></td>
-		<td>
-			<select class="selecting">
-				<option <?php echo ($var['file_privacy']=='public'?'selected':'');?> value="public">Public</option>
-				<option <?php echo ($var['file_privacy']=='member'?'selected':'');?> value="member">Member</option>
-				<option <?php echo ($var['file_privacy']=='onlyme'?'selected':'');?> value="onlyme">Only Me</option>
-			</select>
-		</td>
-		<td><button class="btnDelete">Delete</button></td>
-	</tr>
-	<?php }?>
-</table>
-<?php }?>
-
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
-<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
-<script type="text/javascript" src="js/document.js"></script>
 </body>
 </html>

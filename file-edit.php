@@ -46,9 +46,9 @@ if($user->id != $document->owner_id){
 </head>
 <body>
 
-<header class="header">
-	<a href="document/<?php echo $document->id;?>" class="btn left"><i class="fa fa-close" aria-hidden="true"></i>ยกเลิก</a>
+<header class="header light">
 	<div class="title">แก้ไขเอกสาร</div>
+	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
 <div class="overlay"></div>
@@ -69,8 +69,8 @@ if($user->id != $document->owner_id){
 	<div class="form-items">
 		<label for="">สิทธิ์เข้าถึง</label>
 		<div class="selection">
-			<div class="items privacy-items" id="privacy-member" data-v="member"><i class="fa fa-user" aria-hidden="true"></i><span>สมาชิกเท่านั้น</span></div>
 			<div class="items privacy-items" id="privacy-public" data-v="public"><i class="fa fa-globe" aria-hidden="true"></i><span>สาธารณะ</span></div>
+			<div class="items privacy-items" id="privacy-member" data-v="member"><i class="fa fa-user" aria-hidden="true"></i><span>สมาชิกเท่านั้น</span></div>
 			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme"><i class="fa fa-lock" aria-hidden="true"></i><span>เฉพาะฉัน</span></div>
 		</div>
 		<input type="hidden" id="privacy" value="<?php echo $document->privacy;?>">
@@ -89,7 +89,7 @@ if($user->id != $document->owner_id){
 	</div>
 	<div class="form-items control">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึก<i class="fa fa-check" aria-hidden="true"></i></button>
+	    <button id="btnSave">บันทึกการเปลี่ยนแปลง</button>
 	</div>
 
 	<div class="form-items delete-box">

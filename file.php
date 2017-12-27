@@ -40,6 +40,30 @@ if(!file_exists($qrcode_filename)){
 	QRcode::png($qrcode_content,$qrcode_filename,QR_ECLEVEL_L,8);
 }
 
+switch ($document->file_type) {
+	case 'PDF':
+		$icon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>PDf';
+		break;
+	case 'Word':
+		$icon = '<i class="fa fa-file-word-o" aria-hidden="true"></i>Word';
+		break;
+	case 'Excel':
+		$icon = '<i class="fa fa-file-excel-o" aria-hidden="true"></i>Excel';
+		break;
+	case 'PowerPoint':
+		$icon = '<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>Power Point';
+		break;
+	case 'Zip':
+		$icon = '<i class="fa fa-file-zip-o" aria-hidden="true"></i>Zip';
+		break;
+	case 'txt':
+		$icon = '<i class="fa fa-file-text-o" aria-hidden="true"></i>Text';
+		break;
+	default:
+		$icon = '<i class="fa fa-file-o" aria-hidden="true"></i>';
+		break;
+}
+
 $currentPage = 'file';
 ?>
 
@@ -82,14 +106,18 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 </head>
 <body>
 <header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<!-- <a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a> -->
+
+	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
+		<img src="image/logo.png" alt="logo">
+		<div class="detail">
+			<div class="name">Documents</div>
+			<div class="desc">Chao Phraya Abhaibhubej Hospital</div>
+		</div>
+	</a>
 
 	<?php if($document->privacy != 'onlyme'){?>
 	<div class="btn btn-qrcode" id="btn-qrcode"><i class="fa fa-qrcode" aria-hidden="true"></i>QR Code</div>
-	<?php }?>
-	
-	<?php if($user_online && $user->id == $document->owner_id){?>
-	<a href="document/edit/<?php echo $document->id;?>" class="btn"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไข</a>
 	<?php }?>
 </header>
 
@@ -99,13 +127,15 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <div class="container">
 	<div class="article">
 		<div class="info">
-			<span class="icontype <?php echo $document->file_type;?>"><?php echo $document->file_type;?></span>
-			<?php if($data['file_privacy'] != 'public'){?>
-			<span class="privacy"><?php echo $privacy;?></span>
+			<span class="<?php echo $document->file_type;?>"><?php echo $icon;?></span>
+			<?php if($user_online && $user->id == $document->owner_id){?>
+			<a href="document/edit/<?php echo $document->id;?>" class=""><i class="fa fa-cog" aria-hidden="true"></i>แก้ไข</a>
 			<?php }?>
 		</div>
 		<h1><?php echo $document->title;?></h1>
-		<p><?php echo $document->create_time;?></p>
+		<p>
+			<?php echo $document->create_time;?> · <?php echo $document->category_name; ?> · <span class="privacy"><?php echo $privacy;?></span>
+		</p>
 
 		<?php if(!empty($document->description)){?>
 		<div class="text"><?php echo $document->description;?></div>
@@ -113,11 +143,11 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		
 		<div class="download">
 			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->id;?>" target="_blank">
-				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 				<div class="d">
-					<span>ดาวน์โหลดไฟล์</span>
+					<span class="caption">ดาวน์โหลดไฟล์</span>
 					<span class="size">ขนาดไฟล์ <?php echo $document->file_size;?></span>
 				</div>
+				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
 		</div>
 	</div>

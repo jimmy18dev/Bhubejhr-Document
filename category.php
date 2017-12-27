@@ -57,10 +57,9 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 <body>
 
 <?php include_once 'header.php';?>
-
+<div class="headtopic"><?php echo $category->name;?></div>
 <div class="container">
 	<div class="section">
-		<div class="topic"><?php echo $category->name;?></div>
 		<div class="list">
 			<?php
 			if(count($files) > 0){

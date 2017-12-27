@@ -20,6 +20,16 @@ $(document).ready(function(){
 		});		
 	});
 
+	$('#toggleBtn').click(function(){
+		$('#panel').addClass('toggle');
+		$overlay.addClass('open');
+
+		$overlay.click(function(){
+			$('#panel').removeClass('toggle');
+			$overlay.removeClass('open');
+		});
+	});
+
 	$btnProfile.click(function(){
 		$menuProfile.addClass('open');
 	});

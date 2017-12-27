@@ -48,20 +48,23 @@ $p_url 		= DOMAIN.'/signup';
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 </head>
 <body>
-<header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
-	<a href="signin?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>" class="btn btn-link"><i class="fa fa-sign-in" aria-hidden="true"></i>ฉันมีบัญชีอยู่แล้ว</a>
-</header>
-
 <div class="login">
+	<div class="welcome">
+		<a href="index.php" class="logo"><img src="image/logo.png" alt=""></a>
+		<h1>โรงพยาบาลเจ้าพระยาอภัยภูเบศร</h1>
+		<p>Create, share and edit text documents with online word processing</p>
+		<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
+	</div>
 	<div class="content">
-		<div class="head">
-			<h1>ลงทะเบียนใหม่</h1>
+		<div class="nav">
+			<a class="<?php echo ($currentPage=='login'?'active':'');?>" href="signin?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-sign-in" aria-hidden="true"></i>เข้าระบบ</a>
+			<a class="<?php echo ($currentPage=='register'?'active':'');?>" href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-user-plus" aria-hidden="true"></i>ลงทะเบียนใหม่</a>
 		</div>
+
 		<form action="javascript:register();">
 			<input type="text" class="inputtext" id="fullname" placeholder="ชื่อ-นามสกุล" autofocus>
 			<input type="phone" class="inputtext" id="phone" placeholder="เบอร์โทรศัพท์">
-			<input type="email" class="inputtext" id="email" placeholder="Email address">
+			<input type="email" class="inputtext" id="email" placeholder="ที่อยู่อีเมล">
 			<input type="text" class="inputtext" id="bio" placeholder="ชื่อฝ่ายและแผนก">
 			<input type="password" class="inputtext" id="password" placeholder="รหัสผ่าน">
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('register',SECRET_KEY);?>">

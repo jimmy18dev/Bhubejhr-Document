@@ -26,7 +26,7 @@ if(!empty($q) && isset($q)){
 <meta name="viewport" content="user-scalable=no">
 <meta name="viewport" content="initial-scale=1,maximum-scale=1">
 
-<title>FONT AWESOME</title>
+<title>ค้นหาเอกสาร</title>
 
 <base href="<?php echo DOMAIN;?>">
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -34,8 +34,8 @@ if(!empty($q) && isset($q)){
 </head>
 <body>
 
-<header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+<header class="header light">
+	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
 </header>
 
 <form class="search-form" action="search.php" method="GET">
@@ -61,6 +61,9 @@ if(!empty($q) && isset($q)){
 		<?php }?>
 	</div>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/jquery-form.min.js"></script>

@@ -2,14 +2,14 @@
 require_once 'autoload.php';
 
 if(!$user_online){
-	header('Location: login.php');
+	header('Location: '.DOMAIN.'/signin');
 	die();
 }
 
 $category_id = $_GET['category'];
 
 if(empty($category_id)){
-	header('Location: choose.php');
+	header('Location: '.DOMAIN.'/create/choose');
 	die();
 }
 
@@ -42,9 +42,11 @@ if(empty($category->id)){
 </head>
 <body>
 
-<header class="header">
-	<a href="create/choose" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>เลือกประเภทใหม่</a>
-	<div class="title"><?php echo $category->name;?></div>
+<header class="header light">
+	<a href="create/choose" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>เลือกประเภทใหม่</span></a>
+	<div class="title">ประเภท: <?php echo $category->name;?></div>
+
+	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
 <div class="overlay"></div>
