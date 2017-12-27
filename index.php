@@ -68,9 +68,9 @@ $p_url 		= DOMAIN;
 
 <div class="container">
 	<div class="menu">
-		<a href="search.php" class="items"><i class="fa fa-search" aria-hidden="true"></i>ค้นหาไฟล์</a>
-		<a href="create/choose" class="items"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
-		<a href="categories.php" class="items"><i class="fa fa-folder" aria-hidden="true"></i>หมวดหมู่</a>
+		<a href="search.php" class="items btn-search"><i class="fa fa-search" aria-hidden="true"></i><span>ค้นหาไฟล์</span></a>
+		<a href="create/choose" class="items btn-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>อัพโหลด</span></a>
+		<a href="categories.php" class="items btn-category"><i class="fa fa-th-list" aria-hidden="true"></i><span>หมวดหมู่</span></a>
 	</div>
 	
 	<?php foreach ($feeds as $var){?>
