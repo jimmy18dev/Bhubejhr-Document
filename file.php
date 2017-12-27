@@ -42,16 +42,16 @@ if(!file_exists($qrcode_filename)){
 
 switch ($document->file_type) {
 	case 'PDF':
-		$icon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>PDf';
+		$icon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>PDF';
 		break;
 	case 'Word':
-		$icon = '<i class="fa fa-file-word-o" aria-hidden="true"></i>Word';
+		$icon = '<i class="fa fa-file-word-o" aria-hidden="true"></i>Microsoft Word';
 		break;
 	case 'Excel':
-		$icon = '<i class="fa fa-file-excel-o" aria-hidden="true"></i>Excel';
+		$icon = '<i class="fa fa-file-excel-o" aria-hidden="true"></i>Microsoft Excel';
 		break;
 	case 'PowerPoint':
-		$icon = '<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>Power Point';
+		$icon = '<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>Microsoft Power Point';
 		break;
 	case 'Zip':
 		$icon = '<i class="fa fa-file-zip-o" aria-hidden="true"></i>Zip';
@@ -129,12 +129,14 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<div class="info">
 			<span class="<?php echo $document->file_type;?>"><?php echo $icon;?></span>
 			<?php if($user_online && $user->id == $document->owner_id){?>
-			<a href="document/edit/<?php echo $document->id;?>" class=""><i class="fa fa-cog" aria-hidden="true"></i>แก้ไข</a>
+			<a href="document/edit/<?php echo $document->id;?>">แก้ไข<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<?php }?>
 		</div>
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			<?php echo $document->create_time;?> · <?php echo $document->category_name; ?> · <span class="privacy"><?php echo $privacy;?></span>
+			<span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $document->create_time;?></span>
+			<a href="category/<?php echo $document->category_id?>"><i class="fa fa-tag" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
+			<span class="privacy"><?php echo $privacy;?></span>
 		</p>
 
 		<?php if(!empty($document->description)){?>
@@ -142,6 +144,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
+			<div class="filename" title="<?php echo $document->file_name;?>"><?php echo $document->file_name;?></div>
 			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->id;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>

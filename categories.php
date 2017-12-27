@@ -1,11 +1,6 @@
 <?php
 require_once 'autoload.php';
 
-if(!$user_online){
-	header('Location: '.DOMAIN.'/signin');
-	die();
-}
-
 $category = new Category();
 $categories = $category->listAll();
 ?>
@@ -29,17 +24,15 @@ $categories = $category->listAll();
 </head>
 <body>
 
-<header class="header light">
+<header class="header">
 	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>ยกเลิก</a>
 	<div class="title">หมวดหมู่</div>
 </header>
 
 <div class="container">
 	<div class="section">
-		<div class="list border">
-			<?php foreach ($categories as $var) {?>
-			<a href="category/<?php echo $var['category_id'];?>" class="choose-items"><span class="name"><?php echo $var['category_name'];?></span><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<?php }?>
+		<div class="list">
+			<?php foreach ($categories as $var) { include 'template/category.items.php'; }?>
 		</div>
 	</div>
 </div>

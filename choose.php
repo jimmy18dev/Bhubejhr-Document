@@ -37,11 +37,8 @@ $categories = $category->listAll();
 
 <div class="container">
 	<div class="section">
-
-		<div class="list border">
-			<?php foreach ($categories as $var) {?>
-			<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items"><span class="name"><?php echo $var['category_name'];?></span><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<?php }?>
+		<div class="list">
+			<?php foreach ($categories as $var) { include 'template/category.items.php'; }?>
 		</div>
 	</div>
 </div>

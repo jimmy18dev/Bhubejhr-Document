@@ -87,14 +87,14 @@ if($user->id != $document->owner_id){
 	      </select>
 	    </div>
 	</div>
-	<div class="form-items control">
+	<div class="form-items">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึกการเปลี่ยนแปลง</button>
+	    <button id="btnSave">บันทึก<i class="fa fa-check-circle" aria-hidden="true"></i></button>
 	</div>
 
 	<div class="form-items delete-box">
 		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณลบไฟล์นี้แล้ว คุณจะไม่สามารถกู้คืนได้!</div>
-		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้</button>
+		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้<i class="fa fa-trash" aria-hidden="true"></i></button>
 	</div>
 </div>
 

@@ -47,7 +47,11 @@ switch ($data['file_type']) {
 	<a href="document/<?php echo $data['file_id']?>" class="icontype"><?php echo $icon;?></a>
 	<div class="detail">
 		<div class="name"><a href="document/<?php echo $data['file_id']?>"><?php echo $data['file_title']?></a></div>
-		<p><a href="document/<?php echo $data['file_id']?>" title="<?php echo $data['file_create_time'];?>"><?php echo $data['file_create_time_fb'];?></a> · <?php echo $data['file_category_name'];?> · <?php echo $privacy?></p>
+		<p>
+			<a href="document/<?php echo $data['file_id']?>" title="<?php echo $data['file_create_time'];?>"><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $data['file_create_time_fb'];?></a>
+			<a href="category/<?php echo $data['file_category_id']?>"><i class="fa fa-tag" aria-hidden="true"></i><?php echo $data['file_category_name'];?></a>
+			<span><?php echo $privacy?></span>
+		</p>
 	</div>
 	<a class="icon" href="document/<?php echo $data['file_id']?>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 </div>

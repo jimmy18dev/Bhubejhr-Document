@@ -29,11 +29,11 @@ $(document).ready(function(){
 	$progressbar.animate({width:'100%'},500);
 	$progressbar.fadeOut();
 
-	$headerbar = $('#headerbar');
+	$headerbar = $('.fixed');
 	$document = $(document);
 
 	$document.scroll(function() {
-		if ($document.scrollTop() >= 50) {
+		if ($document.scrollTop() >= 10) {
 			// $element.addClass(className);
 			$headerbar.addClass('shadow');
 			console.clear();

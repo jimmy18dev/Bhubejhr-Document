@@ -1,4 +1,4 @@
-<header class="header fixed" id="headerbar">
+<header class="header fixed">
 	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
 		<img src="image/logo.png" alt="logo">
 		<div class="detail">

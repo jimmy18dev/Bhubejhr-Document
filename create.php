@@ -72,7 +72,7 @@ if(empty($category->id)){
 		<textarea name="description" id="description" placeholder="รายละเอียด..."></textarea>
 	</div>
 
-	<div class="form-items hidden control">
+	<div class="form-items hidden">
 		<input type="hidden" id="maximumSize" value="<?php echo $document->return_bytes(ini_get('post_max_size'));?>">
 		<input type="hidden" name="category_id" required value="<?php echo $category->id;?>">
 		<button type="submit" id="btnSubmit" disabled>อัพโหลด<i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
