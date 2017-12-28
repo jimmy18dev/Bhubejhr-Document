@@ -490,7 +490,7 @@ body {
   padding: 2% 0%;
   float: left;
   display: inline-block;
-  border-bottom: 1px solid #FAFAFA;
+  border-bottom: 1px solid #e8e8e9;
 }
 .container .section .list .file-items:last-child {
   border-bottom: 0px;
@@ -545,7 +545,6 @@ body {
 .container .section .list .file-items .detail p a i,
 .container .section .list .file-items .detail p span i {
   margin-right: 3px;
-  color: #DDDDDD;
   font-size: 0.9em;
 }
 .container .section .list .file-items .detail p a:hover {
@@ -561,7 +560,7 @@ body {
   display: inline-block;
   font-size: 1.6em;
   line-height: 1.7em;
-  color: #DDDDDD;
+  color: #CCCCCC;
   text-align: right;
 }
 .container .section .list a.choose-items {
@@ -711,7 +710,6 @@ body {
 .container .article p a i,
 .container .article p span i {
   margin-right: 5px;
-  color: #DDDDDD;
 }
 .container .article p a i.fa-lock,
 .container .article p span i.fa-lock {
@@ -744,7 +742,7 @@ body {
   width: 50%;
   float: left;
   display: inline-block;
-  padding: 4% 0%;
+  padding: 3.5% 0%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -757,7 +755,8 @@ body {
 }
 .container .article .download a.btn-download {
   width: 30%;
-  padding: 3% 5%;
+  padding: 2% 5%;
+  padding-top: 2.5%;
   float: right;
   display: inline-block;
   background: #2ecc71;
@@ -1275,10 +1274,11 @@ body {
   width: 90%;
   float: left;
   display: inline-block;
-  font-size: 1.2em;
-  padding: 5%;
-  text-align: center;
-  background: #004d40;
+  font-size: 1.1em;
+  padding: 4% 5%;
+  background: #2ecc71;
+  background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+  background: linear-gradient(to right, #2ecc71, #27ae60);
   color: #FFFFFF;
 }
 .qrcode-dialog img {
@@ -1290,7 +1290,7 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  border-top: 1px solid #e8e8e9;
+  background: #e8e8e9;
 }
 .qrcode-dialog .control .btn {
   width: 50%;
@@ -1298,13 +1298,13 @@ body {
   display: inline-block;
   text-align: center;
   padding: 5% 0%;
-  color: #002e26;
+  color: #27ae60;
   text-decoration: none;
   font-size: 1.2em;
 }
 .qrcode-dialog .control .btn:hover {
   cursor: pointer;
-  background: #e8e8e9;
+  text-decoration: underline;
 }
 .qrcode-dialog .control .btn.btn-close {
   color: #666666;

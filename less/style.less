@@ -344,7 +344,7 @@
 				padding: 2% 0%;
 				float: left;
 				display: inline-block;
-				border-bottom: 1px solid #FAFAFA;
+				border-bottom: 1px solid @border_color;
 
 				&:last-child{ border-bottom: 0px; }
 
@@ -397,7 +397,6 @@
 
 							i{
 								margin-right: 3px;
-								color: #DDDDDD;
 								font-size: 0.9em;
 							}
 						}
@@ -418,7 +417,7 @@
 					display: inline-block;
 					font-size: 1.6em;
 					line-height: 1.7em;
-					color: #DDDDDD;
+					color: #CCCCCC;
 					text-align: right;
 				}
 			}
@@ -578,12 +577,8 @@
 				text-decoration: none;
 				margin-right: 10px;
 
-				i{
-					margin-right: 5px;
-					color: #DDDDDD;
-				}
+				i{ margin-right: 5px; }
 				i.fa-lock{ color: #FF5722; }
-
 				&:hover{ cursor: default; }
 			}
 
@@ -613,7 +608,7 @@
 				width: 50%;
 				float: left;
 				display: inline-block;
-				padding: 4% 0%;
+				padding: 3.5% 0%;
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				overflow: hidden;
@@ -626,7 +621,8 @@
 
 			a.btn-download{
 				width: 30%;
-				padding: 3% 5%;
+				padding: 2% 5%;
+				padding-top: 2.5%;
 				float: right;
 				display: inline-block;
 				.bgGradient(@green_color,@green_color_dark);
@@ -1147,10 +1143,9 @@
 		width: 90%;
 		float: left;
 		display: inline-block;
-		font-size: 1.2em;
-		padding: 5%;
-		text-align: center;
-		background: @primary_color;
+		font-size: 1.1em;
+		padding: 4% 5%;
+		.bgGradient(@green_color,@green_color_dark);
 		color: #FFFFFF;
 	}
 
@@ -1164,7 +1159,7 @@
 		width: 100%;
 		float: left;
 		display: inline-block;
-		border-top: 1px solid @border_color;
+		background: @border_color;
 
 		.btn{
 			width: 50%;
@@ -1172,18 +1167,16 @@
 			display: inline-block;
 			text-align: center;
 			padding: 5% 0%;
-			color: @primary_color_dark;
+			color: @green_color_dark;
 			text-decoration: none;
 			font-size: 1.2em;
 
 			&:hover{
 				cursor: pointer;
-				background: @border_color;
+				text-decoration: underline;
 			}
 
-			&.btn-close{
-				color: @fontcolor_normal;
-			}
+			&.btn-close{ color: @fontcolor_normal; }
 		}
 	}
 }
