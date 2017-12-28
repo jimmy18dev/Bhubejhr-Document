@@ -48,8 +48,8 @@ switch ($data['file_type']) {
 	<div class="detail">
 		<div class="name"><a href="document/<?php echo $data['file_id']?>"><?php echo $data['file_title']?></a></div>
 		<p>
-			<a href="document/<?php echo $data['file_id']?>" title="<?php echo $data['file_create_time'];?>"><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $data['file_create_time_fb'];?></a>
-			<a href="category/<?php echo $data['file_category_id']?>"><i class="fa fa-tag" aria-hidden="true"></i><?php echo $data['file_category_name'];?></a>
+			<a href="category/<?php echo $data['file_category_id']?>" class="style<?php echo $data['file_category_id']?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $data['file_category_name'];?></a>
+			<a href="document/<?php echo $data['file_id']?>" title="<?php echo $data['file_create_time'];?>"><?php echo $data['file_create_time_fb'];?></a>
 			<span><?php echo $privacy?></span>
 		</p>
 	</div>

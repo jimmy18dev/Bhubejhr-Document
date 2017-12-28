@@ -134,8 +134,8 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			<span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $document->create_time;?></span>
-			<a href="category/<?php echo $document->category_id?>"><i class="fa fa-tag" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
+			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
+			<span><?php echo $document->create_time;?></span>
 			<span class="privacy"><?php echo $privacy;?></span>
 		</p>
 

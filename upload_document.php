@@ -28,17 +28,17 @@ if(isset($_FILES['file'])){
 
     if(empty($errors) == true){
         if(!empty($title) && isset($title))
-            $filename = $title;
+            $filename   = $document->string_cleaner($title);
         else{
-            $filename = $file_name;
+            $filename   = $document->string_cleaner($file_name);
+            $title      = $file_name;
         }
-        
-        $filename       = $document->string_cleaner($filename);
+
         $new_filename   = $filename.'-'.substr(md5(time().rand(0,9999999999)),6,6);
-        $full_filename = $new_filename.'.'.$file_ext;
+        $full_filename  = $new_filename.'.'.$file_ext;
         move_uploaded_file($file_tmp,'files/'.$full_filename);
 
-        $file_id = $document->create($user->id,$category_id,$filename,$description,$full_filename,$file_ext,$file_size);
+        $file_id = $document->create($user->id,$category_id,$title,$description,$full_filename,$file_ext,$file_size);
 
         $qrcode_content = DOMAIN.'/document/'.$file_id;
         $qrcode_filename = 'image/qrcode/'.$full_filename.'.png';

@@ -39,6 +39,7 @@ if($user->id != $document->owner_id){
 
 <header class="header">
 	<div class="title">ไฟล์: <?php echo $document->title;?></div>
+	<a href="document/<?php echo $document->id;?>" class="btn btn-login">ข้าม<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 </header>
 
 <div class="overlay"></div>

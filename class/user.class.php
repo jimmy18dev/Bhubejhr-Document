@@ -158,7 +158,7 @@ class User{
         $this->db->execute();
     }
 
-    public function registerForm($fullname,$phone,$email,$password,$bio){
+    public function registerForm($fullname,$phone,$email,$password){
         // Random password if password is empty value
         $salt       = hash('sha512',uniqid(mt_rand(1,mt_getrandmax()),true));
         // Create salted password
@@ -169,12 +169,11 @@ class User{
 
         if($this->already($phone,$email)){
             
-            $this->db->query('INSERT INTO user(phone,email,fname,lname,bio,password,salt,ip,register_time,type) VALUE(:phone,:email,:fname,:lname,:bio,:password,:salt,:ip,:register_time,:type)');
+            $this->db->query('INSERT INTO user(phone,email,fname,lname,password,salt,ip,register_time,type) VALUE(:phone,:email,:fname,:lname,:password,:salt,:ip,:register_time,:type)');
             $this->db->bind(':phone'    ,$phone);
             $this->db->bind(':email'    ,$email);
             $this->db->bind(':fname'    ,$fname);
             $this->db->bind(':lname'    ,$lname);
-            $this->db->bind(':bio'      ,$bio);
             $this->db->bind(':password' ,$password);
             $this->db->bind(':salt'     ,$salt);
             $this->db->bind(':ip'       ,$this->db->GetIpAddress());

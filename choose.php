@@ -38,7 +38,13 @@ $categories = $category->listAll();
 <div class="container">
 	<div class="section">
 		<div class="list">
-			<?php foreach ($categories as $var) { include 'template/category.items.php'; }?>
+			<?php foreach ($categories as $var) { ?>
+			<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">
+				<i class="fa fa-circle" aria-hidden="true"></i>
+				<span class="name"><?php echo $var['category_name'];?></span>
+				<div class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+			</a>
+			<?php }?>
 		</div>
 	</div>
 </div>

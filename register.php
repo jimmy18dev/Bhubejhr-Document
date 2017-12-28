@@ -65,8 +65,7 @@ $p_url 		= DOMAIN.'/signup';
 			<input type="text" class="inputtext" id="fullname" placeholder="ชื่อ-นามสกุล" autofocus>
 			<input type="phone" class="inputtext" id="phone" placeholder="เบอร์โทรศัพท์">
 			<input type="email" class="inputtext" id="email" placeholder="ที่อยู่อีเมล">
-			<input type="text" class="inputtext" id="bio" placeholder="ชื่อฝ่ายและแผนก">
-			<input type="password" class="inputtext" id="password" placeholder="รหัสผ่าน">
+			<input type="password" class="inputtext" id="password" placeholder="ตั้งรหัสผ่าน">
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('register',SECRET_KEY);?>">
 			<input type="hidden" id="redirect" value="<?php echo $_GET['redirect'];?>">
 			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงทะเบียน<i class="fa fa-check" aria-hidden="true"></i></button>

@@ -93,7 +93,7 @@ if($user->id != $document->owner_id){
 	</div>
 
 	<div class="form-items delete-box">
-		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณลบไฟล์นี้แล้ว คุณจะไม่สามารถกู้คืนได้!</div>
+		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณกดลบไฟล์นี้แล้ว ระบบจะถามเพื่อยืนยันความต้องการอีกครั้ง แต่ตอบตกลง คุณจะไม่สามารถกู้คืนได้อีก</div>
 		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้<i class="fa fa-trash" aria-hidden="true"></i></button>
 	</div>
 </div>
