@@ -42,25 +42,25 @@ if(!file_exists($qrcode_filename)){
 
 switch ($document->file_type) {
 	case 'PDF':
-		$icon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>PDF';
+		$icon = 'PDF';
 		break;
 	case 'Word':
-		$icon = '<i class="fa fa-file-word-o" aria-hidden="true"></i>Microsoft Word';
+		$icon = 'Microsoft Word';
 		break;
 	case 'Excel':
-		$icon = '<i class="fa fa-file-excel-o" aria-hidden="true"></i>Microsoft Excel';
+		$icon = 'Microsoft Excel';
 		break;
 	case 'PowerPoint':
-		$icon = '<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>Microsoft Power Point';
+		$icon = 'Microsoft Power Point';
 		break;
 	case 'Zip':
-		$icon = '<i class="fa fa-file-zip-o" aria-hidden="true"></i>Zip';
+		$icon = 'Zip';
 		break;
 	case 'txt':
-		$icon = '<i class="fa fa-file-text-o" aria-hidden="true"></i>Text';
+		$icon = 'Text';
 		break;
 	default:
-		$icon = '<i class="fa fa-file-o" aria-hidden="true"></i>';
+		$icon = '';
 		break;
 }
 
@@ -117,7 +117,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	</a>
 
 	<?php if($document->privacy != 'onlyme'){?>
-	<div class="btn btn-qrcode" id="btn-qrcode"><i class="fa fa-qrcode" aria-hidden="true"></i>QR Code</div>
+	<div class="btn btn-qrcode" id="btn-qrcode"><i class="fa fa-qrcode" aria-hidden="true"></i>คิวอาร์โค้ด</div>
 	<?php }?>
 </header>
 
@@ -126,12 +126,12 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 
 <div class="container">
 	<div class="article">
+		<?php if($user_online && $user->id == $document->owner_id){?>
 		<div class="info">
-			<span class="<?php echo $document->file_type;?>"><?php echo $icon;?></span>
-			<?php if($user_online && $user->id == $document->owner_id){?>
 			<a href="document/edit/<?php echo $document->id;?>">แก้ไข<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<?php }?>
 		</div>
+		<?php }?>
+		
 		<h1><?php echo $document->title;?></h1>
 		<p>
 			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
@@ -144,20 +144,20 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<div class="filename" title="<?php echo $document->file_name;?>"><?php echo $document->file_name;?></div>
 			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->id;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>
-					<span class="size">ขนาดไฟล์ <?php echo $document->file_size;?></span>
+					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
 				</div>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
+			<div class="filename" title="<?php echo $document->file_name;?>"><?php echo $document->file_name;?></div>
 		</div>
 	</div>
 </div>
 
 <div class="qrcode-dialog" id="qrcode-dialog">
-	<div class="head">QR Code เพื่อเข้าถึงไฟล์นี้</div>
+	<div class="head">สแกนคิวอาร์โค้ดเพื่อเข้าถึงไฟล์นี้</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">
 		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn">บันทึกลงเครื่อง</a>

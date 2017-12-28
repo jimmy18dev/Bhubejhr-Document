@@ -464,7 +464,6 @@ body {
   font-family: "maledpan", sans-serif;
   font-weight: normal;
   letter-spacing: 1px;
-  text-align: right;
 }
 .container .section .list {
   width: 100%;
@@ -610,25 +609,30 @@ body {
   float: left;
   display: inline-block;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 45%;
 }
 .container .section .starter p {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 2.4em;
+  font-size: 1.4em;
   color: #666666;
   font-family: "maledpan", sans-serif;
+  letter-spacing: 1px;
 }
 .container .section .starter a {
   display: inline-block;
   font-size: 1.2em;
-  background: #004d40;
-  color: #1abc9c;
+  font-family: "maledpan", sans-serif;
+  color: #FFFFFF;
   text-decoration: none;
   padding: 2% 4%;
   border-radius: 5px;
-  margin-top: 10%;
+  margin-top: 5%;
+  background: #2ecc71;
+  background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .container .section .starter a i {
   margin-right: 15px;
@@ -1073,7 +1077,7 @@ body {
   display: inline-block;
   margin-bottom: 10%;
 }
-.login .welcome h1 {
+.login .welcome h1 a {
   width: 100%;
   float: left;
   display: inline-block;
@@ -1082,6 +1086,7 @@ body {
   margin-bottom: 3%;
   color: #111111;
   line-height: 1.2em;
+  text-decoration: none;
 }
 .login .welcome p {
   width: 100%;
@@ -1313,7 +1318,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10%;
+  width: 0%;
   height: 3px;
   float: left;
   display: none;
@@ -1352,37 +1357,45 @@ body {
 /* Other Device and Screen */
 @media only screen and (min-width: 0px) and (max-width: 519px) {
   .header a.logo {
-    padding: 10px 1%;
-    padding-left: 5%;
-    height: 30px;
+    padding: 10px 5%;
     letter-spacing: 0px;
   }
   .header a.logo img {
-    margin-right: 10px;
+    margin-right: 7px;
   }
   .header a.logo .detail .name {
-    letter-spacing: 1px;
+    font-size: 1.1em;
+    margin-top: 6px;
   }
   .header a.logo .detail .desc {
-    width: 70%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    display: none;
   }
   .header .btn {
     padding: 16px 5%;
-    letter-spacing: 0px;
+    height: 18px;
+    letter-spacing: 1px;
   }
   .header .btn i {
+    float: left;
+    display: inline-block;
     font-size: 1.3em;
-    margin-right: 5px;
+    margin-right: 7px;
+    margin-top: -2px;
+    color: #111111;
+  }
+  .header .btn span {
+    display: none;
+  }
+  .header .btn.btn-login i {
+    float: right;
+    margin-right: 0px;
+    margin-left: 7px;
   }
   .header .title {
-    padding: 16px 3%;
+    padding: 16px 5%;
   }
   .header .btn-profile {
     padding: 16px 5%;
-    letter-spacing: 0px;
   }
   .header .btn-profile img {
     margin-right: 0px;
@@ -1392,171 +1405,185 @@ body {
   }
   .header .btn-profile .more-menu {
     width: 220px;
-    top: 90%;
-    right: 16%;
+    right: 15%;
+    padding: 20% 0%;
+  }
+  .header .btn-profile .more-menu.open {
+    display: block;
   }
   .header .btn-profile .more-menu .arrow-up {
     right: 6%;
   }
   .header .btn-profile .more-menu a {
+    width: 80%;
     padding: 8% 10%;
   }
   .search-form {
     width: 90%;
-    margin: 5%;
+    margin: 0% 5%;
   }
   .search-form .icon {
     font-size: 1.2em;
-    padding: 3% 5%;
+    padding: 4% 5%;
   }
   .search-form .inputtext {
     width: 70%;
-    padding: 3% 15%;
+    padding: 4% 15%;
     font-size: 1em;
+    line-height: 1.5em;
   }
   .search-form .tip {
-    font-size: 0.65em;
-    letter-spacing: 0px;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    margin-top: 1%;
   }
   .headtopic {
     width: 90%;
     padding: 5%;
+    margin-bottom: 0%;
     font-size: 1.2em;
-    text-align: left;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .menu {
+    width: 90%;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
+  .menu .items {
+    padding: 5% 0%;
+    border-radius: 8px;
+  }
+  .menu .items i {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+  }
+  .menu .items span {
+    font-size: 1em;
+    letter-spacing: 0px;
   }
   .container {
     width: 100%;
-    margin: 5% 0%;
-  }
-  .container .menu {
-    width: 94%;
-    margin: 0% 3%;
-    margin-bottom: 5%;
-  }
-  .container .menu .items {
-    padding: 5% 0%;
-  }
-  .container .menu .items i {
-    font-size: 1.6em;
-    margin-bottom: 7px;
-  }
-  .container .menu .items span {
-    font-size: 1em;
+    margin: 0%;
   }
   .container .section {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
   }
   .container .section .topic {
     width: 90%;
     margin: 0% 5%;
-    font-size: 1.2em;
-    margin-bottom: 0%;
+    font-size: 1em;
+    letter-spacing: 0px;
   }
-  .container .section .topic.center {
-    margin-bottom: 5%;
-  }
-  .container .section .list.border {
-    width: 90%;
-    margin: 0% 5%;
+  .container .section .list .empty {
+    margin-top: 40%;
+    letter-spacing: 0px;
+    font-size: 1.1em;
   }
   .container .section .list .file-items {
-    width: 92%;
-    padding: 4%;
-    border-bottom: 1px solid #EEEEEE;
+    width: 90%;
+    padding: 4% 5%;
   }
   .container .section .list .file-items a.icontype {
     width: 12%;
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 1.7em;
   }
   .container .section .list .file-items .detail {
-    width: 80%;
+    width: 81%;
   }
   .container .section .list .file-items .detail .name {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.3em;
     margin-bottom: 1%;
+    letter-spacing: 0px;
   }
   .container .section .list .file-items .detail p {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   .container .section .list .file-items a.icon {
-    width: 8%;
-    font-size: 1.6em;
+    width: 7%;
+    font-size: 1.4em;
     line-height: 1.7em;
   }
   .container .section .list a.choose-items {
-    width: 90%;
+    width: 80%;
     padding: 3% 5%;
+    margin: 0% 5%;
+    margin-bottom: 1%;
+  }
+  .container .section .list a.choose-items:first-child {
+    margin-top: 5%;
+  }
+  .container .section .list a.choose-items i.fa-circle {
+    width: 13%;
+    font-size: 1.4em;
+    line-height: 1.7em;
   }
   .container .section .list a.choose-items span {
-    width: 92%;
-    font-size: 1.4em;
+    width: 80%;
+    font-size: 1.2em;
+    line-height: 1.9em;
+    letter-spacing: 0px;
   }
-  .container .section .list a.choose-items i {
-    width: 8%;
-    font-size: 1.8em;
+  .container .section .list a.choose-items i.fa-angle-right {
+    width: 7%;
+    font-size: 1.4em;
+    line-height: 1.7em;
   }
   .container .section .starter {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    margin-top: 20%;
+    margin-top: 45%;
   }
   .container .section .starter p {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    font-size: 2.4em;
-    color: #666666;
-    font-family: "maledpan", sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 0px;
   }
   .container .section .starter a {
-    display: inline-block;
-    font-size: 1.2em;
-    background: #004d40;
-    color: #1abc9c;
-    text-decoration: none;
-    padding: 2% 4%;
-    border-radius: 5px;
-    margin-top: 10%;
+    padding: 2% 5%;
+    margin-top: 5%;
   }
   .container .section .starter a i {
     margin-right: 15px;
   }
   .container .article {
     width: 90%;
-    padding: 0% 5%;
-    margin-top: 0%;
+    margin: 5%;
   }
   .container .article .info {
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     font-size: 0.8em;
-  }
-  .container .article .info span,
-  .container .article .info a {
-    padding: 5px 0px;
   }
   .container .article .info a {
     padding: 5px 10px;
   }
   .container .article h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    line-height: 1.3em;
+    margin-bottom: 3%;
+    letter-spacing: 0px;
   }
   .container .article p {
-    font-size: 0.8em;
-    margin-bottom: 4%;
+    font-size: 0.75em;
+    margin-bottom: 5%;
+  }
+  .container .article p a,
+  .container .article p span {
+    margin-right: 5px;
   }
   .container .article .text {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 5%;
   }
   .container .article .download {
+    border-top: 2px dotted #e8e8e9;
     padding-top: 5%;
+  }
+  .container .article .download .filename {
+    width: 90%;
+    padding: 5%;
+    letter-spacing: 0px;
+    font-size: 0.75em;
+    text-align: center;
   }
   .container .article .download a.btn-download {
     width: 80%;
@@ -1567,7 +1594,8 @@ body {
   }
   .container .article .download a.btn-download .d .caption {
     font-size: 1.2em;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
+    letter-spacing: 0px;
   }
   .container .article .download a.btn-download .d .size {
     font-size: 0.75em;
@@ -1578,17 +1606,26 @@ body {
     font-size: 2.2em;
   }
   .logout {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 0% 5%;
     margin-top: 40%;
   }
   .logout h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: 10%;
+  }
+  .logout a {
+    padding: 4% 5%;
+    border-radius: 5px;
+    font-size: 1.1em;
+    letter-spacing: 0px;
+  }
+  .logout a i {
+    margin-right: 15px;
   }
   .form {
     width: 90%;
-    margin: 5%;
+    margin: 3% 5%;
   }
   .form .form-items {
     width: 100%;
@@ -1607,35 +1644,140 @@ body {
     border-top: 3px solid #EAEAEA;
     padding-top: 5%;
   }
+  .form .form-items.delete-box {
+    padding: 5%;
+    margin-top: 5%;
+    border-radius: 5px;
+    background: #FFCDD2;
+  }
   .form .form-items.delete-box .msg {
-    margin-bottom: 5%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: 3%;
+    color: #111111;
   }
   .form .form-items label {
-    font-size: 1em;
-    margin-bottom: 2%;
+    width: 99%;
+    margin-left: 1%;
+    float: left;
+    display: inline-block;
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 1%;
+    font-family: "maledpan", sans-serif;
+  }
+  .form .form-items label:hover {
+    cursor: pointer;
+    color: #111111;
+  }
+  .form .form-items .inputfile {
+    display: none;
   }
   .form .form-items .inputtext,
   .form .form-items textarea {
-    padding: 4% 3%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    padding: 2.5% 3%;
     font-size: 1em;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     line-height: 1.5em;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    color: #333333;
+    background: #e8e8e9;
+    border: 0;
+  }
+  .form .form-items .inputtext:hover,
+  .form .form-items textarea:hover {
+    cursor: pointer;
+  }
+  .form .form-items .inputtext:focus,
+  .form .form-items textarea:focus {
+    color: #111111;
+  }
+  .form .form-items .selection {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    margin-bottom: 5%;
   }
   .form .form-items .selection .items {
-    width: 32%;
+    width: 31.33%;
     padding: 5% 0%;
-    margin-right: 2%;
-    font-size: 0.9em;
-    letter-spacing: 0px;
+    margin-right: 3%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #eeeeee;
+    color: #666666;
+    border: 2px solid #eeeeee;
   }
   .form .form-items .selection .items i {
-    font-size: 1.8em;
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .form .form-items .selection .items span {
+    display: block;
+    font-size: 1.1em;
+    font-family: "maledpan", sans-serif;
+    letter-spacing: 1px;
+  }
+  .form .form-items .selection .items:nth-child(3n+0) {
+    margin-right: 0%;
+  }
+  .form .form-items .selection .items:hover {
+    cursor: pointer;
+  }
+  .form .form-items .selection .items.active {
+    color: #27ae60;
+    background: #E8F5E9;
+    border: 2px solid #27ae60;
+    box-shadow: none;
+  }
+  .form .form-items .select {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5%;
   }
   .form .form-items .select:after {
-    right: 5%;
+    content: '';
+    border: 7px solid transparent;
+    border-top: 10px solid #666666;
+    position: absolute;
+    z-index: 2;
+    top: 38%;
+    right: 4%;
+    pointer-events: none;
   }
   .form .form-items .select select {
-    padding: 4% 3%;
+    width: 100%;
+    margin: 0%;
+    padding: 2.5% 3%;
+    float: left;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #333333;
+    background: #e8e8e9;
+    border: 0;
+  }
+  .form .form-items .select select:hover {
+    cursor: pointer;
+    color: #111111;
   }
   .form .form-items .file-preview {
     width: 100%;
@@ -1646,21 +1788,65 @@ body {
     margin-bottom: 5%;
     border-radius: 5px;
     box-sizing: border-box;
-    border: 3px dashed #CCCCCC;
-    color: #999999;
+    background: #e8e8e9;
+    color: #666666;
   }
   .form .form-items .file-preview i {
-    font-size: 2.2em;
+    display: block;
+    font-size: 3em;
+    margin-bottom: 2%;
+  }
+  .form .form-items .file-preview p {
+    display: block;
+    font-size: 1.4em;
+    font-family: "maledpan", sans-serif;
+    letter-spacing: 1px;
   }
   .form .form-items .file-preview .info {
-    font-size: 0.8em;
+    font-size: 1em;
+    color: #BBBBBB;
+  }
+  .form .form-items .file-preview:hover {
+    cursor: pointer;
+    color: #666666;
+  }
+  .form .form-items .file-preview:hover p {
+    text-decoration: underline;
   }
   .form .form-items button {
-    padding: 4.5% 5%;
-    font-size: 1.2em;
+    padding: 3% 4%;
+    float: right;
+    display: inline-block;
+    font-size: 1.1em;
+    border: 0px;
+    border-radius: 5px;
+    line-height: 1em;
+    background: #2ecc71;
+    background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "maledpan", sans-serif;
+    letter-spacing: 1px;
+  }
+  .form .form-items button:hover {
+    cursor: pointer;
+    background: #66BB6A;
+  }
+  .form .form-items button.loading {
+    background: transparent;
+    box-shadow: none;
+    color: #333333;
   }
   .form .form-items button i {
     margin-left: 10px;
+  }
+  .form .form-items button.btn-delete {
+    float: left;
+    background: #C62828;
+  }
+  .form .form-items button.btn-delete:hover {
+    background: #B71C1C;
   }
   .login .welcome {
     width: 90%;
@@ -1671,15 +1857,13 @@ body {
     margin: 0% 37%;
     margin-bottom: 5%;
   }
-  .login .welcome h1 {
-    font-size: 1.4em;
-    margin-bottom: 2%;
+  .login .welcome h1 a {
+    font-size: 1.3em;
+    margin-bottom: 1%;
     line-height: 1.2em;
   }
   .login .welcome p {
-    line-height: 1.3em;
-    font-size: 0.7em;
-    margin-bottom: 0%;
+    display: none;
   }
   .login .welcome a.btn-back {
     display: none;
@@ -1693,40 +1877,71 @@ body {
     margin-bottom: 5%;
   }
   .login .content .nav a {
-    padding: 4% 0%;
-    font-size: 1em;
+    padding: 3% 0%;
+    font-size: 1.1em;
     letter-spacing: 0px;
-  }
-  .login .content .nav a i {
-    margin-right: 10px;
   }
   .login .content .inputtext {
     padding: 4% 5%;
-    font-size: 1em;
     margin-bottom: 3%;
-    line-height: 1.3em;
+    line-height: 1.5em;
   }
   .login .content .btn {
+    padding: 5% 0%;
     font-size: 1.1em;
-    line-height: 1.1em;
     letter-spacing: 0px;
   }
   .login .content .btn-submit {
     margin-top: 3%;
+  }
+  .login .content .btn-submit i {
+    margin-left: 15px;
   }
   .login .content .line {
     padding: 3% 0%;
     letter-spacing: 0px;
   }
   .qrcode-dialog {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 5%;
   }
   .qrcode-dialog .head {
-    font-size: 1em;
+    width: 90%;
+    float: left;
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 4% 5%;
+    background: #2ecc71;
+    background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: #FFFFFF;
+  }
+  .qrcode-dialog img {
+    width: 100%;
+    float: left;
+    display: inline-block;
+  }
+  .qrcode-dialog .control {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    background: #e8e8e9;
   }
   .qrcode-dialog .control .btn {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    text-align: center;
     padding: 5% 0%;
-    font-size: 1em;
+    color: #27ae60;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  .qrcode-dialog .control .btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .qrcode-dialog .control .btn.btn-close {
+    color: #666666;
   }
 }

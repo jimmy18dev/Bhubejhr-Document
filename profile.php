@@ -33,7 +33,10 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 </header>
 
+<?php if(count($files) > 0){?>
 <div class="headtopic">เอกสารทั้งหมดของคุณ</div>
+<?php }?>
+
 <div class="container">
 	<div class="section">
 		<?php if(count($files) > 0){?>
@@ -46,7 +49,7 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 		<?php }else{?>
 		<div class="starter">
 			<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-			<a href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
+			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลดไฟล์</a>
 		</div>
 		<?php }?>
 	</div>
