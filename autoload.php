@@ -5,7 +5,7 @@ ob_start();
 define('StTime', microtime(true));
 
 date_default_timezone_set('Asia/Bangkok');
-error_reporting(0);
+// error_reporting(0);
 
 define("VERSION" 	,'0.0.1');
 
@@ -16,6 +16,7 @@ require_once 'class/category.class.php';
 require_once 'class/keyword.class.php';
 require_once 'class/document.class.php';
 require_once 'class/user.class.php';
+require_once 'class/member.class.php';
 
 $wpdb = new Database; // DATABASE CONNECT...
 $user = new User;

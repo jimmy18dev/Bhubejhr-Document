@@ -46,6 +46,7 @@ if(!empty($q) && isset($q)){
 <div class="container">
 	<div class="section">
 		<?php if(count($files) > 0){?>
+		<div class="topic">พบ <?php echo count($files);?> รายการ</div>
 		<div class="list">
 			<?php
 			if(count($files) > 0){

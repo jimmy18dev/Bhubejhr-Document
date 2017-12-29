@@ -301,6 +301,10 @@
 	float: left;
 	display: inline-block;
 
+	&.margintop{
+		margin-top: 50px;
+	}
+
 	.section{
 		width: 100%;
 		float: left;
@@ -336,6 +340,121 @@
 				letter-spacing: 1px;
 				font-size: 1.1em;
 				color: #666666;
+			}
+
+			.member-items{
+				width: 100%;
+				padding: 2% 0%;
+				float: left;
+				display: inline-block;
+				border-bottom: 1px solid @border_color;
+
+				&:last-child{ border-bottom: 0px; }
+
+				.avatar{
+					width: 8%;
+					margin-right: 3%;
+					float: left;
+					display: inline-block;
+
+					img{
+						width: 100%;
+						float: left;
+						display: inline-block;
+						border-radius: 50%;
+					}
+				}
+
+				.detail{
+					width: 56%;
+					padding-right: 3%;
+					float: left;
+					display: inline-block;
+
+					.name{
+						width: 100%;
+						float: left;
+						display: inline-block;
+						font-size: 1.2em;
+						line-height: 1em;
+						color: #111111;
+						margin-bottom: 2%;
+						font-family: @topic_font;
+						letter-spacing: 1px;
+
+						a{
+							color: #111111;
+							text-decoration: none;
+
+							&:hover{ text-decoration: underline; }
+						}
+					}
+					.desc{
+						width: 100%;
+						float: left;
+						display: inline-block;
+						font-size: 0.75em;
+						line-height: 1.4em;
+						color: #666666;
+
+						span{
+							float: left;
+							display: inline-block;
+							color: #666666;
+							text-decoration: none;
+							margin-right: 7px;
+
+							i{
+								margin-right: 3px;
+								font-size: 0.9em;
+							}
+
+							&.active{
+								background: @green_color;
+								color: #FFFFFF;
+							}
+							&.reject{
+							}
+							&.lock{}
+						}
+					}
+					
+				}
+
+				.control{
+					width: 30%;
+					float: right;
+					display: inline-block;
+
+					.btnop{
+						width: 47%;
+						padding: 8% 0%;
+						margin-left: 3%;
+						float: right;
+						display: inline-block;
+						font-family: @topic_font;
+						border: 0px;
+						font-size: 1em;
+						background: transparent;
+						border-radius: 5px;
+						color: #999999;
+						border: 1px solid #DDDDDD;
+						line-height: 1em;
+
+						&:hover{
+							cursor: pointer;
+							color: #333333;
+							border: 1px solid #AAAAAA;
+						}
+
+						i{ margin-left: 7px; }
+						&.btn-approve{
+							background: @green_color;
+							border: 1px solid @green_color;
+							color: #FFFFFF;
+						}
+					}
+				}
 			}
 
 			.file-items{
@@ -606,25 +725,11 @@
 			border-top: 2px dotted @border_color;
 			padding-top: 5%;
 
-			.filename{
-				width: 50%;
-				float: left;
-				display: inline-block;
-				padding: 3.5% 0%;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-				font-family: @topic_font;
-				letter-spacing: 1px;
-				color: #BBBBBB;
-
-				&:hover{ cursor: default; }
-			}
-
 			a.btn-download{
 				width: 30%;
 				padding: 2% 5%;
 				padding-top: 2.5%;
+				margin-left: 2%;
 				float: right;
 				display: inline-block;
 				.bgGradient(@green_color,@green_color_dark);
@@ -641,15 +746,23 @@
 					display: inline-block;
 
 					.caption{
-						display: block;
+						width: 100%;
+						float: left;
+						display: inline-block;
 						font-size: 1.2em;
 						margin-bottom: 3%;
 						font-family: @topic_font;
 						letter-spacing: 1px;
 					}
 					.size{
+						width: 100%;
+						float: left;
+						display: inline-block;
 						font-size: 0.75em;
 						margin-bottom: 0;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
 					}
 				}
 				i{
@@ -669,18 +782,27 @@
 	margin: 3% 35%;
 	float: left;
 	display: inline-block;
-	text-align: center;
-	margin-top: 18%;
+	margin-top: 14%;
 
 	h2{
-		font-size: 2.4em;
-		margin-bottom: 10%;
+		font-size: 2.8em;
 		font-weight: normal;
-		color: @primary_color_dark;
+		color: #111111;
 		font-family: @topic_font;
+		margin-bottom: 2%;
+	}
+
+	p{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		font-family: @topic_font;
+		font-size: 1.2em;
+		color: #333333;
 	}
 
 	a{
+		margin-top: 10%;
 		display: inline-block;
 		text-decoration: none;
 		color: #333333;

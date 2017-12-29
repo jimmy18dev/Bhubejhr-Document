@@ -14,7 +14,12 @@
 
 		<div class="more-menu" id="menuProfile">
 			<div class="arrow-up"></div>
+			<?php if($user->status != 'active'){?>
+			<a href="pending"><i class="fa fa-clock-o" aria-hidden="true"></i>รอยืนยันตัวตน...</a>
+			<?php }else{?>
 			<a href="profile"><i class="fa fa-file-text" aria-hidden="true"></i>เอกสารของฉัน</a>
+			<?php }?>
+			<a href="admin-member-list.php"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้</a>
 			<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>
 		</div>
 	</div>

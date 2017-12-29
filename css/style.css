@@ -449,6 +449,9 @@ body {
   float: left;
   display: inline-block;
 }
+.container.margintop {
+  margin-top: 50px;
+}
 .container .section {
   width: 100%;
   float: left;
@@ -483,6 +486,108 @@ body {
   letter-spacing: 1px;
   font-size: 1.1em;
   color: #666666;
+}
+.container .section .list .member-items {
+  width: 100%;
+  padding: 2% 0%;
+  float: left;
+  display: inline-block;
+  border-bottom: 1px solid #e8e8e9;
+}
+.container .section .list .member-items:last-child {
+  border-bottom: 0px;
+}
+.container .section .list .member-items .avatar {
+  width: 8%;
+  margin-right: 3%;
+  float: left;
+  display: inline-block;
+}
+.container .section .list .member-items .avatar img {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  border-radius: 50%;
+}
+.container .section .list .member-items .detail {
+  width: 56%;
+  padding-right: 3%;
+  float: left;
+  display: inline-block;
+}
+.container .section .list .member-items .detail .name {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1em;
+  color: #111111;
+  margin-bottom: 2%;
+  font-family: "maledpan", sans-serif;
+  letter-spacing: 1px;
+}
+.container .section .list .member-items .detail .name a {
+  color: #111111;
+  text-decoration: none;
+}
+.container .section .list .member-items .detail .name a:hover {
+  text-decoration: underline;
+}
+.container .section .list .member-items .detail .desc {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  font-size: 0.75em;
+  line-height: 1.4em;
+  color: #666666;
+}
+.container .section .list .member-items .detail .desc span {
+  float: left;
+  display: inline-block;
+  color: #666666;
+  text-decoration: none;
+  margin-right: 7px;
+}
+.container .section .list .member-items .detail .desc span i {
+  margin-right: 3px;
+  font-size: 0.9em;
+}
+.container .section .list .member-items .detail .desc span.active {
+  background: #2ecc71;
+  color: #FFFFFF;
+}
+.container .section .list .member-items .control {
+  width: 30%;
+  float: right;
+  display: inline-block;
+}
+.container .section .list .member-items .control .btnop {
+  width: 47%;
+  padding: 8% 0%;
+  margin-left: 3%;
+  float: right;
+  display: inline-block;
+  font-family: "maledpan", sans-serif;
+  border: 0px;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 5px;
+  color: #999999;
+  border: 1px solid #DDDDDD;
+  line-height: 1em;
+}
+.container .section .list .member-items .control .btnop:hover {
+  cursor: pointer;
+  color: #333333;
+  border: 1px solid #AAAAAA;
+}
+.container .section .list .member-items .control .btnop i {
+  margin-left: 7px;
+}
+.container .section .list .member-items .control .btnop.btn-approve {
+  background: #2ecc71;
+  border: 1px solid #2ecc71;
+  color: #FFFFFF;
 }
 .container .section .list .file-items {
   width: 100%;
@@ -742,25 +847,11 @@ body {
   border-top: 2px dotted #e8e8e9;
   padding-top: 5%;
 }
-.container .article .download .filename {
-  width: 50%;
-  float: left;
-  display: inline-block;
-  padding: 3.5% 0%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: "maledpan", sans-serif;
-  letter-spacing: 1px;
-  color: #BBBBBB;
-}
-.container .article .download .filename:hover {
-  cursor: default;
-}
 .container .article .download a.btn-download {
   width: 30%;
   padding: 2% 5%;
   padding-top: 2.5%;
+  margin-left: 2%;
   float: right;
   display: inline-block;
   background: #2ecc71;
@@ -779,15 +870,23 @@ body {
   display: inline-block;
 }
 .container .article .download a.btn-download .d .caption {
-  display: block;
+  width: 100%;
+  float: left;
+  display: inline-block;
   font-size: 1.2em;
   margin-bottom: 3%;
   font-family: "maledpan", sans-serif;
   letter-spacing: 1px;
 }
 .container .article .download a.btn-download .d .size {
+  width: 100%;
+  float: left;
+  display: inline-block;
   font-size: 0.75em;
   margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .container .article .download a.btn-download i {
   width: 25%;
@@ -801,17 +900,25 @@ body {
   margin: 3% 35%;
   float: left;
   display: inline-block;
-  text-align: center;
-  margin-top: 18%;
+  margin-top: 14%;
 }
 .logout h2 {
-  font-size: 2.4em;
-  margin-bottom: 10%;
+  font-size: 2.8em;
   font-weight: normal;
-  color: #002e26;
+  color: #111111;
   font-family: "maledpan", sans-serif;
+  margin-bottom: 2%;
+}
+.logout p {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  font-family: "maledpan", sans-serif;
+  font-size: 1.2em;
+  color: #333333;
 }
 .logout a {
+  margin-top: 10%;
   display: inline-block;
   text-decoration: none;
   color: #333333;
@@ -1373,22 +1480,17 @@ body {
   .header .btn {
     padding: 16px 5%;
     height: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
   }
   .header .btn i {
-    float: left;
-    display: inline-block;
     font-size: 1.3em;
     margin-right: 7px;
     margin-top: -2px;
-    color: #111111;
   }
   .header .btn span {
     display: none;
   }
   .header .btn.btn-login i {
-    float: right;
-    margin-right: 0px;
     margin-left: 7px;
   }
   .header .title {
@@ -1575,7 +1677,6 @@ body {
     margin-bottom: 5%;
   }
   .container .article .download {
-    border-top: 2px dotted #e8e8e9;
     padding-top: 5%;
   }
   .container .article .download .filename {
@@ -1628,77 +1729,25 @@ body {
     margin: 3% 5%;
   }
   .form .form-items {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    margin-bottom: 2%;
-    box-sizing: border-box;
+    margin-bottom: 5%;
   }
   .form .form-items.middle {
     margin-top: 22%;
   }
-  .form .form-items.hidden {
-    display: none;
-  }
-  .form .form-items.control {
-    border-top: 3px solid #EAEAEA;
-    padding-top: 5%;
-  }
-  .form .form-items.delete-box {
-    padding: 5%;
-    margin-top: 5%;
-    border-radius: 5px;
-    background: #FFCDD2;
-  }
   .form .form-items.delete-box .msg {
-    width: 100%;
-    float: left;
-    display: inline-block;
     font-size: 1em;
-    margin-bottom: 3%;
-    color: #111111;
+    margin-bottom: 5%;
   }
   .form .form-items label {
-    width: 99%;
-    margin-left: 1%;
-    float: left;
-    display: inline-block;
     font-size: 1.1em;
-    color: #333333;
     margin-bottom: 1%;
-    font-family: "maledpan", sans-serif;
-  }
-  .form .form-items label:hover {
-    cursor: pointer;
-    color: #111111;
-  }
-  .form .form-items .inputfile {
-    display: none;
   }
   .form .form-items .inputtext,
   .form .form-items textarea {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    margin: 0;
     padding: 2.5% 3%;
     font-size: 1em;
     margin-bottom: 4%;
     line-height: 1.5em;
-    border-radius: 5px;
-    resize: none;
-    box-sizing: border-box;
-    color: #333333;
-    background: #e8e8e9;
-    border: 0;
-  }
-  .form .form-items .inputtext:hover,
-  .form .form-items textarea:hover {
-    cursor: pointer;
-  }
-  .form .form-items .inputtext:focus,
-  .form .form-items textarea:focus {
-    color: #111111;
   }
   .form .form-items .selection {
     width: 100%;
@@ -1707,146 +1756,49 @@ body {
     margin-bottom: 5%;
   }
   .form .form-items .selection .items {
-    width: 31.33%;
     padding: 5% 0%;
-    margin-right: 3%;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background: #eeeeee;
-    color: #666666;
-    border: 2px solid #eeeeee;
   }
   .form .form-items .selection .items i {
-    display: block;
     font-size: 2em;
     margin-bottom: 10px;
   }
   .form .form-items .selection .items span {
-    display: block;
     font-size: 1.1em;
-    font-family: "maledpan", sans-serif;
     letter-spacing: 1px;
   }
-  .form .form-items .selection .items:nth-child(3n+0) {
-    margin-right: 0%;
-  }
-  .form .form-items .selection .items:hover {
-    cursor: pointer;
-  }
-  .form .form-items .selection .items.active {
-    color: #27ae60;
-    background: #E8F5E9;
-    border: 2px solid #27ae60;
-    box-shadow: none;
-  }
   .form .form-items .select {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    position: relative;
     margin-bottom: 5%;
   }
   .form .form-items .select:after {
-    content: '';
-    border: 7px solid transparent;
-    border-top: 10px solid #666666;
-    position: absolute;
-    z-index: 2;
     top: 38%;
     right: 4%;
-    pointer-events: none;
   }
   .form .form-items .select select {
-    width: 100%;
-    margin: 0%;
     padding: 2.5% 3%;
-    float: left;
-    display: inline-block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 5px;
     font-size: 1em;
-    line-height: 1.5em;
-    color: #333333;
-    background: #e8e8e9;
-    border: 0;
-  }
-  .form .form-items .select select:hover {
-    cursor: pointer;
-    color: #111111;
   }
   .form .form-items .file-preview {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    text-align: center;
     padding: 15% 0%;
     margin-bottom: 5%;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background: #e8e8e9;
-    color: #666666;
   }
   .form .form-items .file-preview i {
-    display: block;
     font-size: 3em;
     margin-bottom: 2%;
   }
   .form .form-items .file-preview p {
-    display: block;
     font-size: 1.4em;
-    font-family: "maledpan", sans-serif;
     letter-spacing: 1px;
   }
   .form .form-items .file-preview .info {
     font-size: 1em;
-    color: #BBBBBB;
-  }
-  .form .form-items .file-preview:hover {
-    cursor: pointer;
-    color: #666666;
-  }
-  .form .form-items .file-preview:hover p {
-    text-decoration: underline;
   }
   .form .form-items button {
     padding: 3% 4%;
-    float: right;
-    display: inline-block;
     font-size: 1.1em;
-    border: 0px;
-    border-radius: 5px;
-    line-height: 1em;
-    background: #2ecc71;
-    background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
-    background: linear-gradient(to right, #2ecc71, #27ae60);
-    color: #FFFFFF;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-    font-family: "maledpan", sans-serif;
     letter-spacing: 1px;
-  }
-  .form .form-items button:hover {
-    cursor: pointer;
-    background: #66BB6A;
-  }
-  .form .form-items button.loading {
-    background: transparent;
-    box-shadow: none;
-    color: #333333;
   }
   .form .form-items button i {
     margin-left: 10px;
-  }
-  .form .form-items button.btn-delete {
-    float: left;
-    background: #C62828;
-  }
-  .form .form-items button.btn-delete:hover {
-    background: #B71C1C;
   }
   .login .welcome {
     width: 90%;

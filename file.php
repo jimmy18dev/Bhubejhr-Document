@@ -106,8 +106,6 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 </head>
 <body>
 <header class="header">
-	<!-- <a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a> -->
-
 	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
 		<img src="image/logo.png" alt="logo">
 		<div class="detail">
@@ -116,8 +114,8 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</a>
 
-	<?php if($document->privacy != 'onlyme'){?>
-	<div class="btn btn-qrcode" id="btn-qrcode"><i class="fa fa-qrcode" aria-hidden="true"></i>คิวอาร์โค้ด</div>
+	<?php if($user_online && $user->id == $document->owner_id){?>
+	<a href="document/edit/<?php echo $document->id;?>" class="btn btn-login">แก้ไข<i class="fa fa-cog" aria-hidden="true"></i></a>
 	<?php }?>
 </header>
 
@@ -125,13 +123,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <div id="progressbar"></div>
 
 <div class="container">
-	<div class="article">
-		<?php if($user_online && $user->id == $document->owner_id){?>
-		<div class="info">
-			<a href="document/edit/<?php echo $document->id;?>">แก้ไข<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-		</div>
-		<?php }?>
-		
+	<div class="article">		
 		<h1><?php echo $document->title;?></h1>
 		<p>
 			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
@@ -144,14 +136,23 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->id;?>" target="_blank">
+			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>
 					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
 				</div>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
-			<div class="filename" title="<?php echo $document->file_name;?>"><?php echo $document->file_name;?></div>
+
+			<?php if($document->privacy != 'onlyme'){?>
+			<a class="btn-download" href="#">
+				<div class="d">
+					<span class="caption">คิวอาร์โค้ด</span>
+					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
+				</div>
+				<i class="fa fa-qrcode" aria-hidden="true"></i>
+			</a>
+			<?php }?>
 		</div>
 	</div>
 </div>

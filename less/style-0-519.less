@@ -17,24 +17,17 @@
 	.btn{
 		padding: 16px 5%;
 		height: 18px;
-		letter-spacing: 1px;
+		letter-spacing: 0px;
 
 		i{
-			float: left;
-			display: inline-block;
 			font-size: 1.3em;
 			margin-right: 7px;
 			margin-top: -2px;
-			color: #111111;
 		}
 		span{ display: none; }
 
 		&.btn-login{
-			i{
-				float: right;
-				margin-right: 0px;
-				margin-left: 7px;
-			}
+			i{ margin-left: 7px; }
 		}
 	}
 
@@ -240,7 +233,6 @@
 		}
 
 		.download{
-			border-top: 2px dotted @border_color;
 			padding-top: 5%;
 
 			.filename{
@@ -302,69 +294,25 @@
 	margin: 3% 5%;
 
 	.form-items{
-		width: 100%;
-		float: left;
-		display: inline-block;
-		margin-bottom: 2%;
-		box-sizing: border-box;
+		margin-bottom: 5%;
 
 		&.middle{ margin-top: 22%; }
-		&.hidden{ display: none; }
-		&.control{
-			border-top: 3px solid #EAEAEA;
-			padding-top: 5%;
-		}
 		&.delete-box{
-			padding: 5%;
-			margin-top: 5%;
-			border-radius: 5px;
-			background: #FFCDD2;
-
 			.msg{
-				width: 100%;
-				float: left;
-				display: inline-block;
 				font-size: 1em;
-				margin-bottom: 3%;
-				color: #111111;
+				margin-bottom: 5%;
 			}
 		}
 
 		label{
-			width: 99%;
-			margin-left: 1%;
-			float: left;
-			display: inline-block;
 			font-size: 1.1em;
-			color: #333333;
 			margin-bottom: 1%;
-			font-family: @topic_font;
-
-			&:hover{
-				cursor: pointer;
-				color: #111111;
-			}
 		}
-
-		.inputfile{ display: none; }
 		.inputtext, textarea{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			margin: 0;
 			padding: 2.5% 3%;
 			font-size: 1em;
 			margin-bottom: 4%;
 			line-height: 1.5em;
-			border-radius: 5px;
-			resize: none;
-			box-sizing: border-box;
-			color: #333333;
-			background: @border_color;
-			border: 0;
-
-			&:hover{ cursor: pointer; }
-			&:focus{ color: #111111; }
 		}
 
 		.selection{
@@ -374,152 +322,55 @@
 			margin-bottom: 5%;
 
 			.items{
-				width: 31.33%;
 				padding: 5% 0%;
-				margin-right: 3%;
-				float: left;
-				display: inline-block;
-				text-align: center;
-				border-radius: 5px;
-				box-sizing: border-box;
-				background: @bg_gray;
-				color: @fontcolor_normal;
-				border: 2px solid @bg_gray;
 
 				i{
-					display: block;
 					font-size: 2em;
 					margin-bottom: 10px;
 				}
 
 				span{
-					display: block;
 					font-size: 1.1em;
-					font-family: @topic_font;
 					letter-spacing: 1px;
-				}
-				&:nth-child(3n+0){ margin-right: 0%; }
-				&:hover{ cursor: pointer; }
-
-				&.active{
-					color: @green_color_dark;
-					background: #E8F5E9;
-					border: 2px solid @green_color_dark;
-					box-shadow: none;
 				}
 			}
 		}
 
 		.select{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			position: relative;
 			margin-bottom: 5%;
 
 			&:after{
-				content: '';
-				border: 7px solid transparent;
-				border-top: 10px solid @fontcolor_normal;
-			    position: absolute;
-			    z-index: 2;
 			    top: 38%;
 			    right: 4%;
-			    pointer-events: none;
 			}
 			select{
-				width: 100%;
-			    margin: 0%;
 			    padding: 2.5% 3%;
-			    float: left;
-			    display: inline-block;
-			    -webkit-appearance: none;
-			    -moz-appearance: none;
-			    appearance: none;
-			    border-radius: 5px;
 				font-size: 1em;
-				line-height: 1.5em;
-				color: #333333;
-				background: @border_color;
-				border: 0;
-
-			    &:hover{
-			    	cursor: pointer;
-			    	color: #111111;
-			    }
 			}
 		}
 
 		.file-preview{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			text-align: center;
 			padding: 15% 0%;
 			margin-bottom: 5%;
-			border-radius: 5px;
-			box-sizing: border-box;
-			background: @border_color;
-			color: #666666;
 
 			i{
-				display: block;
 				font-size: 3em;
 				margin-bottom: 2%;
 			}
 			p{
-				display: block;
 				font-size: 1.4em;
-				font-family: @topic_font;
 				letter-spacing: 1px;
 			}
 
-			.info{
-				font-size: 1em;
-				color: #BBBBBB;
-			}
-
-			&:hover{
-				cursor: pointer;
-				color: @fontcolor_normal;
-
-				p{ text-decoration: underline; }
-			}
+			.info{ font-size: 1em; }
 		}
 
 		button{
 			padding: 3% 4%;
-			float: right;
-			display: inline-block;
 			font-size: 1.1em;
-			border: 0px;
-			border-radius: 5px;
-			line-height: 1em;
-			.bgGradient(@green_color,@green_color_dark);
-			color: #FFFFFF;
-			box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
-			font-family: @topic_font;
 			letter-spacing: 1px;
-
-			&:hover{
-				cursor: pointer;
-				background: #66BB6A;
-			}
-
-			&.loading{
-				background: transparent;
-				box-shadow: none;
-				color: #333333;
-			}
 			
 			i{ margin-left: 10px; }
-
-			&.btn-delete{
-				float: left;
-				background: #C62828;
-
-				&:hover{ background: #B71C1C; }
-			}
 		}
 	}
 }

@@ -6,7 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^category/([0-9]+)$ /category.php?id=$1 [L]
-RewriteRule ^download/([0-9]+)$ /download.php?id=$1 [L]
+RewriteRule ^download/([^_]*)$ /download.php?secret=$1 [L]
 RewriteRule ^document/([0-9]+)$ /file.php?id=$1 [L]
 RewriteRule ^document/edit/([0-9]+)$ /file-edit.php?id=$1 [L]
 RewriteRule ^document/privacy/([0-9]+)$ /privacy.php?id=$1 [L]
@@ -17,6 +17,7 @@ RewriteRule ^profile$ /profile.php [L]
 RewriteRule ^signin$ /login.php [L]
 RewriteRule ^signup$ /register.php [L]
 RewriteRule ^signout$ /logout.php [L]
+RewriteRule ^pending$ /pending.php [L]
 RewriteRule ^permission/error$ /permission.php [L]
 
 ErrorDocument 400     /error404.php

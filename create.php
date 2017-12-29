@@ -4,6 +4,9 @@ require_once 'autoload.php';
 if(!$user_online){
 	header('Location: '.DOMAIN.'/signin');
 	die();
+}else if($user->status != 'active'){
+	header('Location: '.DOMAIN.'/pending');
+	die();
 }
 
 $category_id = $_GET['category'];

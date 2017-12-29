@@ -13,6 +13,7 @@ class Document{
     public $edit_time;
     public $view;
     public $download;
+    public $secret;
     public $status;
     public $privacy;
 
@@ -83,8 +84,19 @@ class Document{
         $this->db->execute();
     }
 
+    public function getDocumentFromSecret($secret){
+        $this->db->query('SELECT id FROM document WHERE secret = :secret');
+        $this->db->bind(':secret',$secret);
+        $this->db->execute();
+        $dataset = $this->db->single();
+
+        $fileid = $dataset['id'];
+
+        $this->get($fileid);
+    }
+
     public function get($file_id){
-        $this->db->query('SELECT document.id file_id,document.user_id file_owner_id,CONCAT(user.fname," ",user.lname) file_owner_name,document.category_id file_category_id,category.name file_category_name,document.title file_title,document.description file_description,document.file_name,document.file_type,document.file_size,document.create_time file_create_time,document.edit_time file_edit_time,document.view file_view,document.download file_download,document.privacy file_privacy,document.status file_status 
+        $this->db->query('SELECT document.id file_id,document.user_id file_owner_id,CONCAT(user.fname," ",user.lname) file_owner_name,document.category_id file_category_id,category.name file_category_name,document.title file_title,document.description file_description,document.file_name,document.file_type,document.file_size,document.create_time file_create_time,document.edit_time file_edit_time,document.view file_view,document.download file_download,document.secret file_secret,document.privacy file_privacy,document.status file_status 
             FROM document AS document 
             LEFT JOIN user AS user ON document.user_id = user.id 
             LEFT JOIN category AS category ON document.category_id = category.id  WHERE document.id = :file_id');
@@ -106,6 +118,7 @@ class Document{
         $this->edit_time        = $this->db->datetimeformat($dataset['file_create_time'],'fulldate');
         $this->view             = $dataset['file_view'];
         $this->download         = $dataset['file_download'];
+        $this->secret           = $dataset['file_secret'];
         $this->status           = $dataset['file_status'];
         $this->privacy          = $dataset['file_privacy'];
     }
@@ -191,7 +204,7 @@ class Document{
 
         $now = date('Y-m-d H:i:s');
         
-        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time,edit_time) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time,:edit_time)');
+        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time,edit_time,secret) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time,:edit_time,:secret)');
         $this->db->bind(':user_id',$user_id);
         $this->db->bind(':category_id',$category_id);
         $this->db->bind(':title',$title);
@@ -201,6 +214,7 @@ class Document{
         $this->db->bind(':file_size',$file_size);
         $this->db->bind(':create_time',$now);
         $this->db->bind(':edit_time',$now);
+        $this->db->bind(':secret',md5(mt_rand(1,mt_getrandmax())));
         $this->db->execute();
         return $this->db->lastInsertId();
     }

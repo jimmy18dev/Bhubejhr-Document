@@ -73,7 +73,7 @@ $p_url 		= DOMAIN;
 <div class="container">
 	<div class="section">
 		<?php if(count($files) > 0){?>
-		<div class="topic">เอกสารล่าสุด</div>
+		<div class="topic">อัพโหลดล่าสุด</div>
 		<div class="list">
 			<?php
 			foreach ($files as $data)
