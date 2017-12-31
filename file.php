@@ -115,7 +115,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	</a>
 
 	<?php if($user_online && $user->id == $document->owner_id){?>
-	<a href="document/edit/<?php echo $document->id;?>" class="btn btn-login">แก้ไข<i class="fa fa-cog" aria-hidden="true"></i></a>
+	<a href="document/edit/<?php echo $document->id;?>" class="btn btn-login">แก้ไข<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
 </header>
 
@@ -136,7 +136,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
+			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>
 					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
@@ -145,13 +145,13 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 			</a>
 
 			<?php if($document->privacy != 'onlyme'){?>
-			<a class="btn-download" href="#">
+			<div class="btn btn-qrcode" id="btn-qrcode">
 				<div class="d">
 					<span class="caption">คิวอาร์โค้ด</span>
 					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
 				</div>
 				<i class="fa fa-qrcode" aria-hidden="true"></i>
-			</a>
+			</div>
 			<?php }?>
 		</div>
 	</div>

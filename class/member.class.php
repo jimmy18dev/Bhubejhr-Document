@@ -46,6 +46,13 @@ class Member{
         $this->db->execute();
     }
 
+    public function countPending(){
+        $this->db->query('SELECT COUNT(id) total FROM user WHERE status = "pending"');
+        $this->db->execute();
+        $dataset = $this->db->single();
+        return $dataset['total'];
+    }
+
     public function getUser($user_id){
         $this->db->query('SELECT id,phone,email,fname,lname,bio,password,salt,type,status,ip,register_time,edit_time,visit_time,fb_id,fb_fname,fb_lname,fb_link,gender FROM user WHERE id = :user_id');
         $this->db->bind(':user_id',$user_id);

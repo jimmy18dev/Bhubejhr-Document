@@ -6,21 +6,6 @@ $category = new Category();
 
 $files = $document->listAll(NULL,NULL,NULL);
 $categories = $category->listAll();
-
-// $feeds = $categories;
-// foreach ($feeds as $k => $var) {
-// 	$dataset = [];
-// 	foreach ($files as $i => $val) {
-// 		if($var['category_id'] == $val['file_category_id']){
-// 			array_push($dataset,$val);
-// 		}
-// 	}
-
-// 	$feeds[$k]['totalitems'] = count($dataset);
-
-// 	if(count($dataset)>0)
-// 		$feeds[$k]['dataset'] = $dataset;
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,15 +50,13 @@ $p_url 		= DOMAIN;
 <body>
 
 <?php include_once 'header.php';?>
-<div class="menu">
-	<a href="search.php" class="items btn-search"><i class="fa fa-search" aria-hidden="true"></i><span>ค้นหาไฟล์</span></a>
-	<a href="create/choose" class="items btn-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>อัพโหลด</span></a>
-	<a href="categories.php" class="items btn-category"><i class="fa fa-th-list" aria-hidden="true"></i><span>หมวดหมู่</span></a>
-</div>
 <div class="container">
 	<div class="section">
+		<div class="topic">
+			<div class="text">อัพโหลดล่าสุด</div>
+			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลด</a>
+		</div>
 		<?php if(count($files) > 0){?>
-		<div class="topic">อัพโหลดล่าสุด</div>
 		<div class="list">
 			<?php
 			foreach ($files as $data)

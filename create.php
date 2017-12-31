@@ -45,8 +45,8 @@ if(empty($category->id)){
 </head>
 <body>
 
-<header class="header light">
-	<a href="create/choose" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>เลือกประเภทใหม่</span></a>
+<header class="header">
+	<a href="create/choose" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>เลือกประเภทใหม่</span></a>
 	<div class="title">ประเภท: <?php echo $category->name;?></div>
 
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>

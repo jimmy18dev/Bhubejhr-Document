@@ -30,15 +30,16 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 <body>
 
 <header class="header fixed">
-	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<div class="title">เอกสารทั้งหมดของคุณ</div>
 </header>
-
-<?php if(count($files) > 0){?>
-<div class="headtopic">เอกสารทั้งหมดของคุณ</div>
-<?php }?>
 
 <div class="container">
 	<div class="section">
+		<div class="topic">
+			<div class="text">อัพโหลดล่าสุด</div>
+			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลด</a>
+		</div>
 		<?php if(count($files) > 0){?>
 		<div class="list">
 			<?php
@@ -56,8 +57,6 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
-<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>

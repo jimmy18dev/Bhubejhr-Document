@@ -2,13 +2,13 @@
 require_once 'autoload.php';
 
 if (!$user_online) {
-	header("Location:./login.php");
+	header("Location:./signin");
 	exit();
 }
-
-$document 	= new Document();
-$member 	= new Member();
-$files 		= $document->listAll(NULL,$user->id,NULL);
+if ($user->type != 'admin') {
+	header("Location:./permission.php");
+	exit();
+}
 $members = $member->listAll();
 ?>
 
@@ -32,12 +32,13 @@ $members = $member->listAll();
 <body>
 
 <header class="header fixed">
-	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 	<div class="title">ผู้ใช้งาน</div>
 </header>
 
-<div class="container margintop">
+<div class="container">
 	<div class="section">
+		<div class="topic"><?php echo count($members);?> รายการ</div>
 		<?php if(count($members) > 0){?>
 		<div class="list">
 			<?php

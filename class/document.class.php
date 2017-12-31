@@ -114,8 +114,8 @@ class Document{
         $this->file_name        = $dataset['file_name'];
         $this->file_type        = $this->docType($dataset['file_type']);
         $this->file_size        = $this->db->formatBytes($dataset['file_size']);
-        $this->create_time      = $this->db->datetimeformat($dataset['file_create_time'],'fulldate');
-        $this->edit_time        = $this->db->datetimeformat($dataset['file_create_time'],'fulldate');
+        $this->create_time      = $this->db->datetimeformat($dataset['file_create_time'],'shortdatetime');
+        $this->edit_time        = $this->db->datetimeformat($dataset['file_create_time'],'shortdatetime');
         $this->view             = $dataset['file_view'];
         $this->download         = $dataset['file_download'];
         $this->secret           = $dataset['file_secret'];

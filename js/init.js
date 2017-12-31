@@ -11,15 +11,7 @@ $(document).ready(function(){
 		if(current_id != 'btnProfile')
 			$menuProfile.removeClass('open');
 	});
-
-	$('#searchInput').focus(function(){
-		$('#tip').addClass('show');
-
-		$(this).blur(function(){
-			$('#tip').removeClass('show');
-		});		
-	});
-
+	
 	$btnProfile.click(function(){
 		$menuProfile.addClass('open');
 	});

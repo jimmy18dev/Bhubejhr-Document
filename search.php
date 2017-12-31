@@ -34,11 +34,11 @@ if(!empty($q) && isset($q)){
 </head>
 <body>
 
-<header class="header light">
-	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>หน้าแรก</a>
+<header class="header">
+	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 </header>
 
-<form class="search-form" action="search.php" method="GET">
+<form class="searchform" action="search.php" method="GET">
 	<div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
 	<input type="text" name="q" id="searchInput" class="inputtext" placeholder="ค้นหาเอกสาร" autofocus value="<?php echo $q;?>">
 	<div class="tip" id="tip">กด Enter เพิ่มค้นหา</div>
@@ -67,8 +67,6 @@ if(!empty($q) && isset($q)){
 <div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
-<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>

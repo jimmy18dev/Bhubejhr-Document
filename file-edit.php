@@ -46,7 +46,8 @@ if($user->id != $document->owner_id){
 </head>
 <body>
 
-<header class="header light">
+<header class="header">
+	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>หน้าแรก</a>
 	<div class="title">แก้ไขเอกสาร</div>
 	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
@@ -55,7 +56,6 @@ if($user->id != $document->owner_id){
 <div id="progressbar"></div>
 
 <div class="form" id="documentForm">
-
 	<div class="form-items">
 		<label for="">ชื่อไฟล์</label>
 		<input class="inputtext" type="text" id="title" value="<?php echo $document->title;?>">

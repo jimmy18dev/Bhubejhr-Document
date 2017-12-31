@@ -23,4 +23,11 @@ $user = new User;
 
 $user->sec_session_start();
 $user_online = $user->loginChecking();
+
+if($user->type == 'admin'){
+	$member = new Member();
+	$memberPending = $member->countPending();
+}else{
+	$memberPending = 0;
+}
 ?>

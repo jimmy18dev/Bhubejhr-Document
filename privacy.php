@@ -63,8 +63,6 @@ if($user->id != $document->owner_id){
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
-<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/document.js"></script>
 </body>

@@ -220,7 +220,7 @@ class User{
         $this->password       = $dataset['password'];
         $this->salt           = $dataset['salt'];
         $this->ip             = $dataset['ip'];
-        $this->register_time  = $dataset['register_time'];
+        $this->register_time  = $this->db->datetimeformat($dataset['register_time'],'fulldatetime');
         $this->visit_time     = $dataset['visit_time'];
         $this->edit_time     = $dataset['edit_time'];
         $this->type           = $dataset['type'];
