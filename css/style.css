@@ -149,13 +149,14 @@ body {
 .header {
   width: 100%;
   height: 50px;
+  padding: 5px 0px;
   float: left;
   display: inline-block;
-  z-index: 99;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
+  z-index: 50;
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
 }
 .header.fixed {
   position: fixed;
@@ -164,8 +165,9 @@ body {
   background: #FFFFFF;
 }
 .header.shadow {
-  background: #FAFAF9;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  background: #FEFEFD;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+  padding: 0%;
 }
 .header .search-form {
   width: 40%;
@@ -712,20 +714,18 @@ body {
 .container .section .list .choose-items:first-child {
   margin-top: 20%;
 }
-.container .section .list .choose-items:hover span {
-  text-decoration: underline;
+.container .section .list .choose-items:hover {
+  background: #e8e8e9;
 }
-.container .section .list .choose-items i.fa-circle,
-.container .section .list .choose-items i.fa-pencil {
-  width: 7%;
+.container .section .list .choose-items .icon {
+  width: 6%;
   float: left;
   display: inline-block;
-  font-size: 1.6em;
-  line-height: 1.7em;
+  font-size: 1.2em;
+  line-height: 2.2em;
   color: #666666;
 }
-.container .section .list .choose-items span,
-.container .section .list .choose-items .inputtext {
+.container .section .list .choose-items .name {
   width: 86%;
   float: left;
   display: inline-block;
@@ -738,19 +738,25 @@ body {
   padding: 0px;
   background: transparent;
 }
-.container .section .list .choose-items i.fa-angle-right,
-.container .section .list .choose-items i.fa-plus-circle {
-  width: 7%;
+.container .section .list .choose-items .name .inputtext {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  border: 0px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  background: transparent;
+  margin-top: 1%;
+}
+.container .section .list .choose-items .control {
+  width: 8%;
   float: right;
   display: inline-block;
-  font-size: 1.6em;
-  line-height: 1.7em;
-  color: #DDDDDD;
+  font-size: 1.7em;
+  line-height: 1.5em;
+  color: #BBBBBB;
   text-align: right;
   cursor: pointer;
-}
-.container .section .list .choose-items i.fa-plus-circle {
-  color: #2ecc71;
 }
 .container .section .starter {
   width: 100%;
@@ -870,14 +876,12 @@ body {
   background: linear-gradient(to right, #2ecc71, #27ae60);
 }
 .container .article .download .btn.btn-qrcode {
-  background: #f39c12;
-  background: -webkit-linear-gradient(to right, #f39c12, #f1c40f);
-  background: linear-gradient(to right, #f39c12, #f1c40f);
+  background: #e8e8e9;
+  color: #666666;
 }
 .container .article .download .btn:hover {
   cursor: pointer;
   transform: translateY(-2px);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 .container .article .download .btn .d {
   width: 75%;
@@ -1356,7 +1360,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 99;
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s ease-in-out;
@@ -1381,7 +1385,7 @@ body {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
-  z-index: 50;
+  z-index: 120;
   opacity: 0;
   visibility: hidden;
   font-family: "maledpan", sans-serif;
@@ -1432,6 +1436,125 @@ body {
 }
 .qrcode-dialog .control .btn.btn-close {
   color: #666666;
+}
+.formdialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26%;
+  margin: 0% 37%;
+  margin-top: 5%;
+  float: left;
+  display: inline-block;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 120;
+  opacity: 0;
+  visibility: hidden;
+  font-family: "maledpan", sans-serif;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.formdialog.open {
+  opacity: 1;
+  visibility: visible;
+}
+.formdialog .head {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  font-size: 1.2em;
+  color: #999999;
+}
+.formdialog .head .text {
+  padding: 2% 5%;
+  float: left;
+  display: inline-block;
+}
+.formdialog .head .btn {
+  padding: 2% 5%;
+  float: right;
+  display: inline-block;
+  color: #BBBBBB;
+}
+.formdialog .head .btn:hover {
+  cursor: pointer;
+}
+.formdialog .content {
+  width: 90%;
+  padding: 5%;
+  float: left;
+  display: inline-block;
+}
+.formdialog .content label {
+  width: 99%;
+  margin-left: 1%;
+  float: left;
+  display: inline-block;
+  margin-bottom: 2%;
+  color: #111111;
+  font-size: 1.1em;
+}
+.formdialog .content .inputtext {
+  width: 90%;
+  padding: 3% 5%;
+  float: left;
+  display: inline-block;
+  border: 0px;
+  margin: 0px;
+  font-size: 1.1em;
+  background: #eeeeee;
+  border-radius: 5px;
+  color: #333333;
+}
+.formdialog .content .inputtext:hover {
+  cursor: pointer;
+}
+.formdialog .content .inputtext:focus {
+  color: #111111;
+}
+.formdialog .control {
+  width: 90%;
+  margin: 5%;
+  margin-top: 0%;
+  padding-top: 5%;
+  float: left;
+  display: inline-block;
+  border-top: 1px solid #e8e8e9;
+}
+.formdialog .control button {
+  float: left;
+  display: inline-block;
+  font-size: 1.2em;
+  font-family: "maledpan", sans-serif;
+  line-height: 1em;
+  padding: 3% 6%;
+  border: 0px;
+  margin: 0px;
+  background: transparent;
+  border-radius: 5px;
+  color: #999999;
+}
+.formdialog .control button i {
+  margin-right: 10px;
+}
+.formdialog .control button:hover {
+  cursor: pointer;
+}
+.formdialog .control button:active {
+  background: #e8e8e9;
+}
+.formdialog .control button.delete {
+  color: #F44336;
+}
+.formdialog .control button.save {
+  float: right;
+  background: #2ecc71;
+  color: #FFFFFF;
 }
 #progressbar {
   position: fixed;

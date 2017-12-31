@@ -42,23 +42,43 @@ $categories = $category->listAll();
 	<div class="section">
 		<div class="list">
 			 <div class="choose-items">
-			 	<i class="fa fa-pencil" aria-hidden="true"></i>
-			 	<input class="inputtext" id="new_category_name" type="text" placeholder="ตั้งชื่อประเภท..." autofocus>
-			 	<i class="fa fa-plus-circle" aria-hidden="true" id="btnCreateCategory"></i>
+			 	<div class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+			 	<div class="name">
+			 		<input class="inputtext" id="new_category_name" type="text" placeholder="ตั้งชื่อประเภท..." autofocus>
+			 	</div>
+			 	<div class="control"><i class="fa fa-plus-circle" aria-hidden="true" id="btnCreateCategory"></i></div>
 			 </div>
 			<?php foreach ($categories as $var) { ?>
-			<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">
-				<i class="fa fa-circle" aria-hidden="true"></i>
+			<div class="choose-items style<?php echo $var['category_id'];?>" data-id="<?php echo $var['category_id'];?>">
+				<div class="icon"><i class="fa fa-circle" aria-hidden="true"></i></div>
 				<span class="name"><?php echo $var['category_name'];?></span>
-				<div class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-			</a>
+				<div class="control btn-edit-category">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				</div>
+			</div>
 			<?php }?>
 		</div>
 	</div>
 </div>
 
+<div class="formdialog" id="categoryFormDialog">
+	<div class="head">
+		<div class="text">แก้ไข</div>
+		<div class="btn" id="btnCloseCategoryForm"><i class="fa fa-close" aria-hidden="true"></i></div>
+	</div>
+	<div class="content">
+		<label for="category_name">ชื่อประเภทเอกสาร</label>
+		<input type="text" class="inputtext" id="category_name">
+		<input type="hidden" id="category_id">
+	</div>
+	<div class="control">
+		<button id="btnDeleteCategory" class="delete">ลบรายการนี้</button>
+		<button id="btnSaveCategory" class="save"><i class="fa fa-check" aria-hidden="true"></i>บันทึก</button>
+	</div>
+</div>
+
 <div id="progressbar"></div>
+<div class="overlay"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

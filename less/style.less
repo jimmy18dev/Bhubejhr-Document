@@ -4,10 +4,11 @@
 .header{
 	width: 100%;
 	height: 50px;
+	padding: 5px 0px;
 	float: left;
 	display: inline-block;
-	z-index: 99;
-	.transitionAnimation(0.2s);
+	z-index: 50;
+	.transitionAnimation(0.1s);
 
 	&.fixed{
 		position: fixed;
@@ -17,8 +18,9 @@
 	}
 
 	&.shadow{
-		background: #FAFAF9;
-		box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+		background: #FEFEFD;
+		box-shadow: 0px 1px 15px rgba(0,0,0,0.2);
+		padding: 0%;
 	}
 
 	.search-form{
@@ -598,18 +600,20 @@
 				border-radius: 5px;
 
 				&:first-child{ margin-top: 20%; }
-				&:hover span{ text-decoration: underline; }
+				&:hover{
+					background: @border_color;
+				}
 
-				i.fa-circle, i.fa-pencil{
-					width: 7%;
+				.icon{
+					width: 6%;
 					float: left;
 					display: inline-block;
-					font-size: 1.6em;
-					line-height: 1.7em;
+					font-size: 1.2em;
+					line-height: 2.2em;
 					color: #666666;
 				}
 
-				span , .inputtext{
+				.name{
 					width: 86%;
 					float: left;
 					display: inline-block;
@@ -621,20 +625,29 @@
 					margin: 0px;
 					padding: 0px;
 					background: transparent;
+
+					.inputtext{
+						width: 100%;
+						float: left;
+						display: inline-block;
+						border: 0px;
+						font-size: 1.1em;
+						line-height: 1.5em;
+						background: transparent;
+						margin-top: 1%;
+					}
 				}
 
-				i.fa-angle-right , i.fa-plus-circle{
-					width: 7%;
+				.control{
+					width: 8%;
 					float: right;
 					display: inline-block;
-					font-size: 1.6em;
-					line-height: 1.7em;
-					color: #DDDDDD;
+					font-size: 1.7em;
+					line-height: 1.5em;
+					color: #BBBBBB;
 					text-align: right;
 					cursor: pointer;
 				}
-
-				i.fa-plus-circle{ color: @green_color; }
 			}
 		}
 
@@ -750,13 +763,13 @@
 					.bgGradient(@green_color,@green_color_dark);
 				}
 				&.btn-qrcode{
-					.bgGradient(#f39c12,#f1c40f);
+					background: @border_color;
+					color: #666666;
 				}
 
 				&:hover{
 					cursor: pointer;
 					transform: translateY(-2px);
-					box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 				}
 
 				.d{
@@ -1240,7 +1253,7 @@
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.5);
-	z-index: 10;
+	z-index: 99;
 	visibility: hidden;
 	opacity: 0;
 
@@ -1265,7 +1278,7 @@
 	box-shadow: 0px 5px 30px rgba(0,0,0,0.1);
 	border-radius: 5px;
 	overflow: hidden;
-	z-index: 50;
+	z-index: 120;
 	opacity: 0;
 	visibility: hidden;
 	font-family: @topic_font;
@@ -1314,6 +1327,120 @@
 			}
 
 			&.btn-close{ color: @fontcolor_normal; }
+		}
+	}
+}
+
+.formdialog{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 26%;
+	margin: 0% 37%;
+	margin-top: 5%;
+	float: left;
+	display: inline-block;
+	background: #FFFFFF;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 120;
+	opacity: 0;
+	visibility: hidden;
+	font-family: @topic_font;
+	.transitionAnimation(0.2s);
+
+	&.open{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.head{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		font-size: 1.2em;
+		color: #999999;
+
+		.text{
+			padding: 2% 5%;
+			float: left;
+			display: inline-block;
+		}
+		.btn{
+			padding: 2% 5%;
+			float: right;
+			display: inline-block;
+			color: #BBBBBB;
+
+			&:hover{ cursor: pointer; }
+		}
+	}
+
+	.content{
+		width: 90%;
+		padding: 5%;
+		float: left;
+		display: inline-block;
+
+		label{
+			width: 99%;
+			margin-left: 1%;
+			float: left;
+			display: inline-block;
+			margin-bottom: 2%;
+			color: #111111;
+			font-size: 1.1em;
+		}
+
+		.inputtext{
+			width: 90%;
+			padding: 3% 5%;
+			float: left;
+			display: inline-block;
+			border: 0px;
+			margin: 0px;
+			font-size: 1.1em;
+			background: @bg_gray;
+			border-radius: 5px;
+			color: #333333;
+
+			&:hover{ cursor: pointer; }
+			&:focus{ color: #111111; }
+		}
+	}
+
+	.control{
+		width: 90%;
+		margin: 5%;
+		margin-top: 0%;
+		padding-top: 5%;
+		float: left;
+		display: inline-block;
+		border-top: 1px solid @border_color;
+
+		button{
+			float: left;
+			display: inline-block;
+			font-size: 1.2em;
+			font-family: @topic_font;
+			line-height: 1em;
+			padding: 3% 6%;
+			border: 0px;
+			margin: 0px;
+			background: transparent;
+			border-radius: 5px;
+			color: #999999;
+
+			i{ margin-right: 10px; }
+			&:hover{ cursor: pointer; }
+			&:active{ background: @border_color; }
+			&.delete{ color: #F44336; }
+			&.save{
+				float: right;
+				background: @green_color;
+				color: #FFFFFF;
+			}
 		}
 	}
 }
