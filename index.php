@@ -53,7 +53,7 @@ $p_url 		= DOMAIN;
 <div class="container">
 	<div class="section">
 		<div class="topic">
-			<div class="text">อัพโหลดล่าสุด</div>
+			<div class="text">รายการล่าสุด</div>
 			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลด</a>
 		</div>
 		<?php if(count($files) > 0){?>

@@ -36,8 +36,8 @@
 
 			<?php if($user->type == 'admin'){?>
 			<div class="caption">ผู้ดูแลระบบ</div>
-			<a href="admin-member-list.php"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
-			<a href="admin-category.php"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
+			<a href="admin/member"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
+			<a href="admin/category"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
 			<?php }?>
 		</div>
 	</div>

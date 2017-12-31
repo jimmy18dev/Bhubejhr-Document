@@ -19,6 +19,8 @@ RewriteRule ^signup$ /register.php [L]
 RewriteRule ^signout$ /logout.php [L]
 RewriteRule ^pending$ /pending.php [L]
 RewriteRule ^permission/error$ /permission.php [L]
+RewriteRule ^admin/category$ /admin-category.php [L]
+RewriteRule ^admin/member$ /admin-member-list.php [L]
 
 ErrorDocument 400     /error404.php
 ErrorDocument 401     /error404.php
