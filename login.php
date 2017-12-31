@@ -21,7 +21,7 @@ $currentPage = 'login';
 <meta name="viewport" content="initial-scale=1,maximum-scale=1">
 
 <?php
-$p_title 	= 'เข้าสู่ระบบ '.TITLE;
+$p_title 	= 'ลงชื่อเข้าใช้ '.TITLE;
 $p_desc 	= DESCRIPTION;
 $p_url 		= DOMAIN.'/signin';
 ?>
@@ -57,17 +57,17 @@ $p_url 		= DOMAIN.'/signin';
 	</div>
 	<div class="content">
 		<div class="nav">
-			<a class="<?php echo ($currentPage=='login'?'active':'');?>" href="signin?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-sign-in" aria-hidden="true"></i>เข้าระบบ</a>
+			<a class="<?php echo ($currentPage=='login'?'active':'');?>" href="signin?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-sign-in" aria-hidden="true"></i>ลงชื่อเข้าใช้</a>
 			<a class="<?php echo ($currentPage=='register'?'active':'');?>" href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-user-plus" aria-hidden="true"></i>ลงทะเบียนใหม่</a>
 		</div>
-		<button class="btn btn-facebook" onclick="javascript:facebookLogin();"><i class="fa fa-facebook" aria-hidden="true"></i>เข้าระบบด้วย Facebook</button>
+		<button class="btn btn-facebook" onclick="javascript:facebookLogin();"><i class="fa fa-facebook" aria-hidden="true"></i>ลงชื่อเข้าใช้ด้วย Facebook</button>
 		<div class="line"><span>หรือ</span></div>
 		<form action="javascript:login();">
-			<input type="phone" class="inputtext" id="username" placeholder="ที่อยู่อีเมล หรือ เบอร์โทรศัพท์" required autofocus>
+			<input type="phone" class="inputtext" id="username" placeholder="ที่อยู่อีเมลหรือเบอร์โทรศัพท์" required autofocus>
 			<input type="password" class="inputtext" id="password" placeholder="รหัสผ่าน" required>
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('login',SECRET_KEY);?>">
 			<input type="hidden" id="redirect" value="<?php echo $_GET['redirect'];?>">
-			<button type="btn" class="btn btn-submit" id="btnSubmit">เข้าสู่ระบบ<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงชื่อเข้าใช้งาน<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 		</form>
 	</div>
 </div>

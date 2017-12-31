@@ -13,12 +13,12 @@
 	<?php if($user->id != $data['id']){?>
 	<div class="control">
 		<?php if($data['status'] == 'active'){?>
-		<button class="btnop btn-lock" data-op="lock">Lock<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+		<button class="btnop btn-lock" data-op="lock">ระงับ<i class="fa fa-angle-right" aria-hidden="true"></i></button>
 		<?php }else if($data['status'] == 'reject'){?>
-		<button class="btnop btn-approve" data-op="approve">Recovery</button>
+		<button class="btnop btn-approve" data-op="approve">อนุญาตใหม่</button>
 		<?php }else{?>
-		<button class="btnop btn-approve" data-op="approve">Approve</button>
-		<button class="btnop btn-reject" data-op="reject">Reject</button>
+		<button class="btnop btn-approve" data-op="approve">อนุญาต</button>
+		<button class="btnop btn-reject" data-op="reject">เพิกเฉย</button>
 		<?php }?>
 	</div>
 	<?php }?>

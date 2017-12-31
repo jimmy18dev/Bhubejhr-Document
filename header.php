@@ -32,17 +32,18 @@
 			<a href="profile"><i class="fa fa-file-text" aria-hidden="true"></i>เอกสารของฉัน</a>
 			<?php }?>
 
+			<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>
+
 			<?php if($user->type == 'admin'){?>
+			<div class="caption">ผู้ดูแลระบบ</div>
 			<a href="admin-member-list.php"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
 			<a href="admin-category.php"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
 			<?php }?>
-
-			<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>
 		</div>
 	</div>
 	<!-- <a href="create/choose" class="btn btn-upload"><i class="fa fa-plus" aria-hidden="true"></i><span>อัพโหลด</span></a> -->
 	<?php }else{?>
-	<a href="signin" class="btn btn-login">เข้าระบบ<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
 
 	<!-- <a href="search.php" class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i><span>ค้นหา</span></a> -->

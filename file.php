@@ -157,12 +157,16 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	</div>
 </div>
 
-<div class="qrcode-dialog" id="qrcode-dialog">
-	<div class="head">สแกนคิวอาร์โค้ดเพื่อเข้าถึงไฟล์นี้</div>
-	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
+<div class="dialog" id="qrcode-dialog">
+	<div class="head">
+		<div class="text">คิวอาร์โค้ด</div>
+		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
+	</div>
+	<div class="content">
+		<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
+	</div>
 	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn">บันทึกลงเครื่อง</a>
-		<div class="btn btn-close">ปิดหน้าต่าง</div>
+		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn save"><i class="fa fa-floppy-o" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
 

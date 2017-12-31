@@ -61,7 +61,7 @@ $categories = $category->listAll();
 	</div>
 </div>
 
-<div class="formdialog" id="categoryFormDialog">
+<div class="dialog" id="categoryFormDialog">
 	<div class="head">
 		<div class="text">แก้ไข</div>
 		<div class="btn" id="btnCloseCategoryForm"><i class="fa fa-close" aria-hidden="true"></i></div>
@@ -72,8 +72,8 @@ $categories = $category->listAll();
 		<input type="hidden" id="category_id">
 	</div>
 	<div class="control">
-		<button id="btnDeleteCategory" class="delete">ลบรายการนี้</button>
-		<button id="btnSaveCategory" class="save"><i class="fa fa-check" aria-hidden="true"></i>บันทึก</button>
+		<button id="btnDeleteCategory" class="btn delete">ลบรายการนี้</button>
+		<button id="btnSaveCategory" class="btn save"><i class="fa fa-check" aria-hidden="true"></i>บันทึก</button>
 	</div>
 </div>
 
