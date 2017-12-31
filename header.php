@@ -34,6 +34,7 @@
 
 			<?php if($user->type == 'admin'){?>
 			<a href="admin-member-list.php"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
+			<a href="admin-category.php"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
 			<?php }?>
 
 			<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>

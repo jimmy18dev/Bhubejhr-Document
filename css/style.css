@@ -700,7 +700,7 @@ body {
   color: #CCCCCC;
   text-align: right;
 }
-.container .section .list a.choose-items {
+.container .section .list .choose-items {
   width: 94%;
   padding: 1% 3%;
   float: left;
@@ -709,13 +709,14 @@ body {
   margin-bottom: 1%;
   border-radius: 5px;
 }
-.container .section .list a.choose-items:first-child {
+.container .section .list .choose-items:first-child {
   margin-top: 20%;
 }
-.container .section .list a.choose-items:hover span {
+.container .section .list .choose-items:hover span {
   text-decoration: underline;
 }
-.container .section .list a.choose-items i.fa-circle {
+.container .section .list .choose-items i.fa-circle,
+.container .section .list .choose-items i.fa-pencil {
   width: 7%;
   float: left;
   display: inline-block;
@@ -723,7 +724,8 @@ body {
   line-height: 1.7em;
   color: #666666;
 }
-.container .section .list a.choose-items span {
+.container .section .list .choose-items span,
+.container .section .list .choose-items .inputtext {
   width: 86%;
   float: left;
   display: inline-block;
@@ -731,8 +733,13 @@ body {
   line-height: 2em;
   font-family: "maledpan", sans-serif;
   color: #111111;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
 }
-.container .section .list a.choose-items i.fa-angle-right {
+.container .section .list .choose-items i.fa-angle-right,
+.container .section .list .choose-items i.fa-plus-circle {
   width: 7%;
   float: right;
   display: inline-block;
@@ -740,6 +747,10 @@ body {
   line-height: 1.7em;
   color: #DDDDDD;
   text-align: right;
+  cursor: pointer;
+}
+.container .section .list .choose-items i.fa-plus-circle {
+  color: #2ecc71;
 }
 .container .section .starter {
   width: 100%;

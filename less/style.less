@@ -588,7 +588,7 @@
 				}
 			}
 
-			a.choose-items{
+			.choose-items{
 				width: 94%;
 				padding: 1% 3%;
 				float: left;
@@ -600,7 +600,7 @@
 				&:first-child{ margin-top: 20%; }
 				&:hover span{ text-decoration: underline; }
 
-				i.fa-circle{
+				i.fa-circle, i.fa-pencil{
 					width: 7%;
 					float: left;
 					display: inline-block;
@@ -609,7 +609,7 @@
 					color: #666666;
 				}
 
-				span{
+				span , .inputtext{
 					width: 86%;
 					float: left;
 					display: inline-block;
@@ -617,9 +617,13 @@
 					line-height: 2em;
 					font-family: @topic_font;
 					color: #111111;
+					border: 0px;
+					margin: 0px;
+					padding: 0px;
+					background: transparent;
 				}
 
-				i.fa-angle-right{
+				i.fa-angle-right , i.fa-plus-circle{
 					width: 7%;
 					float: right;
 					display: inline-block;
@@ -627,7 +631,10 @@
 					line-height: 1.7em;
 					color: #DDDDDD;
 					text-align: right;
+					cursor: pointer;
 				}
+
+				i.fa-plus-circle{ color: @green_color; }
 			}
 		}
 
