@@ -1409,12 +1409,15 @@ body {
   color: #999999;
 }
 .dialog .head .text {
-  padding: 2% 5%;
+  padding: 3.5% 5%;
   float: left;
   display: inline-block;
 }
+.dialog .head .text:hover {
+  cursor: default;
+}
 .dialog .head .btn {
-  padding: 2% 5%;
+  padding: 3.5% 5%;
   float: right;
   display: inline-block;
   color: #BBBBBB;
