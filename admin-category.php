@@ -33,31 +33,30 @@ $categories = $category->listAll();
 </head>
 <body>
 
-<header class="header fixed">
+<header class="header shadow">
 	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 	<div class="title">ประเภทเอกส่าร</div>
 </header>
 
-<div class="container">
-	<div class="section">
-		<div class="list">
-			 <div class="choose-items">
-			 	<div class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></div>
-			 	<div class="name">
-			 		<input class="inputtext" id="new_category_name" type="text" placeholder="ตั้งชื่อประเภท..." autofocus>
-			 	</div>
-			 	<div class="control"><i class="fa fa-plus-circle" aria-hidden="true" id="btnCreateCategory"></i></div>
-			 </div>
-			<?php foreach ($categories as $var) { ?>
-			<div class="choose-items style<?php echo $var['category_id'];?>" data-id="<?php echo $var['category_id'];?>">
-				<div class="icon"><i class="fa fa-circle" aria-hidden="true"></i></div>
-				<span class="name"><?php echo $var['category_name'];?></span>
-				<div class="control btn-edit-category">
-					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-				</div>
+<div class="container nomargin">
+	<div class="list">
+		<div class="choose-items">
+			<div class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+			<div class="name">
+				<input class="inputtext" id="new_category_name" type="text" placeholder="ตั้งชื่อประเภท..." autofocus>
 			</div>
-			<?php }?>
+			<div class="control"><i class="fa fa-plus-circle" aria-hidden="true" id="btnCreateCategory"></i></div>
 		</div>
+
+		<?php foreach ($categories as $var) { ?>
+		<div class="choose-items style<?php echo $var['category_id'];?>" data-id="<?php echo $var['category_id'];?>">
+			<div class="icon"><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<span class="name"><?php echo $var['category_name'];?></span>
+			<div class="control btn-edit-category">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+			</div>
+		</div>
+		<?php }?>
 	</div>
 </div>
 

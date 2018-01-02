@@ -7,11 +7,11 @@
 		</div>
 	</a>
 
-	<form class="search-form" action="search.php" method="GET">
+	<!-- <form class="search-form <?php echo ($user_online?'fullsize':'');?>" action="search.php" method="GET">
 		<div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
 		<input type="text" name="q" class="inputtext" placeholder="ค้นหาเอกสาร" maxlength="30" autofocus value="<?php echo $q;?>">
 		<div class="tip" id="tip">กด Enter เพิ่มค้นหา</div>
-	</form>
+	</form> -->
 
 	<?php if($user_online){?>
 	<div class="btn-profile" id="btnProfile">
@@ -46,7 +46,7 @@
 	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
 
-	<!-- <a href="search.php" class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i><span>ค้นหา</span></a> -->
+	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
 </header>
 
 <div class="overlay"></div>

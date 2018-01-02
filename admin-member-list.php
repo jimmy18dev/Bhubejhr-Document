@@ -31,28 +31,26 @@ $members = $member->listAll();
 </head>
 <body>
 
-<header class="header fixed">
+<header class="header shadow">
 	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 	<div class="title">ผู้ใช้งาน</div>
 </header>
 
-<div class="container">
-	<div class="section">
-		<div class="topic"><?php echo count($members);?> รายการ</div>
-		<?php if(count($members) > 0){?>
-		<div class="list">
-			<?php
-			foreach ($members as $data)
-				include 'template/member.items.php';
-			?>
-		</div>
-		<?php }else{?>
-		<div class="starter">
-			<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลดไฟล์</a>
-		</div>
-		<?php }?>
+<div class="container nomargin">
+	<div class="topic"><?php echo count($members);?> รายการ</div>
+	<?php if(count($members) > 0){?>
+	<div class="list">
+		<?php
+		foreach ($members as $data)
+			include 'template/member.items.php';
+		?>
 	</div>
+	<?php }else{?>
+	<div class="starter">
+		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
+		<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลดไฟล์</a>
+	</div>
+	<?php }?>
 </div>
 
 <div id="progressbar"></div>

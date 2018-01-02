@@ -56,24 +56,20 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 </head>
 <body>
 
-<header class="header fixed">
+<header class="header shadow">
 	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 	<div class="title"><?php echo $category->name;?></div>
 </header>
-<div class="container">
-	<div class="section">
-		<div class="topic">
-			<div class="text"><?php echo count($files);?> รายการ</div>
-		</div>
-		<div class="list">
-			<?php
-			if(count($files) > 0){
-				foreach ($files as $data)
-					include 'template/file.items.php';
-			}else
-				include 'template/empty.items.php';
-			?>
-		</div>
+<div class="container nomargin">
+	<div class="topic"><?php echo count($files);?> รายการ</div>
+	<div class="list">
+		<?php
+		if(count($files) > 0){
+			foreach ($files as $data)
+				include 'template/file.items.php';
+		}else
+			include 'template/empty.items.php';
+		?>
 	</div>
 </div>
 

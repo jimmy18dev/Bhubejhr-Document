@@ -50,26 +50,40 @@ $p_url 		= DOMAIN;
 <body>
 
 <?php include_once 'header.php';?>
-<div class="container">
-	<div class="section">
-		<div class="topic">
-			<div class="text">รายการล่าสุด</div>
-			<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลด</a>
-		</div>
-		<?php if(count($files) > 0){?>
-		<div class="list">
-			<?php
-			foreach ($files as $data)
-				include 'template/file.items.php';
-			?>
-		</div>
+<div class="cover">
+	<?php if(DEVICE_TYPE == 'Mobile'){?>
+	<img src="image/cover_square.jpg" alt="">
+	<?php }else{?>
+	<img src="image/cover.jpg" alt="">
+	<?php }?>
+	<div class="filter"></div>
+	<div class="welcome">
+		<h1>ระบบเอกสารออนไลน์</h1>
+		<p>โรงพยาบาลเจ้าพระยาอภัยภูเบศร จ.ปราจีนบุรี</p>
+		
+		<?php if(!$user_online){?>
+		<a href="signup">ลงทะเบียน<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<?php }else{?>
-		<div class="starter">
-			<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-			<a href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
-		</div>
+		<a href="create/choose">อัพโหลด<i class="fa fa-plus" aria-hidden="true"></i></a>
 		<?php }?>
 	</div>
+</div>
+<div class="container nomargin">
+	<div class="topic">รายการล่าสุด</div>
+	
+	<?php if(count($files) > 0){?>
+	<div class="list">
+		<?php
+		foreach ($files as $data)
+			include 'template/file.items.php';
+		?>
+	</div>
+	<?php }else{?>
+	<div class="starter">
+		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
+		<a href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
+	</div>
+	<?php }?>
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>

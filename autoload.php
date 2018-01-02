@@ -17,9 +17,18 @@ require_once 'class/keyword.class.php';
 require_once 'class/document.class.php';
 require_once 'class/user.class.php';
 require_once 'class/member.class.php';
+include_once 'plugin/mobile-detect/mobile_detect.php';
+include_once 'plugin/mobile-detect/desktop_detect.php';
 
-$wpdb = new Database; // DATABASE CONNECT...
-$user = new User;
+$wpdb 		= new Database; // DATABASE CONNECT...
+$user 		= new User;
+$detect 	= new Mobile_Detect;
+include_once 'plugin/mobile-detect/device.access.php';
+// Device define data
+define('DEVICE_TYPE',		$deviceType);
+define('DEVICE_MODEL',		$deviceModel);
+define('DEVICE_OS', 		$deviceOS);
+define('DEVICE_BROWSER',	$deviceBrowser);
 
 $user->sec_session_start();
 $user_online = $user->loginChecking();

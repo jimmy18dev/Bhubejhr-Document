@@ -34,24 +34,18 @@ $categories = $category->listAll();
 
 <header class="header">
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
-	<div class="title">กรุณาเลือกประเภท...</div>
+	<div class="title">เลือกประเภทเอกสาร...</div>
 </header>
 
 <div class="container">
-	<div class="section">
-		<div class="list">
-			<?php foreach ($categories as $var) { ?>
-			<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">
-				<div class="icon">
-					<i class="fa fa-circle" aria-hidden="true"></i>
-				</div>
-				<span class="name"><?php echo $var['category_name'];?></span>
-				<div class="control">
-					<i class="fa fa-angle-right" aria-hidden="true"></i>
-				</div>
-			</a>
-			<?php }?>
-		</div>
+	<div class="list">
+		<?php foreach ($categories as $var) { ?>
+		<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">
+			<div class="icon"><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<span class="name"><?php echo $var['category_name'];?></span>
+			<div class="control"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+		</a>
+		<?php }?>
 	</div>
 </div>
 

@@ -43,7 +43,8 @@ if(!empty($q) && isset($q)){
 	<input type="text" name="q" id="searchInput" class="inputtext" placeholder="ค้นหาเอกสาร" autofocus value="<?php echo $q;?>">
 	<div class="tip" id="tip">กด Enter เพิ่มค้นหา</div>
 </form>
-<div class="container">
+
+<div class="container nomargin">
 	<div class="section">
 		<?php if(count($files) > 0){?>
 		<div class="topic">พบ <?php echo count($files);?> รายการ</div>

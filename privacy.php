@@ -47,22 +47,41 @@ if($user->id != $document->owner_id){
 
 <div class="form">
 	<div class="form-items middle">
-		<label for="">สิทธิ์เข้าถึง</label>
+		<label for="">สิทธิ์เข้าถึงเอกสารนี้</label>
 		<div class="selection">
-			<div class="items privacy-items" id="privacy-public" data-v="public"><i class="fa fa-globe" aria-hidden="true"></i><span>สาธารณะ</span></div>
-			<div class="items privacy-items" id="privacy-member" data-v="member"><i class="fa fa-user" aria-hidden="true"></i><span>สมาชิกเท่านั้น</span></div>
-			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme"><i class="fa fa-lock" aria-hidden="true"></i><span>เฉพาะฉัน</span></div>
+			<div class="items privacy-items" id="privacy-public" data-v="public">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">สาธารณะ</div>
+					<div class="c">ใครก็สามารถเห็นไฟล์นี้ได้</div>
+				</div>
+			</div>
+			<div class="items privacy-items" id="privacy-member" data-v="member">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">สมาชิกเท่านั้น</div>
+					<div class="c">ต้องเป็นสมาชิกที่ลงเบียนเท่านั้น</div>
+				</div>
+			</div>
+			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme">
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">เฉพาะฉัน</div>
+					<div class="c">คุณคนเดียวเท่านั้นที่เห็นไฟล์นี้</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<input type="hidden" id="privacy" value="<?php echo $document->privacy;?>">
 	<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
 	
 	<div class="form-items control">
-		<button id="btnPrivacySave">บันทึก<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+		<button id="btnPrivacySave">บันทึกสิทธิ์<i class="fa fa-angle-right" aria-hidden="true"></i></button>
 	</div>
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/document.js"></script>
 </body>

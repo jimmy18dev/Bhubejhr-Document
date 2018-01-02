@@ -68,7 +68,7 @@ $p_url 		= DOMAIN.'/signup';
 			<input type="password" class="inputtext" id="password" placeholder="ตั้งรหัสผ่าน">
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('register',SECRET_KEY);?>">
 			<input type="hidden" id="redirect" value="<?php echo $_GET['redirect'];?>">
-			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงทะเบียน<i class="fa fa-check" aria-hidden="true"></i></button>
+			<button type="btn" class="btn btn-register" id="btnSubmit">ลงทะเบียน<i class="fa fa-check" aria-hidden="true"></i></button>
 		</form>
 	</div>
 </div>

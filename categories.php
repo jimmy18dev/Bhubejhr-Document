@@ -30,10 +30,8 @@ $categories = $category->listAll();
 </header>
 
 <div class="container">
-	<div class="section">
-		<div class="list">
-			<?php foreach ($categories as $var) { include 'template/category.items.php'; }?>
-		</div>
+	<div class="list">
+		<?php foreach ($categories as $var) { include 'template/category.items.php'; }?>
 	</div>
 </div>
 

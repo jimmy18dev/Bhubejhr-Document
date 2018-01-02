@@ -105,7 +105,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 </head>
 <body>
-<header class="header">
+<header class="header shadow">
 	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
 		<img src="image/logo.png" alt="logo">
 		<div class="detail">
