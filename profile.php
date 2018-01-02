@@ -53,6 +53,8 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 	<?php }?>
 </div>
 
+<div id="progressbar"></div>
+
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </body>

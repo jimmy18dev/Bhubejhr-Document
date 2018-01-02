@@ -50,6 +50,7 @@ $p_url 		= DOMAIN;
 <body>
 
 <?php include_once 'header.php';?>
+
 <div class="cover">
 	<?php if(DEVICE_TYPE == 'Mobile'){?>
 	<img src="image/cover_square.jpg" alt="">
@@ -64,7 +65,7 @@ $p_url 		= DOMAIN;
 		<?php if(!$user_online){?>
 		<a href="signup">ลงทะเบียน<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<?php }else{?>
-		<a href="create/choose">อัพโหลด<i class="fa fa-plus" aria-hidden="true"></i></a>
+		<a href="create/choose">อัพโหลดไฟล์<i class="fa fa-plus" aria-hidden="true"></i></a>
 		<?php }?>
 	</div>
 </div>
