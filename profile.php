@@ -32,6 +32,8 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 <header class="header shadow">
 	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
 	<div class="title">เอกสารทั้งหมดของคุณ</div>
+
+	<?php include 'template/header.profile.php'; ?>
 </header>
 
 <div class="container nomargin">

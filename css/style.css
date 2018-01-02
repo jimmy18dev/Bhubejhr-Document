@@ -522,17 +522,25 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  box-sizing: border-box;
 }
 .container .list .file-items {
   width: 100%;
-  padding: 3% 0%;
+  padding: 2.5% 3%;
   float: left;
   display: inline-block;
-  border-bottom: 1px solid #e8e8e9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 2%;
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
 }
 .container .list .file-items:last-child {
   border-bottom: 0px;
+}
+.container .list .file-items:hover {
+  background: #FAFAFA;
 }
 .container .list .file-items a.icontype {
   width: 7%;
@@ -540,7 +548,7 @@ body {
   display: inline-block;
   font-size: 1.6em;
   line-height: 1.7em;
-  color: #666666;
+  color: #999999;
 }
 .container .list .file-items .detail {
   width: 86%;
@@ -567,7 +575,7 @@ body {
   display: inline-block;
   font-size: 0.75em;
   line-height: 1.3em;
-  color: #666666;
+  color: #999999;
 }
 .container .list .file-items .detail p a,
 .container .list .file-items .detail p span {
@@ -810,6 +818,32 @@ body {
   display: inline-block;
   margin-top: 20%;
   background: #FFFFFF;
+}
+.container .article .control {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+.container .article .control a {
+  float: right;
+  display: inline-block;
+  text-decoration: none;
+  background: #e8e8e9;
+  color: #999999;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "maledpan", sans-serif;
+}
+.container .article .control a i {
+  margin-left: 7px;
+  float: right;
+  font-size: 1.2em;
+  margin-top: 2px;
+}
+.container .article .control a:hover {
+  color: #333333;
 }
 .container .article h1 {
   width: 100%;

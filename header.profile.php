@@ -1,14 +1,4 @@
-<header class="header fixed">
-	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
-		<img src="image/logo.png" alt="logo">
-		<div class="detail">
-			<div class="name">Documents</div>
-			<div class="desc">Chao Phraya Abhaibhubej Hospital</div>
-		</div>
-	</a>
-
-	<?php if($user_online){?>
-	<div class="btn-profile" id="btnProfile">
+<div class="btn-profile" id="btnProfile">
 		<span class="avatar">
 			<img src="image/avatar.png">
 		</span>
@@ -35,12 +25,3 @@
 			<?php }?>
 		</div>
 	</div>
-	<?php }else{?>
-	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	<?php }?>
-
-	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
-</header>
-
-<div class="overlay"></div>
-<div id="progressbar"></div>

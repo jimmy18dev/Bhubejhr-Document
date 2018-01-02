@@ -114,8 +114,8 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</a>
 
-	<?php if($user_online && $user->id == $document->owner_id){?>
-	<a href="document/edit/<?php echo $document->id;?>" class="btn btn-login">แก้ไขเอกสาร<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<?php if($user_online){?>
+	<?php include 'template/header.profile.php'; ?>
 	<?php }?>
 </header>
 
@@ -123,7 +123,12 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <div id="progressbar"></div>
 
 <div class="container">
-	<div class="article">		
+	<div class="article">
+		<?php if($user_online && $user->id == $document->owner_id){?>
+		<div class="control">
+			<a href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
+		</div>
+		<?php }?>		
 		<h1><?php echo $document->title;?></h1>
 		<p>
 			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
