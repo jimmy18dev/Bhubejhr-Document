@@ -39,7 +39,6 @@ if($user->id != $document->owner_id){
 
 <header class="header">
 	<div class="title">ไฟล์: <?php echo $document->title;?></div>
-	<a href="document/<?php echo $document->id;?>" class="btn btn-login">ข้าม<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 </header>
 
 <div class="overlay"></div>
@@ -76,7 +75,8 @@ if($user->id != $document->owner_id){
 	<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
 	
 	<div class="form-items control">
-		<button id="btnPrivacySave">บันทึกสิทธิ์<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+		<button id="btnPrivacySave">บันทึกสิทธิ์</button>
+		<a href="document/<?php echo $document->id;?>" class="btn">ข้ามขั้นตอนนี้</a>
 	</div>
 </div>
 

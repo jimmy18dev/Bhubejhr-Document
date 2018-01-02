@@ -41,6 +41,7 @@ $categories = $category->listAll();
 </header>
 
 <div class="container nomargin">
+	<div class="topic">สร้างประเภทใหม่</div>
 	<div class="list">
 		<div class="choose-items">
 			<div class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></div>

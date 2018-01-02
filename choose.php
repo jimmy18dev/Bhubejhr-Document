@@ -34,10 +34,10 @@ $categories = $category->listAll();
 
 <header class="header">
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
-	<div class="title">เลือกประเภทเอกสาร...</div>
 </header>
 
 <div class="container">
+	<div class="topic center">กรุณาเลือกประเภทของเอกสาร ที่คุณต้องการอัพโหลด<span>คลิกเลือกด้านล่าง</span></div>
 	<div class="list">
 		<?php foreach ($categories as $var) { ?>
 		<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">

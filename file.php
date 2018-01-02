@@ -171,7 +171,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	</div>
 	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn save"><i class="fa fa-floppy-o" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
+		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn save"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
 
