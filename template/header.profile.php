@@ -1,8 +1,7 @@
 <div class="btn-profile" id="btnProfile">
-		<span class="avatar">
-			<img src="image/avatar.png">
-		</span>
+		<span class="avatar"><img src="image/avatar.png"></span>
 		<span class="name"><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></span>
+		<span class="icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
 
 		<?php if($memberPending > 0){?>
 		<div class="notif"><?php echo $memberPending;?></div>

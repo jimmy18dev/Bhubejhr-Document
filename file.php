@@ -114,9 +114,11 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</a>
 
+	<?php include 'template/header.profile.php'; ?>
+
 	<?php if($user_online && $user->id == $document->owner_id){?>
 	<a class="btn btn-login" href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
-	<?php }?>	
+	<?php }?>
 </header>
 
 <div class="overlay"></div>

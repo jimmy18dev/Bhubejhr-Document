@@ -157,6 +157,7 @@ body {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
+  background: #CCCCCC;
 }
 .header.fixed {
   position: fixed;
@@ -214,7 +215,9 @@ body {
 .header .btn-back {
   float: left;
   display: inline-block;
-  padding: 16px 1%;
+  padding: 7px;
+  margin: 9px 0px;
+  margin-left: 7px;
   height: 18px;
   color: #333333;
   text-decoration: none;
@@ -222,26 +225,31 @@ body {
   line-height: 1em;
   position: relative;
   font-family: "maledpan", sans-serif;
-}
-.header .btn-back:hover {
-  text-decoration: underline;
+  border-radius: 5px;
 }
 .header .btn-back i {
   float: left;
   display: inline-block;
-  font-size: 1.3em;
-  margin-right: 10px;
-  margin-top: -3px;
+  font-size: 1.2em;
+  margin-right: 7px;
+  margin-top: -1px;
+}
+.header .btn-back:hover {
+  cursor: pointer;
+  color: #111111;
+}
+.header .btn-back:active {
+  background: #DDDDDD;
+  color: #004d40;
 }
 .header .btn {
   float: right;
   display: inline-block;
-  padding: 6px 1.5%;
-  margin: 10px 0px;
-  margin-left: 10px;
+  padding: 7px;
+  margin: 9px 0px;
+  margin-left: 7px;
   height: 18px;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  color: #DDDDDD;
   text-decoration: none;
   font-size: 1em;
   line-height: 1em;
@@ -252,12 +260,13 @@ body {
 .header .btn i {
   float: left;
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-right: 7px;
   margin-top: -1px;
 }
 .header .btn:hover {
   cursor: pointer;
+  color: #FFFFFF;
 }
 .header .btn:active {
   background: #FFFFFF;
@@ -278,7 +287,9 @@ body {
 .header .title {
   float: left;
   display: inline-block;
-  padding: 16px 1%;
+  padding: 7px;
+  margin: 9px 0px;
+  margin-left: 7px;
   height: 18px;
   color: #BBBBBB;
   font-family: "maledpan", sans-serif;
@@ -295,10 +306,11 @@ body {
 .header .btn-profile {
   float: right;
   display: inline-block;
-  padding: 16px 1%;
+  padding: 7px;
+  margin: 9px 0px;
+  margin-left: 7px;
   height: 18px;
-  margin-left: 10px;
-  color: #FFFFFF;
+  color: #DDDDDD;
   text-decoration: none;
   font-size: 1em;
   line-height: 1em;
@@ -307,7 +319,7 @@ body {
 }
 .header .btn-profile:hover {
   cursor: pointer;
-  text-decoration: underline;
+  color: #FFFFFF;
 }
 .header .btn-profile .notif {
   position: absolute;
@@ -325,11 +337,14 @@ body {
 .header .btn-profile img {
   float: left;
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   margin-right: 10px;
-  margin-top: -5px;
+  margin-top: -7px;
   border-radius: 50%;
+}
+.header .btn-profile .icon {
+  margin-left: 5px;
 }
 .header .btn-profile .more-menu {
   position: absolute;
