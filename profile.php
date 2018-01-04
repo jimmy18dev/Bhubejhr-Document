@@ -30,7 +30,7 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 <body>
 
 <header class="header shadow">
-	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
+	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>หน้าแรก</span></a>
 	<div class="title">เอกสารทั้งหมดของคุณ</div>
 
 	<?php include 'template/header.profile.php'; ?>

@@ -47,9 +47,16 @@ $p_url 		= DOMAIN;
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 </head>
-<body>
 
-<?php include_once 'header.php';?>
+<body>
+<header class="header fixed">
+	<?php include 'template/header.logo.php';?>
+	<?php if($user_online){ include 'template/header.profile.php'; }else{?>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<?php }?>
+
+	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
+</header>
 
 <div class="cover">
 	<?php if(DEVICE_TYPE == 'Mobile'){?>
@@ -86,6 +93,9 @@ $p_url 		= DOMAIN;
 	</div>
 	<?php }?>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

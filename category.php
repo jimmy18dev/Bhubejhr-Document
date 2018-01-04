@@ -57,7 +57,7 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 <body>
 
 <header class="header shadow">
-	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>หน้าแรก</a>
 	<div class="title"><?php echo $category->name;?></div>
 </header>
 <div class="container nomargin">

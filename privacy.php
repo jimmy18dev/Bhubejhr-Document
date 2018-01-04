@@ -41,9 +41,6 @@ if($user->id != $document->owner_id){
 	<div class="title">ไฟล์: <?php echo $document->title;?></div>
 </header>
 
-<div class="overlay"></div>
-<div id="progressbar"></div>
-
 <div class="form">
 	<div class="form-items middle">
 		<label for="">สิทธิ์เข้าถึงเอกสารนี้</label>
@@ -79,6 +76,9 @@ if($user->id != $document->owner_id){
 		<a href="document/<?php echo $document->id;?>" class="btn">ข้ามขั้นตอนนี้</a>
 	</div>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/autosize.js"></script>

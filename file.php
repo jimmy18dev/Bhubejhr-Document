@@ -106,15 +106,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 </head>
 <body>
 <header class="header light">
-	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
-		<img src="image/logo.png" alt="logo">
-		<div class="detail">
-			<div class="name">Documents</div>
-			<div class="desc">Chao Phraya Abhaibhubej Hospital</div>
-		</div>
-	</a>
-
-	<?php include 'template/header.profile.php'; ?>
+	<?php include 'template/header.logo.php'; ?>
 
 	<?php if($user_online && $user->id == $document->owner_id){?>
 	<a class="btn btn-login" href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
@@ -125,7 +117,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <div id="progressbar"></div>
 
 <div class="container nomargin">
-	<div class="article">	
+	<div class="article">
 		<h1><?php echo $document->title;?></h1>
 		<p>
 			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><?php echo $document->category_name; ?></a> · <?php echo $document->create_time;?> · <?php echo $privacy;?>
@@ -162,11 +154,9 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<div class="text">คิวอาร์โค้ด</div>
 		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
 	</div>
-	<div class="content">
-		<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
-	</div>
+	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn save"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
+		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
 
