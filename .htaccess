@@ -13,6 +13,7 @@ RewriteRule ^download/([^_]*)$ /download.php?secret=$1 [L]
 
 RewriteRule ^document/([0-9]+)$ /file.php?id=$1 [L]
 RewriteRule ^document/edit/([0-9]+)$ /file-edit.php?id=$1 [L]
+RewriteRule ^document/delete/([0-9]+)$ /file-delete.php?id=$1 [L]
 RewriteRule ^document/privacy/([0-9]+)$ /privacy.php?id=$1 [L]
 
 RewriteRule ^create/category/([0-9]+)$ /create.php?category=$1 [L]

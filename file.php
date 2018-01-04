@@ -109,12 +109,17 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	<?php include 'template/header.logo.php'; ?>
 
 	<?php if($user_online && $user->id == $document->owner_id){?>
-	<a class="btn btn-login" href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
+	<div class="btn btn-login" id="btnOption">
+		ตัวเลือก<i class="fa fa-angle-down" aria-hidden="true"></i>
+
+		<div class="more-menu" id="menuOption">
+			<div class="arrow-up"></div>
+			<a href="document/edit/<?php echo $document->id;?>"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไขเอกสาร</a>
+			<a href="document/delete/<?php echo $document->id;?>" class="btn-logout"><i class="fa fa-trash" aria-hidden="true"></i>ลบไฟล์นี้</a>
+		</div>
+	</div>
 	<?php }?>
 </header>
-
-<div class="overlay"></div>
-<div id="progressbar"></div>
 
 <div class="container nomargin">
 	<div class="article">
@@ -159,6 +164,9 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

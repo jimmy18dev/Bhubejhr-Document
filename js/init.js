@@ -3,6 +3,8 @@ $(document).ready(function(){
 	$progressbar 	= $('#progressbar');
 	$btnProfile 	= $('#btnProfile');
 	$menuProfile 	= $('#menuProfile');
+	$btnOption 	= $('#btnOption');
+	$menuOption = $('#menuOption');
 
 	$(document).click(function(e) {
 		var current_id = e.target.id;
@@ -10,10 +12,17 @@ $(document).ready(function(){
 			current_id = e.target.offsetParent.id;
 		if(current_id != 'btnProfile')
 			$menuProfile.removeClass('open');
+		if(current_id != 'btnOption')
+			$menuOption.removeClass('open');
 	});
 	
 	$btnProfile.click(function(){
 		$menuProfile.addClass('open');
+	});
+
+	// File Menu
+	$btnOption.click(function(){
+		$menuOption.addClass('open');
 	});
 
 	$progressbar.fadeIn(300);

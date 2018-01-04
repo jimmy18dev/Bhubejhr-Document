@@ -108,11 +108,6 @@ if($user->id != $document->owner_id){
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
 	    <button id="btnSave">บันทึกการแก้ไข<i class="fa fa-check-circle" aria-hidden="true"></i></button>
 	</div>
-
-	<div class="form-items delete-box">
-		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณกดลบไฟล์นี้แล้ว ระบบจะถามเพื่อยืนยันความต้องการอีกครั้ง แต่ตอบตกลง คุณจะไม่สามารถกู้คืนได้อีก</div>
-		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้<i class="fa fa-trash" aria-hidden="true"></i></button>
-	</div>
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
