@@ -26,7 +26,7 @@ if(!empty($q) && isset($q)){
 <meta name="viewport" content="user-scalable=no">
 <meta name="viewport" content="initial-scale=1,maximum-scale=1">
 
-<title>FONT AWESOME</title>
+<title>ค้นหาเอกสาร</title>
 
 <base href="<?php echo DOMAIN;?>">
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -34,18 +34,20 @@ if(!empty($q) && isset($q)){
 </head>
 <body>
 
-<header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+<header class="header light">
+	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>หน้าแรก</span></a>
 </header>
 
-<form class="search-form" action="search.php" method="GET">
+<form class="searchform" action="search.php" method="GET">
 	<div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
 	<input type="text" name="q" id="searchInput" class="inputtext" placeholder="ค้นหาเอกสาร" autofocus value="<?php echo $q;?>">
 	<div class="tip" id="tip">กด Enter เพิ่มค้นหา</div>
 </form>
-<div class="container">
+
+<div class="container nomargin">
 	<div class="section">
 		<?php if(count($files) > 0){?>
+		<div class="topic">พบ <?php echo count($files);?> รายการ</div>
 		<div class="list">
 			<?php
 			if(count($files) > 0){
@@ -62,9 +64,10 @@ if(!empty($q) && isset($q)){
 	</div>
 </div>
 
+<div class="overlay"></div>
+<div id="progressbar"></div>
+
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
-<script type="text/javascript" src="js/lib/autosize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>

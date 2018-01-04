@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$btnQRCode 		= $('#btn-qrcode');
 	$QRCodeDialog 	= $('#qrcode-dialog');
-	$btnClose 		= $QRCodeDialog.children('.control').children('.btn-close');
+	$btnClose 		= $QRCodeDialog.children('.head').children('.btn-close');
 
 	if(window.location.hash == '#qrcode'){
 		$overlay.addClass('open');

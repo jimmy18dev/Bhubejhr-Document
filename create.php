@@ -2,14 +2,17 @@
 require_once 'autoload.php';
 
 if(!$user_online){
-	header('Location: login.php');
+	header('Location: '.DOMAIN.'/signin');
+	die();
+}else if($user->status != 'active'){
+	header('Location: '.DOMAIN.'/pending');
 	die();
 }
 
 $category_id = $_GET['category'];
 
 if(empty($category_id)){
-	header('Location: choose.php');
+	header('Location: '.DOMAIN.'/create/choose');
 	die();
 }
 
@@ -42,9 +45,11 @@ if(empty($category->id)){
 </head>
 <body>
 
-<header class="header">
-	<a href="create/choose" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>เลือกประเภทใหม่</a>
-	<div class="title"><?php echo $category->name;?></div>
+<header class="header light">
+	<a href="create/choose" class="btn btn-back"><i class="fa fa-history" aria-hidden="true"></i><span>กลับเลือกประเภท</span></a>
+	<div class="title">ประเภท: <?php echo $category->name;?></div>
+
+	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
 <div class="overlay"></div>
@@ -70,7 +75,7 @@ if(empty($category->id)){
 		<textarea name="description" id="description" placeholder="รายละเอียด..."></textarea>
 	</div>
 
-	<div class="form-items hidden control">
+	<div class="form-items hidden">
 		<input type="hidden" id="maximumSize" value="<?php echo $document->return_bytes(ini_get('post_max_size'));?>">
 		<input type="hidden" name="category_id" required value="<?php echo $category->id;?>">
 		<button type="submit" id="btnSubmit" disabled>อัพโหลด<i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>

@@ -40,6 +40,30 @@ if(!file_exists($qrcode_filename)){
 	QRcode::png($qrcode_content,$qrcode_filename,QR_ECLEVEL_L,8);
 }
 
+switch ($document->file_type) {
+	case 'PDF':
+		$icon = 'PDF';
+		break;
+	case 'Word':
+		$icon = 'Microsoft Word';
+		break;
+	case 'Excel':
+		$icon = 'Microsoft Excel';
+		break;
+	case 'PowerPoint':
+		$icon = 'Microsoft Power Point';
+		break;
+	case 'Zip':
+		$icon = 'Zip';
+		break;
+	case 'txt':
+		$icon = 'Text';
+		break;
+	default:
+		$icon = '';
+		break;
+}
+
 $currentPage = 'file';
 ?>
 
@@ -81,56 +105,68 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 </head>
 <body>
-<header class="header">
-	<a href="index.php" class="btn left"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+<header class="header light">
+	<?php include 'template/header.logo.php'; ?>
 
-	<?php if($document->privacy != 'onlyme'){?>
-	<div class="btn btn-qrcode" id="btn-qrcode"><i class="fa fa-qrcode" aria-hidden="true"></i>QR Code</div>
-	<?php }?>
-	
 	<?php if($user_online && $user->id == $document->owner_id){?>
-	<a href="document/edit/<?php echo $document->id;?>" class="btn"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไข</a>
+	<div class="btn btn-login" id="btnOption">
+		ตัวเลือก<i class="fa fa-angle-down" aria-hidden="true"></i>
+
+		<div class="more-menu" id="menuOption">
+			<div class="arrow-up"></div>
+			<a href="document/edit/<?php echo $document->id;?>"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไขเอกสาร</a>
+			<a href="document/delete/<?php echo $document->id;?>" class="btn-logout"><i class="fa fa-trash" aria-hidden="true"></i>ลบไฟล์นี้</a>
+		</div>
+	</div>
 	<?php }?>
 </header>
 
-<div class="overlay"></div>
-<div id="progressbar"></div>
-
-<div class="container">
+<div class="container nomargin">
 	<div class="article">
-		<div class="info">
-			<span class="icontype <?php echo $document->file_type;?>"><?php echo $document->file_type;?></span>
-			<?php if($data['file_privacy'] != 'public'){?>
-			<span class="privacy"><?php echo $privacy;?></span>
-			<?php }?>
-		</div>
 		<h1><?php echo $document->title;?></h1>
-		<p><?php echo $document->create_time;?></p>
+		<p>
+			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><?php echo $document->category_name; ?></a> · <?php echo $document->create_time;?> · <?php echo $privacy;?>
+		</p>
 
 		<?php if(!empty($document->description)){?>
 		<div class="text"><?php echo $document->description;?></div>
 		<?php }?>
 		
 		<div class="download">
-			<a class="btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->id;?>" target="_blank">
-				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+			<?php if($document->privacy != 'onlyme'){?>
+			<div class="btn btn-qrcode" id="btn-qrcode">
 				<div class="d">
-					<span>ดาวน์โหลดไฟล์</span>
-					<span class="size">ขนาดไฟล์ <?php echo $document->file_size;?></span>
+					<span class="caption">แสดงคิวอาร์โค้ด</span>
+					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
 				</div>
+				<i class="fa fa-qrcode" aria-hidden="true"></i>
+			</div>
+			<?php }?>
+
+			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
+				<div class="d">
+					<span class="caption">ดาวน์โหลดไฟล์</span>
+					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
+				</div>
+				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
 		</div>
 	</div>
 </div>
 
-<div class="qrcode-dialog" id="qrcode-dialog">
-	<div class="head">QR Code เพื่อเข้าถึงไฟล์นี้</div>
+<div class="dialog" id="qrcode-dialog">
+	<div class="head">
+		<div class="text">คิวอาร์โค้ด</div>
+		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
+	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn">บันทึกลงเครื่อง</a>
-		<div class="btn btn-close">ปิดหน้าต่าง</div>
+		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" target="_blank" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

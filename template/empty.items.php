@@ -1,3 +1,1 @@
-<div class="empty">
-				<i>Empty items!</i>
-			</div>
+<div class="empty">ไม่พบไฟล์เอกสาร</div>

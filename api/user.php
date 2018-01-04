@@ -59,9 +59,8 @@ switch ($_SERVER['REQUEST_METHOD']){
 				$phone 		= $_POST['phone'];
 				$email 		= $_POST['email'];
 				$password 	= $_POST['password'];
-				$bio 		= $_POST['bio'];
 
-				$user_id = $user->registerForm($fullname,$phone,$email,$password,$bio);
+				$user_id = $user->registerForm($fullname,$phone,$email,$password);
 
 				if(true){
 					$state = $user->login($phone,$password);

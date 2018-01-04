@@ -18,10 +18,10 @@ class Category{
         $this->db->execute();
         $dataset = $this->db->single();
 
-        $this->id = $dataset['id'];
-        $this->name = $dataset['name'];
-        $this->description = $dataset['description'];
-        $this->edit_time = $dataset['edit_time'];
+        $this->id           = $dataset['id'];
+        $this->name         = $dataset['name'];
+        $this->description  = $dataset['description'];
+        $this->edit_time    = $dataset['edit_time'];
 
         return $dataset;
     }

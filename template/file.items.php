@@ -3,6 +3,9 @@
 <?php
 // Privacy
 switch ($data['file_privacy']) {
+	case 'public':
+		$privacy = '<span title="ทุกคนเห็นไฟล์นี้"><i class="fa fa-globe" aria-hidden="true"></i></span>';
+		break;
 	case 'member':
 		$privacy = '<span title="เห็นเฉพาะสมาชิกเท่านั้น"><i class="fa fa-user" aria-hidden="true"></i></span>';
 		break;
@@ -43,9 +46,14 @@ switch ($data['file_type']) {
 <div class="file-items">
 	<a href="document/<?php echo $data['file_id']?>" class="icontype"><?php echo $icon;?></a>
 	<div class="detail">
-		<div class="name"><a href="document/<?php echo $data['file_id']?>"><?php echo $data['file_title']?><?php echo $privacy?></a></div>
-		<p><a href="document/<?php echo $data['file_id']?>"><?php echo $data['file_create_time'];?></a></p>
+		<div class="name"><a href="document/<?php echo $data['file_id']?>"><?php echo $data['file_title']?></a></div>
+		<p>
+			<a href="category/<?php echo $data['file_category_id']?>/<?php echo $data['file_category_name'];?>" class="style<?php echo $data['file_category_id']?>"><?php echo $data['file_category_name'];?></a> · <a href="document/<?php echo $data['file_id']?>" title="<?php echo $data['file_create_time'];?>"><?php echo $data['file_create_time_fb'];?></a>
+
+			<?php if($user_online){?>
+			 · <span><?php echo $privacy?></span>
+			<?php }?>
+		</p>
 	</div>
-	<a class="icon" href="document/<?php echo $data['file_id']?>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 </div>
 <?php }?>

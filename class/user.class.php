@@ -158,7 +158,7 @@ class User{
         $this->db->execute();
     }
 
-    public function registerForm($fullname,$phone,$email,$password,$bio){
+    public function registerForm($fullname,$phone,$email,$password){
         // Random password if password is empty value
         $salt       = hash('sha512',uniqid(mt_rand(1,mt_getrandmax()),true));
         // Create salted password
@@ -169,12 +169,11 @@ class User{
 
         if($this->already($phone,$email)){
             
-            $this->db->query('INSERT INTO user(phone,email,fname,lname,bio,password,salt,ip,register_time,type) VALUE(:phone,:email,:fname,:lname,:bio,:password,:salt,:ip,:register_time,:type)');
+            $this->db->query('INSERT INTO user(phone,email,fname,lname,password,salt,ip,register_time,type) VALUE(:phone,:email,:fname,:lname,:password,:salt,:ip,:register_time,:type)');
             $this->db->bind(':phone'    ,$phone);
             $this->db->bind(':email'    ,$email);
             $this->db->bind(':fname'    ,$fname);
             $this->db->bind(':lname'    ,$lname);
-            $this->db->bind(':bio'      ,$bio);
             $this->db->bind(':password' ,$password);
             $this->db->bind(':salt'     ,$salt);
             $this->db->bind(':ip'       ,$this->db->GetIpAddress());
@@ -221,7 +220,7 @@ class User{
         $this->password       = $dataset['password'];
         $this->salt           = $dataset['salt'];
         $this->ip             = $dataset['ip'];
-        $this->register_time  = $dataset['register_time'];
+        $this->register_time  = $this->db->datetimeformat($dataset['register_time'],'fulldatetime');
         $this->visit_time     = $dataset['visit_time'];
         $this->edit_time     = $dataset['edit_time'];
         $this->type           = $dataset['type'];
@@ -261,8 +260,8 @@ class User{
         // session_set_cookie_params('600'); // 10 minutes.
 
         // Sets the session name to the one set above.
-        session_name($session_name);
-        session_start();             // Start the PHP session
+        // session_name($session_name);
+        // session_start();             // Start the PHP session
         // session_regenerate_id(true); // regenerated the session, delete the old one.
     }
 

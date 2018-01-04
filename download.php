@@ -1,21 +1,21 @@
 <?php
 require_once 'autoload.php';
 $document = new Document();
-$file_id = $_GET['id'];
+$secret = $_GET['secret'];
 
-if(!empty($file_id) && isset($file_id)){
-	$document->get($file_id);
+if(!empty($secret) && isset($secret)){
+	$document->getDocumentFromSecret($secret);
 	$document->updateDownload($document->id);
 
 	if(!empty($document->id)){
 		header("Location:".DOMAIN."/files/".$document->file_name);
 		exit();
 	}else{
-		header("Location:".DOMAIN);
+		header("Location:".DOMAIN."/file-not-found");
 		exit();
 	}
 }else{
-	header("Location:".DOMAIN);
+	header("Location:".DOMAIN."/secret-is-empty");
 	exit();
 }
 ?>

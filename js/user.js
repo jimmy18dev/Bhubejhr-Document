@@ -77,7 +77,6 @@ function register(){
 	var email 	= $('#email').val();
 	var phone 	= $('#phone').val();
 	var password 	= $('#password').val();
-	var bio 		= $('#bio').val();
 	var sign 		= $('#sign').val();
 
 	if(fullname == '' || phone == '' || email == '' || password == '') return false;
@@ -98,7 +97,6 @@ function register(){
 			phone 		:phone,
 			email		:email,
 			password 	:password,
-			bio 		:bio,
 			sign 		:sign,
 		},
 		error: function (request, status, error) {

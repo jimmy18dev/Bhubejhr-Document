@@ -47,15 +47,14 @@ if($user->id != $document->owner_id){
 <body>
 
 <header class="header">
-	<a href="document/<?php echo $document->id;?>" class="btn left"><i class="fa fa-close" aria-hidden="true"></i>ยกเลิก</a>
 	<div class="title">แก้ไขเอกสาร</div>
+	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
 <div class="overlay"></div>
 <div id="progressbar"></div>
 
 <div class="form" id="documentForm">
-
 	<div class="form-items">
 		<label for="">ชื่อไฟล์</label>
 		<input class="inputtext" type="text" id="title" value="<?php echo $document->title;?>">
@@ -67,17 +66,35 @@ if($user->id != $document->owner_id){
 	</div>
 
 	<div class="form-items">
-		<label for="">สิทธิ์เข้าถึง</label>
+		<label for="">สิทธิ์เข้าถึงเอกสาร</label>
 		<div class="selection">
-			<div class="items privacy-items" id="privacy-member" data-v="member"><i class="fa fa-user" aria-hidden="true"></i><span>สมาชิกเท่านั้น</span></div>
-			<div class="items privacy-items" id="privacy-public" data-v="public"><i class="fa fa-globe" aria-hidden="true"></i><span>สาธารณะ</span></div>
-			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme"><i class="fa fa-lock" aria-hidden="true"></i><span>เฉพาะฉัน</span></div>
+			<div class="items privacy-items" id="privacy-public" data-v="public">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">สาธารณะ</div>
+					<div class="c">ใครก็สามารถเห็นไฟล์นี้ได้</div>
+				</div>
+			</div>
+			<div class="items privacy-items" id="privacy-member" data-v="member">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">สมาชิกเท่านั้น</div>
+					<div class="c">ต้องเป็นสมาชิกที่ลงเบียนเท่านั้น</div>
+				</div>
+			</div>
+			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme">
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<div class="caption">
+					<div class="t">เฉพาะฉัน</div>
+					<div class="c">คุณคนเดียวเท่านั้นที่เห็นไฟล์นี้</div>
+				</div>
+			</div>
 		</div>
 		<input type="hidden" id="privacy" value="<?php echo $document->privacy;?>">
 	</div>
 
 	<div class="form-items">
-		<label for="">หมวดหมู่</label>
+		<label for="">ประเภทเอกสาร</label>
 		<div class="select">
 	      <select id="category_id" class="form-control">
 	        <option value="0">เลือกหน่วยแพทย์...</option>
@@ -87,14 +104,9 @@ if($user->id != $document->owner_id){
 	      </select>
 	    </div>
 	</div>
-	<div class="form-items control">
+	<div class="form-items">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึก<i class="fa fa-check" aria-hidden="true"></i></button>
-	</div>
-
-	<div class="form-items delete-box">
-		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณลบไฟล์นี้แล้ว คุณจะไม่สามารถกู้คืนได้!</div>
-		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้</button>
+	    <button id="btnSave">บันทึกการแก้ไข<i class="fa fa-check-circle" aria-hidden="true"></i></button>
 	</div>
 </div>
 

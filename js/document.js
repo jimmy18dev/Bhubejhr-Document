@@ -11,6 +11,8 @@ $(document).ready(function(){
     // Privacy
     var default_privacy = $('#privacy').val();
 
+    console.log(default_privacy);
+
     $('#privacy-'+default_privacy).addClass('active');
     $('.privacy-items').click(function(){
         var privacy = $(this).attr('data-v');
