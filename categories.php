@@ -24,7 +24,7 @@ $categories = $category->listAll();
 </head>
 <body>
 
-<header class="header">
+<header class="header light">
 	<a href="index.php" class="btn btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>หน้าแรก</a>
 	<div class="title">เลือกประเภทเอกสาร</div>
 </header>

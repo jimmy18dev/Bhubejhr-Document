@@ -53,7 +53,7 @@ if($user->id != $document->owner_id){
 
 <div class="form">
 	<div class="form-items delete-box">
-		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณกดลบไฟล์ <?php echo $document->title;?> แล้ว ระบบจะถามเพื่อยืนยันความต้องการอีกครั้ง เมื่อลบไฟล์คุณจะไม่สามารถกู้คืนไฟล์ได้อีก!</div>
+		<div class="msg"><strong>คำเตือน:</strong> เมื่อคุณกดลบไฟล์ <u><?php echo $document->title;?></u> แล้ว ระบบจะถามเพื่อยืนยันความต้องการอีกครั้ง เมื่อลบไฟล์คุณจะไม่สามารถกู้คืนไฟล์ได้อีก!</div>
 
 		<input type="hidden" id="title" value="<?php echo $document->title;?>">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">

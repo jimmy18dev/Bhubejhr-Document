@@ -53,7 +53,7 @@ $categories = $category->listAll();
 
 		<?php foreach ($categories as $var) { ?>
 		<div class="choose-items style<?php echo $var['category_id'];?>" data-id="<?php echo $var['category_id'];?>">
-			<div class="icon"><i class="fa fa-circle" aria-hidden="true"></i></div>
+			<div class="icon"><i class="fa fa-folder-o" aria-hidden="true"></i></div>
 			<span class="name"><?php echo $var['category_name'];?></span>
 			<div class="control btn-edit-category">
 				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>

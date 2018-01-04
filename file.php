@@ -136,7 +136,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 			<?php if($document->privacy != 'onlyme'){?>
 			<div class="btn btn-qrcode" id="btn-qrcode">
 				<div class="d">
-					<span class="caption">คิวอาร์โค้ด</span>
+					<span class="caption">แสดงคิวอาร์โค้ด</span>
 					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
 				</div>
 				<i class="fa fa-qrcode" aria-hidden="true"></i>
@@ -161,7 +161,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
+		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" target="_blank" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
 	</div>
 </div>
 

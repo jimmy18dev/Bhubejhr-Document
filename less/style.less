@@ -753,7 +753,7 @@
 			width: 100%;
 			float: left;
 			display: inline-block;
-			border-top: 2px solid @border_color;
+			border-top: 1px solid @border_color;
 			padding-top: 5%;
 
 			.btn{
@@ -772,13 +772,11 @@
 
 				&.btn-download{
 					background: @green_color_dark;
-
 					&:hover{ background: @green_color; }
 				}
 				&.btn-qrcode{
 					background: @border_color;
 					color: #333333;
-
 					&:hover{ color: #333333; }
 				}
 
@@ -878,7 +876,7 @@
 		&.middle{ margin-top: 22%; }
 		&.hidden{ display: none; }
 		&.control{
-			border-top: 3px solid #EAEAEA;
+			border-top: 1px solid #EAEAEA;
 			padding-top: 5%;
 		}
 		&.delete-box{
@@ -1072,6 +1070,7 @@
 			color: #999999;
 			font-family: @topic_font;
 			text-decoration: none;
+			text-align: center;
 
 			&:hover{ text-decoration: underline; }
 			&:active{ background: @border_color; }
@@ -1099,7 +1098,7 @@
 			
 			i{ margin-left: 10px; }
 
-			&.btn-delete{ background: transparent; color: #C62828; border: 1px solid #C62828; }
+			&.btn-delete{ background: #C62828; }
 			&.loading{
 				background: transparent;
 				color: #999999;
