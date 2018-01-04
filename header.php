@@ -20,6 +20,16 @@
 
 		<div class="more-menu" id="menuProfile">
 			<div class="arrow-up"></div>
+
+			<?php if($user->type == 'admin'){?>
+			<div class="caption">ผู้ดูแลระบบ</div>
+			<a href="admin/member"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
+			<a href="admin/category"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
+			<?php }?>
+
+			<?php if($user->type == 'admin'){?>
+			<div class="caption">บัญชีส่วนตัว</div>
+			<?php }?>
 			<?php if($user->status != 'active'){?>
 			<a href="pending"><i class="fa fa-clock-o" aria-hidden="true"></i>รอยืนยันตัวตน...</a>
 			<?php }else{?>
@@ -27,12 +37,6 @@
 			<?php }?>
 
 			<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>
-
-			<?php if($user->type == 'admin'){?>
-			<div class="caption">ผู้ดูแลระบบ</div>
-			<a href="admin/member"><i class="fa fa-user" aria-hidden="true"></i>รายชื่อผู้ใช้ <?php echo ($memberPending>0?'('.$memberPending.')':'');?></a>
-			<a href="admin/category"><i class="fa fa-folder" aria-hidden="true"></i>ประเภทเอกสาร</a>
-			<?php }?>
 		</div>
 	</div>
 	<?php }else{?>

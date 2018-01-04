@@ -105,7 +105,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 </head>
 <body>
-<header class="header shadow">
+<header class="header light">
 	<a href="index.php" class="logo" title="Version <?php echo VERSION;?>">
 		<img src="image/logo.png" alt="logo">
 		<div class="detail">
@@ -114,26 +114,19 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</a>
 
-	<?php if($user_online){?>
-	<?php include 'template/header.profile.php'; ?>
-	<?php }?>
+	<?php if($user_online && $user->id == $document->owner_id){?>
+	<a class="btn btn-login" href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
+	<?php }?>	
 </header>
 
 <div class="overlay"></div>
 <div id="progressbar"></div>
 
-<div class="container">
-	<div class="article">
-		<?php if($user_online && $user->id == $document->owner_id){?>
-		<div class="control">
-			<a href="document/edit/<?php echo $document->id;?>">แก้ไขเอกสาร<i class="fa fa-cog" aria-hidden="true"></i></a>
-		</div>
-		<?php }?>		
+<div class="container nomargin">
+	<div class="article">	
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><i class="fa fa-circle" aria-hidden="true"></i><?php echo $document->category_name; ?></a>
-			<span><?php echo $document->create_time;?></span>
-			<span class="privacy"><?php echo $privacy;?></span>
+			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><?php echo $document->category_name; ?></a> · <?php echo $document->create_time;?> · <?php echo $privacy;?>
 		</p>
 
 		<?php if(!empty($document->description)){?>
@@ -141,14 +134,6 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
-				<div class="d">
-					<span class="caption">ดาวน์โหลดไฟล์</span>
-					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
-				</div>
-				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-			</a>
-
 			<?php if($document->privacy != 'onlyme'){?>
 			<div class="btn btn-qrcode" id="btn-qrcode">
 				<div class="d">
@@ -158,6 +143,14 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 				<i class="fa fa-qrcode" aria-hidden="true"></i>
 			</div>
 			<?php }?>
+
+			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
+				<div class="d">
+					<span class="caption">ดาวน์โหลดไฟล์</span>
+					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
+				</div>
+				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+			</a>
 		</div>
 	</div>
 </div>

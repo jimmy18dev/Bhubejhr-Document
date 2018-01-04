@@ -14,10 +14,14 @@
 
 	&.shadow{
 		background: rgba(0,77,64,0.95);
-		// box-shadow: 0px 2px 20px rgba(0,0,0,0.3);
-
 		.btn-back{ color: #FFFFFF; }
 		.title{ color: #1abc9c; }
+	}
+
+	&.light{
+		a.logo .detail .name{ color: @primary_color_dark; }
+		a.logo .detail .desc{ color: #999999; }
+		.btn{ color: #999999; }
 	}
 
 	a.logo{
@@ -197,7 +201,7 @@
 			.arrow-up{
 				position: absolute;
 				bottom: 100%;
-				right: 10%;
+				right: 20%;
 				border: 8px solid transparent;
 				border-bottom-color: #FFFFFF;
 			}
@@ -417,7 +421,7 @@
 				display: inline-block;
 				font-size: 2em;
 				line-height: 1.5em;
-				color: #DDDDDD;
+				color: #BBBBBB;
 			}
 
 			.detail{
@@ -425,7 +429,7 @@
 				padding: 3% 0%;
 				float: left;
 				display: inline-block;
-				border-bottom: 1px solid #EEEEEE;
+				border-bottom: 1px solid #DDDDDD;
 
 				.name a{
 					width: 100%;
@@ -675,41 +679,13 @@
 		margin-top: 20%;
 		background: #FFFFFF;
 
-		.control{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			margin-bottom: 2%;
-
-			a{
-				float: right;
-				display: inline-block;
-				text-decoration: none;
-				background: @border_color;
-				color: #999999;
-				padding: 5px 12px;
-				border-radius: 5px;
-				font-size: 1em;
-				font-family: @topic_font;
-
-				i{
-					margin-left: 7px;
-					float: right;
-					font-size: 1.2em;
-					margin-top: 2px;
-				}
-
-				&:active{ color: #333333; }
-			}
-		}
-
 		h1{
 			width: 100%;
 			float: left;
 			display: inline-block;
 			font-size: 3em;
 			line-height: 1.2em;
-			margin-bottom: 3%;
+			margin-bottom: 2%;
 			color: @primary_color_dark;
 			font-weight: normal;
 			font-family: @topic_font;
@@ -723,20 +699,14 @@
 			color: #666666;
 			margin-bottom: 3%;
 
-			a, span{
-				color: #666666;
+			a{
 				text-decoration: none;
-				margin-right: 10px;
-
-				i{ margin-right: 5px; }
-				i.fa-lock{ color: #FF5722; }
-				&:hover{ cursor: default; }
+				color: #333333;
 			}
 
-			a:hover{
-				cursor: pointer;
-				text-decoration: underline;
-			}
+			i{ margin-right: 5px; }
+
+			a:hover{ text-decoration: underline; }
 		}
 
 		.text{
@@ -752,14 +722,14 @@
 			width: 100%;
 			float: left;
 			display: inline-block;
-			border-top: 2px dotted @border_color;
+			border-top: 2px solid @border_color;
 			padding-top: 5%;
 
 			.btn{
 				width: 40%;
 				padding: 2% 5%;
-				margin-left: 2%;
-				float: right;
+				margin-right: 2%;
+				float: left;
 				display: inline-block;
 				color: #FFFFFF;
 				text-decoration: none;
@@ -771,21 +741,14 @@
 
 				&.btn-download{
 					background: @green_color_dark;
-					border: 1px solid @green_color_dark;
 
-					&:hover{
-						border: 1px solid @green_color;
-						background: @green_color;
-					}
+					&:hover{ background: @green_color; }
 				}
 				&.btn-qrcode{
-					border: 1px solid #999999;
-					color: #666666;
+					background: @border_color;
+					color: #333333;
 
-					&:hover{
-						border: 1px solid #333333;
-						color: #333333;
-					}
+					&:hover{ color: #333333; }
 				}
 
 				&:hover{ cursor: pointer; }
@@ -956,18 +919,18 @@
 				border-radius: 5px;
 				box-sizing: border-box;
 				color: @fontcolor_normal;
-				border: 2px dashed @border_color;
+				border: 2px solid @border_color;
 
 				i{
 					width: 100%;
-					display: block;
+					float: left;
+					display: inline-block;
 					font-size: 2em;
 					margin-bottom: 10px;
 				}
 
 				.caption{
 					width: 100%;
-					display: block;
 					float: left;
 					display: inline-block;
 

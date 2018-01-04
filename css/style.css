@@ -173,6 +173,15 @@ body {
 .header.shadow .title {
   color: #1abc9c;
 }
+.header.light a.logo .detail .name {
+  color: #002e26;
+}
+.header.light a.logo .detail .desc {
+  color: #999999;
+}
+.header.light .btn {
+  color: #999999;
+}
 .header a.logo {
   width: 28%;
   float: left;
@@ -340,7 +349,7 @@ body {
 .header .btn-profile .more-menu .arrow-up {
   position: absolute;
   bottom: 100%;
-  right: 10%;
+  right: 20%;
   border: 8px solid transparent;
   border-bottom-color: #FFFFFF;
 }
@@ -548,14 +557,14 @@ body {
   display: inline-block;
   font-size: 2em;
   line-height: 1.5em;
-  color: #DDDDDD;
+  color: #BBBBBB;
 }
 .container .list .file-items .detail {
   width: 91%;
   padding: 3% 0%;
   float: left;
   display: inline-block;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #DDDDDD;
 }
 .container .list .file-items .detail .name a {
   width: 100%;
@@ -790,39 +799,13 @@ body {
   margin-top: 20%;
   background: #FFFFFF;
 }
-.container .article .control {
-  width: 100%;
-  float: left;
-  display: inline-block;
-  margin-bottom: 2%;
-}
-.container .article .control a {
-  float: right;
-  display: inline-block;
-  text-decoration: none;
-  background: #e8e8e9;
-  color: #999999;
-  padding: 5px 12px;
-  border-radius: 5px;
-  font-size: 1em;
-  font-family: "maledpan", sans-serif;
-}
-.container .article .control a i {
-  margin-left: 7px;
-  float: right;
-  font-size: 1.2em;
-  margin-top: 2px;
-}
-.container .article .control a:active {
-  color: #333333;
-}
 .container .article h1 {
   width: 100%;
   float: left;
   display: inline-block;
   font-size: 3em;
   line-height: 1.2em;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   color: #002e26;
   font-weight: normal;
   font-family: "maledpan", sans-serif;
@@ -835,26 +818,14 @@ body {
   color: #666666;
   margin-bottom: 3%;
 }
-.container .article p a,
-.container .article p span {
-  color: #666666;
+.container .article p a {
   text-decoration: none;
-  margin-right: 10px;
+  color: #333333;
 }
-.container .article p a i,
-.container .article p span i {
+.container .article p i {
   margin-right: 5px;
 }
-.container .article p a i.fa-lock,
-.container .article p span i.fa-lock {
-  color: #FF5722;
-}
-.container .article p a:hover,
-.container .article p span:hover {
-  cursor: default;
-}
 .container .article p a:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 .container .article .text {
@@ -869,14 +840,14 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  border-top: 2px dotted #e8e8e9;
+  border-top: 2px solid #e8e8e9;
   padding-top: 5%;
 }
 .container .article .download .btn {
   width: 40%;
   padding: 2% 5%;
-  margin-left: 2%;
-  float: right;
+  margin-right: 2%;
+  float: left;
   display: inline-block;
   color: #FFFFFF;
   text-decoration: none;
@@ -891,18 +862,15 @@ body {
 }
 .container .article .download .btn.btn-download {
   background: #27ae60;
-  border: 1px solid #27ae60;
 }
 .container .article .download .btn.btn-download:hover {
-  border: 1px solid #2ecc71;
   background: #2ecc71;
 }
 .container .article .download .btn.btn-qrcode {
-  border: 1px solid #999999;
-  color: #666666;
+  background: #e8e8e9;
+  color: #333333;
 }
 .container .article .download .btn.btn-qrcode:hover {
-  border: 1px solid #333333;
   color: #333333;
 }
 .container .article .download .btn:hover {
@@ -1073,17 +1041,17 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   color: #666666;
-  border: 2px dashed #e8e8e9;
+  border: 2px solid #e8e8e9;
 }
 .form .form-items .selection .items i {
   width: 100%;
-  display: block;
+  float: left;
+  display: inline-block;
   font-size: 2em;
   margin-bottom: 10px;
 }
 .form .form-items .selection .items .caption {
   width: 100%;
-  display: block;
   float: left;
   display: inline-block;
 }
@@ -1622,3 +1590,644 @@ body {
   color: #745151 !important;
 }
 /* Other Device and Screen */
+@media only screen and (min-width: 0px) and (max-width: 519px) {
+  .header {
+    width: 100%;
+    padding: 0px;
+  }
+  .header a.logo {
+    width: auto;
+    padding: 10px 5%;
+  }
+  .header a.logo img {
+    margin-right: 0px;
+  }
+  .header a.logo .detail {
+    display: none;
+  }
+  .header .btn-back {
+    padding: 16px 5%;
+  }
+  .header .btn-back span {
+    display: none;
+  }
+  .header .btn-back i {
+    margin-right: 0px;
+  }
+  .header .btn {
+    padding: 6px 5%;
+    margin: 10px 0px;
+    margin-left: 0%;
+    margin-right: 1%;
+  }
+  .header .btn i {
+    float: left;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-right: 7px;
+    margin-top: -1px;
+  }
+  .header .btn:hover {
+    cursor: pointer;
+  }
+  .header .btn:active {
+    background: #FFFFFF;
+    color: #004d40;
+  }
+  .header .btn.btn-cancel {
+    color: #F44336;
+  }
+  .header .btn.btn-cancel:active {
+    background: #F44336;
+    color: #FFFFFF;
+  }
+  .header .btn.btn-login i {
+    float: right;
+    margin-right: 0px;
+    margin-left: 7px;
+  }
+  .header .title {
+    padding: 16px 0%;
+    padding-left: 5%;
+    max-width: 30%;
+  }
+  .header .btn-profile {
+    padding: 16px 5%;
+    margin-left: 0px;
+  }
+  .header .btn-profile .notif {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    float: left;
+    display: inline-block;
+    background: #F44336;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    line-height: 1em;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  .header .btn-profile img {
+    margin-right: 0px;
+  }
+  .header .btn-profile .name {
+    display: none;
+  }
+  .header .btn-profile .more-menu {
+    width: 220px;
+    top: 90%;
+    right: 15%;
+    padding: 5% 0%;
+  }
+  .header .btn-profile .more-menu .arrow-up {
+    right: 5%;
+  }
+  .header .btn-profile .more-menu .caption {
+    width: 80%;
+    padding: 7% 10%;
+    padding-bottom: 2%;
+    float: left;
+    display: inline-block;
+    font-size: 0.75em;
+    color: #004d40;
+  }
+  .header .btn-profile .more-menu .caption:hover {
+    cursor: default;
+  }
+  .header .btn-profile .more-menu a {
+    width: 80%;
+    padding: 7% 10%;
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    color: #002e26;
+    border-bottom: 1px solid #FAFAFA;
+  }
+  .header .btn-profile .more-menu a i {
+    float: left;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 15px;
+    margin-top: -2px;
+  }
+  .header .btn-profile .more-menu a.btn-logout {
+    color: #c0392b;
+  }
+  .header .btn-profile .more-menu a:last-child {
+    border-bottom: 0px;
+  }
+  .header .btn-profile .more-menu a:hover {
+    background: #eeeeee;
+  }
+  .searchform {
+    width: 90%;
+    margin: 5%;
+    margin-top: 0px;
+  }
+  .searchform .icon {
+    font-size: 1.1em;
+    padding: 6% 5%;
+  }
+  .searchform .inputtext {
+    width: 80%;
+    padding: 5%;
+    padding-left: 15%;
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+  .searchform .tip {
+    bottom: 7px;
+    right: 7px;
+    font-size: 0.6em;
+  }
+  .cover {
+    height: auto;
+  }
+  .cover .welcome {
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 25%;
+  }
+  .cover .welcome h1 {
+    font-size: 2em;
+  }
+  .cover .welcome p {
+    font-size: 1em;
+    margin-bottom: 15%;
+    letter-spacing: 0px;
+  }
+  .cover .welcome a {
+    font-size: 1.2em;
+    padding: 3px 25px;
+    padding-bottom: 6px;
+  }
+  .cover .welcome a i {
+    margin-left: 10px;
+  }
+  .cover img {
+    margin-top: 0;
+  }
+  .container {
+    width: 100%;
+    margin: 0%;
+    margin-top: 50px;
+  }
+  .container .topic {
+    width: 90%;
+    font-size: 1.1em;
+    margin: 5%;
+    margin-bottom: 2%;
+  }
+  .container .topic.center {
+    margin-bottom: 5%;
+    font-size: 1.4em;
+  }
+  .container .topic span {
+    font-size: 0.7em;
+    margin-top: 5px;
+  }
+  .container .list .file-items {
+    margin-bottom: 1%;
+  }
+  .container .list .file-items a.icontype {
+    width: 7%;
+    padding: 4% 5%;
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+  .container .list .file-items .detail {
+    width: 78%;
+    padding: 4% 0%;
+    padding-right: 5%;
+  }
+  .container .list .file-items .detail .name a {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .container .list .file-items .detail p {
+    font-size: 0.7em;
+  }
+  .container .list .member-items {
+    width: 100%;
+    float: left;
+    display: inline-block;
+  }
+  .container .list .member-items:last-child .detail {
+    border-bottom: 0px;
+  }
+  .container .list .member-items .avatar {
+    width: 6%;
+    padding: 3% 0%;
+    margin-right: 3%;
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+  }
+  .container .list .member-items .avatar img {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .container .list .member-items .detail {
+    width: 91%;
+    padding: 3% 0%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  .container .list .member-items .detail .name {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    color: #002e26;
+    font-family: "maledpan", sans-serif;
+  }
+  .container .list .member-items .detail .name a {
+    color: #002e26;
+    text-decoration: none;
+  }
+  .container .list .member-items .detail .name a:hover {
+    text-decoration: underline;
+  }
+  .container .list .member-items .detail .desc {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 0.75em;
+    line-height: 1.5em;
+    color: #666666;
+  }
+  .container .list .member-items .detail .desc span i {
+    margin-right: 3px;
+    font-size: 0.9em;
+  }
+  .container .list .member-items .detail .desc span.active {
+    background: #2ecc71;
+    color: #FFFFFF;
+  }
+  .container .list .member-items .detail .control {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+  }
+  .container .list .member-items .detail .control .btnop {
+    padding: 1.5% 3%;
+    margin-right: 1.5%;
+    float: left;
+    display: inline-block;
+    font-family: "maledpan", sans-serif;
+    border: 0px;
+    font-size: 1em;
+    background: transparent;
+    border-radius: 5px;
+    color: #999999;
+    border: 1px solid #DDDDDD;
+    line-height: 1em;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  }
+  .container .list .member-items .detail .control .btnop:hover {
+    cursor: pointer;
+    color: #333333;
+    border: 1px solid #AAAAAA;
+  }
+  .container .list .member-items .detail .control .btnop i {
+    margin-left: 7px;
+  }
+  .container .list .member-items .detail .control .btnop.btn-approve {
+    background: #2ecc71;
+    background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    border: 1px solid #2ecc71;
+    color: #FFFFFF;
+  }
+  .container .list .empty {
+    width: 100%;
+    margin-top: 40%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    font-family: "maledpan", sans-serif;
+    font-size: 1.1em;
+    color: #666666;
+  }
+  .container .list .choose-items {
+    width: 90%;
+    padding: 5%;
+    margin: 0% 5%;
+    margin-bottom: 2%;
+  }
+  .container .list .choose-items .icon {
+    width: 10%;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .container .list .choose-items .name {
+    width: 82%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .container .list .choose-items .name .inputtext {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    border: 0px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    background: transparent;
+    margin-top: 1%;
+  }
+  .container .list .choose-items .control {
+    width: 8%;
+    font-size: 1.3em;
+    line-height: 1.1em;
+  }
+  .container .starter {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-top: 45%;
+  }
+  .container .starter p {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.4em;
+    color: #666666;
+    font-family: "maledpan", sans-serif;
+  }
+  .container .starter a {
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: "maledpan", sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 2% 4%;
+    border-radius: 5px;
+    margin-top: 5%;
+    background: #2ecc71;
+    background: -webkit-linear-gradient(to right, #2ecc71, #27ae60);
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+  }
+  .container .starter a i {
+    margin-right: 15px;
+  }
+  .container .article {
+    width: 90%;
+    margin: 5%;
+  }
+  .container .article h1 {
+    font-size: 2.2em;
+    line-height: 1.2em;
+    margin-bottom: 2%;
+  }
+  .container .article p {
+    font-size: 0.75em;
+    margin-bottom: 3%;
+  }
+  .container .article .text {
+    font-size: 1em;
+    margin-bottom: 5%;
+  }
+  .container .article .download {
+    padding-top: 5%;
+  }
+  .container .article .download .btn {
+    width: 100%;
+    padding: 6%;
+    margin-right: 0%;
+    margin-bottom: 3%;
+  }
+  .container .article .download .btn .d {
+    width: 75%;
+  }
+  .container .article .download .btn .d .caption {
+    font-size: 1.2em;
+    margin-bottom: 3%;
+  }
+  .container .article .download .btn .d .size {
+    font-size: 0.75em;
+  }
+  .container .article .download .btn i {
+    width: 25%;
+    font-size: 2.2em;
+  }
+  .logout {
+    width: 90%;
+    margin: 5%;
+    margin-top: 25%;
+  }
+  .logout h2 {
+    font-size: 2em;
+    margin-bottom: 2%;
+  }
+  .logout p {
+    font-size: 1.2em;
+  }
+  .logout a {
+    padding: 5%;
+  }
+  .form {
+    width: 90%;
+    margin: 5%;
+  }
+  .form .form-items {
+    margin-bottom: 3%;
+  }
+  .form .form-items.middle {
+    margin-top: 22%;
+  }
+  .form .form-items.control {
+    border-top: 3px solid #EAEAEA;
+    padding-top: 5%;
+  }
+  .form .form-items.delete-box {
+    padding: 5%;
+    margin-top: 15%;
+    border-radius: 5px;
+    background: #FFCDD2;
+  }
+  .form .form-items.delete-box .msg {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: 3%;
+    color: #002e26;
+  }
+  .form .form-items label {
+    font-size: 1.1em;
+    margin-bottom: 2%;
+  }
+  .form .form-items .inputtext,
+  .form .form-items textarea {
+    padding: 5%;
+    font-size: 1em;
+    margin-bottom: 5%;
+  }
+  .form .form-items .selection .items {
+    width: 100%;
+    padding: 4% 0%;
+    margin-right: 0%;
+    margin-bottom: 3%;
+  }
+  .form .form-items .selection .items i {
+    width: 20%;
+    font-size: 1.8em;
+    margin-bottom: 0px;
+    margin-top: 2%;
+  }
+  .form .form-items .selection .items .caption {
+    width: 80%;
+    text-align: left;
+  }
+  .form .form-items .selection .items .caption .t {
+    font-size: 1.2em;
+  }
+  .form .form-items .selection .items .caption .c {
+    font-size: 0.75em;
+  }
+  .form .form-items .select {
+    margin-bottom: 5%;
+  }
+  .form .form-items .select:after {
+    top: 44%;
+    right: 5%;
+  }
+  .form .form-items .select select {
+    width: 100%;
+    padding: 5%;
+  }
+  .form .form-items .file-preview {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 15% 0%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 3px dashed #e8e8e9;
+    color: #666666;
+  }
+  .form .form-items .file-preview i {
+    display: block;
+    font-size: 3em;
+    margin-bottom: 2%;
+  }
+  .form .form-items .file-preview p {
+    display: block;
+    font-size: 1.5em;
+    font-family: "maledpan", sans-serif;
+  }
+  .form .form-items .file-preview .info {
+    font-size: 1em;
+    color: #BBBBBB;
+  }
+  .form .form-items .file-preview:hover {
+    cursor: pointer;
+    color: #666666;
+  }
+  .form .form-items .file-preview:hover p {
+    text-decoration: underline;
+  }
+  .form .form-items a.btn {
+    width: 90%;
+    padding: 5%;
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+  .form .form-items button {
+    width: 100%;
+    padding: 5%;
+    margin: 0%;
+    font-size: 1.2em;
+  }
+  .form .form-items button i {
+    margin-left: 15px;
+  }
+  .login .welcome {
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 0%;
+  }
+  .login .welcome img {
+    width: 26%;
+    margin: 0% 37%;
+    margin-bottom: 5%;
+  }
+  .login .welcome h1 a {
+    font-size: 1.4em;
+    margin-bottom: 1%;
+  }
+  .login .welcome p {
+    font-size: 0.7em;
+    margin-bottom: 0%;
+  }
+  .login .welcome a.btn-back {
+    display: none;
+  }
+  .login .content {
+    width: 90%;
+    margin: 5%;
+  }
+  .login .content .nav {
+    margin-bottom: 5%;
+  }
+  .login .content .nav a {
+    padding: 3% 0%;
+    font-size: 1.1em;
+  }
+  .login .content .inputtext {
+    padding: 5%;
+    font-size: 1em;
+    margin-bottom: 3%;
+  }
+  .login .content .btn {
+    padding: 5% 0%;
+    font-size: 1.2em;
+  }
+  .login .content .line {
+    padding: 3% 0%;
+  }
+  .dialog {
+    width: 90%;
+    margin: 5%;
+  }
+  .dialog .head {
+    font-size: 1.2em;
+  }
+  .dialog .head .text {
+    padding: 3.5% 5%;
+  }
+  .dialog .head .btn {
+    padding: 3.5% 5%;
+  }
+  .dialog .content {
+    width: 90%;
+    padding: 5%;
+  }
+  .dialog .content label {
+    width: 99%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    font-size: 1.1em;
+  }
+  .dialog .content .inputtext {
+    width: 90%;
+    padding: 5%;
+    font-size: 1.1em;
+  }
+  .dialog .control .btn {
+    font-size: 1.2em;
+    padding: 5%;
+  }
+}

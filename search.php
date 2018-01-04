@@ -35,7 +35,7 @@ if(!empty($q) && isset($q)){
 <body>
 
 <header class="header">
-	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+	<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
 </header>
 
 <form class="searchform" action="search.php" method="GET">
