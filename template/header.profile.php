@@ -23,13 +23,13 @@
 		<?php if($user->status != 'active'){?>
 		<a href="permission.php?e=UserNotActive"><i class="fa fa-clock-o" aria-hidden="true"></i>รอตรวจสอบบัญชี...</a>
 		<?php }else{?>
+			<a href="profile"><i class="fa fa-file-text" aria-hidden="true"></i>เอกสารของฉัน</a>
+			
 			<?php if($user->verified == 'pending'){?>
 			<a href="verify"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>รอการตรวจสอบ...</a>
 			<?php }else if($user->verified != 'verified'){?>
 			<a href="verify"><i class="fa fa-address-card-o" aria-hidden="true"></i>ขอยืนยันเป็นเจ้าหน้าที่</a>
 			<?php }?>
-
-			<a href="profile"><i class="fa fa-file-text" aria-hidden="true"></i>เอกสารของฉัน</a>
 		<?php }?>
 
 		<a href="signout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>

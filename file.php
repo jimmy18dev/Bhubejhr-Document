@@ -40,7 +40,7 @@ if($document->privacy != 'public' && $user->status != 'active'){
 	exit();
 }
 // Not Employee!
-else if($document->privacy == 'member' && $document->verified != 'verified'){
+else if($document->privacy == 'member' && $user->verified != 'verified'){
 	header("Location:".DOMAIN."/permission.php?e=EmployeeOnly");
 	exit();
 }

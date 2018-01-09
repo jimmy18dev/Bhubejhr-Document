@@ -146,7 +146,8 @@ function register(){
 			if(redirect != ''){
 				window.location = 'document/'+redirect;
 	        }else{
-	        	window.location = 'index.php?login=success';
+	        	// window.location = 'index.php?login=success';
+	        	window.location = 'permission.php?e=UserNotActive';
 	        }
 	    },1000);
 	    

@@ -11,11 +11,20 @@ $(document).ready(function(){
     // Privacy
     var default_privacy = $('#privacy').val();
 
+    // User verified status
+    var verified       = $('#verified').val();
+
     console.log(default_privacy);
 
     $('#privacy-'+default_privacy).addClass('active');
     $('.privacy-items').click(function(){
         var privacy = $(this).attr('data-v');
+
+        if(privacy == 'member' && !verified){
+            alert('คุณยังไม่ได้ยืนยันตนเป็นเจ้าหน้าที่โรงพยาบาล!')
+            return false;
+        }
+
         $('.privacy-items').removeClass('active');
         $(this).addClass('active');
         $('#privacy').val(privacy);

@@ -5,6 +5,7 @@
 	<div class="detail">
 		<div class="name">
 			<span><?php echo $data['fname'].' '.$data['lname']?></span>
+			<?php if($data['status'] == 'active'){?><span class="tag">Active</span><?php }?>
 			<?php if($data['verified'] == 'verified'){?><span class="tag">Verified</span><?php }?>
 			<?php if($data['status'] == 'locked'){?><span class="tag lock">Locked</span><?php }?>
 		</div>
