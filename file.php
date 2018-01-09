@@ -134,6 +134,10 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</div>
 	<?php }?>
+
+	<?php if(!$user_online){?>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<?php }?>
 </header>
 
 <div class="container nomargin">
