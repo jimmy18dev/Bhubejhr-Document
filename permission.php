@@ -43,6 +43,12 @@ $e = $_GET['e'];
 		<p>บัญชีของคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> อยู่ในขั้นตอนการตรวจสอบความถูกต้องจากผู้ดูแลระบบ หากคุณรอนานมากกว่า 24 ชั่วโมงแล้ว กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
 
 		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+	<?php }else if($e == 'UserNotLogin'){?>
+		<h2>สำหรับเจ้าหน้าที่เท่านั้น!</h2>
+		<p>เอกสารนี้สามารถเข้าถึงได้เฉพาะเจ้าหน้าที่ของโรงพยาบาลเท่านั้น กรุณาเข้าระบบและทดลองเปิดไฟล์นี้อีกครั้ง หากพบปัญหาการใช้งาน กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
+
+		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+		<a href="signin" class="right">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }else if($e == 'NotOwner'){?>
 		<h2>คุณไม่ใช่เจ้าของเอกสาร!</h2>
 		<p>เราพบว่าคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> ไม่ใช่เจ้าของเอกสารดังกล่าว จึงไม่มีสิทธิ์ในแก้ไขหรือลบเอกสารได้ หากคุณแน่ใจว่าเป็นเจ้าของเอกสารจริง กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>

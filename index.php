@@ -52,7 +52,7 @@ $p_url 		= DOMAIN;
 <header class="header fixed">
 	<?php include 'template/header.logo.php';?>
 	<?php if($user_online){ include 'template/header.profile.php'; }else{?>
-	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<a href="signup" class="btn btn-login">ลงทะเบียนใหม่<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
 
 	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
@@ -70,7 +70,7 @@ $p_url 		= DOMAIN;
 		<p>โรงพยาบาลเจ้าพระยาอภัยภูเบศร จ.ปราจีนบุรี</p>
 		
 		<?php if(!$user_online){?>
-		<a href="signup">ลงทะเบียน<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="signin">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<?php }else{?>
 		<a href="create/choose">อัพโหลดไฟล์<i class="fa fa-plus" aria-hidden="true"></i></a>
 		<?php }?>

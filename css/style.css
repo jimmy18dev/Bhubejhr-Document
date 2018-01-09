@@ -1032,8 +1032,8 @@ body {
 }
 .logout a.right {
   float: right;
-  color: #27ae60;
-  border: 1px solid #2ecc71;
+  color: #004d40;
+  border: 1px solid #004d40;
 }
 .logout a.right i {
   margin: 0px;
@@ -1077,7 +1077,7 @@ body {
   box-sizing: border-box;
 }
 .form .form-items.middle {
-  margin-top: 22%;
+  margin-top: 18%;
 }
 .form .form-items.hidden {
   display: none;
@@ -1150,26 +1150,26 @@ body {
   margin-bottom: 5%;
 }
 .form .form-items .selection .items {
-  width: 31.33%;
-  padding: 5% 0%;
-  margin-right: 3%;
+  width: 100%;
+  padding: 2.5% 0%;
   float: left;
   display: inline-block;
-  text-align: center;
   border-radius: 5px;
   box-sizing: border-box;
   color: #666666;
   border: 2px solid #e8e8e9;
+  margin-bottom: 2%;
 }
 .form .form-items .selection .items i {
-  width: 100%;
+  width: 15%;
   float: left;
   display: inline-block;
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.4em;
+  text-align: center;
+  margin-top: 1.5%;
 }
 .form .form-items .selection .items .caption {
-  width: 100%;
+  width: 85%;
   float: left;
   display: inline-block;
 }
@@ -1178,7 +1178,7 @@ body {
   font-family: "maledpan", sans-serif;
 }
 .form .form-items .selection .items .caption .c {
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 .form .form-items .selection .items:nth-child(3n+0) {
   margin-right: 0%;
@@ -1650,9 +1650,9 @@ body {
   top: 0;
   left: 0;
   width: 0%;
-  height: 3px;
+  height: 5px;
   float: left;
-  display: none;
+  display: inline-block;
   z-index: 999;
   background: #3bed8d;
   background: -webkit-linear-gradient(to right, #3bed8d, #38acc5);

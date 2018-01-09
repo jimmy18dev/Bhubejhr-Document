@@ -34,6 +34,11 @@ else
 // 	exit();
 // }
 
+if($document->privacy == 'member' && !$user_online){
+	header("Location:".DOMAIN."/permission.php?e=UserNotLogin");
+	exit();
+}
+
 // Account is not Active!
 if($document->privacy != 'public' && $user->status != 'active'){
 	header("Location:".DOMAIN."/permission.php?e=UserNotActive");
@@ -177,10 +182,6 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	<div class="head">
 		<div class="text">คิวอาร์โค้ด</div>
 		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
-	</div>
-	<div class="content">
-		<label for="category_name">ลิ้งค์เอกสารนี้</label>
-		<input type="text" class="inputtext" value="<?php echo $p_url?>">
 	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">

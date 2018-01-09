@@ -49,21 +49,21 @@ if($user->id != $document->owner_id){
 				<i class="fa fa-globe" aria-hidden="true"></i>
 				<div class="caption">
 					<div class="t">สาธารณะ</div>
-					<div class="c">ทุกคนสามารถเห็นไฟล์นี้ได้</div>
+					<div class="c">ทุกคนสามารถเห็นเอกสารนี้ได้ (ไม่ต้องลงชื่อเข้าใช้)</div>
 				</div>
 			</div>
 			<div class="items privacy-items" id="privacy-member" data-v="member">
 				<i class="fa fa-user" aria-hidden="true"></i>
 				<div class="caption">
-					<div class="t">เจ้าหน้าที่</div>
-					<div class="c">เข้าถึงได้เฉพาะเจ้าหน้าที่เท่านั้น</div>
+					<div class="t">เฉพาะเจ้าหน้าที่</div>
+					<div class="c">ผู้ที่ลงชื่อเข้าใช้และเป็นเจ้าหน้าที่ของโรงพยาบาลเท่านั้น</div>
 				</div>
 			</div>
 			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme">
 				<i class="fa fa-lock" aria-hidden="true"></i>
 				<div class="caption">
-					<div class="t">เฉพาะฉัน</div>
-					<div class="c">คุณคนเดียวเท่านั้นที่เห็นไฟล์นี้</div>
+					<div class="t">เจ้าของเท่านั้น</div>
+					<div class="c">เจ้าของเอกสารคนเดียวเท่านั้น ที่เสามารถห็นเอกสารนี้</div>
 				</div>
 			</div>
 		</div>
