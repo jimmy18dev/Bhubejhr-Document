@@ -171,7 +171,7 @@ body {
   color: #1abc9c;
 }
 .header.light a.logo .detail .name {
-  color: #002e26;
+  color: #050505;
 }
 .header.light a.logo .detail .desc {
   color: #999999;
@@ -294,7 +294,7 @@ body {
   float: left;
   display: inline-block;
   text-decoration: none;
-  color: #002e26;
+  color: #050505;
   border-bottom: 1px solid #FAFAFA;
 }
 .header .btn .more-menu a i {
@@ -414,7 +414,7 @@ body {
   float: left;
   display: inline-block;
   text-decoration: none;
-  color: #002e26;
+  color: #050505;
   border-bottom: 1px solid #FAFAFA;
 }
 .header .btn-profile .more-menu a i {
@@ -465,7 +465,7 @@ body {
   cursor: pointer;
 }
 .searchform .inputtext:focus {
-  color: #002e26;
+  color: #050505;
 }
 .searchform .tip {
   position: absolute;
@@ -561,7 +561,7 @@ body {
   float: left;
   display: inline-block;
   font-size: 1.1em;
-  color: #333333;
+  color: #BBBBBB;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
   margin-top: 5%;
@@ -572,12 +572,13 @@ body {
   text-align: left;
   margin-bottom: 5%;
   font-size: 1.4em;
+  color: #333333;
 }
 .container .topic span {
   display: block;
   font-size: 0.7em;
   margin-top: 5px;
-  color: #BBBBBB;
+  color: #999999;
 }
 .container .list {
   width: 100%;
@@ -615,7 +616,7 @@ body {
   display: inline-block;
   font-size: 1.5em;
   line-height: 1.3em;
-  color: #002e26;
+  color: #050505;
   font-family: "maledpan", sans-serif;
   text-decoration: none;
 }
@@ -672,11 +673,11 @@ body {
   display: inline-block;
   font-size: 1.5em;
   line-height: 1.3em;
-  color: #002e26;
+  color: #050505;
   font-family: "maledpan", sans-serif;
 }
 .container .list .member-items .detail .name a {
-  color: #002e26;
+  color: #050505;
   text-decoration: none;
 }
 .container .list .member-items .detail .name a:hover {
@@ -789,7 +790,7 @@ body {
   font-size: 1.5em;
   line-height: 1.5em;
   font-family: "maledpan", sans-serif;
-  color: #002e26;
+  color: #050505;
   border: 0px;
   margin: 0px;
   padding: 0px;
@@ -863,7 +864,7 @@ body {
   font-size: 3em;
   line-height: 1.2em;
   margin-bottom: 2%;
-  color: #002e26;
+  color: #050505;
   font-weight: normal;
   font-family: "maledpan", sans-serif;
 }
@@ -897,14 +898,13 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  border-top: 1px solid #e8e8e9;
   padding-top: 5%;
 }
 .container .article .download .btn {
   width: 40%;
   padding: 2% 5%;
   margin-right: 2%;
-  float: left;
+  float: right;
   display: inline-block;
   color: #FFFFFF;
   text-decoration: none;
@@ -973,7 +973,7 @@ body {
 .logout h2 {
   font-size: 2.8em;
   font-weight: normal;
-  color: #002e26;
+  color: #050505;
   font-family: "maledpan", sans-serif;
   margin-bottom: 2%;
 }
@@ -984,6 +984,9 @@ body {
   font-family: "maledpan", sans-serif;
   font-size: 1.2em;
   color: #333333;
+}
+.logout p strong {
+  color: #050505;
 }
 .logout textarea {
   width: 92%;
@@ -1003,20 +1006,20 @@ body {
   cursor: pointer;
 }
 .logout textarea:focus {
-  color: #002e26;
+  color: #050505;
 }
 .logout a {
   margin-top: 10%;
   float: left;
   display: inline-block;
   text-decoration: none;
-  color: #333333;
+  color: #666666;
   padding: 2.5% 3%;
   border-radius: 5px;
   font-size: 1.1em;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
-  border: 1px solid transparent;
+  border: 1px solid #e8e8e9;
 }
 .logout a:hover {
   cursor: pointer;
@@ -1095,7 +1098,7 @@ body {
   display: inline-block;
   font-size: 1.4em;
   margin-bottom: 5%;
-  color: #002e26;
+  color: #050505;
 }
 .form .form-items label {
   width: 99%;
@@ -1109,7 +1112,7 @@ body {
 }
 .form .form-items label:hover {
   cursor: pointer;
-  color: #002e26;
+  color: #050505;
 }
 .form .form-items .inputfile {
   display: none;
@@ -1137,7 +1140,8 @@ body {
 }
 .form .form-items .inputtext:focus,
 .form .form-items textarea:focus {
-  color: #002e26;
+  color: #050505;
+  background: #e2e2e3;
 }
 .form .form-items .selection {
   width: 100%;
@@ -1222,7 +1226,8 @@ body {
 }
 .form .form-items .select select:hover {
   cursor: pointer;
-  color: #002e26;
+  color: #050505;
+  background: #e2e2e3;
 }
 .form .form-items .file-preview {
   width: 100%;
@@ -1233,8 +1238,8 @@ body {
   margin-bottom: 5%;
   border-radius: 5px;
   box-sizing: border-box;
-  border: 3px dashed #e8e8e9;
-  color: #666666;
+  border: 2px dashed #BBBBBB;
+  color: #333333;
 }
 .form .form-items .file-preview i {
   display: block;
@@ -1247,12 +1252,13 @@ body {
   font-family: "maledpan", sans-serif;
 }
 .form .form-items .file-preview .info {
-  font-size: 1em;
-  color: #BBBBBB;
+  font-size: 0.9em;
+  color: #999999;
 }
 .form .form-items .file-preview:hover {
   cursor: pointer;
   color: #666666;
+  background: #EFEFEF;
 }
 .form .form-items .file-preview:hover p {
   text-decoration: underline;
@@ -1335,7 +1341,7 @@ body {
   font-family: "maledpan", sans-serif;
   font-size: 1.7em;
   margin-bottom: 3%;
-  color: #002e26;
+  color: #050505;
   line-height: 1.2em;
   text-decoration: none;
 }
@@ -1362,7 +1368,7 @@ body {
   margin-right: 10px;
 }
 .login .welcome a.btn-back:hover {
-  color: #002e26;
+  color: #050505;
 }
 .login .welcome a.btn-back:active {
   background: #e8e8e9;
@@ -1394,11 +1400,11 @@ body {
   color: #666666;
 }
 .login .content .nav a.active {
-  color: #002e26;
-  border-bottom: 1px solid #002e26;
+  color: #050505;
+  border-bottom: 1px solid #050505;
 }
 .login .content .nav a.active:hover {
-  color: #002e26;
+  color: #050505;
 }
 .login .content .nav a:hover {
   color: #333333;
@@ -1426,7 +1432,8 @@ body {
   cursor: pointer;
 }
 .login .content .inputtext:focus {
-  color: #002e26;
+  color: #050505;
+  background: #e2e2e3;
 }
 .login .content .btn {
   width: 100%;
@@ -1570,7 +1577,7 @@ body {
   float: left;
   display: inline-block;
   margin-bottom: 2%;
-  color: #002e26;
+  color: #050505;
   font-size: 1.1em;
 }
 .dialog .content .inputtext {
@@ -1589,7 +1596,7 @@ body {
   cursor: pointer;
 }
 .dialog .content .inputtext:focus {
-  color: #002e26;
+  color: #050505;
 }
 .dialog .control {
   width: 100%;

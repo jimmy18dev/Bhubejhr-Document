@@ -152,16 +152,6 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<?php if($document->privacy != 'onlyme'){?>
-			<div class="btn btn-qrcode" id="btn-qrcode">
-				<div class="d">
-					<span class="caption">แสดงคิวอาร์โค้ด</span>
-					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
-				</div>
-				<i class="fa fa-qrcode" aria-hidden="true"></i>
-			</div>
-			<?php }?>
-
 			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>
@@ -169,6 +159,16 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 				</div>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
+
+			<?php if($document->privacy != 'onlyme'){?>
+			<div class="btn btn-qrcode" id="btn-qrcode">
+				<div class="d">
+					<span class="caption">แสดงคิวอาร์โค้ด</span>
+					<span class="size">ส่งต่อเอกสารนี้</span>
+				</div>
+				<i class="fa fa-qrcode" aria-hidden="true"></i>
+			</div>
+			<?php }?>
 		</div>
 	</div>
 </div>
@@ -177,6 +177,10 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	<div class="head">
 		<div class="text">คิวอาร์โค้ด</div>
 		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
+	</div>
+	<div class="content">
+		<label for="category_name">ลิ้งค์เอกสารนี้</label>
+		<input type="text" class="inputtext" value="<?php echo $p_url?>">
 	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
 	<div class="control">
