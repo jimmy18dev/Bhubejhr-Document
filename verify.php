@@ -4,6 +4,9 @@ require_once 'autoload.php';
 if($user->verified == 'pending'){
 	header("Location:".DOMAIN."/permission.php?e=EmployeeOnly");
 	exit();
+}else if($user->verified == 'verified'){
+	header("Location:".DOMAIN."/profile");
+	exit();
 }
 ?>
 <!doctype html>
