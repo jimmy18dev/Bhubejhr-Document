@@ -41,6 +41,11 @@ switch ($_SERVER['REQUEST_METHOD']){
     			$member->updateStatus($member_id,'locked');
     			$returnObject['message'] = 'MemberID '.$member_id.' is update status to Locked!';
 				break;
+			case 'confirm_employee':
+				$member_id = $_POST['member_id'];
+				$member->confirmEmployee($member_id);
+				$returnObject['message'] = 'MemberID '.$member_id.' is employee confirm!';
+				break;
 			default:
 				$returnObject['message'] = 'POST API Not found!';
 			break;

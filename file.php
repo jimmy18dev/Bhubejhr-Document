@@ -15,7 +15,7 @@ if(empty($document->id)){
 }
 
 if($document->privacy == 'member')
-	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะสมาชิก';
+	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะเจ้าหน้าที่';
 else if($document->privacy == 'public')
 	$privacy = '<i class="fa fa-globe" aria-hidden="true"></i>สาธารณะ';
 else if($document->privacy == 'onlyme')
@@ -23,11 +23,30 @@ else if($document->privacy == 'onlyme')
 else
 	$privacy = '';
 
-if($document->privacy == 'member' && !$user_online){
-	header("Location:".DOMAIN."/signin?redirect=".$document->id);
+// if($document->privacy == 'member' && !$user_online){
+// 	header("Location:".DOMAIN."/signin?redirect=".$document->id);
+// 	exit();
+// }else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
+// 	header("Location:".DOMAIN."/permission/error");
+// 	exit();
+// }else if($document->privacy == 'member' && ){
+// 	header("Location:".DOMAIN."/pending#waiting_verify");
+// 	exit();
+// }
+
+// Account is not Active!
+if($document->privacy != 'public' && $user->status != 'active'){
+	header("Location:".DOMAIN."/permission.php?e=UserNotActive");
 	exit();
-}else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
-	header("Location:".DOMAIN."/permission/error");
+}
+// Not Employee!
+else if($document->privacy == 'member' && $document->verified != 'verified'){
+	header("Location:".DOMAIN."/permission.php?e=EmployeeOnly");
+	exit();
+}
+// Not Document Owner!
+else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
+	header("Location:".DOMAIN."/permission.php?e=NotOwner");
 	exit();
 }
 

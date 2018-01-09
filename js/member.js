@@ -5,12 +5,14 @@ $(document).ready(function(){
 	$btn = $('.btnop');
 
 	$btn.click(function(){
-		var member_id = $(this).parent().parent().attr('data-id');
+		var member_id = $(this).parent().parent().parent().attr('data-id');
 		var operation = $(this).attr('data-op');
 		var confirmMsg = '';
 
 		if(!member_id)
 			return false;
+
+		console.log('BTn Clickd');
 
 		switch(operation) {
 		    case 'approve':

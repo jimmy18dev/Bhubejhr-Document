@@ -1,5 +1,6 @@
 <?php
 class User{
+    // STATUS  Active, Pending, Locked, Reject
     public $id;
     public $phone;
     public $email;
@@ -7,6 +8,7 @@ class User{
     public $fname;
     public $lname;
     public $bio;
+    public $verified;
     public $type;
     public $status;
     public $ip;
@@ -51,6 +53,13 @@ class User{
         setcookie('login_string',hash('sha512',$user_data['password'].$user_browser),$cookie_time);
 
         return 1; // LOGIN SUCCESS
+    }
+    
+    public function requestVerify($user_id,$bio){
+        $this->db->query('UPDATE user SET bio = :bio,verified = "pending" WHERE id = :user_id');
+        $this->db->bind(':bio',$bio);
+        $this->db->bind(':user_id',$user_id);
+        $this->db->execute();
     }
 
     public function login($username,$password){
@@ -205,7 +214,7 @@ class User{
     }
 
     public function getUser($user_id){
-        $this->db->query('SELECT id,phone,email,fname,lname,bio,password,salt,type,status,ip,register_time,edit_time,visit_time,fb_id,fb_fname,fb_lname,fb_link,gender FROM user WHERE id = :user_id');
+        $this->db->query('SELECT id,phone,email,fname,lname,bio,password,salt,verified,type,status,ip,register_time,edit_time,visit_time,fb_id,fb_fname,fb_lname,fb_link,gender FROM user WHERE id = :user_id');
         $this->db->bind(':user_id',$user_id);
         $this->db->execute();
         $dataset = $this->db->single();
@@ -223,6 +232,7 @@ class User{
         $this->register_time  = $this->db->datetimeformat($dataset['register_time'],'fulldatetime');
         $this->visit_time     = $dataset['visit_time'];
         $this->edit_time     = $dataset['edit_time'];
+        $this->verified     = $dataset['verified'];
         $this->type           = $dataset['type'];
         $this->status         = $dataset['status'];
         $this->gender         = $dataset['gender'];

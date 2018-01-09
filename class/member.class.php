@@ -46,6 +46,12 @@ class Member{
         $this->db->execute();
     }
 
+    public function confirmEmployee($user_id){
+        $this->db->query('UPDATE user SET verified = "verified" WHERE id = :user_id');
+        $this->db->bind(':user_id',$user_id);
+        $this->db->execute();
+    }
+
     public function countPending(){
         $this->db->query('SELECT COUNT(id) total FROM user WHERE status = "pending"');
         $this->db->execute();

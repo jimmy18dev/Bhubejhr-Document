@@ -5,9 +5,10 @@
 	<div class="detail">
 		<div class="name"><?php echo $data['fname'].' '.$data['lname']?></div>
 		<div class="desc">
-			<span><strong>Email:</strong> <?php echo $data['email'];?></span>
-			<span><strong>Phone:</strong> <?php echo $data['phone'];?></span>
-			<span><strong>Register:</strong> <?php echo $data['register_time'];?></span>
+			<span><strong>ที่อยู่อีเมล</strong> <?php echo $data['email'];?></span>
+			<span><strong>เบอร์ติดต่อ</strong> <?php echo $data['phone'];?></span>
+			<span><strong>ลงทะเบียนเมื่อ</strong> <?php echo $data['register_time'];?></span>
+			<span><?php echo $data['bio'];?></span>
 		</div>
 
 		<?php if($user->id != $data['id']){?>
@@ -19,6 +20,7 @@
 			<?php }else{?>
 			<button class="btnop btn-approve" data-op="approve">อนุญาต</button>
 			<button class="btnop btn-reject" data-op="reject">เพิกเฉย</button>
+			<div class="caption">ตรวจสอบบัญชี</div>
 			<?php }?>
 		</div>
 		<?php }?>
