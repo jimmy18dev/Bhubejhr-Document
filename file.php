@@ -10,30 +10,12 @@ if(empty($file_id)){
 $document = new Document();
 $document->get($file_id);
 
+// File Not Found
 if(empty($document->id)){
 	header('Location: 404!'); die();
 }
 
-if($document->privacy == 'member')
-	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะเจ้าหน้าที่';
-else if($document->privacy == 'public')
-	$privacy = '<i class="fa fa-globe" aria-hidden="true"></i>สาธารณะ';
-else if($document->privacy == 'onlyme')
-	$privacy = '<i class="fa fa-lock" aria-hidden="true"></i>เฉพาะฉัน';
-else
-	$privacy = '';
-
-// if($document->privacy == 'member' && !$user_online){
-// 	header("Location:".DOMAIN."/signin?redirect=".$document->id);
-// 	exit();
-// }else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
-// 	header("Location:".DOMAIN."/permission/error");
-// 	exit();
-// }else if($document->privacy == 'member' && ){
-// 	header("Location:".DOMAIN."/pending#waiting_verify");
-// 	exit();
-// }
-
+// User not Login
 if($document->privacy == 'member' && !$user_online){
 	header("Location:".DOMAIN."/permission.php?e=UserNotLogin");
 	exit();
@@ -54,6 +36,15 @@ else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
 	header("Location:".DOMAIN."/permission.php?e=NotOwner");
 	exit();
 }
+
+if($document->privacy == 'member')
+	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะเจ้าหน้าที่';
+else if($document->privacy == 'public')
+	$privacy = '<i class="fa fa-globe" aria-hidden="true"></i>สาธารณะ';
+else if($document->privacy == 'onlyme')
+	$privacy = '<i class="fa fa-lock" aria-hidden="true"></i>เฉพาะฉัน';
+else
+	$privacy = '';
 
 $document->updateView($document->id);
 
@@ -147,9 +138,10 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 
 <div class="container nomargin">
 	<div class="article">
+		<a class="category" href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><?php echo $document->category_name; ?></a> · <?php echo $document->create_time;?> · <?php echo $privacy;?>
+			เมื่อ <?php echo $document->create_time;?> · <?php echo $privacy;?>
 		</p>
 
 		<?php if(!empty($document->description)){?>

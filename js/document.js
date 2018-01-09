@@ -41,6 +41,7 @@ $(document).ready(function(){
 
         if(!title || !category_id || !privacy || !file_id) return false;
 
+        $overlay.addClass('open');
         $progressbar.fadeIn(300);
         $progressbar.width('0%');
 
@@ -82,6 +83,7 @@ $(document).ready(function(){
         $btnPrivacySave.prop('disabled', false);
         $btnPrivacySave.html('รอสักครู่<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
 
+        $overlay.addClass('open');
         $progressbar.fadeIn(300);
         $progressbar.width('0%');
 

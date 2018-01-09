@@ -107,7 +107,7 @@ if($user->id != $document->owner_id){
 	</div>
 	<div class="form-items">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึกการแก้ไข<i class="fa fa-check-circle" aria-hidden="true"></i></button>
+	    <button id="btnSave">บันทึกการแก้ไข</button>
 	</div>
 </div>
 

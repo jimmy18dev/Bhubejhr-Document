@@ -73,7 +73,7 @@ if($user->id != $document->owner_id){
 	<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
 	
 	<div class="form-items control">
-		<button id="btnPrivacySave">บันทึกสิทธิ์</button>
+		<button id="btnPrivacySave">บันทึก</button>
 		<a href="document/<?php echo $document->id;?>" class="btn">ข้ามขั้นตอนนี้</a>
 	</div>
 </div>

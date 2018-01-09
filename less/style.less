@@ -544,7 +544,7 @@
 						display: inline-block;
 
 						&.tag{
-							background: @green_color_dark;
+							background: @primary_color;
 							font-size: 0.45em;
 							padding: 3px 5px;
 							border-radius: 3px;
@@ -728,6 +728,20 @@
 		margin-top: 25%;
 		background: #FFFFFF;
 
+		.category{
+			float: left;
+			display: inline-block;
+			color: #999999;
+			text-decoration: none;
+
+			i{ margin-left: 7px; }
+
+			&:hover{
+				text-decoration: underline;
+				color: #050505;
+			}
+		}
+
 		h1{
 			width: 100%;
 			float: left;
@@ -775,7 +789,7 @@
 
 			.btn{
 				width: 40%;
-				padding: 2% 5%;
+				padding: 3% 4%;
 				margin-right: 2%;
 				float: right;
 				display: inline-block;
@@ -784,12 +798,12 @@
 				font-size: 1em;
 				line-height: 1em;
 				border-radius: 5px;
-				.transitionAnimation(0.1s);
 				box-sizing: border-box;
 
 				&.btn-download{
-					background: @green_color_dark;
-					&:hover{ background: @green_color; }
+					background: @green_color;
+					box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+					&:hover{ background: @green_color_dark; }
 				}
 				&.btn-qrcode{
 					background: @border_color;
@@ -944,8 +958,8 @@
 		&.middle{ margin-top: 18%; }
 		&.hidden{ display: none; }
 		&.control{
-			border-top: 1px solid #EAEAEA;
-			padding-top: 5%;
+			border-top: 1px dotted @border_color;
+			padding: 5% 0%;
 		}
 		&.delete-box{
 			padding: 5% 0%;
@@ -1044,7 +1058,10 @@
 				}
 				&:nth-child(3n+0){ margin-right: 0%; }
 
-				&:hover{ cursor: pointer; }
+				&:hover{
+					cursor: pointer;
+					background: #FAFAFA;
+				}
 
 				&.active{
 					color: @green_color_dark;
@@ -1100,9 +1117,9 @@
 			float: left;
 			display: inline-block;
 			text-align: center;
-			padding: 15% 0%;
+			padding: 10% 0%;
 			margin-bottom: 5%;
-			border-radius: 5px;
+			border-radius: 10px;
 			box-sizing: border-box;
 			border: 2px dashed #BBBBBB;
 			color: #333333;
@@ -1111,6 +1128,7 @@
 				display: block;
 				font-size: 3em;
 				margin-bottom: 2%;
+				color: #DDDDDD;
 			}
 			p{
 				display: block;
@@ -1150,7 +1168,7 @@
 		}
 
 		button{
-			padding: 2.5% 5%;
+			padding: 3% 4%;
 			margin: 0px;
 			float: right;
 			display: inline-block;
@@ -1158,23 +1176,24 @@
 			border: 0px;
 			border-radius: 5px;
 			line-height: 1em;
-			background: @green_color_dark;
+			background: @green_color;
 			color: #FFFFFF;
 			font-family: @topic_font;
-
-			.transitionAnimation(0.2s);
+			box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+			letter-spacing: 1px;
 
 			&:hover{
 				cursor: pointer;
-				background: @green_color;
+				background: @green_color_dark;
 			}
 			
 			i{ margin-left: 10px; }
 
 			&.btn-delete{ background: #C62828; }
 			&.loading{
-				background: transparent;
+				background: #EEEEEE;
 				color: #999999;
+				box-shadow: none;
 			}
 		}
 	}
@@ -1316,12 +1335,13 @@
 			text-decoration: none;
 			box-sizing: border-box;
 			font-family: @topic_font;
-			background: @green_color_dark;
+			background: @green_color;
+			box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
 
 			&:hover{ cursor: pointer; }
 
 			&.loading{
-				background: transparent;
+				box-shadow: none;
 				color: #666666;
 			}
 		}
@@ -1336,7 +1356,7 @@
 			margin-top: 5%;
 			i{ margin-left: 15px; }
 
-			&:hover{ background: @green_color; }
+			&:hover{ background: @green_color_dark; }
 		}
 
 		.btn-register{
@@ -1487,16 +1507,16 @@
 			&.delete{ color: #F44336; }
 			&.save{
 				float: right;
-				color: @green_color_dark;
-				&:hover{ color: @green_color; }
+				color: @green_color;
+				&:hover{ color: @green_color_dark; }
 			}
 			&.fullsize{
 				width: 90%;
 				text-align: center;
-				background: @green_color_dark;
+				background: @green_color;
 				color: #FFFFFF;
 
-				&:hover{ background: @green_color; }
+				&:hover{ background: @green_color_dark; }
 			}
 		}
 	}
