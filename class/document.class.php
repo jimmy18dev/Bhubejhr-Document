@@ -204,7 +204,7 @@ class Document{
 
         $now = date('Y-m-d H:i:s');
         
-        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time,edit_time,secret) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time,:edit_time,:secret)');
+        $this->db->query('INSERT INTO document(user_id,category_id,title,description,file_name,file_type,file_size,create_time,edit_time,secret,privacy) VALUE(:user_id,:category_id,:title,:description,:file_name,:file_type,:file_size,:create_time,:edit_time,:secret,:privacy)');
         $this->db->bind(':user_id',$user_id);
         $this->db->bind(':category_id',$category_id);
         $this->db->bind(':title',$title);
@@ -215,6 +215,7 @@ class Document{
         $this->db->bind(':create_time',$now);
         $this->db->bind(':edit_time',$now);
         $this->db->bind(':secret',md5(mt_rand(1,mt_getrandmax())));
+        $this->db->bind(':privacy',"public");
         $this->db->execute();
         return $this->db->lastInsertId();
     }

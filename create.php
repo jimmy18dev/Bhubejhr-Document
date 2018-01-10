@@ -5,7 +5,7 @@ if(!$user_online){
 	header('Location: '.DOMAIN.'/signin');
 	die();
 }else if($user->status != 'active'){
-	header('Location: '.DOMAIN.'/pending');
+	header("Location:".DOMAIN."/permission.php?e=UserNotActive");
 	die();
 }
 
@@ -46,7 +46,7 @@ if(empty($category->id)){
 <body>
 
 <header class="header light">
-	<a href="create/choose" class="btn btn-back"><i class="fa fa-history" aria-hidden="true"></i><span>กลับเลือกประเภท</span></a>
+	<a href="create/choose" class="btn btn-back"><i class="fa fa-bars" aria-hidden="true"></i><span>กลับเลือกประเภท</span></a>
 	<div class="title">ประเภท: <?php echo $category->name;?></div>
 
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
@@ -78,7 +78,7 @@ if(empty($category->id)){
 	<div class="form-items hidden">
 		<input type="hidden" id="maximumSize" value="<?php echo $document->return_bytes(ini_get('post_max_size'));?>">
 		<input type="hidden" name="category_id" required value="<?php echo $category->id;?>">
-		<button type="submit" id="btnSubmit" disabled>อัพโหลด<i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+		<button type="submit" id="btnSubmit" disabled>อัพโหลดเอกสาร</button>
 	</div>
 </form>
 

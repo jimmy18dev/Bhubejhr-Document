@@ -78,8 +78,8 @@ if($user->id != $document->owner_id){
 			<div class="items privacy-items" id="privacy-member" data-v="member">
 				<i class="fa fa-user" aria-hidden="true"></i>
 				<div class="caption">
-					<div class="t">สมาชิกเท่านั้น</div>
-					<div class="c">ต้องเป็นสมาชิกที่ลงเบียนเท่านั้น</div>
+					<div class="t">เจ้าหน้าที่</div>
+					<div class="c">เข้าถึงได้เฉพาะเจ้าหน้าที่เท่านั้น</div>
 				</div>
 			</div>
 			<div class="items privacy-items" id="privacy-onlyme" data-v="onlyme">
@@ -90,6 +90,7 @@ if($user->id != $document->owner_id){
 				</div>
 			</div>
 		</div>
+		<input type="hidden" id="verified" value="<?php echo $user->verified;?>">
 		<input type="hidden" id="privacy" value="<?php echo $document->privacy;?>">
 	</div>
 
@@ -106,7 +107,7 @@ if($user->id != $document->owner_id){
 	</div>
 	<div class="form-items">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึกการแก้ไข<i class="fa fa-check-circle" aria-hidden="true"></i></button>
+	    <button id="btnSave">บันทึกการแก้ไข</button>
 	</div>
 </div>
 

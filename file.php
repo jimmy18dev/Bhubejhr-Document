@@ -10,26 +10,41 @@ if(empty($file_id)){
 $document = new Document();
 $document->get($file_id);
 
+// File Not Found
 if(empty($document->id)){
 	header('Location: 404!'); die();
 }
 
+// User not Login
+if($document->privacy == 'member' && !$user_online){
+	header("Location:".DOMAIN."/permission.php?e=UserNotLogin");
+	exit();
+}
+
+// Account is not Active!
+if($document->privacy != 'public' && $user->status != 'active'){
+	header("Location:".DOMAIN."/permission.php?e=UserNotActive");
+	exit();
+}
+// Not Employee!
+else if($document->privacy == 'member' && $user->verified != 'verified'){
+	header("Location:".DOMAIN."/permission.php?e=EmployeeOnly");
+	exit();
+}
+// Not Document Owner!
+else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
+	header("Location:".DOMAIN."/permission.php?e=NotOwner");
+	exit();
+}
+
 if($document->privacy == 'member')
-	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะสมาชิก';
+	$privacy = '<i class="fa fa-user" aria-hidden="true"></i>เฉพาะเจ้าหน้าที่';
 else if($document->privacy == 'public')
 	$privacy = '<i class="fa fa-globe" aria-hidden="true"></i>สาธารณะ';
 else if($document->privacy == 'onlyme')
 	$privacy = '<i class="fa fa-lock" aria-hidden="true"></i>เฉพาะฉัน';
 else
 	$privacy = '';
-
-if($document->privacy == 'member' && !$user_online){
-	header("Location:".DOMAIN."/signin?redirect=".$document->id);
-	exit();
-}else if($document->privacy == 'onlyme' && $user->id != $document->owner_id){
-	header("Location:".DOMAIN."/permission/error");
-	exit();
-}
 
 $document->updateView($document->id);
 
@@ -119,13 +134,18 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		</div>
 	</div>
 	<?php }?>
+
+	<?php if(!$user_online){?>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<?php }?>
 </header>
 
 <div class="container nomargin">
 	<div class="article">
+		<a class="category" href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			<a href="category/<?php echo $document->category_id?>" class="style<?php echo $document->category_id?>"><?php echo $document->category_name; ?></a> · <?php echo $document->create_time;?> · <?php echo $privacy;?>
+			เมื่อ <?php echo $document->create_time;?> · <?php echo $privacy;?>
 		</p>
 
 		<?php if(!empty($document->description)){?>
@@ -133,16 +153,6 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<?php }?>
 		
 		<div class="download">
-			<?php if($document->privacy != 'onlyme'){?>
-			<div class="btn btn-qrcode" id="btn-qrcode">
-				<div class="d">
-					<span class="caption">แสดงคิวอาร์โค้ด</span>
-					<span class="size">สแกนด้วยโทรศัพท์มือถือ</span>
-				</div>
-				<i class="fa fa-qrcode" aria-hidden="true"></i>
-			</div>
-			<?php }?>
-
 			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
 				<div class="d">
 					<span class="caption">ดาวน์โหลดไฟล์</span>
@@ -150,6 +160,16 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 				</div>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
+
+			<?php if($document->privacy != 'onlyme'){?>
+			<div class="btn btn-qrcode" id="btn-qrcode">
+				<div class="d">
+					<span class="caption">แสดงคิวอาร์โค้ด</span>
+					<span class="size">ส่งต่อเอกสารนี้</span>
+				</div>
+				<i class="fa fa-qrcode" aria-hidden="true"></i>
+			</div>
+			<?php }?>
 		</div>
 	</div>
 </div>

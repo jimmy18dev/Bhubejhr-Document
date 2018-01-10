@@ -66,7 +66,8 @@ $(document).ready(function(){
             $fileInput.prop('disabled', true);
             $titleInput.prop('disabled', true);
             $descriptionInput.prop('disabled', true);
-
+            
+            $overlay.addClass('open');
             $progressbar.fadeIn(300);
             $progressbar.width('0%');
         },

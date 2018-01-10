@@ -26,20 +26,20 @@ switch ($_SERVER['REQUEST_METHOD']){
     	break;
     case 'POST':
     	switch ($_POST['request']){
-    		case 'approve':
+    		case 'active':
     			$member_id = $_POST['member_id'];
     			$member->updateStatus($member_id,'active');
     			$returnObject['message'] = 'MemberID '.$member_id.' is update status to approved';
-				break;
-			case 'reject':
-				$member_id = $_POST['member_id'];
-    			$member->updateStatus($member_id,'reject');
-    			$returnObject['message'] = 'MemberID '.$member_id.' is update status to Reject!';
 				break;
 			case 'lock':
 				$member_id = $_POST['member_id'];
     			$member->updateStatus($member_id,'locked');
     			$returnObject['message'] = 'MemberID '.$member_id.' is update status to Locked!';
+				break;
+			case 'verified':
+				$member_id = $_POST['member_id'];
+				$member->confirmEmployee($member_id);
+				$returnObject['message'] = 'MemberID '.$member_id.' is employee confirm!';
 				break;
 			default:
 				$returnObject['message'] = 'POST API Not found!';

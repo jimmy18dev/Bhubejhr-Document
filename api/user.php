@@ -103,6 +103,14 @@ switch ($_SERVER['REQUEST_METHOD']){
 
 				$returnObject['message'] 	= 'Password changed.';
 				break;
+			case 'request_verify':
+				$user_id 	= $_POST['user_id'];
+				$bio 		= $_POST['bio'];
+
+				$user->requestVerify($user->id,$bio);
+
+				$returnObject['message'] 	= 'Verify request Send';
+				break;
 			default:
 				$returnObject['message'] = 'POST API Not found!';
 			break;

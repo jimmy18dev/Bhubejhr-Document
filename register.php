@@ -52,7 +52,7 @@ $p_url 		= DOMAIN.'/signup';
 	<div class="welcome">
 		<a href="index.php" class="logo"><img src="image/logo.png" alt=""></a>
 		<h1><a href="index.php">โรงพยาบาลเจ้าพระยาอภัยภูเบศร</a></h1>
-		<p>Create, share and edit text documents with online word processing</p>
+		<p>การแบ่งปันเอกสารจะไม่เป็นอุปสรรคอีกต่อไป</p>
 		<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
 	</div>
 	<div class="content">

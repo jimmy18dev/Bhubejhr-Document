@@ -8,6 +8,23 @@ if (!$user_online) {
 
 $document 	= new Document();
 $files 		= $document->listAll(NULL,$user->id,NULL);
+$dataset 	= [];
+
+foreach ($files as $k => $v){
+	$date = $wpdb->datetimeformat(date('Y-m-d',$v['file_create_timestamp']),'topicdate');
+
+	if(!in_array($date, array_column($dataset,'date'))){
+		$structure = array(
+			'date' 	=> $date,
+			'items' => []
+		);
+
+		array_push($dataset,$structure);
+	}
+
+	$pos = array_search($date, array_column($dataset,'date'));
+	array_push($dataset[$pos]["items"],$files[$k]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,18 +54,19 @@ $files 		= $document->listAll(NULL,$user->id,NULL);
 </header>
 
 <div class="container nomargin">
-	<div class="topic">รายการล่าสุด</div>
-	<?php if(count($files) > 0){?>
+	<?php if(count($dataset) > 0){?>
+	<?php foreach ($dataset as $var){?>
+	<div class="topic"><?php echo $var['date'];?></div>
 	<div class="list">
-	<?php
-		foreach ($files as $data)
-			include 'template/file.items.php';
-	?>
+		<?php
+		foreach ($var['items'] as $data){ include 'template/file.items.php'; }
+		?>
 	</div>
+	<?php }?>
 	<?php }else{?>
 	<div class="starter">
 		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-		<a href="create/choose"><i class="fa fa-cloud-upload" aria-hidden="true"></i>อัพโหลดไฟล์</a>
+		<a href="create/choose">อัพโหลดไฟล์</a>
 	</div>
 	<?php }?>
 </div>

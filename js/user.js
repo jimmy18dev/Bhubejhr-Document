@@ -6,6 +6,37 @@ $(document).ready(function(){
 	$btnSubmit 		= $('#btnSubmit');
 });
 
+function requestVerify(){
+	var bio 	= $('#bio').val();
+
+	if(!bio){
+		alert(bio);
+		return false;
+	}
+
+	$progressbar.fadeIn(300);
+	$progressbar.width('0%');
+	$progressbar.animate({width:'70%'},500);
+
+	$.get({
+		url         :api_user,
+		timeout 	:10000, //10 second timeout
+		cache       :false,
+		dataType    :"json",
+		type        :"POST",
+		data:{
+			request     :'request_verify',
+			bio 		:bio
+		},
+		error: function (request, status, error) {
+			console.log("Request Error",request.responseText);
+		}
+	}).done(function(data){
+		console.log(data);
+		location.reload();
+	});
+}
+
 function login(){
 	var username 	= $('#username').val();
 	var password 	= $('#password').val();
@@ -115,7 +146,8 @@ function register(){
 			if(redirect != ''){
 				window.location = 'document/'+redirect;
 	        }else{
-	        	window.location = 'index.php?login=success';
+	        	// window.location = 'index.php?login=success';
+	        	window.location = 'permission.php?e=UserNotActive';
 	        }
 	    },1000);
 	    

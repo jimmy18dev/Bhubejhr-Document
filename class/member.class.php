@@ -32,7 +32,7 @@ class Member{
     }
 
     public function listAll(){
-        $this->db->query('SELECT id,phone,email,fname,lname,bio,password,salt,type,status,ip,register_time,edit_time,visit_time,fb_id,fb_fname,fb_lname,fb_link,gender FROM user ORDER BY register_time DESC');
+        $this->db->query('SELECT id,phone,email,fname,lname,bio,password,salt,verified,type,status,ip,register_time,edit_time,visit_time,fb_id,fb_fname,fb_lname,fb_link,gender FROM user ORDER BY register_time DESC');
         $this->db->bind(':user_id',$user_id);
         $this->db->execute();
         $dataset = $this->db->resultset();
@@ -43,6 +43,12 @@ class Member{
         $this->db->query('UPDATE user SET status = :status WHERE id = :user_id');
         $this->db->bind(':user_id',$user_id);
         $this->db->bind(':status',$status);
+        $this->db->execute();
+    }
+
+    public function confirmEmployee($user_id){
+        $this->db->query('UPDATE user SET verified = "verified" WHERE id = :user_id');
+        $this->db->bind(':user_id',$user_id);
         $this->db->execute();
     }
 

@@ -15,7 +15,23 @@ if(empty($category->id)){
 	header('Location: 404!'); die();
 }
 
-$files = $document->listAll($category->id,NULL,NULL);
+$files 		= $document->listAll($category->id,NULL,NULL);
+$dataset 	= [];
+foreach ($files as $k => $v){
+	$date = $wpdb->datetimeformat(date('Y-m-d',$v['file_create_timestamp']),'topicdate');
+
+	if(!in_array($date, array_column($dataset,'date'))){
+		$structure = array(
+			'date' 	=> $date,
+			'items' => []
+		);
+
+		array_push($dataset,$structure);
+	}
+
+	$pos = array_search($date, array_column($dataset,'date'));
+	array_push($dataset[$pos]["items"],$files[$k]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,16 +77,21 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 	<div class="title"><?php echo $category->name;?></div>
 </header>
 <div class="container nomargin">
-	<div class="topic"><?php echo count($files);?> รายการ</div>
+	<?php if(count($dataset) > 0){?>
+	<?php foreach ($dataset as $var){?>
+	<div class="topic"><?php echo $var['date'];?></div>
 	<div class="list">
 		<?php
-		if(count($files) > 0){
-			foreach ($files as $data)
-				include 'template/file.items.php';
-		}else
-			include 'template/empty.items.php';
+		foreach ($var['items'] as $data){ include 'template/file.items.php'; }
 		?>
 	</div>
+	<?php }?>
+	<?php }else{?>
+	<div class="starter">
+		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
+		<a href="create/choose">อัพโหลดไฟล์</a>
+	</div>
+	<?php }?>
 </div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>

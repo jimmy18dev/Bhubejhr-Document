@@ -5,7 +5,7 @@ if(!$user_online){
 	header('Location: '.DOMAIN.'/signin');
 	die();
 }else if($user->status != 'active'){
-	header('Location: '.DOMAIN.'/pending');
+	header("Location:".DOMAIN."/permission.php?e=UserNotActive");
 	die();
 }
 
