@@ -561,12 +561,11 @@ body {
   float: left;
   display: inline-block;
   font-size: 1.1em;
-  color: #BBBBBB;
+  color: #999999;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
   margin-top: 5%;
   margin-bottom: 2%;
-  text-align: right;
 }
 .container .topic.center {
   text-align: left;
@@ -590,9 +589,6 @@ body {
   float: left;
   display: inline-block;
   box-sizing: border-box;
-}
-.container .list .file-items:last-child .detail {
-  border-bottom: 0px;
 }
 .container .list .file-items a.icontype {
   width: 9%;
@@ -840,15 +836,16 @@ body {
   font-family: "maledpan", sans-serif;
   color: #FFFFFF;
   text-decoration: none;
-  padding: 2% 4%;
+  padding: 3% 4%;
   border-radius: 5px;
   margin-top: 5%;
   background: #28a646;
-  background: -webkit-linear-gradient(to right, #28a646, #24953f);
-  background: linear-gradient(to right, #28a646, #24953f);
+  line-height: 1em;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.container .starter a i {
-  margin-right: 15px;
+.container .starter a:hover {
+  cursor: pointer;
+  background: #24953f;
 }
 .container .article {
   width: 100%;
@@ -1469,6 +1466,7 @@ body {
 .login .content .btn.loading {
   box-shadow: none;
   color: #666666;
+  background: transparent;
 }
 .login .content .btn-facebook {
   background: #3b5998;

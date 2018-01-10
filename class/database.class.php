@@ -126,6 +126,20 @@ class Database{
             case 'shortdate':
                 $str = $date.' '.$monthText[$month-1].' '.($year+543);
                 break;
+            case 'topicdate':
+                $diff = time() - $timestamp;
+                if($diff < 86400){
+                    $str = 'วันนี้';
+                }else if($diff < (86400*2)){
+                    $str = 'เมื่อวานนี้';
+                }else{
+                    if($year == date('Y')){
+                        $str = $date.' '.$monthFullText[$month-1];
+                    }else{
+                        $str = $date.' '.$monthFullText[$month-1].' '.($year+543);
+                    }
+                }
+                break;
             case 'facebook':
                 $diff       = time() - $timestamp;
                 $periods    = array('วินาที','นาที','ชั่วโมง');

@@ -1,11 +1,24 @@
 <?php
 require_once 'autoload.php';
 
-$document = new Document();
-$category = new Category();
+$document 	= new Document();
+$files 		= $document->listAll(NULL,NULL,NULL);
+$dataset 	= [];
+foreach ($files as $k => $v){
+	$date = $wpdb->datetimeformat(date('Y-m-d',$v['file_create_timestamp']),'topicdate');
 
-$files = $document->listAll(NULL,NULL,NULL);
-$categories = $category->listAll();
+	if(!in_array($date, array_column($dataset,'date'))){
+		$structure = array(
+			'date' 	=> $date,
+			'items' => []
+		);
+
+		array_push($dataset,$structure);
+	}
+
+	$pos = array_search($date, array_column($dataset,'date'));
+	array_push($dataset[$pos]["items"],$files[$k]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,19 +90,12 @@ $p_url 		= DOMAIN;
 	</div>
 </div>
 <div class="container nomargin">
-	<div class="topic">รายการล่าสุด</div>
-	
-	<?php if(count($files) > 0){?>
+	<?php foreach ($dataset as $var){?>
+	<div class="topic"><?php echo $var['date'];?></div>
 	<div class="list">
 		<?php
-		foreach ($files as $data)
-			include 'template/file.items.php';
+		foreach ($var['items'] as $data){ include 'template/file.items.php'; }
 		?>
-	</div>
-	<?php }else{?>
-	<div class="starter">
-		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-		<a href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i>อัพโหลด</a>
 	</div>
 	<?php }?>
 </div>

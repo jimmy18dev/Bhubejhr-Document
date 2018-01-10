@@ -48,7 +48,7 @@ switch ($data['file_type']) {
 	<div class="detail">
 		<div class="name"><a href="document/<?php echo $data['file_id'];?>"><?php echo $data['file_title'];?></a></div>
 		<p>
-			<a href="category/<?php echo $data['file_category_id']?>/<?php echo $data['file_category_name'];?>" class="style<?php echo $data['file_category_id'];?>"><?php echo $data['file_category_name'];?></a> · <a href="document/<?php echo $data['file_id'];?>" title="<?php echo $data['file_create_time'];?>"><?php echo $data['file_create_time_fb'];?></a>
+			<a href="category/<?php echo $data['file_category_id']?>/<?php echo $data['file_category_name'];?>" class="style<?php echo $data['file_category_id'];?>"><?php echo $data['file_category_name'];?></a>
 
 			<?php if($user_online){?>
 			 · <span><?php echo $data['file_owner_name'];?> · </span><span><?php echo $privacy?></span>
