@@ -1531,11 +1531,11 @@ body {
   left: 0;
   width: 30%;
   margin: 0% 35%;
-  margin-top: 5%;
+  margin-top: 3%;
   float: left;
   display: inline-block;
   background: #FFFFFF;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   z-index: 120;
   opacity: 0;
@@ -1554,7 +1554,7 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #999999;
 }
 .dialog .head .text {
