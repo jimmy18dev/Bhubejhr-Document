@@ -14,6 +14,7 @@ function requestVerify(){
 		return false;
 	}
 
+	$overlay.addClass('open');
 	$progressbar.fadeIn(300);
 	$progressbar.width('0%');
 	$progressbar.animate({width:'70%'},500);

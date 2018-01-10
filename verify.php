@@ -44,9 +44,12 @@ if($user->verified == 'pending'){
 	<p>กรุณาใส่ชื่อตำแหน่ง แผนกที่ทำงานเพื่อส่งให้ผู้ดูแลระบบตรวจสอบ</p>
 
 	<textarea id="bio" placeholder="ใส่ตำแหน่งและแผนก..."><?php echo $user->bio;?></textarea>
-	<button onclick="javascript:requestVerify();">บันทึก<i class="fa fa-check" aria-hidden="true"></i></button>
+	<button onclick="javascript:requestVerify();">ส่งคำขอ</button>
 	<?php }?>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
