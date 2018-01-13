@@ -532,7 +532,6 @@ body {
   color: #004d40;
   padding: 5px 25px;
   padding-bottom: 10px;
-  margin: 0px 10px;
   line-height: 1em;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -561,11 +560,12 @@ body {
   float: left;
   display: inline-block;
   font-size: 1.1em;
-  color: #999999;
+  color: #333333;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
   margin-top: 5%;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
+  text-align: right;
 }
 .container .topic.center {
   text-align: left;
@@ -585,32 +585,38 @@ body {
   display: inline-block;
 }
 .container .list .file-items {
-  width: 100%;
+  width: 94%;
+  padding: 2% 3%;
   float: left;
   display: inline-block;
-  box-sizing: border-box;
+  background: #EEEEEE;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+.container .list .file-items:last-child .detail {
+  margin-bottom: 0;
+}
+.container .list .file-items:hover {
+  background: #EAEAEA;
 }
 .container .list .file-items a.icontype {
-  width: 9%;
-  padding: 3% 0%;
+  width: 8%;
   float: left;
   display: inline-block;
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 1.8em;
+  line-height: 1.6em;
   color: #BBBBBB;
 }
 .container .list .file-items .detail {
-  width: 91%;
-  padding: 3% 0%;
+  width: 92%;
   float: left;
   display: inline-block;
-  border-bottom: 1px solid #DDDDDD;
 }
 .container .list .file-items .detail .name a {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.3em;
   color: #050505;
   font-family: "maledpan", sans-serif;
@@ -855,13 +861,12 @@ body {
   background: #FFFFFF;
 }
 .container .article .category {
-  float: left;
-  display: inline-block;
   color: #999999;
   text-decoration: none;
+  font-size: 0.9em;
 }
 .container .article .category i {
-  margin-left: 7px;
+  margin-left: 5px;
 }
 .container .article .category:hover {
   text-decoration: underline;
@@ -1331,12 +1336,12 @@ body {
   display: inline-block;
 }
 .login .welcome {
-  width: 24%;
+  width: 27%;
   float: left;
   display: inline-block;
-  margin-left: 21%;
-  margin-right: 5%;
-  margin-top: 15%;
+  margin-left: 20%;
+  margin-right: 3%;
+  margin-top: 17%;
   text-align: center;
 }
 .login .welcome img {
@@ -1344,25 +1349,26 @@ body {
   margin: 0% 35%;
   float: left;
   display: inline-block;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .login .welcome h1 a {
   width: 100%;
   float: left;
   display: inline-block;
   font-family: "maledpan", sans-serif;
-  font-size: 1.7em;
+  font-size: 2em;
   margin-bottom: 3%;
   color: #050505;
-  line-height: 1.2em;
+  line-height: 1.1em;
   text-decoration: none;
+  font-weight: normal;
 }
 .login .welcome p {
   width: 100%;
   float: left;
   display: inline-block;
   font-size: 0.9em;
-  color: #333333;
+  color: #666666;
   margin-bottom: 10%;
 }
 .login .welcome a.btn-back {
@@ -1374,7 +1380,7 @@ body {
   padding: 10px 15px;
   border-radius: 5px;
   line-height: 1em;
-  border: 1px solid #e8e8e9;
+  background: #FAFAFA;
 }
 .login .welcome a.btn-back i {
   margin-right: 10px;
@@ -1391,38 +1397,7 @@ body {
   display: inline-block;
   margin-right: 22%;
   margin-left: 5%;
-  margin-top: 12%;
-}
-.login .content .nav {
-  width: 100%;
-  float: left;
-  display: inline-block;
-  margin-bottom: 10%;
-}
-.login .content .nav a {
-  width: 50%;
-  padding: 4% 0%;
-  float: left;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  font-family: "maledpan", sans-serif;
-  font-size: 1.1em;
-  border-bottom: 1px solid #e8e8e9;
-  color: #666666;
-}
-.login .content .nav a.active {
-  color: #050505;
-  border-bottom: 1px solid #050505;
-}
-.login .content .nav a.active:hover {
-  color: #050505;
-}
-.login .content .nav a:hover {
-  color: #333333;
-}
-.login .content .nav a i {
-  margin-right: 7px;
+  margin-top: 15%;
 }
 .login .content .inputtext {
   width: 100%;
@@ -1476,16 +1451,13 @@ body {
   background: #3b5998;
 }
 .login .content .btn-facebook i {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .login .content .btn-facebook:hover {
   background: #355088;
 }
-.login .content .btn-submit {
-  margin-top: 5%;
-}
 .login .content .btn-submit i {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .login .content .btn-submit:hover {
   background: #24953f;
@@ -1494,7 +1466,7 @@ body {
   background: #E65100;
 }
 .login .content .btn-register i {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .login .content .line {
   width: 100%;
@@ -1505,6 +1477,25 @@ body {
   font-size: 1em;
   color: #666666;
   font-family: "maledpan", sans-serif;
+}
+.login .content p {
+  width: 100%;
+  margin-top: 10%;
+  float: left;
+  display: inline-block;
+  font-family: "maledpan", sans-serif;
+  font-size: 1.1em;
+  color: #666666;
+  text-align: center;
+}
+.login .content p a {
+  color: #004d40;
+}
+.login .content p a i {
+  margin-left: 7px;
+}
+.login .content p a:hover {
+  color: #002e26;
 }
 .overlay {
   position: fixed;
@@ -1672,66 +1663,6 @@ body {
   background: -webkit-linear-gradient(to right, #3bed8d, #38acc5);
   background: linear-gradient(to right, #3bed8d, #38acc5);
 }
-.style1 i.fa-circle {
-  color: #3F51B5 !important;
-}
-.style2 i.fa-circle {
-  color: #E91E63 !important;
-}
-.style3 i.fa-circle {
-  color: #673AB7 !important;
-}
-.style4 i.fa-circle {
-  color: #9C27B0 !important;
-}
-.style5 i.fa-circle {
-  color: #2196F3 !important;
-}
-.style6 i.fa-circle {
-  color: #e67e22 !important;
-}
-.style7 i.fa-circle {
-  color: #dd855c !important;
-}
-.style8 i.fa-circle {
-  color: #9ebd9e !important;
-}
-.style9 i.fa-circle {
-  color: #7f8c8d !important;
-}
-.style10 i.fa-circle {
-  color: #008744 !important;
-}
-.style11 i.fa-circle {
-  color: #0057e7 !important;
-}
-.style12 i.fa-circle {
-  color: #d62d20 !important;
-}
-.style13 i.fa-circle {
-  color: #ffa700 !important;
-}
-.style14 i.fa-circle {
-  color: #fb5858 !important;
-}
-.style15 i.fa-circle {
-  color: #ff00a9 !important;
-}
-.style16 i.fa-circle {
-  color: #00aba9 !important;
-}
-.style17 i.fa-circle {
-  color: #9ed670 !important;
-}
-.style18 i.fa-circle {
-  color: #e8d174 !important;
-}
-.style19 i.fa-circle {
-  color: #4d7358 !important;
-}
-.style20 i.fa-circle {
-  color: #745151 !important;
-}
 /* Other Device and Screen */
 @media only screen and (min-width: 0px) and (max-width: 519px) {
   .header {
@@ -1739,7 +1670,8 @@ body {
     padding: 0%;
   }
   .header a.logo {
-    padding: 10px 3%;
+    width: auto;
+    padding: 10px 5%;
   }
   .header a.logo img {
     margin-right: 0px;
@@ -1748,28 +1680,32 @@ body {
     display: none;
   }
   .header .btn {
-    padding: 7px 3%;
-  }
-  .header .btn.btn-cancel {
-    margin-right: 7px;
-  }
-  .header .btn.btn-login {
-    margin-right: 7px;
+    padding: 7px 5%;
+    margin-left: 0%;
   }
   .header .btn .more-menu {
-    top: 115%;
-    right: 5%;
-    padding: 10px 0%;
+    top: 105%;
+    right: 15%;
   }
   .header .btn .more-menu .arrow-up {
     right: 15%;
   }
+  .header .btn .more-menu a {
+    padding: 8% 10%;
+  }
   .header .title {
-    padding: 7px 3%;
+    padding: 7px 5%;
+    margin-left: 0%;
+    max-width: 30%;
   }
   .header .btn-profile {
-    padding: 7px 3%;
-    margin: 9px 7px;
+    padding: 7px 5%;
+    margin-left: 0%;
+  }
+  .header .btn-profile .notif {
+    top: -2px;
+    left: 7px;
+    font-size: 0.7em;
   }
   .header .btn-profile img {
     margin-right: 0px;
@@ -1778,32 +1714,37 @@ body {
     display: none;
   }
   .header .btn-profile .icon {
-    margin-left: 7px;
+    margin-left: 5px;
   }
   .header .btn-profile .more-menu {
-    width: 200px;
-    top: 115%;
-    right: 5%;
-    padding: 10px 0%;
+    top: 120%;
+    right: 15%;
   }
   .header .btn-profile .more-menu .arrow-up {
-    right: 5%;
+    right: 14%;
+  }
+  .header .btn-profile .more-menu .caption {
+    width: 80%;
+    padding: 7% 10%;
+    padding-bottom: 2%;
+    font-size: 0.75em;
+  }
+  .header .btn-profile .more-menu a {
+    padding: 8% 10%;
   }
   .searchform {
     width: 90%;
-    margin: 5%;
-    margin-top: 0px;
+    margin: 0% 5%;
   }
   .searchform .icon {
     font-size: 1.2em;
-    padding: 4.5% 5%;
+    padding: 5%;
   }
   .searchform .inputtext {
     width: 80%;
     padding: 5%;
     padding-left: 15%;
-    font-size: 1.1em;
-    line-height: 1.3em;
+    font-size: 1em;
   }
   .searchform .tip {
     display: none;
@@ -1814,67 +1755,67 @@ body {
   .cover .welcome {
     width: 90%;
     margin: 0 5%;
-    padding-top: 25%;
+    padding-top: 30%;
   }
   .cover .welcome h1 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
   .cover .welcome p {
     font-size: 1em;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
     letter-spacing: 0px;
   }
   .cover .welcome a {
     font-size: 1.2em;
-    padding: 3px 25px;
-    padding-bottom: 6px;
-  }
-  .cover .welcome a i {
-    margin-left: 10px;
+    padding: 5px 25px;
+    padding-bottom: 10px;
   }
   .cover img {
-    margin-top: 0;
+    margin-top: 0px;
   }
   .container {
     width: 100%;
     margin: 0%;
     margin-top: 50px;
   }
+  .container.nomargin {
+    margin-top: 0px;
+  }
   .container .topic {
     width: 90%;
-    font-size: 1.1em;
     margin: 5%;
-    margin-bottom: 2%;
+    font-size: 1em;
+    margin-bottom: 3%;
   }
   .container .topic.center {
+    text-align: left;
     margin-bottom: 5%;
-    font-size: 1.5em;
-    line-height: 1.1em;
+    font-size: 1.4em;
   }
   .container .topic span {
+    display: block;
     font-size: 0.7em;
-    margin-top: 10px;
   }
   .container .list .file-items {
-    margin-bottom: 1%;
+    width: 80%;
+    padding: 3% 5%;
+    margin: 0 5%;
+    margin-bottom: 2%;
   }
   .container .list .file-items a.icontype {
-    width: 7%;
-    padding: 4% 5%;
-    font-size: 1.5em;
-    line-height: 1.7em;
+    width: 15%;
+    font-size: 1.6em;
+    line-height: 1.6em;
   }
   .container .list .file-items .detail {
-    width: 78%;
-    padding: 4% 0%;
-    padding-right: 5%;
+    width: 85%;
   }
   .container .list .file-items .detail .name a {
     font-size: 1.2em;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
   .container .list .file-items .detail p {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   .container .list .member-items {
     width: 100%;
@@ -1885,30 +1826,110 @@ body {
     border-bottom: 0px;
   }
   .container .list .member-items .avatar {
-    width: 10%;
-    padding: 3% 5%;
-    margin-right: 0%;
-    margin-top: 3%;
+    width: 7%;
+    padding: 3% 0%;
+    margin-right: 2%;
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+  }
+  .container .list .member-items .avatar img {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    border-radius: 50%;
   }
   .container .list .member-items .detail {
-    width: 75%;
+    width: 91%;
     padding: 3% 0%;
-    padding-right: 5%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #EEEEEE;
   }
   .container .list .member-items .detail .name {
+    width: 100%;
+    float: left;
+    display: inline-block;
     font-size: 1.5em;
     line-height: 1.3em;
+    color: #050505;
+    font-family: "maledpan", sans-serif;
+  }
+  .container .list .member-items .detail .name a {
+    color: #050505;
+    text-decoration: none;
+  }
+  .container .list .member-items .detail .name a:hover {
+    text-decoration: underline;
+  }
+  .container .list .member-items .detail .name span {
+    float: left;
+    display: inline-block;
+  }
+  .container .list .member-items .detail .name span.tag {
+    background: #004d40;
+    font-size: 0.45em;
+    padding: 3px 5px;
+    border-radius: 3px;
+    line-height: 1.1em;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: #FFFFFF;
+  }
+  .container .list .member-items .detail .name span.lock {
+    background: #AAAAAA;
   }
   .container .list .member-items .detail .desc {
+    width: 100%;
+    float: left;
+    display: inline-block;
     font-size: 0.75em;
     line-height: 1.5em;
+    color: #666666;
+  }
+  .container .list .member-items .detail .desc span i {
+    margin-right: 3px;
+    font-size: 0.9em;
+  }
+  .container .list .member-items .detail .desc span.active {
+    background: #28a646;
+    color: #FFFFFF;
   }
   .container .list .member-items .detail .control {
+    width: 100%;
+    float: left;
+    display: inline-block;
     margin-top: 2%;
   }
   .container .list .member-items .detail .control .btnop {
-    padding: 4% 6%;
-    margin-right: 2%;
+    padding: 2% 3%;
+    margin-right: 1%;
+    float: right;
+    display: inline-block;
+    font-family: "maledpan", sans-serif;
+    border: 0px;
+    font-size: 1em;
+    background: transparent;
+    border-radius: 5px;
+    color: #999999;
+    border: 1px solid #DDDDDD;
+    line-height: 1em;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  }
+  .container .list .member-items .detail .control .btnop:hover {
+    cursor: pointer;
+    color: #333333;
+    border: 1px solid #AAAAAA;
+  }
+  .container .list .member-items .detail .control .btnop i {
+    margin-left: 7px;
+  }
+  .container .list .member-items .detail .control .btnop.btn-approve {
+    background: #24953f;
+    color: #FFFFFF;
   }
   .container .list .empty {
     width: 100%;
@@ -1922,136 +1943,243 @@ body {
   }
   .container .list .choose-items {
     width: 90%;
-    padding: 5%;
+    padding: 4% 5%;
     margin: 0% 5%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
   .container .list .choose-items .icon {
-    width: 10%;
-    font-size: 1em;
-    line-height: 1.8em;
+    width: 13%;
+    font-size: 1.2em;
+    line-height: 1.4em;
   }
   .container .list .choose-items .name {
-    width: 82%;
+    width: 77%;
     font-size: 1.2em;
     line-height: 1.2em;
   }
   .container .list .choose-items .name .inputtext {
-    font-size: 0.9em;
-    line-height: 1.2em;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    border: 0px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    background: transparent;
+    margin-top: 1%;
   }
   .container .list .choose-items .control {
-    width: 8%;
-    font-size: 1.3em;
-    line-height: 1.1em;
+    width: 10%;
+    font-size: 1.2em;
+    line-height: 1.4em;
   }
   .container .starter {
-    margin-top: 35%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-top: 45%;
   }
   .container .starter p {
-    font-size: 1.5em;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.4em;
+    color: #666666;
+    font-family: "maledpan", sans-serif;
   }
   .container .starter a {
+    display: inline-block;
     font-size: 1.2em;
-    padding: 3% 5%;
+    font-family: "maledpan", sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 3% 4%;
+    border-radius: 5px;
+    margin-top: 5%;
+    background: #28a646;
+    line-height: 1em;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .container .starter a:hover {
+    cursor: pointer;
+    background: #24953f;
   }
   .container .article {
     width: 90%;
     margin: 5%;
   }
+  .container .article .category {
+    font-size: 0.8em;
+  }
   .container .article h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.2em;
     margin-bottom: 2%;
   }
   .container .article p {
-    font-size: 0.7em;
-    margin-bottom: 5%;
+    font-size: 0.8em;
+    margin-bottom: 3%;
   }
   .container .article .text {
     font-size: 1em;
     margin-bottom: 5%;
   }
+  .container .article .download {
+    width: 90%;
+    padding: 5%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
   .container .article .download .btn {
     width: 100%;
-    padding: 5% 8%;
+    padding: 4% 5%;
     margin-right: 0%;
-    margin-bottom: 3%;
+    margin-top: 3%;
   }
   .container .article .download .btn .d {
     width: 75%;
+    float: left;
+    display: inline-block;
   }
   .container .article .download .btn .d .caption {
-    font-size: 1.4em;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.2em;
     margin-bottom: 3%;
+    font-family: "maledpan", sans-serif;
   }
   .container .article .download .btn .d .size {
-    font-size: 0.7em;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 0.75em;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .container .article .download .btn i {
     width: 25%;
+    float: right;
+    display: inline-block;
+    font-size: 2.2em;
+    text-align: right;
   }
   .logout {
     width: 90%;
     margin: 5%;
-    margin-top: 25%;
+    margin-top: 30%;
   }
   .logout h2 {
     font-size: 2em;
     margin-bottom: 2%;
   }
   .logout p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+  .logout textarea {
+    width: 92%;
+    float: left;
+    display: inline-block;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-top: 5%;
+    padding: 4%;
   }
   .logout a {
-    padding: 5%;
+    margin-top: 15%;
+    padding: 4% 5%;
+    font-size: 1.1em;
+  }
+  .logout button {
+    margin-top: 10%;
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
+    padding: 3% 5%;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-family: "maledpan", sans-serif;
+    background: #28a646;
+    color: #FFFFFF;
+    line-height: 1em;
+    border: 0px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .logout button i {
+    margin-left: 7px;
+  }
+  .logout button:hover {
+    cursor: pointer;
+    background: #24953f;
   }
   .form {
     width: 90%;
-    margin: 5%;
+    margin: 3% 5%;
   }
   .form .form-items {
-    margin-bottom: 3%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    margin-bottom: 2%;
+    box-sizing: border-box;
   }
   .form .form-items.middle {
-    margin-top: 0%;
+    margin-top: 18%;
+  }
+  .form .form-items.hidden {
+    display: none;
   }
   .form .form-items.control {
-    padding-top: 5%;
+    border-top: 1px dotted #e8e8e9;
+    padding: 5% 0%;
   }
   .form .form-items.delete-box {
     padding: 5% 0%;
-    margin-top: 25%;
+    margin-top: 15%;
+    border-radius: 5px;
+    font-family: "maledpan", sans-serif;
   }
   .form .form-items.delete-box .msg {
-    font-size: 1.2em;
-    margin-bottom: 10%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.4em;
+    margin-bottom: 5%;
+    color: #050505;
   }
   .form .form-items label {
-    font-size: 1.1em;
+    width: 98%;
+    margin-left: 2%;
+    font-size: 1.2em;
     margin-bottom: 2%;
   }
   .form .form-items .inputtext,
   .form .form-items textarea {
     padding: 5%;
-    font-size: 1em;
+    margin-bottom: 5%;
+    line-height: 1.5em;
+  }
+  .form .form-items .selection {
     margin-bottom: 5%;
   }
   .form .form-items .selection .items {
-    width: 100%;
-    padding: 4% 0%;
-    margin-right: 0%;
-    margin-bottom: 3%;
+    padding: 3% 0%;
+    margin-bottom: 2%;
   }
   .form .form-items .selection .items i {
     width: 20%;
-    font-size: 1.8em;
-    margin-bottom: 0px;
-    margin-top: 2%;
+    float: left;
+    display: inline-block;
+    font-size: 2.4em;
+    text-align: center;
+    margin-top: 1.5%;
   }
   .form .form-items .selection .items .caption {
     width: 80%;
-    text-align: left;
   }
   .form .form-items .selection .items .caption .t {
     font-size: 1.2em;
@@ -2063,7 +2191,7 @@ body {
     margin-bottom: 5%;
   }
   .form .form-items .select:after {
-    top: 44%;
+    top: 40%;
     right: 5%;
   }
   .form .form-items .select select {
@@ -2071,49 +2199,80 @@ body {
     padding: 5%;
   }
   .form .form-items .file-preview {
-    padding: 15% 0%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 10% 0%;
     margin-bottom: 5%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px dashed #BBBBBB;
+    color: #333333;
   }
   .form .form-items .file-preview i {
-    font-size: 2.5em;
+    display: block;
+    font-size: 3em;
+    margin-bottom: 2%;
+    color: #DDDDDD;
   }
   .form .form-items .file-preview p {
-    font-size: 1.6em;
+    display: block;
+    font-size: 1.5em;
+    font-family: "maledpan", sans-serif;
   }
   .form .form-items .file-preview .info {
     font-size: 0.9em;
+    color: #999999;
+  }
+  .form .form-items .file-preview:hover {
+    cursor: pointer;
+    color: #666666;
+    background: #EFEFEF;
+  }
+  .form .form-items .file-preview:hover p {
+    text-decoration: underline;
   }
   .form .form-items a.btn {
-    width: 90%;
-    padding: 5%;
+    padding: 3% 4%;
+    float: right;
+    display: inline-block;
     font-size: 1.2em;
+    border: 0px;
+    border-radius: 5px;
     line-height: 1em;
+    color: #999999;
+    font-family: "maledpan", sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }
+  .form .form-items a.btn:hover {
+    text-decoration: underline;
+  }
+  .form .form-items a.btn:active {
+    background: #e8e8e9;
   }
   .form .form-items button {
     width: 100%;
     padding: 5%;
-    margin: 0%;
     font-size: 1.2em;
-  }
-  .form .form-items button i {
-    margin-left: 15px;
+    letter-spacing: 1px;
   }
   .login .welcome {
     width: 90%;
     margin: 5%;
-    margin-bottom: 0%;
   }
   .login .welcome img {
-    width: 26%;
-    margin: 0% 37%;
-    margin-bottom: 5%;
+    width: 24%;
+    margin: 0% 38%;
+    margin-bottom: 3%;
   }
   .login .welcome h1 a {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin-bottom: 1%;
   }
   .login .welcome p {
-    font-size: 0.7em;
+    font-size: 0.75em;
     margin-bottom: 0%;
   }
   .login .welcome a.btn-back {
@@ -2122,13 +2281,7 @@ body {
   .login .content {
     width: 90%;
     margin: 5%;
-  }
-  .login .content .nav {
-    margin-bottom: 5%;
-  }
-  .login .content .nav a {
-    padding: 3% 0%;
-    font-size: 1.1em;
+    margin-top: 0%;
   }
   .login .content .inputtext {
     padding: 5%;
@@ -2140,38 +2293,137 @@ body {
     font-size: 1.2em;
   }
   .login .content .line {
-    padding: 3% 0%;
+    padding: 2.5% 0%;
+    font-size: 1em;
+  }
+  .login .content p {
+    margin-top: 5%;
+    font-size: 1.1em;
   }
   .dialog {
     width: 90%;
     margin: 5%;
   }
   .dialog .head {
-    font-size: 1.2em;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    font-size: 1.4em;
+    color: #999999;
   }
   .dialog .head .text {
     padding: 3.5% 5%;
+    float: left;
+    display: inline-block;
+  }
+  .dialog .head .text:hover {
+    cursor: default;
   }
   .dialog .head .btn {
     padding: 3.5% 5%;
+    float: right;
+    display: inline-block;
+    color: #BBBBBB;
+  }
+  .dialog .head .btn:hover {
+    cursor: pointer;
+  }
+  .dialog img {
+    width: 100%;
+    float: left;
+    display: inline-block;
   }
   .dialog .content {
     width: 90%;
     padding: 5%;
+    float: left;
+    display: inline-block;
   }
   .dialog .content label {
     width: 99%;
     margin-left: 1%;
+    float: left;
+    display: inline-block;
     margin-bottom: 2%;
+    color: #050505;
     font-size: 1.1em;
   }
   .dialog .content .inputtext {
     width: 90%;
-    padding: 5%;
+    padding: 4% 5%;
+    float: left;
+    display: inline-block;
+    border: 0px;
+    margin: 0px;
     font-size: 1.1em;
+    background: #eeeeee;
+    border-radius: 5px;
+    color: #333333;
+  }
+  .dialog .content .inputtext:hover {
+    cursor: pointer;
+  }
+  .dialog .content .inputtext:focus {
+    color: #050505;
+  }
+  .dialog .control {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    border-top: 1px solid #e8e8e9;
   }
   .dialog .control .btn {
+    float: left;
+    display: inline-block;
     font-size: 1.2em;
-    padding: 6% 5%;
+    font-family: "maledpan", sans-serif;
+    line-height: 1em;
+    padding: 5%;
+    border: 0px;
+    margin: 0px;
+    background: transparent;
+    color: #999999;
+    text-decoration: none;
+  }
+  .dialog .control .btn i {
+    margin-right: 10px;
+  }
+  .dialog .control .btn:hover {
+    cursor: pointer;
+  }
+  .dialog .control .btn:active {
+    background: #e8e8e9;
+  }
+  .dialog .control .btn.delete {
+    color: #F44336;
+  }
+  .dialog .control .btn.save {
+    float: right;
+    color: #28a646;
+  }
+  .dialog .control .btn.save:hover {
+    color: #24953f;
+  }
+  .dialog .control .btn.fullsize {
+    width: 90%;
+    text-align: center;
+    background: #28a646;
+    color: #FFFFFF;
+  }
+  .dialog .control .btn.fullsize:hover {
+    background: #24953f;
+  }
+  #progressbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    float: left;
+    display: inline-block;
+    z-index: 999;
+    background: #3bed8d;
+    background: -webkit-linear-gradient(to right, #3bed8d, #38acc5);
+    background: linear-gradient(to right, #3bed8d, #38acc5);
   }
 }

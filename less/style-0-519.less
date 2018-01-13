@@ -3,63 +3,77 @@
 	padding: 0%;
 
 	a.logo{
-		padding: 10px 3%;
+		width: auto;
+		padding: 10px 5%;
+
 		img{ margin-right: 0px; }
 		.detail{ display: none; }
 	}
 
 	.btn{
-		padding: 7px 3%;
-
-		&.btn-cancel{ margin-right: 7px; }
-		&.btn-login{ margin-right: 7px; }
+		padding: 7px 5%;
+		margin-left: 0%;
 
 		.more-menu{
-			top: 115%;
-			right: 5%;
-			padding: 10px 0%;
+			top: 105%;
+			right: 15%;
 
 			.arrow-up{ right: 15%; }
+			a{ padding: 8% 10%; }
 		}
 	}
 
-	.title{ padding: 7px 3%; }
+	.title{
+		padding: 7px 5%;
+		margin-left: 0%;
+		max-width: 30%;
+	}
 
 	.btn-profile{
-		padding: 7px 3%;
-		margin: 9px 7px;
+		padding: 7px 5%;
+		margin-left: 0%;
+
+		.notif{
+			top: -2px;
+			left: 7px;
+			font-size: 0.7em;
+		}
 
 		img{ margin-right: 0px; }
 		.name{ display: none; }
-		.icon{ margin-left: 7px; }
+		.icon{ margin-left: 5px; }
 
 		.more-menu{
-			width: 200px;
-			top: 115%;
-			right: 5%;
-			padding: 10px 0%;
+			top: 120%;
+			right: 15%;
 
-			.arrow-up{ right: 5%; }
+			.arrow-up{ right: 14%; }
+			.caption{
+				width: 80%;
+				padding: 7% 10%;
+				padding-bottom: 2%;
+				font-size: 0.75em;
+			}
+
+			a{ padding: 8% 10%; }
 		}
 	}
 }
 
 .searchform{
 	width: 90%;
-	margin: 5%;
-	margin-top: 0px;
+	margin: 0% 5%;
 
 	.icon{
 		font-size: 1.2em;
-		padding: 4.5% 5%;
+		padding: 5%;
 	}
 
 	.inputtext{
 		width: 80%;
 		padding: 5%;
 		padding-left: 15%;
-		font-size: 1.1em;
-		line-height: 1.3em;
+		font-size: 1em;
 	}
 
 	.tip{ display: none; }
@@ -70,25 +84,23 @@
 	.welcome{
 		width: 90%;
 		margin: 0 5%;
-		padding-top: 25%;
+		padding-top: 30%;
 
-		h1{ font-size: 2.2em; }
+		h1{ font-size: 2em; }
 		p{
 			font-size: 1em;
-			margin-bottom: 15%;
+			margin-bottom: 20%;
 			letter-spacing: 0px;
 		}
 
 		a{
 			font-size: 1.2em;
-			padding: 3px 25px;
-			padding-bottom: 6px;
-
-			i{ margin-left: 10px; }
+			padding: 5px 25px;
+			padding-bottom: 10px;
 		}
 	}
 
-	img{ margin-top: 0; }
+	img{ margin-top: 0px; }
 }
 
 .container{
@@ -96,44 +108,47 @@
 	margin: 0%;
 	margin-top: 50px;
 
+	&.nomargin{ margin-top: 0px; }
+
 	.topic{
 		width: 90%;
-		font-size: 1.1em;
 		margin: 5%;
-		margin-bottom: 2%;
+		font-size: 1em;
+		margin-bottom: 3%;
 
 		&.center{
+			text-align: left;
 			margin-bottom: 5%;
-			font-size: 1.5em;
-			line-height: 1.1em;
+			font-size: 1.4em;
 		}
 
 		span{
+			display: block;
 			font-size: 0.7em;
-			margin-top: 10px;
 		}
 	}
 
 	.list{
 		.file-items{
-			margin-bottom: 1%;
+			width: 80%;
+			padding: 3% 5%;
+			margin: 0 5%;
+			margin-bottom: 2%;
+
 			a.icontype{
-				width: 7%;
-				padding: 4% 5%;
-				font-size: 1.5em;
-				line-height: 1.7em;
+				width: 15%;
+				font-size: 1.6em;
+				line-height: 1.6em;
 			}
 
 			.detail{
-				width: 78%;
-				padding: 4% 0%;
-				padding-right: 5%;
+				width: 85%;
 
 				.name a{
 					font-size: 1.2em;
-					line-height: 1.2em;
+					line-height: 1.3em;
 				}
-				p{ font-size: 0.7em; }
+				p{ font-size: 0.75em; }
 			}
 		}
 
@@ -145,32 +160,118 @@
 			&:last-child .detail{ border-bottom: 0px; }
 
 			.avatar{
-				width: 10%;
-				padding: 3% 5%;
-				margin-right: 0%;
-				margin-top: 3%;
+				width: 7%;
+				padding: 3% 0%;
+				margin-right: 2%;
+				float: left;
+				display: inline-block;
+				margin-top: 1%;
+
+				img{
+					width: 100%;
+					float: left;
+					display: inline-block;
+					border-radius: 50%;
+				}
 			}
 
 			.detail{
-				width: 75%;
+				width: 91%;
 				padding: 3% 0%;
-				padding-right: 5%;
+				float: left;
+				display: inline-block;
+				border-bottom: 1px solid #EEEEEE;
 
 				.name{
+					width: 100%;
+					float: left;
+					display: inline-block;
 					font-size: 1.5em;
 					line-height: 1.3em;
+					color: #050505;
+					font-family: @topic_font;
+
+					a{
+						color: #050505;
+						text-decoration: none;
+
+						&:hover{ text-decoration: underline; }
+					}
+
+					span{
+						float: left;
+						display: inline-block;
+
+						&.tag{
+							background: @primary_color;
+							font-size: 0.45em;
+							padding: 3px 5px;
+							border-radius: 3px;
+							line-height: 1.1em;
+							margin-left: 5px;
+							margin-top: 10px;
+							color: #FFFFFF;
+						}
+
+						&.lock{ background: #AAAAAA; }
+					}
 				}
 				.desc{
+					width: 100%;
+					float: left;
+					display: inline-block;
 					font-size: 0.75em;
 					line-height: 1.5em;
+					color: #666666;
+
+					span{
+
+						i{
+							margin-right: 3px;
+							font-size: 0.9em;
+						}
+
+						&.active{
+							background: @green_color;
+							color: #FFFFFF;
+						}
+						&.reject{}
+						&.lock{}
+					}
 				}
 
 				.control{
+					width: 100%;
+					float: left;
+					display: inline-block;
 					margin-top: 2%;
 
 					.btnop{
-						padding: 4% 6%;
-						margin-right: 2%;
+						padding: 2% 3%;
+						margin-right: 1%;
+						float: right;
+						display: inline-block;
+						font-family: @topic_font;
+						border: 0px;
+						font-size: 1em;
+						background: transparent;
+						border-radius: 5px;
+						color: #999999;
+						border: 1px solid #DDDDDD;
+						line-height: 1em;
+						.transitionAnimation(0.2s);
+
+						&:hover{
+							cursor: pointer;
+							color: #333333;
+							border: 1px solid #AAAAAA;
+						}
+						i{ margin-left: 7px; }
+
+						&.btn-approve{
+							background: @green_color_dark;
+							color: #FFFFFF;
+						}
 					}
 				}
 			}
@@ -189,42 +290,74 @@
 
 		.choose-items{
 			width: 90%;
-			padding: 5%;
+			padding: 4% 5%;
 			margin: 0% 5%;
-			margin-bottom: 2%;
+			margin-bottom: 1%;
 
 			.icon{
-				width: 10%;
-				font-size: 1em;
-				line-height: 1.8em;
+				width: 13%;
+				font-size: 1.2em;
+				line-height: 1.4em;
 			}
 
 			.name{
-				width: 82%;
+				width: 77%;
 				font-size: 1.2em;
 				line-height: 1.2em;
 
 				.inputtext{
-					font-size: 0.9em;
-					line-height: 1.2em;
+					width: 100%;
+					float: left;
+					display: inline-block;
+					border: 0px;
+					font-size: 1.1em;
+					line-height: 1.5em;
+					background: transparent;
+					margin-top: 1%;
 				}
 			}
 
 			.control{
-				width: 8%;
-				font-size: 1.3em;
-				line-height: 1.1em;
+				width: 10%;
+				font-size: 1.2em;
+				line-height: 1.4em;
 			}
 		}
 	}
 
 	.starter{
-		margin-top: 35%;
+		width: 100%;
+		float: left;
+		display: inline-block;
+		text-align: center;
+		margin-top: 45%;
 
-		p{ font-size: 1.5em; }
+		p{
+			width: 100%;
+			float: left;
+			display: inline-block;
+			font-size: 1.4em;
+			color: @fontcolor_normal;
+			font-family: @topic_font;
+		}
+
 		a{
+			display: inline-block;
 			font-size: 1.2em;
-			padding: 3% 5%;
+			font-family: @topic_font;
+			color: #FFFFFF;
+			text-decoration: none;
+			padding: 3% 4%;
+			border-radius: 5px;
+			margin-top: 5%;
+			background: @green_color;
+			line-height: 1em;
+			box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+
+			&:hover{
+				cursor: pointer;
+				background: @green_color_dark;
+			}
 		}
 	}
 
@@ -232,15 +365,17 @@
 		width: 90%;
 		margin: 5%;
 
+		.category{ font-size: 0.8em; }
+
 		h1{
-			font-size: 2em;
+			font-size: 1.5em;
 			line-height: 1.2em;
 			margin-bottom: 2%;
 		}
 
 		p{
-			font-size: 0.7em;
-			margin-bottom: 5%;
+			font-size: 0.8em;
+			margin-bottom: 3%;
 		}
 
 		.text{
@@ -249,22 +384,49 @@
 		}
 
 		.download{
+			width: 90%;
+			padding: 5%;
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+
 			.btn{
 				width: 100%;
-				padding: 5% 8%;
+				padding: 4% 5%;
 				margin-right: 0%;
-				margin-bottom: 3%;
+				margin-top: 3%;
 
 				.d{
 					width: 75%;
+					float: left;
+					display: inline-block;
 
 					.caption{
-						font-size: 1.4em;
+						width: 100%;
+						float: left;
+						display: inline-block;
+						font-size: 1.2em;
 						margin-bottom: 3%;
+						font-family: @topic_font;
 					}
-					.size{ font-size: 0.7em; }
+					.size{
+						width: 100%;
+						float: left;
+						display: inline-block;
+						font-size: 0.75em;
+						margin-bottom: 0;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+					}
 				}
-				i{ width: 25%; }
+				i{
+					width: 25%;
+					float: right;
+					display: inline-block;
+					font-size: 2.2em;
+					text-align: right;
+				}
 			}
 		}
 	}
@@ -273,65 +435,120 @@
 .logout{
 	width: 90%;
 	margin: 5%;
-	margin-top: 25%;
+	margin-top: 30%;
 
 	h2{
 		font-size: 2em;
 		margin-bottom: 2%;
 	}
-	p{ font-size: 1.2em; }
-	a{ padding: 5%; }
+
+	p{ font-size: 1.1em; }
+
+	textarea{
+		width: 92%;
+		float: left;
+		display: inline-block;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		margin-top: 5%;
+		padding: 4%;
+	}
+
+	a{
+		margin-top: 15%;
+		padding: 4% 5%;
+		font-size: 1.1em;
+	}
+
+	button{
+		margin-top: 10%;
+		float: right;
+		display: inline-block;
+		text-decoration: none;
+		color: #333333;
+		padding: 3% 5%;
+		border-radius: 5px;
+		font-size: 1.1em;
+		font-family: @topic_font;
+		background: @green_color;
+		color: #FFFFFF;
+		line-height: 1em;
+		border: 0px;
+		box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+
+		i{ margin-left: 7px; }
+
+		&:hover{ cursor: pointer; background: @green_color_dark; }
+		// &:active{ background: @border_color; }
+	}
 }
 
 .form{
 	width: 90%;
-	margin: 5%;
+	margin: 3% 5%;
 
 	.form-items{
-		margin-bottom: 3%;
+		width: 100%;
+		float: left;
+		display: inline-block;
+		margin-bottom: 2%;
+		box-sizing: border-box;
 
-		&.middle{ margin-top: 0%; }
-		&.control{ padding-top: 5%; }
+		&.middle{ margin-top: 18%; }
+		&.hidden{ display: none; }
+		&.control{
+			border-top: 1px dotted @border_color;
+			padding: 5% 0%;
+		}
 		&.delete-box{
 			padding: 5% 0%;
-			margin-top: 25%;
+			margin-top: 15%;
+			border-radius: 5px;
+			font-family: @topic_font;
 
 			.msg{
-				font-size: 1.2em;
-				margin-bottom: 10%;
+				width: 100%;
+				float: left;
+				display: inline-block;
+				font-size: 1.4em;
+				margin-bottom: 5%;
+				color: #050505;
 			}
 		}
 
 		label{
-			font-size: 1.1em;
+			width: 98%;
+			margin-left: 2%;
+			font-size: 1.2em;
 			margin-bottom: 2%;
 		}
 		.inputtext, textarea{
 			padding: 5%;
-			font-size: 1em;
 			margin-bottom: 5%;
+			line-height: 1.5em;
 		}
 
 		.selection{
+			margin-bottom: 5%;
+
 			.items{
-				width: 100%;
-				padding: 4% 0%;
-				margin-right: 0%;
-				margin-bottom: 3%;
+				padding: 3% 0%;
+				margin-bottom: 2%;
 
 				i{
 					width: 20%;
-					font-size: 1.8em;
-					margin-bottom: 0px;
-					margin-top: 2%;
+					float: left;
+					display: inline-block;
+					font-size: 2.4em;
+					text-align: center;
+					margin-top: 1.5%;
 				}
 
 				.caption{
 					width: 80%;
-					text-align: left;
 
 					.t{ font-size: 1.2em; }
-					.c{ font-size: 0.75em; }
+					.c{ font-size: 0.75em;}
 				}
 			}
 		}
@@ -340,7 +557,7 @@
 			margin-bottom: 5%;
 
 			&:after{
-			    top: 44%;
+			    top: 40%;
 			    right: 5%;
 			}
 			select{
@@ -350,28 +567,65 @@
 		}
 
 		.file-preview{
-			padding: 15% 0%;
+			width: 100%;
+			float: left;
+			display: inline-block;
+			text-align: center;
+			padding: 10% 0%;
 			margin-bottom: 5%;
+			border-radius: 10px;
+			box-sizing: border-box;
+			border: 2px dashed #BBBBBB;
+			color: #333333;
 
-			i{ font-size: 2.5em; }
-			p{ font-size: 1.6em; }
-			.info{ font-size: 0.9em; }
+			i{
+				display: block;
+				font-size: 3em;
+				margin-bottom: 2%;
+				color: #DDDDDD;
+			}
+			p{
+				display: block;
+				font-size: 1.5em;
+				font-family: @topic_font;
+			}
+
+			.info{
+				font-size: 0.9em;
+				color: #999999;
+			}
+
+			&:hover{
+				cursor: pointer;
+				color: @fontcolor_normal;
+				background: #EFEFEF;
+
+				p{ text-decoration: underline; }
+			}
 		}
 
 		a.btn{
-			width: 90%;
-			padding: 5%;
+			padding: 3% 4%;
+			float: right;
+			display: inline-block;
 			font-size: 1.2em;
+			border: 0px;
+			border-radius: 5px;
 			line-height: 1em;
+			color: #999999;
+			font-family: @topic_font;
+			text-decoration: none;
+			text-align: center;
+
+			&:hover{ text-decoration: underline; }
+			&:active{ background: @border_color; }
 		}
 
 		button{
 			width: 100%;
 			padding: 5%;
-			margin: 0%;
 			font-size: 1.2em;
-
-			i{ margin-left: 15px; }
+			letter-spacing: 1px;
 		}
 	}
 }
@@ -380,21 +634,20 @@
 	.welcome{
 		width: 90%;
 		margin: 5%;
-		margin-bottom: 0%;
 
 		img{
-			width: 26%;
-			margin: 0% 37%;
-			margin-bottom: 5%;
+			width: 24%;
+			margin: 0% 38%;
+			margin-bottom: 3%;
 		}
 
 		h1 a{
-			font-size: 1.4em;
+			font-size: 1.5em;
 			margin-bottom: 1%;
 		}
 
 		p{
-			font-size: 0.7em;
+			font-size: 0.75em;
 			margin-bottom: 0%;
 		}
 
@@ -404,15 +657,7 @@
 	.content{
 		width: 90%;
 		margin: 5%;
-
-		.nav{
-			margin-bottom: 5%;
-
-			a{
-				padding: 3% 0%;
-				font-size: 1.1em;
-			}
-		}
+		margin-top: 0%;
 
 		.inputtext{
 			padding: 5%;
@@ -425,7 +670,15 @@
 			font-size: 1.2em;
 		}
 
-		.line{ padding: 3% 0%; }
+		.line{
+			padding: 2.5% 0%;
+			font-size: 1em;
+		}
+
+		p{
+			margin-top: 5%;
+			font-size: 1.1em;
+		}
 	}
 }
 
@@ -434,33 +687,116 @@
 	margin: 5%;
 
 	.head{
-		font-size: 1.2em;
-		.text{ padding: 3.5% 5%; }
-		.btn{ padding: 3.5% 5%; }
+		width: 100%;
+		float: left;
+		display: inline-block;
+		font-size: 1.4em;
+		color: #999999;
+
+		.text{
+			padding: 3.5% 5%;
+			float: left;
+			display: inline-block;
+
+			&:hover{ cursor: default; }
+		}
+		.btn{
+			padding: 3.5% 5%;
+			float: right;
+			display: inline-block;
+			color: #BBBBBB;
+
+			&:hover{ cursor: pointer; }
+		}
+	}
+	img{
+		width: 100%;
+		float: left;
+		display: inline-block;
 	}
 
 	.content{
 		width: 90%;
 		padding: 5%;
+		float: left;
+		display: inline-block;
 
 		label{
 			width: 99%;
 			margin-left: 1%;
+			float: left;
+			display: inline-block;
 			margin-bottom: 2%;
+			color: #050505;
 			font-size: 1.1em;
 		}
 
 		.inputtext{
 			width: 90%;
-			padding: 5%;
+			padding: 4% 5%;
+			float: left;
+			display: inline-block;
+			border: 0px;
+			margin: 0px;
 			font-size: 1.1em;
+			background: @bg_gray;
+			border-radius: 5px;
+			color: #333333;
+
+			&:hover{ cursor: pointer; }
+			&:focus{ color: #050505; }
 		}
 	}
 
 	.control{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		border-top: 1px solid @border_color;
+
 		.btn{
+			float: left;
+			display: inline-block;
 			font-size: 1.2em;
-			padding: 6% 5%;
+			font-family: @topic_font;
+			line-height: 1em;
+			padding: 5%;
+			border: 0px;
+			margin: 0px;
+			background: transparent;
+			color: #999999;
+			text-decoration: none;
+
+			i{ margin-right: 10px; }
+			&:hover{ cursor: pointer; }
+			&:active{ background: @border_color; }
+
+			&.delete{ color: #F44336; }
+			&.save{
+				float: right;
+				color: @green_color;
+				&:hover{ color: @green_color_dark; }
+			}
+			&.fullsize{
+				width: 90%;
+				text-align: center;
+				background: @green_color;
+				color: #FFFFFF;
+
+				&:hover{ background: @green_color_dark; }
+			}
 		}
 	}
+}
+
+#progressbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	float: left;
+	display: inline-block;
+	z-index: 999;
+	.bgGradient(#3BED8D,#38ACC5);
 }
