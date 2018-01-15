@@ -73,6 +73,10 @@ foreach ($files as $k => $v){
 
 <div id="progressbar"></div>
 
+<?php if($user_online){?>
+<a class="btn-create" href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<?php }?>
+
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </body>

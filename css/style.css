@@ -182,6 +182,9 @@ body {
 .header.light .btn:active {
   background: #e8e8e9;
 }
+.header.light .btn-profile {
+  color: #666666;
+}
 .header a.logo {
   width: 28%;
   float: left;
@@ -853,127 +856,167 @@ body {
   cursor: pointer;
   background: #24953f;
 }
-.container .article {
-  width: 100%;
+.article {
+  width: 36%;
+  padding: 2%;
+  margin: 0% 30%;
+  margin-top: 8%;
   float: left;
   display: inline-block;
-  margin-top: 25%;
-  background: #FFFFFF;
-}
-.container .article h1 {
-  width: 100%;
-  margin-bottom: 2%;
-  float: left;
-  display: inline-block;
-  font-size: 2.8em;
-  line-height: 1.1em;
-  color: #050505;
-  font-weight: normal;
-  font-family: "maledpan", sans-serif;
-}
-.container .article p {
-  width: 100%;
-  float: left;
-  display: inline-block;
-  font-size: 1em;
-  color: #BBBBBB;
-  font-family: "maledpan", sans-serif;
-}
-.container .article p span {
-  float: left;
-  display: inline-block;
-  margin-right: 2%;
-}
-.container .article p span i {
-  font-size: 1.3em;
-  float: left;
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 2px;
-}
-.container .article p a {
-  text-decoration: none;
-  color: #666666;
-  background: #e8e8e9;
-  padding: 0px 10px;
+  background: #F5F5F5;
   border-radius: 5px;
 }
-.container .article p a i {
-  margin-left: 5px;
-}
-.container .article .text {
+.article .control {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 1.1em;
-  margin-top: 5%;
-  color: #666666;
+  margin-bottom: 3%;
 }
-.container .article .download {
-  width: 100%;
-  float: left;
-  display: inline-block;
-  padding-top: 10%;
-}
-.container .article .download .btn {
-  width: 40%;
-  padding: 3% 4%;
-  margin-right: 2%;
+.article .control .btn-option {
   float: right;
   display: inline-block;
-  color: #FFFFFF;
-  text-decoration: none;
   font-size: 1em;
   line-height: 1em;
-  border-radius: 5px;
-  box-sizing: border-box;
+  font-family: "maledpan", sans-serif;
+  position: relative;
+  color: #999999;
 }
-.container .article .download .btn.btn-download {
-  background: #28a646;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+.article .control .btn-option i {
+  float: right;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 5px;
+  margin-top: -1px;
 }
-.container .article .download .btn.btn-download:hover {
-  background: #24953f;
-}
-.container .article .download .btn.btn-qrcode {
-  background: #e8e8e9;
-  color: #333333;
-}
-.container .article .download .btn.btn-qrcode:hover {
-  color: #333333;
-}
-.container .article .download .btn:hover {
+.article .control .btn-option:hover {
   cursor: pointer;
+  color: #333333;
 }
-.container .article .download .btn .d {
-  width: 75%;
+.article .control .btn-option .more-menu {
+  position: absolute;
+  width: 200px;
+  top: 150%;
+  right: 5%;
+  padding: 10px 0%;
+  background: #FFFFFF;
+  border-radius: 5px;
+  display: none;
+  z-index: 999;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.article .control .btn-option .more-menu.open {
+  display: block;
+}
+.article .control .btn-option .more-menu .arrow-up {
+  position: absolute;
+  bottom: 100%;
+  right: 10%;
+  border: 8px solid transparent;
+  border-bottom-color: #FFFFFF;
+}
+.article .control .btn-option .more-menu a {
+  width: 80%;
+  padding: 7% 10%;
   float: left;
   display: inline-block;
+  text-decoration: none;
+  color: #050505;
+  border-bottom: 1px solid #FAFAFA;
 }
-.container .article .download .btn .d .caption {
-  width: 100%;
+.article .control .btn-option .more-menu a i {
   float: left;
   display: inline-block;
   font-size: 1.2em;
-  margin-bottom: 3%;
-  font-family: "maledpan", sans-serif;
+  margin-right: 15px;
+  margin-top: -2px;
 }
-.container .article .download .btn .d .size {
+.article .control .btn-option .more-menu a.btn-logout {
+  color: #c0392b;
+}
+.article .control .btn-option .more-menu a:last-child {
+  border-bottom: 0px;
+}
+.article .control .btn-option .more-menu a:hover {
+  background: #eeeeee;
+}
+.article .head {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 0.75em;
-  margin-bottom: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  font-family: "maledpan", sans-serif;
+  margin-bottom: 5%;
 }
-.container .article .download .btn i {
-  width: 25%;
+.article .head h1 {
+  font-size: 2.4em;
+  line-height: 1.1em;
+  margin-bottom: 2%;
+  color: #050505;
+}
+.article .head p.info {
+  font-size: 1em;
+  margin-bottom: 1%;
+  color: #666666;
+}
+.article .head p.info i {
+  margin-right: 5px;
+}
+.article .head a.category {
+  color: #28a646;
+  text-decoration: none;
+}
+.article .head a.category i {
+  margin-left: 5px;
+}
+.article .head a.category:hover {
+  text-decoration: underline;
+}
+.article .content {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  margin-bottom: 5%;
+  color: #333333;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+.article .download {
+  width: 100%;
+  padding-top: 5%;
+  float: left;
+  display: inline-block;
+  font-family: "maledpan", sans-serif;
+  border-top: 1px solid #e8e8e9;
+}
+.article .download .btn {
   float: right;
   display: inline-block;
-  font-size: 2.2em;
-  text-align: right;
+  text-decoration: none;
+  background: #DDDDDD;
+  font-size: 1.2em;
+  padding: 15px 20px;
+  line-height: 1em;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+.article .download .btn i {
+  margin-left: 10px;
+  float: right;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-top: -1px;
+}
+.article .download .btn:hover {
+  cursor: pointer;
+}
+.article .download .btn.btn-download {
+  background: #28a646;
+  margin-left: 10px;
+}
+.article .download .btn.btn-download:hover {
+  background: #24953f;
+}
+.article .download .btn.btn-qrcode {
+  color: #333333;
 }
 .logout {
   width: 30%;
@@ -1668,6 +1711,28 @@ body {
   background: -webkit-linear-gradient(to right, #3bed8d, #38acc5);
   background: linear-gradient(to right, #3bed8d, #38acc5);
 }
+.btn-create {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  float: left;
+  display: inline-block;
+  z-index: 999;
+  background: #004d40;
+  color: #FFFFFF;
+  line-height: 1em;
+  padding: 1.1% 1.35%;
+  border-radius: 50%;
+  font-size: 1.5em;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.btn-create:hover {
+  transform: scale(1.1);
+}
 /* Other Device and Screen */
 @media only screen and (min-width: 0px) and (max-width: 519px) {
   .header {
@@ -2022,12 +2087,12 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    width: 94%;
-    padding: 3%;
+    width: 92%;
+    padding: 4%;
   }
   .container .article .download .btn {
-    width: 48.5%;
-    padding: 3%;
+    width: 48%;
+    padding: 4%;
     margin-right: 0%;
   }
   .container .article .download .btn.btn-qrcode {
@@ -2035,33 +2100,17 @@ body {
   }
   .container .article .download .btn .d {
     width: 75%;
-    float: left;
-    display: inline-block;
   }
   .container .article .download .btn .d .caption {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 3%;
-    font-family: "maledpan", sans-serif;
   }
   .container .article .download .btn .d .size {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    font-size: 0.75em;
-    margin-bottom: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 0.7em;
   }
   .container .article .download .btn i {
     width: 25%;
-    float: right;
-    display: inline-block;
-    font-size: 2.2em;
-    text-align: right;
+    font-size: 2em;
   }
   .logout {
     width: 92%;

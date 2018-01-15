@@ -21,6 +21,7 @@
 		a.logo .detail .name{ color: #050505; }
 		a.logo .detail .desc{ color: #999999; }
 		.btn{ color: #666666; &:active{ background: @border_color; } }
+		.btn-profile{ color: #666666; }
 	}
 
 	a.logo{
@@ -723,131 +724,173 @@
 			}
 		}
 	}
+}
 
-	.article{
+.article{
+	width: 36%;
+	padding: 2%;
+	margin: 0% 30%;
+	margin-top: 8%;
+	float: left;
+	display: inline-block;
+	background: #F5F5F5;
+	border-radius: 5px;
+
+	.control{
 		width: 100%;
 		float: left;
 		display: inline-block;
-		margin-top: 25%;
-		background: #FFFFFF;
+		margin-bottom: 3%;
 
-		h1{
-			width: 100%;
-			margin-bottom: 2%;
-			float: left;
-			display: inline-block;
-			font-size: 2.8em;
-			line-height: 1.1em;
-			color: #050505;
-			font-weight: normal;
-			font-family: @topic_font;
-		}
-
-		p{
-			width: 100%;
-			float: left;
+		.btn-option{
+			float: right;
 			display: inline-block;
 			font-size: 1em;
-			color: #BBBBBB;
+			line-height: 1em;
 			font-family: @topic_font;
+			position: relative;
+			color: #999999;
 
-			span{
-				float: left;
-				display: inline-block;
-				margin-right: 2%;
-
-				i{
-					font-size: 1.3em;
-					float: left;
-					display: inline-block;
-					margin-right: 5px;
-					margin-top: 2px;
-				}
-			}
-
-			a{
-				text-decoration: none;
-				color: #666666;
-				background: @border_color;
-				padding: 0px 10px;
-				border-radius: 5px;
-
-				i{ margin-left: 5px; }
-			}
-		}
-
-		.text{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			font-size: 1.1em;
-			margin-top: 5%;
-			color: #666666;
-		}
-
-		.download{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			padding-top: 10%;
-
-			.btn{
-				width: 40%;
-				padding: 3% 4%;
-				margin-right: 2%;
+			i{
 				float: right;
 				display: inline-block;
-				color: #FFFFFF;
-				text-decoration: none;
-				font-size: 1em;
-				line-height: 1em;
+				font-size: 1.2em;
+				margin-left: 5px;
+				margin-top: -1px;
+			}
+
+			&:hover{
+				cursor: pointer;
+				color: #333333;
+			}
+
+			.more-menu{
+				position: absolute;
+				width: 200px;
+				top: 150%;
+				right: 5%;
+				padding: 10px 0%;
+				background: #FFFFFF;
 				border-radius: 5px;
-				box-sizing: border-box;
+				display: none;
+				z-index: 999;
+				box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
 
-				&.btn-download{
-					background: @green_color;
-					box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
-					&:hover{ background: @green_color_dark; }
+				&.open{ display: block; }
+
+				.arrow-up{
+					position: absolute;
+					bottom: 100%;
+					right: 10%;
+					border: 8px solid transparent;
+					border-bottom-color: #FFFFFF;
 				}
-				&.btn-qrcode{
-					background: @border_color;
-					color: #333333;
-					&:hover{ color: #333333; }
-				}
 
-				&:hover{ cursor: pointer; }
-
-				.d{
-					width: 75%;
+				a{
+					width: 80%;
+					padding: 7% 10%;
 					float: left;
 					display: inline-block;
+					text-decoration: none;
+					color: #050505;
+					border-bottom: 1px solid #FAFAFA;
 
-					.caption{
-						width: 100%;
+					i{
 						float: left;
 						display: inline-block;
 						font-size: 1.2em;
-						margin-bottom: 3%;
-						font-family: @topic_font;
+						margin-right: 15px;
+						margin-top: -2px;
 					}
-					.size{
-						width: 100%;
-						float: left;
-						display: inline-block;
-						font-size: 0.75em;
-						margin-bottom: 0;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-						overflow: hidden;
-					}
+
+					&.btn-logout{ color: @alertcolor; }
+
+					&:last-child{ border-bottom: 0px; }
+					&:hover{ background: @bg_gray; }
 				}
-				i{
-					width: 25%;
-					float: right;
-					display: inline-block;
-					font-size: 2.2em;
-					text-align: right;
-				}
+			}
+		}
+	}
+
+	.head{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		font-family: @topic_font;
+		margin-bottom: 5%;
+
+		h1{
+			font-size: 2.4em;
+			line-height: 1.1em;
+			margin-bottom: 2%;
+			color: #050505;
+		}
+		p.info{
+			font-size: 1em;
+			margin-bottom: 1%;
+			color: #666666;
+
+			i{
+				margin-right: 5px;
+			}
+		}
+		a.category{
+			color: @green_color;
+			text-decoration: none;
+
+			i{ margin-left: 5px; }
+
+			&:hover{ text-decoration: underline; }
+		}
+	}
+
+	.content{
+		width: 100%;
+		float: left;
+		display: inline-block;
+		margin-bottom: 5%;
+		color: #333333;
+		font-size: 1.1em;
+		line-height: 1.6em;
+	}
+
+	.download{
+		width: 100%;
+		padding-top: 5%;
+		float: left;
+		display: inline-block;
+		font-family: @topic_font;
+		border-top: 1px solid @border_color;
+
+		.btn{
+			float: right;
+			display: inline-block;
+			text-decoration: none;
+			background: #DDDDDD;
+			font-size: 1.2em;
+			padding: 15px 20px;
+			line-height: 1em;
+			border-radius: 5px;
+			color: #FFFFFF;
+
+			i{
+				margin-left: 10px;
+				float: right;
+				display: inline-block;
+				font-size: 1.2em;
+				margin-top: -1px;
+			}
+
+			&:hover{ cursor: pointer; }
+
+			&.btn-download{
+				background: @green_color;
+				margin-left: 10px;
+
+				&:hover{ background: @green_color_dark; }
+			}
+			&.btn-qrcode{
+				color: #333333;
 			}
 		}
 	}
@@ -1531,6 +1574,27 @@
 	display: inline-block;
 	z-index: 999;
 	.bgGradient(#3BED8D,#38ACC5);
+}
+
+.btn-create{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	float: left;
+	display: inline-block;
+	z-index: 999;
+	background: @primary_color;
+	color: #FFFFFF;
+	line-height: 1em;
+	padding: 1.1% 1.35%;
+	border-radius: 50%;
+	font-size: 1.5em;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	.transitionAnimation(0.2s);
+
+	&:hover{
+		transform: scale(1.1);
+	}
 }
 
 /* Other Device and Screen */

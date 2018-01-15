@@ -67,7 +67,6 @@ $p_url 		= DOMAIN;
 	<?php if($user_online){ include 'template/header.profile.php'; }else{?>
 	<a href="signup" class="btn btn-login">ลงทะเบียนใหม่<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
-
 	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
 </header>
 
@@ -102,6 +101,10 @@ $p_url 		= DOMAIN;
 
 <div class="overlay"></div>
 <div id="progressbar"></div>
+
+<?php if($user_online){?>
+<a class="btn-create" href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<?php }?>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

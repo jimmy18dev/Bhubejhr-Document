@@ -94,6 +94,10 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 	<?php }?>
 </div>
 
+<?php if($user_online){?>
+<a class="btn-create" href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<?php }?>
+
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
 <script type="text/javascript" src="js/lib/autosize.js"></script>
