@@ -123,7 +123,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <header class="header light">
 	<?php include 'template/header.logo.php'; ?>
 	<?php if($user_online){ include 'template/header.profile.php'; }else{?>
-	<a href="signup" class="btn btn-login">ลงทะเบียนใหม่<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<?php }?>
 	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
 </header>
@@ -154,7 +154,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 
 	<div class="download">
 		<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
-				<span class="caption">ดาวน์โหลดไฟล์</span>
+				<span class="caption">ดาวน์โหลด</span>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
 

@@ -951,6 +951,7 @@ body {
   line-height: 1.1em;
   margin-bottom: 2%;
   color: #050505;
+  text-decoration: none;
 }
 .article .head p.info {
   font-size: 1em;
@@ -988,22 +989,20 @@ body {
   border-top: 1px solid #e8e8e9;
 }
 .article .download .btn {
+  width: 32%;
   float: right;
   display: inline-block;
   text-decoration: none;
   background: #DDDDDD;
   font-size: 1.2em;
-  padding: 15px 20px;
+  padding: 15px 0px;
   line-height: 1em;
   border-radius: 5px;
   color: #FFFFFF;
+  text-align: center;
 }
 .article .download .btn i {
-  margin-left: 10px;
-  float: right;
-  display: inline-block;
-  font-size: 1.2em;
-  margin-top: -1px;
+  margin-left: 7px;
 }
 .article .download .btn:hover {
   cursor: pointer;
@@ -2062,55 +2061,66 @@ body {
     cursor: pointer;
     background: #24953f;
   }
-  .container .article {
+  .article {
     width: 92%;
     padding: 4%;
-    margin-top: 0%;
+    margin: 0%;
+    border-radius: 0px;
+    background: transparent;
   }
-  .container .article h1 {
-    margin: 3% 0%;
-    font-size: 2.2em;
-    line-height: 1.1em;
-  }
-  .container .article p {
-    font-size: 0.75em;
-  }
-  .container .article p a {
-    margin-left: 3%;
-  }
-  .container .article .text {
-    font-size: 1.1em;
-    margin-top: 5%;
-    margin-bottom: 25%;
-  }
-  .container .article .download {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 92%;
-    padding: 4%;
-  }
-  .container .article .download .btn {
-    width: 48%;
-    padding: 4%;
-    margin-right: 0%;
-  }
-  .container .article .download .btn.btn-qrcode {
-    float: left;
-  }
-  .container .article .download .btn .d {
-    width: 75%;
-  }
-  .container .article .download .btn .d .caption {
-    font-size: 1.1em;
+  .article .control {
     margin-bottom: 3%;
   }
-  .container .article .download .btn .d .size {
-    font-size: 0.7em;
+  .article .control .btn-option {
+    font-size: 1em;
+    line-height: 1em;
   }
-  .container .article .download .btn i {
-    width: 25%;
+  .article .control .btn-option i {
+    font-size: 1.2em;
+    margin-left: 5px;
+    margin-top: -1px;
+  }
+  .article .head {
+    margin-bottom: 5%;
+  }
+  .article .head h1 {
     font-size: 2em;
+    line-height: 1.1em;
+    margin-bottom: 2%;
+  }
+  .article .head p.info {
+    font-size: 1em;
+    margin-bottom: 1%;
+  }
+  .article .head p.info i {
+    margin-right: 5px;
+  }
+  .article .head a.category i {
+    margin-left: 5px;
+  }
+  .article .content {
+    margin-bottom: 5%;
+    font-size: 1.1em;
+    line-height: 1.6em;
+  }
+  .article .download {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    padding: 4% 0%;
+    margin: 0% 4%;
+  }
+  .article .download .btn {
+    width: 48%;
+    font-size: 1.2em;
+    padding: 15px 0px;
+  }
+  .article .download .btn.btn-download {
+    margin-left: 0px;
+  }
+  .article .download .btn.btn-qrcode {
+    float: left;
   }
   .logout {
     width: 92%;
@@ -2392,5 +2402,27 @@ body {
   .dialog .control .btn {
     font-size: 1.2em;
     padding: 5%;
+  }
+  .btn-create {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    float: left;
+    display: inline-block;
+    z-index: 999;
+    background: #004d40;
+    color: #FFFFFF;
+    line-height: 1em;
+    padding: 1.1% 1.35%;
+    border-radius: 50%;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  }
+  .btn-create:hover {
+    transform: scale(1.1);
   }
 }
