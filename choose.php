@@ -37,11 +37,13 @@ $categories = $category->listAll();
 </header>
 
 <div class="container">
-	<div class="topic center">กรุณาเลือกประเภทของเอกสาร ที่คุณต้องการอัพโหลด<span>คลิกเลือกด้านล่าง</span></div>
+	<div class="form-topic">
+		<h2>เลือกประเภทเอกสารที่คุณต้องการ...</h2>
+		<p>คลิกเลือกด้านล่าง</p>
+	</div>
 	<div class="list">
 		<?php foreach ($categories as $var) { ?>
-		<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items style<?php echo $var['category_id'];?>">
-			<div class="icon"><i class="fa fa-folder-o" aria-hidden="true"></i></div>
+		<a href="create/category/<?php echo $var['category_id'];?>" class="choose-items">
 			<span class="name"><?php echo $var['category_name'];?></span>
 			<div class="control"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
 		</a>

@@ -142,10 +142,11 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 
 <div class="container nomargin">
 	<div class="article">
-		<a class="category" href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		<h1><?php echo $document->title;?></h1>
 		<p>
-			เมื่อ <?php echo $document->create_time;?> · <?php echo $privacy;?>
+			<span><?php echo $privacy;?></span>
+			<span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $document->create_time;?></span>
+			<a href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		</p>
 
 		<?php if(!empty($document->description)){?>
@@ -155,7 +156,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 		<div class="download">
 			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
 				<div class="d">
-					<span class="caption">ดาวน์โหลดไฟล์</span>
+					<span class="caption">ดาวน์โหลด</span>
 					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
 				</div>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
@@ -164,8 +165,8 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 			<?php if($document->privacy != 'onlyme'){?>
 			<div class="btn btn-qrcode" id="btn-qrcode">
 				<div class="d">
-					<span class="caption">แสดงคิวอาร์โค้ด</span>
-					<span class="size">ส่งต่อเอกสารนี้</span>
+					<span class="caption">คิวอาร์โค้ด</span>
+					<span class="size">ส่งต่อเอกสาร</span>
 				</div>
 				<i class="fa fa-qrcode" aria-hidden="true"></i>
 			</div>

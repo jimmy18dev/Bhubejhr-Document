@@ -63,10 +63,10 @@ $p_url 		= DOMAIN.'/signin';
 			<input type="password" class="inputtext" id="password" placeholder="รหัสผ่าน" required>
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('login',SECRET_KEY);?>">
 			<input type="hidden" id="redirect" value="<?php echo $_GET['redirect'];?>">
-			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงชื่อเข้าใช้งาน<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงชื่อเข้าใช้งาน</button>
 		</form>
 
-		<p>ใช้งานเป็นครั้งแรก <a href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>">ลงทะเบียนใหม่ที่นี่<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+		<p>ใช้งานเป็นครั้งแรก <a href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>">ลงทะเบียนใหม่<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
 	</div>
 </div>
 

@@ -405,31 +405,39 @@
 
 	&.nomargin{ margin-top: 0px; }
 
-	.topic{
+	.form-topic{
+		width: 100%;
+		margin: 6% 0%;
+		float: left;
+		display: inline-block;
+		color: #999999;
+		font-family: @topic_font;
+
+		h2{
+			font-size: 2.2em;
+			font-weight: normal;
+			line-height: 1.1em;
+			color: #333333;
+		}
+		p{
+			font-size: 1.2em;
+			color: #BBBBBB;
+		}
+	}
+
+	.date{
 		width: 100%;
 		float: left;
 		display: inline-block;
 		font-size: 1.1em;
-		color: #333333;
+		color: #999999;
 		font-family: @topic_font;
 		line-height: 1em;
-		margin-top: 5%;
+		margin-top: 6%;
 		margin-bottom: 3%;
 		text-align: right;
 
-		&.center{
-			text-align: left;
-			margin-bottom: 5%;
-			font-size: 1.4em;
-			color: #333333;
-		}
-
-		span{
-			display: block;
-			font-size: 0.7em;
-			margin-top: 5px;
-			color: #999999;
-		}
+		&:hover{ cursor: default; }
 	}
 
 	.list{
@@ -439,11 +447,11 @@
 
 		.file-items{
 			width: 94%;
-			padding: 2% 3%;
+			padding: 3%;
 			float: left;
 			display: inline-block;
 			background: #EEEEEE;
-			margin-bottom: 1%;
+			margin-bottom: 3%;
 			border-radius: 5px;
 
 			&:last-child .detail{ margin-bottom: 0; }
@@ -630,28 +638,18 @@
 		}
 
 		.choose-items{
-			width: 100%;
-			padding: 2% 3%;
+			width: 92%;
+			padding: 3% 4%;
 			float: left;
 			display: inline-block;
 			margin-bottom: 2%;
 			border-radius: 5px;
-			box-sizing: border-box;
 			background: @bg_gray;
 
 			&:hover{ background: @border_color; }
 
-			.icon{
-				width: 6%;
-				float: left;
-				display: inline-block;
-				font-size: 1.2em;
-				line-height: 2.2em;
-				color: #666666;
-			}
-
 			.name{
-				width: 86%;
+				width: 92%;
 				float: left;
 				display: inline-block;
 				font-size: 1.5em;
@@ -733,26 +731,13 @@
 		margin-top: 25%;
 		background: #FFFFFF;
 
-		.category{
-			color: #999999;
-			text-decoration: none;
-			font-size: 0.9em;
-
-			i{ margin-left: 5px; }
-
-			&:hover{
-				text-decoration: underline;
-				color: #050505;
-			}
-		}
-
 		h1{
 			width: 100%;
+			margin-bottom: 2%;
 			float: left;
 			display: inline-block;
-			font-size: 3em;
-			line-height: 1.2em;
-			margin-bottom: 2%;
+			font-size: 2.8em;
+			line-height: 1.1em;
 			color: #050505;
 			font-weight: normal;
 			font-family: @topic_font;
@@ -762,18 +747,33 @@
 			width: 100%;
 			float: left;
 			display: inline-block;
-			font-size: 0.9em;
-			color: #666666;
-			margin-bottom: 3%;
+			font-size: 1em;
+			color: #BBBBBB;
+			font-family: @topic_font;
+
+			span{
+				float: left;
+				display: inline-block;
+				margin-right: 2%;
+
+				i{
+					font-size: 1.3em;
+					float: left;
+					display: inline-block;
+					margin-right: 5px;
+					margin-top: 2px;
+				}
+			}
 
 			a{
 				text-decoration: none;
-				color: #333333;
+				color: #666666;
+				background: @border_color;
+				padding: 0px 10px;
+				border-radius: 5px;
+
+				i{ margin-left: 5px; }
 			}
-
-			i{ margin-right: 5px; }
-
-			a:hover{ text-decoration: underline; }
 		}
 
 		.text{
@@ -781,15 +781,15 @@
 			float: left;
 			display: inline-block;
 			font-size: 1.1em;
-			margin-bottom: 5%;
-			color: @fontcolor_normal;
+			margin-top: 5%;
+			color: #666666;
 		}
 
 		.download{
 			width: 100%;
 			float: left;
 			display: inline-block;
-			padding-top: 5%;
+			padding-top: 10%;
 
 			.btn{
 				width: 40%;
@@ -973,7 +973,6 @@
 		&.delete-box{
 			padding: 5% 0%;
 			margin-top: 15%;
-			border-radius: 5px;
 			font-family: @topic_font;
 
 			.msg{
@@ -992,14 +991,11 @@
 			float: left;
 			display: inline-block;
 			font-size: 1.2em;
-			color: #333333;
+			color: #999999;
 			margin-bottom: 2%;
 			font-family: @topic_font;
 
-			&:hover{
-				cursor: pointer;
-				color: #050505;
-			}
+			&:hover{ cursor: default; }
 		}
 
 		.inputfile{ display: none; }
@@ -1008,7 +1004,7 @@
 			float: left;
 			display: inline-block;
 			margin: 0;
-			padding: 2.5% 3%;
+			padding: 3%;
 			font-size: 1em;
 			margin-bottom: 4%;
 			line-height: 1.5em;
@@ -1034,17 +1030,17 @@
 
 			.items{
 				width: 100%;
-				padding: 2.5% 0%;
+				padding: 2% 0%;
 				float: left;
 				display: inline-block;
 				border-radius: 5px;
 				box-sizing: border-box;
 				color: @fontcolor_normal;
-				border: 2px solid @border_color;
+				border: 1px solid @border_color;
 				margin-bottom: 2%;
 
 				i{
-					width: 15%;
+					width: 13%;
 					float: left;
 					display: inline-block;
 					font-size: 2.4em;
@@ -1053,7 +1049,7 @@
 				}
 
 				.caption{
-					width: 85%;
+					width: 87%;
 					float: left;
 					display: inline-block;
 
@@ -1061,9 +1057,7 @@
 						font-size: 1.4em;
 						font-family: @topic_font;
 					}
-					.c{
-						font-size: 0.9em;
-					}
+					.c{ font-size: 0.9em; }
 				}
 				&:nth-child(3n+0){ margin-right: 0%; }
 
@@ -1075,7 +1069,8 @@
 				&.active{
 					color: @green_color_dark;
 					background: #E8F5E9;
-					border: 2px solid @green_color_dark;
+					border: 1px solid @green_color_dark;
+					// box-shadow: 1px 1px 5px @green_color_dark;
 				}
 			}
 		}
@@ -1093,14 +1088,14 @@
 				border-top: 10px solid @fontcolor_normal;
 			    position: absolute;
 			    z-index: 2;
-			    top: 38%;
+			    top: 40%;
 			    right: 4%;
 			    pointer-events: none;
 			}
 			select{
 				width: 100%;
 			    margin: 0%;
-			    padding: 2.5% 3%;
+			    padding: 3%;
 			    float: left;
 			    display: inline-block;
 			    -webkit-appearance: none;
@@ -1160,6 +1155,7 @@
 		}
 
 		a.btn{
+			width: 22%;
 			padding: 3% 4%;
 			float: right;
 			display: inline-block;
@@ -1177,8 +1173,10 @@
 		}
 
 		button{
-			padding: 3% 4%;
+			width: 30%;
+			padding: 3% 0%;
 			margin: 0px;
+			margin-left: 1%;
 			float: right;
 			display: inline-block;
 			font-size: 1.2em;
@@ -1248,13 +1246,13 @@
 			float: left;
 			display: inline-block;
 			font-size: 0.9em;
-			color: #666666;
+			color: #999999;
 			margin-bottom: 10%;
 		}
 
 		a.btn-back{
 			display: inline-block;
-			color: #333333;
+			color: #999999;
 			font-size: 1.1em;
 			font-family: @topic_font;
 			text-decoration: none;
@@ -1350,7 +1348,7 @@
 			display: inline-block;
 			text-align: center;
 			font-size: 1em;
-			color: @fontcolor_normal;
+			color: #999999;
 			font-family: @topic_font;
 		}
 
@@ -1361,14 +1359,18 @@
 			display: inline-block;
 			font-family: @topic_font;
 			font-size: 1.1em;
-			color: #666666;
+			color: #999999;
 			text-align: center;
 
 			a{
-				color: @primary_color;
+				color: #050505;
+				text-decoration: none;
+				background: @border_color;
+				padding: 0 7px;
+				border-radius: 5px;
 
 				i{ margin-left: 7px; }
-				&:hover{ color: @primary_color_dark; }
+				&:hover{ text-decoration: underline; }
 			}
 		}
 	}
@@ -1403,7 +1405,7 @@
 	float: left;
 	display: inline-block;
 	background: #FFFFFF;
-	border-radius: 10px;
+	border-radius: 5px;
 	overflow: hidden;
 	z-index: 120;
 	opacity: 0;
@@ -1524,7 +1526,7 @@
 	top: 0;
 	left: 0;
 	width: 0%;
-	height: 5px;
+	height: 3px;
 	float: left;
 	display: inline-block;
 	z-index: 999;

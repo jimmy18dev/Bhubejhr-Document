@@ -555,29 +555,38 @@ body {
 .container.nomargin {
   margin-top: 0px;
 }
-.container .topic {
+.container .form-topic {
+  width: 100%;
+  margin: 6% 0%;
+  float: left;
+  display: inline-block;
+  color: #999999;
+  font-family: "maledpan", sans-serif;
+}
+.container .form-topic h2 {
+  font-size: 2.2em;
+  font-weight: normal;
+  line-height: 1.1em;
+  color: #333333;
+}
+.container .form-topic p {
+  font-size: 1.2em;
+  color: #BBBBBB;
+}
+.container .date {
   width: 100%;
   float: left;
   display: inline-block;
   font-size: 1.1em;
-  color: #333333;
+  color: #999999;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
-  margin-top: 5%;
+  margin-top: 6%;
   margin-bottom: 3%;
   text-align: right;
 }
-.container .topic.center {
-  text-align: left;
-  margin-bottom: 5%;
-  font-size: 1.4em;
-  color: #333333;
-}
-.container .topic span {
-  display: block;
-  font-size: 0.7em;
-  margin-top: 5px;
-  color: #999999;
+.container .date:hover {
+  cursor: default;
 }
 .container .list {
   width: 100%;
@@ -586,11 +595,11 @@ body {
 }
 .container .list .file-items {
   width: 94%;
-  padding: 2% 3%;
+  padding: 3%;
   float: left;
   display: inline-block;
   background: #EEEEEE;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   border-radius: 5px;
 }
 .container .list .file-items:last-child .detail {
@@ -765,28 +774,19 @@ body {
   color: #666666;
 }
 .container .list .choose-items {
-  width: 100%;
-  padding: 2% 3%;
+  width: 92%;
+  padding: 3% 4%;
   float: left;
   display: inline-block;
   margin-bottom: 2%;
   border-radius: 5px;
-  box-sizing: border-box;
   background: #eeeeee;
 }
 .container .list .choose-items:hover {
   background: #e8e8e9;
 }
-.container .list .choose-items .icon {
-  width: 6%;
-  float: left;
-  display: inline-block;
-  font-size: 1.2em;
-  line-height: 2.2em;
-  color: #666666;
-}
 .container .list .choose-items .name {
-  width: 86%;
+  width: 92%;
   float: left;
   display: inline-block;
   font-size: 1.5em;
@@ -860,25 +860,13 @@ body {
   margin-top: 25%;
   background: #FFFFFF;
 }
-.container .article .category {
-  color: #999999;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-.container .article .category i {
-  margin-left: 5px;
-}
-.container .article .category:hover {
-  text-decoration: underline;
-  color: #050505;
-}
 .container .article h1 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: inline-block;
-  font-size: 3em;
-  line-height: 1.2em;
-  margin-bottom: 2%;
+  font-size: 2.8em;
+  line-height: 1.1em;
   color: #050505;
   font-weight: normal;
   font-family: "maledpan", sans-serif;
@@ -887,33 +875,45 @@ body {
   width: 100%;
   float: left;
   display: inline-block;
-  font-size: 0.9em;
-  color: #666666;
-  margin-bottom: 3%;
+  font-size: 1em;
+  color: #BBBBBB;
+  font-family: "maledpan", sans-serif;
+}
+.container .article p span {
+  float: left;
+  display: inline-block;
+  margin-right: 2%;
+}
+.container .article p span i {
+  font-size: 1.3em;
+  float: left;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 2px;
 }
 .container .article p a {
   text-decoration: none;
-  color: #333333;
+  color: #666666;
+  background: #e8e8e9;
+  padding: 0px 10px;
+  border-radius: 5px;
 }
-.container .article p i {
-  margin-right: 5px;
-}
-.container .article p a:hover {
-  text-decoration: underline;
+.container .article p a i {
+  margin-left: 5px;
 }
 .container .article .text {
   width: 100%;
   float: left;
   display: inline-block;
   font-size: 1.1em;
-  margin-bottom: 5%;
+  margin-top: 5%;
   color: #666666;
 }
 .container .article .download {
   width: 100%;
   float: left;
   display: inline-block;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 .container .article .download .btn {
   width: 40%;
@@ -1105,7 +1105,6 @@ body {
 .form .form-items.delete-box {
   padding: 5% 0%;
   margin-top: 15%;
-  border-radius: 5px;
   font-family: "maledpan", sans-serif;
 }
 .form .form-items.delete-box .msg {
@@ -1122,13 +1121,12 @@ body {
   float: left;
   display: inline-block;
   font-size: 1.2em;
-  color: #333333;
+  color: #999999;
   margin-bottom: 2%;
   font-family: "maledpan", sans-serif;
 }
 .form .form-items label:hover {
-  cursor: pointer;
-  color: #050505;
+  cursor: default;
 }
 .form .form-items .inputfile {
   display: none;
@@ -1139,7 +1137,7 @@ body {
   float: left;
   display: inline-block;
   margin: 0;
-  padding: 2.5% 3%;
+  padding: 3%;
   font-size: 1em;
   margin-bottom: 4%;
   line-height: 1.5em;
@@ -1167,17 +1165,17 @@ body {
 }
 .form .form-items .selection .items {
   width: 100%;
-  padding: 2.5% 0%;
+  padding: 2% 0%;
   float: left;
   display: inline-block;
   border-radius: 5px;
   box-sizing: border-box;
   color: #666666;
-  border: 2px solid #e8e8e9;
+  border: 1px solid #e8e8e9;
   margin-bottom: 2%;
 }
 .form .form-items .selection .items i {
-  width: 15%;
+  width: 13%;
   float: left;
   display: inline-block;
   font-size: 2.4em;
@@ -1185,7 +1183,7 @@ body {
   margin-top: 1.5%;
 }
 .form .form-items .selection .items .caption {
-  width: 85%;
+  width: 87%;
   float: left;
   display: inline-block;
 }
@@ -1206,7 +1204,7 @@ body {
 .form .form-items .selection .items.active {
   color: #24953f;
   background: #E8F5E9;
-  border: 2px solid #24953f;
+  border: 1px solid #24953f;
 }
 .form .form-items .select {
   width: 100%;
@@ -1221,14 +1219,14 @@ body {
   border-top: 10px solid #666666;
   position: absolute;
   z-index: 2;
-  top: 38%;
+  top: 40%;
   right: 4%;
   pointer-events: none;
 }
 .form .form-items .select select {
   width: 100%;
   margin: 0%;
-  padding: 2.5% 3%;
+  padding: 3%;
   float: left;
   display: inline-block;
   -webkit-appearance: none;
@@ -1282,6 +1280,7 @@ body {
   text-decoration: underline;
 }
 .form .form-items a.btn {
+  width: 22%;
   padding: 3% 4%;
   float: right;
   display: inline-block;
@@ -1301,8 +1300,10 @@ body {
   background: #e8e8e9;
 }
 .form .form-items button {
-  padding: 3% 4%;
+  width: 30%;
+  padding: 3% 0%;
   margin: 0px;
+  margin-left: 1%;
   float: right;
   display: inline-block;
   font-size: 1.2em;
@@ -1368,12 +1369,12 @@ body {
   float: left;
   display: inline-block;
   font-size: 0.9em;
-  color: #666666;
+  color: #999999;
   margin-bottom: 10%;
 }
 .login .welcome a.btn-back {
   display: inline-block;
-  color: #333333;
+  color: #999999;
   font-size: 1.1em;
   font-family: "maledpan", sans-serif;
   text-decoration: none;
@@ -1475,7 +1476,7 @@ body {
   display: inline-block;
   text-align: center;
   font-size: 1em;
-  color: #666666;
+  color: #999999;
   font-family: "maledpan", sans-serif;
 }
 .login .content p {
@@ -1485,17 +1486,21 @@ body {
   display: inline-block;
   font-family: "maledpan", sans-serif;
   font-size: 1.1em;
-  color: #666666;
+  color: #999999;
   text-align: center;
 }
 .login .content p a {
-  color: #004d40;
+  color: #050505;
+  text-decoration: none;
+  background: #e8e8e9;
+  padding: 0 7px;
+  border-radius: 5px;
 }
 .login .content p a i {
   margin-left: 7px;
 }
 .login .content p a:hover {
-  color: #002e26;
+  text-decoration: underline;
 }
 .overlay {
   position: fixed;
@@ -1526,7 +1531,7 @@ body {
   float: left;
   display: inline-block;
   background: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   z-index: 120;
   opacity: 0;
@@ -1655,7 +1660,7 @@ body {
   top: 0;
   left: 0;
   width: 0%;
-  height: 5px;
+  height: 3px;
   float: left;
   display: inline-block;
   z-index: 999;
@@ -1667,11 +1672,11 @@ body {
 @media only screen and (min-width: 0px) and (max-width: 519px) {
   .header {
     width: 100%;
-    padding: 0%;
+    padding: 0;
   }
   .header a.logo {
     width: auto;
-    padding: 10px 5%;
+    padding: 10px 4%;
   }
   .header a.logo img {
     margin-right: 0px;
@@ -1680,12 +1685,11 @@ body {
     display: none;
   }
   .header .btn {
-    padding: 7px 5%;
-    margin-left: 0%;
+    margin: 9px 4%;
+    margin-left: 0px;
   }
   .header .btn .more-menu {
-    top: 105%;
-    right: 15%;
+    right: 5%;
   }
   .header .btn .more-menu .arrow-up {
     right: 15%;
@@ -1694,18 +1698,19 @@ body {
     padding: 8% 10%;
   }
   .header .title {
-    padding: 7px 5%;
+    padding: 7px 4%;
+    padding-right: 0%;
     margin-left: 0%;
     max-width: 30%;
   }
   .header .btn-profile {
-    padding: 7px 5%;
-    margin-left: 0%;
+    padding: 7px 4%;
+    margin-left: 0px;
   }
   .header .btn-profile .notif {
     top: -2px;
-    left: 7px;
-    font-size: 0.7em;
+    left: 5px;
+    padding: 3px;
   }
   .header .btn-profile img {
     margin-right: 0px;
@@ -1717,34 +1722,30 @@ body {
     margin-left: 5px;
   }
   .header .btn-profile .more-menu {
-    top: 120%;
-    right: 15%;
+    top: 145%;
+    right: 10%;
+    padding: 10px 0%;
   }
   .header .btn-profile .more-menu .arrow-up {
     right: 14%;
-  }
-  .header .btn-profile .more-menu .caption {
-    width: 80%;
-    padding: 7% 10%;
-    padding-bottom: 2%;
-    font-size: 0.75em;
   }
   .header .btn-profile .more-menu a {
     padding: 8% 10%;
   }
   .searchform {
-    width: 90%;
-    margin: 0% 5%;
+    width: 92%;
+    margin: 0% 4%;
   }
   .searchform .icon {
     font-size: 1.2em;
     padding: 5%;
   }
   .searchform .inputtext {
-    width: 80%;
-    padding: 5%;
+    width: 75%;
+    padding: 5% 10%;
     padding-left: 15%;
     font-size: 1em;
+    line-height: 1.5em;
   }
   .searchform .tip {
     display: none;
@@ -1753,21 +1754,21 @@ body {
     height: auto;
   }
   .cover .welcome {
-    width: 90%;
-    margin: 0 5%;
+    width: 94%;
+    margin: 0 3%;
     padding-top: 30%;
   }
   .cover .welcome h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
   .cover .welcome p {
     font-size: 1em;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
     letter-spacing: 0px;
   }
   .cover .welcome a {
     font-size: 1.2em;
-    padding: 5px 25px;
+    padding: 5px 20px;
     padding-bottom: 10px;
   }
   .cover img {
@@ -1776,46 +1777,44 @@ body {
   .container {
     width: 100%;
     margin: 0%;
-    margin-top: 50px;
   }
-  .container.nomargin {
-    margin-top: 0px;
+  .container .form-topic {
+    width: 92%;
+    margin: 6% 4%;
   }
-  .container .topic {
-    width: 90%;
-    margin: 5%;
+  .container .form-topic h2 {
+    font-size: 2.2em;
+    margin-bottom: 1%;
+  }
+  .container .form-topic p {
     font-size: 1em;
-    margin-bottom: 3%;
   }
-  .container .topic.center {
-    text-align: left;
-    margin-bottom: 5%;
-    font-size: 1.4em;
-  }
-  .container .topic span {
-    display: block;
-    font-size: 0.7em;
+  .container .date {
+    width: 92%;
+    font-size: 1em;
+    margin: 4%;
+    margin-top: 8%;
   }
   .container .list .file-items {
-    width: 80%;
-    padding: 3% 5%;
-    margin: 0 5%;
-    margin-bottom: 2%;
+    width: 84%;
+    padding: 4%;
+    margin: 0 4%;
+    margin-bottom: 4%;
   }
   .container .list .file-items a.icontype {
-    width: 15%;
-    font-size: 1.6em;
+    width: 12%;
+    font-size: 1.5em;
     line-height: 1.6em;
   }
   .container .list .file-items .detail {
-    width: 85%;
+    width: 88%;
   }
   .container .list .file-items .detail .name a {
     font-size: 1.2em;
-    line-height: 1.3em;
+    line-height: 1.2em;
   }
   .container .list .file-items .detail p {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   .container .list .member-items {
     width: 100%;
@@ -1942,20 +1941,14 @@ body {
     color: #666666;
   }
   .container .list .choose-items {
-    width: 90%;
-    padding: 4% 5%;
-    margin: 0% 5%;
-    margin-bottom: 1%;
-  }
-  .container .list .choose-items .icon {
-    width: 13%;
-    font-size: 1.2em;
-    line-height: 1.4em;
+    width: 84%;
+    padding: 4%;
+    margin: 0 4%;
+    margin-bottom: 3%;
   }
   .container .list .choose-items .name {
-    width: 77%;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    width: 92%;
+    font-size: 1.3em;
   }
   .container .list .choose-items .name .inputtext {
     width: 100%;
@@ -1968,9 +1961,9 @@ body {
     margin-top: 1%;
   }
   .container .list .choose-items .control {
-    width: 10%;
-    font-size: 1.2em;
-    line-height: 1.4em;
+    width: 8%;
+    font-size: 1.4em;
+    line-height: 1.3em;
   }
   .container .starter {
     width: 100%;
@@ -2005,37 +1998,40 @@ body {
     background: #24953f;
   }
   .container .article {
-    width: 90%;
-    margin: 5%;
-  }
-  .container .article .category {
-    font-size: 0.8em;
+    width: 92%;
+    padding: 4%;
+    margin-top: 0%;
   }
   .container .article h1 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    margin-bottom: 2%;
+    margin: 3% 0%;
+    font-size: 2.2em;
+    line-height: 1.1em;
   }
   .container .article p {
-    font-size: 0.8em;
-    margin-bottom: 3%;
+    font-size: 0.75em;
+  }
+  .container .article p a {
+    margin-left: 3%;
   }
   .container .article .text {
-    font-size: 1em;
-    margin-bottom: 5%;
+    font-size: 1.1em;
+    margin-top: 5%;
+    margin-bottom: 25%;
   }
   .container .article .download {
-    width: 90%;
-    padding: 5%;
     position: fixed;
     bottom: 0px;
     left: 0px;
+    width: 94%;
+    padding: 3%;
   }
   .container .article .download .btn {
-    width: 100%;
-    padding: 4% 5%;
+    width: 48.5%;
+    padding: 3%;
     margin-right: 0%;
-    margin-top: 3%;
+  }
+  .container .article .download .btn.btn-qrcode {
+    float: left;
   }
   .container .article .download .btn .d {
     width: 75%;
@@ -2068,16 +2064,16 @@ body {
     text-align: right;
   }
   .logout {
-    width: 90%;
-    margin: 5%;
-    margin-top: 30%;
+    width: 92%;
+    margin: 0 4%;
+    margin-top: 40%;
   }
   .logout h2 {
-    font-size: 2em;
-    margin-bottom: 2%;
+    font-size: 2.2em;
+    margin-bottom: 3%;
   }
   .logout p {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .logout textarea {
     width: 92%;
@@ -2087,11 +2083,25 @@ body {
     line-height: 1.5em;
     margin-top: 5%;
     padding: 4%;
+    border-radius: 5px;
+    color: #333333;
+    background: #e8e8e9;
+    border: 0;
+    resize: none;
+  }
+  .logout textarea:hover {
+    cursor: pointer;
+  }
+  .logout textarea:focus {
+    color: #050505;
   }
   .logout a {
-    margin-top: 15%;
+    margin-top: 10%;
     padding: 4% 5%;
-    font-size: 1.1em;
+    font-size: 1.2em;
+  }
+  .logout a i {
+    margin-right: 10px;
   }
   .logout button {
     margin-top: 10%;
@@ -2117,30 +2127,21 @@ body {
     background: #24953f;
   }
   .form {
-    width: 90%;
-    margin: 3% 5%;
+    width: 92%;
+    margin: 4%;
   }
   .form .form-items {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    margin-bottom: 2%;
-    box-sizing: border-box;
+    margin-bottom: 4%;
   }
   .form .form-items.middle {
-    margin-top: 18%;
-  }
-  .form .form-items.hidden {
-    display: none;
+    margin-top: 0%;
   }
   .form .form-items.control {
-    border-top: 1px dotted #e8e8e9;
-    padding: 5% 0%;
+    padding: 4% 0%;
   }
   .form .form-items.delete-box {
     padding: 5% 0%;
     margin-top: 15%;
-    border-radius: 5px;
     font-family: "maledpan", sans-serif;
   }
   .form .form-items.delete-box .msg {
@@ -2152,31 +2153,29 @@ body {
     color: #050505;
   }
   .form .form-items label {
-    width: 98%;
-    margin-left: 2%;
-    font-size: 1.2em;
+    width: 99%;
+    margin-left: 1%;
+    font-size: 1.1em;
     margin-bottom: 2%;
+  }
+  .form .form-items label:hover {
+    cursor: default;
   }
   .form .form-items .inputtext,
   .form .form-items textarea {
     padding: 5%;
     margin-bottom: 5%;
-    line-height: 1.5em;
   }
   .form .form-items .selection {
     margin-bottom: 5%;
   }
   .form .form-items .selection .items {
-    padding: 3% 0%;
-    margin-bottom: 2%;
+    padding: 2.5% 0%;
   }
   .form .form-items .selection .items i {
     width: 20%;
-    float: left;
-    display: inline-block;
-    font-size: 2.4em;
-    text-align: center;
-    margin-top: 1.5%;
+    font-size: 2em;
+    margin-top: 2.5%;
   }
   .form .form-items .selection .items .caption {
     width: 80%;
@@ -2188,14 +2187,16 @@ body {
     font-size: 0.75em;
   }
   .form .form-items .select {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    position: relative;
     margin-bottom: 5%;
   }
   .form .form-items .select:after {
-    top: 40%;
     right: 5%;
   }
   .form .form-items .select select {
-    width: 100%;
     padding: 5%;
   }
   .form .form-items .file-preview {
@@ -2234,42 +2235,32 @@ body {
     text-decoration: underline;
   }
   .form .form-items a.btn {
-    padding: 3% 4%;
-    float: right;
-    display: inline-block;
-    font-size: 1.2em;
-    border: 0px;
-    border-radius: 5px;
-    line-height: 1em;
-    color: #999999;
-    font-family: "maledpan", sans-serif;
-    text-decoration: none;
-    text-align: center;
-  }
-  .form .form-items a.btn:hover {
-    text-decoration: underline;
-  }
-  .form .form-items a.btn:active {
-    background: #e8e8e9;
-  }
-  .form .form-items button {
-    width: 100%;
+    width: 40%;
     padding: 5%;
     font-size: 1.2em;
-    letter-spacing: 1px;
+  }
+  .form .form-items button {
+    width: 50%;
+    padding: 5% 0%;
+    margin: 0px;
+    margin-left: 0%;
+    font-size: 1.2em;
+    letter-spacing: 0px;
   }
   .login .welcome {
-    width: 90%;
-    margin: 5%;
+    width: 92%;
+    margin: 4%;
+    margin-bottom: 0%;
   }
   .login .welcome img {
-    width: 24%;
-    margin: 0% 38%;
+    width: 20%;
+    margin: 0% 40%;
     margin-bottom: 3%;
   }
   .login .welcome h1 a {
     font-size: 1.5em;
     margin-bottom: 1%;
+    line-height: 1.1em;
   }
   .login .welcome p {
     font-size: 0.75em;
@@ -2279,59 +2270,42 @@ body {
     display: none;
   }
   .login .content {
-    width: 90%;
-    margin: 5%;
-    margin-top: 0%;
+    width: 92%;
+    margin: 4%;
   }
   .login .content .inputtext {
     padding: 5%;
     font-size: 1em;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
+    line-height: 1.5em;
   }
   .login .content .btn {
-    padding: 5% 0%;
+    width: 100%;
+    padding: 5.5% 0%;
     font-size: 1.2em;
   }
   .login .content .line {
-    padding: 2.5% 0%;
-    font-size: 1em;
+    padding: 2% 0%;
   }
   .login .content p {
-    margin-top: 5%;
-    font-size: 1.1em;
+    margin-top: 8%;
+    font-size: 1.2em;
+  }
+  .login .content p a {
+    padding: 0 10px;
   }
   .dialog {
-    width: 90%;
-    margin: 5%;
+    width: 92%;
+    margin: 4%;
   }
   .dialog .head {
-    width: 100%;
-    float: left;
-    display: inline-block;
     font-size: 1.4em;
-    color: #999999;
   }
   .dialog .head .text {
     padding: 3.5% 5%;
-    float: left;
-    display: inline-block;
-  }
-  .dialog .head .text:hover {
-    cursor: default;
   }
   .dialog .head .btn {
     padding: 3.5% 5%;
-    float: right;
-    display: inline-block;
-    color: #BBBBBB;
-  }
-  .dialog .head .btn:hover {
-    cursor: pointer;
-  }
-  .dialog img {
-    width: 100%;
-    float: left;
-    display: inline-block;
   }
   .dialog .content {
     width: 90%;
@@ -2366,64 +2340,8 @@ body {
   .dialog .content .inputtext:focus {
     color: #050505;
   }
-  .dialog .control {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    border-top: 1px solid #e8e8e9;
-  }
   .dialog .control .btn {
-    float: left;
-    display: inline-block;
     font-size: 1.2em;
-    font-family: "maledpan", sans-serif;
-    line-height: 1em;
     padding: 5%;
-    border: 0px;
-    margin: 0px;
-    background: transparent;
-    color: #999999;
-    text-decoration: none;
-  }
-  .dialog .control .btn i {
-    margin-right: 10px;
-  }
-  .dialog .control .btn:hover {
-    cursor: pointer;
-  }
-  .dialog .control .btn:active {
-    background: #e8e8e9;
-  }
-  .dialog .control .btn.delete {
-    color: #F44336;
-  }
-  .dialog .control .btn.save {
-    float: right;
-    color: #28a646;
-  }
-  .dialog .control .btn.save:hover {
-    color: #24953f;
-  }
-  .dialog .control .btn.fullsize {
-    width: 90%;
-    text-align: center;
-    background: #28a646;
-    color: #FFFFFF;
-  }
-  .dialog .control .btn.fullsize:hover {
-    background: #24953f;
-  }
-  #progressbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    float: left;
-    display: inline-block;
-    z-index: 999;
-    background: #3bed8d;
-    background: -webkit-linear-gradient(to right, #3bed8d, #38acc5);
-    background: linear-gradient(to right, #3bed8d, #38acc5);
   }
 }

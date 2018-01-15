@@ -34,7 +34,7 @@ foreach ($files as $k => $v){
 <?php include'favicon.php';?>
 
 <?php
-$p_title 	= TITLE;
+$p_title 	= 'เอกสารออนไลน์ - '.TITLE;
 $p_desc 	= DESCRIPTION;
 $p_url 		= DOMAIN;
 ?>
@@ -91,7 +91,7 @@ $p_url 		= DOMAIN;
 </div>
 <div class="container nomargin">
 	<?php foreach ($dataset as $var){?>
-	<div class="topic"><?php echo $var['date'];?></div>
+	<div class="date"><?php echo $var['date'];?></div>
 	<div class="list">
 		<?php
 		foreach ($var['items'] as $data){ include 'template/file.items.php'; }

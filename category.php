@@ -79,7 +79,7 @@ $p_url 		= DOMAIN.'/category/'.$category->id;
 <div class="container nomargin">
 	<?php if(count($dataset) > 0){?>
 	<?php foreach ($dataset as $var){?>
-	<div class="topic"><?php echo $var['date'];?></div>
+	<div class="date"><?php echo $var['date'];?></div>
 	<div class="list">
 		<?php
 		foreach ($var['items'] as $data){ include 'template/file.items.php'; }
