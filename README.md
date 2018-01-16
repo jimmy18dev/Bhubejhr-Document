@@ -59,3 +59,4 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
 * [PHP QR Code](http://phpqrcode.sourceforge.net) - PHP QR Code is open source (LGPL)
 * [Numeral.js v. 2.0.6](http://numeraljs.com) - A javascript library for formatting and manipulating numbers.
 * [PDO PHP Class](http://culttt.com/2012/10/01/roll-your-own-pdo-php-class/) - Roll your own PDO PHP Class
+* [Facebook SDK for JavaScript](https://developers.facebook.com/docs/javascript) - A rich set of client-side functionality for adding Social Plugins, Facebook Login and Graph API calls.
