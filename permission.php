@@ -26,34 +26,52 @@ $e = $_GET['e'];
 
 </head>
 <body>
-<div class="logout">
+<div class="announce">
 	<?php if($e == 'EmployeeOnly'){?>
 		<?php if($user->verified == 'pending'){?>
 			<h2>ขอยืนยันตัวตนแล้ว</h2>
 			<p>บัญชีของคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> อยู่ระหว่างการตรวจสอบตัวตนเป็นเจ้าหน้าที่ของโรงพยาบาล หากคุณรอนานมากกว่า 24 ชั่วโมงแล้ว กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
-			<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+			
+			<div class="control">
+				<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+			</div>
 		<?php }else{?>
 			<h2>สำหรับเจ้าหน้าที่เท่านั้น!</h2>
 			<p>ไฟล์เอกสารนี้อนุญาตสำหรับเจ้าหน้าที่เท่านั้น บัญชีของคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> จึงไม่สามารถเข้าถึงไฟล์นี้ได้ หากคุณเป็นเจ้าหน้าที่ของโรงพยาบาล กรุณาส่งคำขอยืนยันตัวตนเจ้าหน้าที่ได้จากปุ่มด้านล่างนี้ ขออภัยในความไม่สะดวก ขอบคุณค่ะ</p>
-			<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
-			<a href="verify.php" class="right">ขอยืนยันตัวตน<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			
+			<div class="control">
+				<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+				<a href="verify.php" class="right">ขอยืนยันตัวตน<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			</div>
 		<?php }?>
 	<?php }else if($e == 'UserNotActive'){?>
+		<?php
+		if ($user->status == 'active') {
+			header("Location:./profile");
+			exit();
+		}
+		?>
 		<h2>รอตรวจสอบบัญชี!</h2>
 		<p>บัญชีของคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> อยู่ในขั้นตอนการตรวจสอบความถูกต้องจากผู้ดูแลระบบ หากคุณรอนานมากกว่า 24 ชั่วโมงแล้ว กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
 
-		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+		<div class="control">
+			<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+		</div>
 	<?php }else if($e == 'UserNotLogin'){?>
 		<h2>สำหรับเจ้าหน้าที่เท่านั้น!</h2>
 		<p>เอกสารนี้สามารถเข้าถึงได้เฉพาะเจ้าหน้าที่ของโรงพยาบาลเท่านั้น กรุณาเข้าระบบและทดลองเปิดไฟล์นี้อีกครั้ง หากพบปัญหาการใช้งาน กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
 
-		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
-		<a href="signin" class="right">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<div class="control">
+			<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+			<a href="signin" class="right">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		</div>
 	<?php }else if($e == 'NotOwner'){?>
 		<h2>คุณไม่ใช่เจ้าของเอกสาร!</h2>
 		<p>เราพบว่าคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> ไม่ใช่เจ้าของเอกสารดังกล่าว จึงไม่มีสิทธิ์ในแก้ไขหรือลบเอกสารได้ หากคุณแน่ใจว่าเป็นเจ้าของเอกสารจริง กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
 
-		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+		<div class="control">
+			<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
+		</div>
 	<?php }?>
 </div>
 </body>

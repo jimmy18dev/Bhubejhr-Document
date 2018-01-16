@@ -56,10 +56,6 @@ $p_url 		= DOMAIN.'/signin';
 		<a href="index.php" class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>กลับหน้าแรก</span></a>
 	</div>
 	<div class="content">
-		<div class="nav">
-			<a class="<?php echo ($currentPage=='login'?'active':'');?>" href="signin?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-sign-in" aria-hidden="true"></i>ลงชื่อเข้าใช้</a>
-			<a class="<?php echo ($currentPage=='register'?'active':'');?>" href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>"><i class="fa fa-user-plus" aria-hidden="true"></i>ลงทะเบียนใหม่</a>
-		</div>
 		<button class="btn btn-facebook" onclick="javascript:facebookLogin();"><i class="fa fa-facebook" aria-hidden="true"></i>ลงชื่อเข้าใช้ด้วย Facebook</button>
 		<div class="line"><span>หรือ</span></div>
 		<form action="javascript:login();">
@@ -67,8 +63,10 @@ $p_url 		= DOMAIN.'/signin';
 			<input type="password" class="inputtext" id="password" placeholder="รหัสผ่าน" required>
 			<input type="hidden" id="sign" name="sign" value="<?php echo $signature->generateSignature('login',SECRET_KEY);?>">
 			<input type="hidden" id="redirect" value="<?php echo $_GET['redirect'];?>">
-			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงชื่อเข้าใช้งาน<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+			<button type="btn" class="btn btn-submit" id="btnSubmit">ลงชื่อเข้าใช้งาน</button>
 		</form>
+
+		<p>ใช้งานเป็นครั้งแรก <a href="signup?<?php echo (!empty($_GET['redirect'])?'redirect='.$_GET['redirect']:'');?>">ลงทะเบียนใหม่<i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
 	</div>
 </div>
 

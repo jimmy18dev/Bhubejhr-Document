@@ -47,12 +47,8 @@ if($user->id != $document->owner_id){
 <body>
 
 <header class="header">
-	<div class="title">แก้ไขเอกสาร</div>
 	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
-
-<div class="overlay"></div>
-<div id="progressbar"></div>
 
 <div class="form" id="documentForm">
 	<div class="form-items">
@@ -107,9 +103,14 @@ if($user->id != $document->owner_id){
 	</div>
 	<div class="form-items">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-	    <button id="btnSave">บันทึกการแก้ไข</button>
+	    <button id="btnSave" class="fullsize">บันทึกการแก้ไข</button>
 	</div>
 </div>
+
+<div class="overlay">
+	<div class="icon-loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+</div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/jquery-form.min.js"></script>

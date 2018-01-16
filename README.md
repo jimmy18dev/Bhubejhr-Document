@@ -53,9 +53,10 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
 ```
 
 ## Built With
-
+* [jQuery v.3.2.1](https://jquery.com) - jQuery: The Write Less, Do More, JavaScript Library.
+* [jQuery Form Plugin](http://malsup.com/jquery/form/) - The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.
 * [Font Awesome 4.7](http://fontawesome.io) - The iconic font and CSS toolkit
 * [PHP QR Code](http://phpqrcode.sourceforge.net) - PHP QR Code is open source (LGPL)
 * [Numeral.js v. 2.0.6](http://numeraljs.com) - A javascript library for formatting and manipulating numbers.
-* [jQuery Form Plugin](http://malsup.com/jquery/form/) - The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.
 * [PDO PHP Class](http://culttt.com/2012/10/01/roll-your-own-pdo-php-class/) - Roll your own PDO PHP Class
+* [Facebook SDK for JavaScript](https://developers.facebook.com/docs/javascript) - A rich set of client-side functionality for adding Social Plugins, Facebook Login and Graph API calls.

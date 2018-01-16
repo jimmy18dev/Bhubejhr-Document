@@ -56,7 +56,7 @@ foreach ($files as $k => $v){
 <div class="container nomargin">
 	<?php if(count($dataset) > 0){?>
 	<?php foreach ($dataset as $var){?>
-	<div class="topic"><?php echo $var['date'];?></div>
+	<div class="date"><?php echo $var['date'];?></div>
 	<div class="list">
 		<?php
 		foreach ($var['items'] as $data){ include 'template/file.items.php'; }
@@ -65,13 +65,16 @@ foreach ($files as $k => $v){
 	<?php }?>
 	<?php }else{?>
 	<div class="starter">
-		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-		<a href="create/choose">อัพโหลดไฟล์</a>
+		<p>คุณยังไม่เคยอัพโหลดเอกสาร...</p>
 	</div>
 	<?php }?>
 </div>
 
 <div id="progressbar"></div>
+
+<?php if($user_online){?>
+<a class="btn-create" href="create/choose"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<?php }?>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

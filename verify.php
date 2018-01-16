@@ -33,20 +33,40 @@ if($user->verified == 'pending'){
 
 </head>
 <body>
-<div class="logout">
-	<?php if($user->status == 'employee_verify'){?>
-	<h2>ส่งคำขอแล้ว</h2>
-	<p>ผู้ดูแลระบบกำลังตรวจสอบคำขอยืนยันตัวตนเจ้าหน้าที่ของคุณ หากคุณรอนานเกิน 24 ชั่วโมง กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong></p>
 
-	<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
-	<?php }else{?>
-	<h2>คำขอยืนตัวตนเจ้าหน้าที่</h2>
-	<p>กรุณาใส่ชื่อตำแหน่ง แผนกที่ทำงานเพื่อส่งให้ผู้ดูแลระบบตรวจสอบ</p>
+<header class="header">
+	<a href="profile" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
+</header>
 
-	<textarea id="bio" placeholder="ใส่ตำแหน่งและแผนก..."><?php echo $user->bio;?></textarea>
-	<button onclick="javascript:requestVerify();">บันทึก<i class="fa fa-check" aria-hidden="true"></i></button>
-	<?php }?>
+<div class="form">
+	<div class="head">
+		<h1>ขอยืนยันตัวตนเจ้าหน้าที่</h1>
+		<p>การขอยืนยันตัวตนเป็นเจ้าหน้าที่ของโรงพยาบาล คุณจำเป็นต้องกรอกข้อมูลทุกช่องหลังจากนั้นกดที่ <strong>"ส่งคำขอ"</strong> ผู้ดูแลระบบจะใช้เวลาในการตรวจสอบไม่เกิน 24 ชั่วโมง ขอบคุณค่ะ</p>
+	</div>
+	<div class="form-items">
+		<label for="">ชื่อนามสกุล</label>
+		<input class="inputtext" type="text" id="fullname" value="<?php echo $user->fname.' '.$user->lname;?>">
+	</div>
+	<div class="form-items">
+		<label for="">เบอร์โทรศัพท์</label>
+		<input class="inputtext" type="text" id="phone" value="<?php echo $user->phone;?>">
+	</div>
+	<div class="form-items">
+		<label for="">ที่อยู่อีเมล</label>
+		<input class="inputtext" type="text" id="email" value="<?php echo $user->email;?>">
+	</div>
+
+	<div class="form-items">
+		<label for="">ตำแหน่ง</label>
+		<input class="inputtext" type="text" id="bio" value="<?php echo $user->bio;?>">
+	</div>
+	<div class="form-items">
+	    <button id="btnVerify" class="fullsize">ส่งคำขอ</button>
+	</div>
 </div>
+
+<div class="overlay"></div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>

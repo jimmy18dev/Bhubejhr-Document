@@ -122,67 +122,58 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 <body>
 <header class="header light">
 	<?php include 'template/header.logo.php'; ?>
+	<?php if($user_online){ include 'template/header.profile.php'; }else{?>
+	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<?php }?>
+	<a href="search.php" class="btn btn-search" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i>ค้นหา</a>
+</header>
 
+<article class="article">
 	<?php if($user_online && $user->id == $document->owner_id){?>
-	<div class="btn btn-login" id="btnOption">
-		ตัวเลือก<i class="fa fa-angle-down" aria-hidden="true"></i>
+	<div class="control">
+		<div class="btn-option" id="btnOption">
+			ตัวเลือก<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 
-		<div class="more-menu" id="menuOption">
-			<div class="arrow-up"></div>
-			<a href="document/edit/<?php echo $document->id;?>"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไขเอกสาร</a>
-			<a href="document/delete/<?php echo $document->id;?>" class="btn-logout"><i class="fa fa-trash" aria-hidden="true"></i>ลบไฟล์นี้</a>
+			<div class="more-menu" id="menuOption">
+				<div class="arrow-up"></div>
+				<a href="document/edit/<?php echo $document->id;?>"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไขเอกสาร</a>
+				<a href="document/delete/<?php echo $document->id;?>" class="btn-logout"><i class="fa fa-trash" aria-hidden="true"></i>ลบไฟล์นี้</a>
+			</div>
 		</div>
 	</div>
 	<?php }?>
 
-	<?php if(!$user_online){?>
-	<a href="signin" class="btn btn-login">ลงชื่อเข้าใช้<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	<?php }?>
-</header>
-
-<div class="container nomargin">
-	<div class="article">
-		<a class="category" href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<header class="head">
 		<h1><?php echo $document->title;?></h1>
-		<p>
-			เมื่อ <?php echo $document->create_time;?> · <?php echo $privacy;?>
-		</p>
+		<p class="info"><?php echo $privacy;?> โพสต์เมื่อ <?php echo $document->create_time;?> <span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span></p>
+		<a class="category" href="category/<?php echo $document->category_id?>"><?php echo $document->category_name;?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	</header>
+	<?php if(!empty($document->description)){?>
+	<div class="content"><?php echo $document->description;?></div>
+	<?php }?>
 
-		<?php if(!empty($document->description)){?>
-		<div class="text"><?php echo $document->description;?></div>
-		<?php }?>
-		
-		<div class="download">
-			<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
-				<div class="d">
-					<span class="caption">ดาวน์โหลดไฟล์</span>
-					<span class="size"><?php echo $icon;?> ขนาดไฟล์ <?php echo $document->file_size;?></span>
-				</div>
+	<div class="download">
+		<a class="btn btn-download" title="ดาวน์โหลดไปแล้ว <?php echo $document->download;?> ครั้ง" href="download/<?php echo $document->secret;?>" target="_blank">
+				<span class="caption">ดาวน์โหลด</span>
 				<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 			</a>
 
 			<?php if($document->privacy != 'onlyme'){?>
 			<div class="btn btn-qrcode" id="btn-qrcode">
-				<div class="d">
-					<span class="caption">แสดงคิวอาร์โค้ด</span>
-					<span class="size">ส่งต่อเอกสารนี้</span>
-				</div>
+				<span class="caption">คิวอาร์โค้ด</span>
 				<i class="fa fa-qrcode" aria-hidden="true"></i>
 			</div>
 			<?php }?>
 		</div>
-	</div>
-</div>
+</article>
 
 <div class="dialog" id="qrcode-dialog">
 	<div class="head">
-		<div class="text">คิวอาร์โค้ด</div>
+		<div class="text">QR-Code</div>
 		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
 	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
-	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" target="_blank" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
-	</div>
+	<p>สแกนด้วยโทรศัพท์มือถือ</p>
 </div>
 
 <div class="overlay"></div>

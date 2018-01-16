@@ -41,10 +41,13 @@ session_destroy();
 
 </head>
 <body>
-<div class="logout">
+<div class="announce">
 	<h2>กำลังออกจากระบบ</h2>
 	<p>หากคุณรอนานกว่า 5 วินาที สามารถกดที่ปุ่ม "กลับไปหน้าแรก"</p>
-	<a href="signin"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+	
+	<div class="control">
+		<a href="signin"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>ไปหน้าแรก</a>
+	</div>
 </div>
 </body>
 

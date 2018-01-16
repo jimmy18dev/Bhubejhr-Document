@@ -1,5 +1,7 @@
 <div class="btn-profile" id="btnProfile">
-	<span class="avatar"><img src="image/avatar.png"></span>
+	<span class="avatar">
+		<img src="<?php echo (empty($user->fb_id)?'image/avatar.png':'https://graph.facebook.com/'.$user->fb_id.'/picture?type=square');?>">
+	</span>
 	<span class="name"><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></span>
 	<span class="icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
 

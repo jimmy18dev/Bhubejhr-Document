@@ -46,14 +46,11 @@ if(empty($category->id)){
 <body>
 
 <header class="header light">
-	<a href="create/choose" class="btn btn-back"><i class="fa fa-bars" aria-hidden="true"></i><span>กลับเลือกประเภท</span></a>
+	<a href="create/choose" class="btn btn-back"><i class="fa fa-arrow-left" aria-hidden="true"></i><span>เลือกประเภท</span></a>
 	<div class="title">ประเภท: <?php echo $category->name;?></div>
 
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
-
-<div class="overlay"></div>
-<div id="progressbar"></div>
 
 <form action="upload_document.php" class="form" id="documentForm" method="POST" enctype="multipart/form-data">
 	<div class="form-items middle">
@@ -78,9 +75,14 @@ if(empty($category->id)){
 	<div class="form-items hidden">
 		<input type="hidden" id="maximumSize" value="<?php echo $document->return_bytes(ini_get('post_max_size'));?>">
 		<input type="hidden" name="category_id" required value="<?php echo $category->id;?>">
-		<button type="submit" id="btnSubmit" disabled>อัพโหลดเอกสาร</button>
+		<button type="submit" id="btnSubmit" class="fullsize" disabled>อัพโหลดเอกสาร</button>
 	</div>
 </form>
+
+<div class="overlay">
+	<div class="icon-loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+</div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/jquery-form.min.js"></script>
