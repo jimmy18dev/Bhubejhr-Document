@@ -21,14 +21,16 @@ require_once 'autoload.php';
 <base href="<?php echo DOMAIN;?>">
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="plugin/font-awesome/css/font-awesome.min.css"/>
 
 </head>
 <body>
 <div class="announce">
 	<h2>ไม่พบหน้าที่คุณต้องการ</h2>
+	<p>หน้าเพจนี้อาจถูกลบไปแล้ว! กรุณาตรวจสอบลิ้งค์อีกครั้ง หากพบปัญหา กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong></p>
 	
 	<div class="control">
-		<a href="<?php echo DOMAIN;?>">กลับไปหน้าแรก</a>
+		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับหน้าแรก</a>
 	</div>
 </div>
 </body>

@@ -46,7 +46,7 @@ session_destroy();
 	<p>หากคุณรอนานกว่า 5 วินาที สามารถกดที่ปุ่ม "กลับไปหน้าแรก"</p>
 	
 	<div class="control">
-		<a href="signin"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+		<a href="signin"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>ไปหน้าแรก</a>
 	</div>
 </div>
 </body>

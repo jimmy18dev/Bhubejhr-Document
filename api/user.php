@@ -105,9 +105,12 @@ switch ($_SERVER['REQUEST_METHOD']){
 				break;
 			case 'request_verify':
 				$user_id 	= $_POST['user_id'];
+				$fullname 	= $_POST['fullname'];
+				$email 		= $_POST['email'];
+				$phone 		= $_POST['phone'];
 				$bio 		= $_POST['bio'];
 
-				$user->requestVerify($user->id,$bio);
+				$user->requestVerify($user->id,$fullname,$email,$phone,$bio);
 
 				$returnObject['message'] 	= 'Verify request Send';
 				break;

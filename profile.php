@@ -65,8 +65,7 @@ foreach ($files as $k => $v){
 	<?php }?>
 	<?php }else{?>
 	<div class="starter">
-		<p>คุณยังไม่เคยอัพโหลดเอกสารใดๆ</p>
-		<a href="create/choose">อัพโหลดไฟล์</a>
+		<p>คุณยังไม่เคยอัพโหลดเอกสาร...</p>
 	</div>
 	<?php }?>
 </div>

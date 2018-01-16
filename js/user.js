@@ -4,9 +4,16 @@ $(document).ready(function(){
 	var sign 		= $('#sign').val();
 	$progressbar 	= $('#progressbar');
 	$btnSubmit 		= $('#btnSubmit');
+
+	$('#btnVerify').click(function(){
+		requestVerify();
+	});
 });
 
 function requestVerify(){
+	var fullname = $('#fullname').val();
+	var email 	= $('#email').val();
+	var phone 	= $('#phone').val();
 	var bio 	= $('#bio').val();
 
 	if(!bio){
@@ -27,6 +34,9 @@ function requestVerify(){
 		type        :"POST",
 		data:{
 			request     :'request_verify',
+			fullname 	:fullname,
+			email 		:email,
+			phone 		:phone,
 			bio 		:bio
 		},
 		error: function (request, status, error) {

@@ -55,8 +55,16 @@ class User{
         return 1; // LOGIN SUCCESS
     }
     
-    public function requestVerify($user_id,$bio){
-        $this->db->query('UPDATE user SET bio = :bio,verified = "pending" WHERE id = :user_id');
+    public function requestVerify($user_id,$fullname,$email,$phone,$bio){
+        $name       = explode(' ',strip_tags(trim($fullname)));
+        $fname      = trim($name[0]);
+        $lname      = trim($name[1]);
+
+        $this->db->query('UPDATE user SET fname = :fname,lname = :lname,email = :email,phone = :phone,bio = :bio,verified = "pending" WHERE id = :user_id');
+        $this->db->bind(':fname',$fname);
+        $this->db->bind(':lname',$lname);
+        $this->db->bind(':email',$email);
+        $this->db->bind(':phone',$phone);
         $this->db->bind(':bio',$bio);
         $this->db->bind(':user_id',$user_id);
         $this->db->execute();

@@ -45,6 +45,12 @@ $e = $_GET['e'];
 			</div>
 		<?php }?>
 	<?php }else if($e == 'UserNotActive'){?>
+		<?php
+		if ($user->status == 'active') {
+			header("Location:./profile");
+			exit();
+		}
+		?>
 		<h2>รอตรวจสอบบัญชี!</h2>
 		<p>บัญชีของคุณ <strong><?php echo (!empty($user->fname)?$user->fullname:$user->fb_fname);?></strong> อยู่ในขั้นตอนการตรวจสอบความถูกต้องจากผู้ดูแลระบบ หากคุณรอนานมากกว่า 24 ชั่วโมงแล้ว กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong> ขอบคุณค่ะ</p>
 

@@ -655,6 +655,9 @@ body {
 .container .list .file-items .detail p a:hover {
   text-decoration: underline;
 }
+.container .list .file-items .detail p span:hover {
+  cursor: default;
+}
 .container .list .member-items {
   width: 100%;
   float: left;
@@ -842,26 +845,9 @@ body {
   color: #666666;
   font-family: "maledpan", sans-serif;
 }
-.container .starter a {
-  display: inline-block;
-  font-size: 1.2em;
-  font-family: "maledpan", sans-serif;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 3% 4%;
-  border-radius: 5px;
-  margin-top: 5%;
-  background: #28a646;
-  line-height: 1em;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-}
-.container .starter a:hover {
-  cursor: pointer;
-  background: #24953f;
-}
 .article {
-  width: 36%;
-  padding: 2%;
+  width: 35%;
+  padding: 2.5%;
   margin: 0% 30%;
   margin-top: 8%;
   float: left;
@@ -885,11 +871,7 @@ body {
   color: #999999;
 }
 .article .control .btn-option i {
-  float: right;
-  display: inline-block;
-  font-size: 1.2em;
-  margin-left: 5px;
-  margin-top: -1px;
+  margin-left: 10px;
 }
 .article .control .btn-option:hover {
   cursor: pointer;
@@ -1074,7 +1056,7 @@ body {
   padding-top: 5%;
 }
 .announce .control a {
-  width: 30%;
+  width: 35%;
   float: left;
   display: inline-block;
   text-decoration: none;
@@ -1136,6 +1118,23 @@ body {
   margin: 3% 30%;
   float: left;
   display: inline-block;
+}
+.form .head {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  margin-bottom: 5%;
+  font-family: "maledpan", sans-serif;
+}
+.form .head h1 {
+  font-size: 2em;
+  color: #050505;
+  font-weight: normal;
+}
+.form .head p {
+  font-size: 1.1em;
+  color: #333333;
+  line-height: 1.5em;
 }
 .form .form-items {
   width: 100%;
@@ -2050,36 +2049,10 @@ body {
     line-height: 1.3em;
   }
   .container .starter {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    margin-top: 45%;
+    margin-top: 55%;
   }
   .container .starter p {
-    width: 100%;
-    float: left;
-    display: inline-block;
     font-size: 1.4em;
-    color: #666666;
-    font-family: "maledpan", sans-serif;
-  }
-  .container .starter a {
-    display: inline-block;
-    font-size: 1.2em;
-    font-family: "maledpan", sans-serif;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 3% 4%;
-    border-radius: 5px;
-    margin-top: 5%;
-    background: #28a646;
-    line-height: 1em;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .container .starter a:hover {
-    cursor: pointer;
-    background: #24953f;
   }
   .article {
     width: 90%;
