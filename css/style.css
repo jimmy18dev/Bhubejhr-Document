@@ -988,6 +988,7 @@ body {
   display: inline-block;
   font-family: "maledpan", sans-serif;
   border-top: 1px solid #e8e8e9;
+  background: rgba(255, 255, 255, 0.9);
 }
 .article .download .btn {
   width: 32%;
@@ -1747,7 +1748,7 @@ body {
   }
   .header a.logo {
     width: auto;
-    padding: 10px 4%;
+    padding: 10px 5%;
   }
   .header a.logo img {
     margin-right: 0px;
@@ -1756,7 +1757,7 @@ body {
     display: none;
   }
   .header .btn {
-    margin: 9px 4%;
+    margin: 9px 5%;
     margin-left: 0px;
   }
   .header .btn .more-menu {
@@ -1769,13 +1770,13 @@ body {
     padding: 8% 10%;
   }
   .header .title {
-    padding: 7px 4%;
+    padding: 7px 5%;
     padding-right: 0%;
     margin-left: 0%;
     max-width: 30%;
   }
   .header .btn-profile {
-    padding: 7px 4%;
+    padding: 7px 5%;
     margin-left: 0px;
   }
   .header .btn-profile .notif {
@@ -1804,8 +1805,8 @@ body {
     padding: 8% 10%;
   }
   .searchform {
-    width: 92%;
-    margin: 0% 4%;
+    width: 90%;
+    margin: 0% 5%;
   }
   .searchform .icon {
     font-size: 1.2em;
@@ -1825,15 +1826,15 @@ body {
     height: auto;
   }
   .cover .welcome {
-    width: 94%;
-    margin: 0 3%;
+    width: 90%;
+    margin: 0 5%;
     padding-top: 30%;
   }
   .cover .welcome h1 {
     font-size: 2.2em;
   }
   .cover .welcome p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 15%;
     letter-spacing: 0px;
   }
@@ -1850,8 +1851,8 @@ body {
     margin: 0%;
   }
   .container .form-topic {
-    width: 92%;
-    margin: 6% 4%;
+    width: 90%;
+    margin: 10% 5%;
   }
   .container .form-topic h2 {
     font-size: 2.2em;
@@ -1861,21 +1862,21 @@ body {
     font-size: 1em;
   }
   .container .date {
-    width: 92%;
+    width: 90%;
     font-size: 1em;
-    margin: 4%;
-    margin-top: 8%;
+    margin: 5%;
+    margin-top: 10%;
   }
   .container .list .file-items {
-    width: 84%;
-    padding: 4%;
-    margin: 0 4%;
-    margin-bottom: 4%;
+    width: 80%;
+    padding: 5%;
+    margin: 0 5%;
+    margin-bottom: 5%;
   }
   .container .list .file-items a.icontype {
     width: 12%;
-    font-size: 1.5em;
-    line-height: 1.6em;
+    font-size: 1.3em;
+    line-height: 1.7em;
   }
   .container .list .file-items .detail {
     width: 88%;
@@ -2012,13 +2013,13 @@ body {
     color: #666666;
   }
   .container .list .choose-items {
-    width: 84%;
-    padding: 4%;
-    margin: 0 4%;
-    margin-bottom: 3%;
+    width: 80%;
+    padding: 5%;
+    margin: 0 5%;
+    margin-bottom: 5%;
   }
   .container .list .choose-items .name {
-    width: 92%;
+    width: 90%;
     font-size: 1.3em;
   }
   .container .list .choose-items .name .inputtext {
@@ -2032,7 +2033,7 @@ body {
     margin-top: 1%;
   }
   .container .list .choose-items .control {
-    width: 8%;
+    width: 10%;
     font-size: 1.4em;
     line-height: 1.3em;
   }
@@ -2069,14 +2070,14 @@ body {
     background: #24953f;
   }
   .article {
-    width: 92%;
-    padding: 4%;
+    width: 90%;
+    padding: 5%;
     margin: 0%;
     border-radius: 0px;
     background: transparent;
   }
   .article .control {
-    margin-bottom: 3%;
+    margin-bottom: 5%;
   }
   .article .control .btn-option {
     font-size: 1em;
@@ -2106,7 +2107,7 @@ body {
     margin-left: 5px;
   }
   .article .content {
-    margin-bottom: 5%;
+    margin-bottom: 30%;
     font-size: 1.1em;
     line-height: 1.6em;
   }
@@ -2114,9 +2115,9 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 92%;
-    padding: 4% 0%;
-    margin: 0% 4%;
+    width: 90%;
+    padding: 5% 0%;
+    margin: 0% 5%;
   }
   .article .download .btn {
     width: 48%;
@@ -2196,17 +2197,17 @@ body {
     margin-left: 7px;
   }
   .form {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 5%;
   }
   .form .form-items {
-    margin-bottom: 4%;
+    margin-bottom: 5%;
   }
   .form .form-items.middle {
     margin-top: 0%;
   }
   .form .form-items.control {
-    padding: 4% 0%;
+    padding: 5% 0%;
   }
   .form .form-items.delete-box {
     padding: 5% 0%;
@@ -2317,8 +2318,8 @@ body {
     letter-spacing: 0px;
   }
   .login .welcome {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 5%;
     margin-bottom: 0%;
   }
   .login .welcome img {
@@ -2339,8 +2340,8 @@ body {
     display: none;
   }
   .login .content {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 5%;
   }
   .login .content .inputtext {
     padding: 5%;
@@ -2357,15 +2358,15 @@ body {
     padding: 2% 0%;
   }
   .login .content p {
-    margin-top: 8%;
+    margin-top: 6%;
     font-size: 1.2em;
   }
   .login .content p a {
     padding: 0 10px;
   }
   .dialog {
-    width: 92%;
-    margin: 4%;
+    width: 90%;
+    margin: 5%;
   }
   .dialog .head {
     font-size: 1.4em;
@@ -2414,9 +2415,9 @@ body {
     padding: 5%;
   }
   .btn-create {
-    bottom: 20px;
-    right: 20px;
-    padding: 4% 4.8%;
+    bottom: 15px;
+    right: 15px;
+    padding: 5% 5.8%;
     font-size: 1.3em;
   }
 }
