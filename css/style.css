@@ -518,6 +518,7 @@ body {
   font-size: 3em;
   color: #FFFFFF;
   text-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+  font-weight: normal;
 }
 .cover .welcome p {
   width: 100%;
@@ -634,6 +635,7 @@ body {
   color: #050505;
   font-family: "maledpan", sans-serif;
   text-decoration: none;
+  margin-bottom: 1%;
 }
 .container .list .file-items .detail .name a:hover {
   text-decoration: underline;
@@ -643,7 +645,7 @@ body {
   float: left;
   display: inline-block;
   font-size: 0.75em;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: #999999;
 }
 .container .list .file-items .detail p a {
@@ -988,7 +990,6 @@ body {
   display: inline-block;
   font-family: "maledpan", sans-serif;
   border-top: 1px solid #e8e8e9;
-  background: rgba(255, 255, 255, 0.9);
 }
 .article .download .btn {
   width: 32%;
@@ -1017,7 +1018,7 @@ body {
   background: #24953f;
 }
 .article .download .btn.btn-qrcode {
-  color: #333333;
+  background: #E65100;
 }
 .announce {
   width: 30%;
@@ -1031,6 +1032,7 @@ body {
   color: #333333;
   font-family: "maledpan", sans-serif;
   margin-bottom: 2%;
+  font-weight: normal;
 }
 .announce p {
   width: 100%;
@@ -1748,7 +1750,7 @@ body {
   }
   .header a.logo {
     width: auto;
-    padding: 10px 5%;
+    padding: 10px 2.5%;
   }
   .header a.logo img {
     margin-right: 0px;
@@ -1757,8 +1759,17 @@ body {
     display: none;
   }
   .header .btn {
-    margin: 9px 5%;
+    padding: 7px 2.5%;
     margin-left: 0px;
+  }
+  .header .btn.btn-back {
+    margin-left: 2.5%;
+  }
+  .header .btn.btn-cancel {
+    margin-right: 2.5%;
+  }
+  .header .btn.btn-login {
+    margin-right: 2.5%;
   }
   .header .btn .more-menu {
     right: 5%;
@@ -1770,13 +1781,13 @@ body {
     padding: 8% 10%;
   }
   .header .title {
-    padding: 7px 5%;
+    padding: 7px 2.5%;
     padding-right: 0%;
     margin-left: 0%;
     max-width: 30%;
   }
   .header .btn-profile {
-    padding: 7px 5%;
+    padding: 7px 2.5%;
     margin-left: 0px;
   }
   .header .btn-profile .notif {
@@ -1884,6 +1895,7 @@ body {
   .container .list .file-items .detail .name a {
     font-size: 1.2em;
     line-height: 1.2em;
+    margin-bottom: 2%;
   }
   .container .list .file-items .detail p {
     font-size: 0.7em;
@@ -2118,6 +2130,7 @@ body {
     width: 90%;
     padding: 5% 0%;
     margin: 0% 5%;
+    background: rgba(255, 255, 255, 0.9);
   }
   .article .download .btn {
     width: 48%;
@@ -2172,7 +2185,7 @@ body {
   }
   .announce .control a {
     width: 48%;
-    padding: 4% 0%;
+    padding: 5% 0%;
     font-size: 1.2em;
   }
   .announce .control a i {
@@ -2316,6 +2329,9 @@ body {
     margin-left: 0%;
     font-size: 1.2em;
     letter-spacing: 0px;
+  }
+  .form .form-items button.fullsize {
+    width: 100%;
   }
   .login .welcome {
     width: 90%;

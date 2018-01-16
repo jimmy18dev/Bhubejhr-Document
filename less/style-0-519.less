@@ -4,15 +4,19 @@
 
 	a.logo{
 		width: auto;
-		padding: 10px 5%;
+		padding: 10px 2.5%;
 
 		img{ margin-right: 0px; }
 		.detail{ display: none; }
 	}
 
 	.btn{
-		margin: 9px 5%;
+		padding: 7px 2.5%;
 		margin-left: 0px;
+
+		&.btn-back{ margin-left: 2.5%; }
+		&.btn-cancel{ margin-right: 2.5%; }
+		&.btn-login{ margin-right: 2.5%; }
 
 		.more-menu{
 			right: 5%;
@@ -22,14 +26,14 @@
 	}
 
 	.title{
-		padding: 7px 5%;
+		padding: 7px 2.5%;
 		padding-right: 0%;
 		margin-left: 0%;
 		max-width: 30%;
 	}
 
 	.btn-profile{
-		padding: 7px 5%;
+		padding: 7px 2.5%;
 		margin-left: 0px;
 
 		.notif{
@@ -136,6 +140,7 @@
 				.name a{
 					font-size: 1.2em;
 					line-height: 1.2em;
+					margin-bottom: 2%;
 				}
 				p{ font-size: 0.7em; }
 			}
@@ -400,6 +405,7 @@
 		width: 90%;
 		padding: 5% 0%;
 		margin: 0% 5%;
+		background: rgba(255,255,255,0.9);
 
 		.btn{
 			width: 48%;
@@ -454,7 +460,7 @@
 
 		a{
 			width: 48%;
-			padding: 4% 0%;
+			padding: 5% 0%;
 			font-size: 1.2em;
 
 			i{ margin-right: 10px; }
@@ -600,6 +606,8 @@
 			margin-left: 0%;
 			font-size: 1.2em;
 			letter-spacing: 0px;
+
+			&.fullsize{ width: 100%; }
 		}
 	}
 }

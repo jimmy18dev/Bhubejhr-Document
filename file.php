@@ -132,7 +132,7 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 	<?php if($user_online && $user->id == $document->owner_id){?>
 	<div class="control">
 		<div class="btn-option" id="btnOption">
-			ตัวเลือก<i class="fa fa-angle-down" aria-hidden="true"></i>
+			ตัวเลือก<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 
 			<div class="more-menu" id="menuOption">
 				<div class="arrow-up"></div>
