@@ -107,7 +107,9 @@ if($user->id != $document->owner_id){
 	</div>
 </div>
 
-<div class="overlay"></div>
+<div class="overlay">
+	<div class="icon-loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+</div>
 <div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>

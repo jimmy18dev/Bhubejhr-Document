@@ -52,9 +52,6 @@ if(empty($category->id)){
 	<a href="index.php" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
-<div class="overlay"></div>
-<div id="progressbar"></div>
-
 <form action="upload_document.php" class="form" id="documentForm" method="POST" enctype="multipart/form-data">
 	<div class="form-items middle">
 		<div class="file-preview" id="filePreview">
@@ -81,6 +78,11 @@ if(empty($category->id)){
 		<button type="submit" id="btnSubmit" class="fullsize" disabled>อัพโหลดเอกสาร</button>
 	</div>
 </form>
+
+<div class="overlay">
+	<div class="icon-loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+</div>
+<div id="progressbar"></div>
 
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/jquery-form.min.js"></script>

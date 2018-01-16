@@ -169,13 +169,11 @@ $p_url 		= DOMAIN.'/document/'.$document->id;
 
 <div class="dialog" id="qrcode-dialog">
 	<div class="head">
-		<div class="text">คิวอาร์โค้ด</div>
+		<div class="text">QR-Code</div>
 		<div class="btn btn-close"><i class="fa fa-close" aria-hidden="true"></i></div>
 	</div>
 	<img src="image/qrcode/<?php echo $document->file_name;?>.png" alt="">
-	<div class="control">
-		<a href="image/qrcode/<?php echo $document->file_name;?>.png" download="image/qrcode/<?php echo $document->file_name;?>.png" target="_blank" class="btn fullsize"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>บันทึกคิวอาร์โค้ด</a>
-	</div>
+	<p>สแกนด้วยโทรศัพท์มือถือ</p>
 </div>
 
 <div class="overlay"></div>
