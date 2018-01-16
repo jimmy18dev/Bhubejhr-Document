@@ -35,7 +35,7 @@ if($user->verified == 'pending'){
 <body>
 
 <header class="header">
-	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
+	<a href="profile" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
 <div class="form">

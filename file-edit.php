@@ -47,7 +47,6 @@ if($user->id != $document->owner_id){
 <body>
 
 <header class="header">
-	<div class="title">แก้ไขเอกสาร</div>
 	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 

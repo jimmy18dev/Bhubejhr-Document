@@ -47,7 +47,6 @@ if($user->id != $document->owner_id){
 <body>
 
 <header class="header">
-	<div class="title">ลบเอกสาร</div>
 	<a href="document/<?php echo $document->id;?>" class="btn btn-cancel"><i class="fa fa-close" aria-hidden="true"></i><span>ยกเลิก</span></a>
 </header>
 
@@ -57,7 +56,7 @@ if($user->id != $document->owner_id){
 
 		<input type="hidden" id="title" value="<?php echo $document->title;?>">
 		<input type="hidden" id="file_id" value="<?php echo $document->id;?>">
-		<button id="btnDelete" class="btn-delete">ลบไฟล์นี้<i class="fa fa-trash" aria-hidden="true"></i></button>
+		<button id="btnDelete" class="fullsize btn-delete">ลบไฟล์นี้</button>
 	</div>
 </div>
 

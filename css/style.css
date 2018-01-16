@@ -1028,26 +1028,6 @@ body {
 .announce p strong {
   color: #050505;
 }
-.announce textarea {
-  width: 92%;
-  float: left;
-  display: inline-block;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin-top: 5%;
-  padding: 4%;
-  border-radius: 5px;
-  color: #333333;
-  background: #e8e8e9;
-  border: 0;
-  resize: none;
-}
-.announce textarea:hover {
-  cursor: pointer;
-}
-.announce textarea:focus {
-  color: #050505;
-}
 .announce .control {
   width: 100%;
   float: left;
@@ -2068,11 +2048,6 @@ body {
     font-size: 1em;
     line-height: 1em;
   }
-  .article .control .btn-option i {
-    font-size: 1.2em;
-    margin-left: 5px;
-    margin-top: -1px;
-  }
   .article .head {
     margin-bottom: 5%;
   }
@@ -2128,26 +2103,6 @@ body {
     font-size: 1.1em;
     margin-bottom: 0%;
   }
-  .announce textarea {
-    width: 92%;
-    float: left;
-    display: inline-block;
-    font-size: 1.1em;
-    line-height: 1.5em;
-    margin-top: 5%;
-    padding: 4%;
-    border-radius: 5px;
-    color: #333333;
-    background: #e8e8e9;
-    border: 0;
-    resize: none;
-  }
-  .announce textarea:hover {
-    cursor: pointer;
-  }
-  .announce textarea:focus {
-    color: #050505;
-  }
   .announce .control {
     position: fixed;
     bottom: 0;
@@ -2186,6 +2141,16 @@ body {
     width: 90%;
     margin: 5%;
   }
+  .form .head {
+    margin-bottom: 5%;
+  }
+  .form .head h1 {
+    font-size: 1.8em;
+    margin-bottom: 5%;
+  }
+  .form .head p {
+    line-height: 1.3em;
+  }
   .form .form-items {
     margin-bottom: 5%;
   }
@@ -2196,17 +2161,13 @@ body {
     padding: 5% 0%;
   }
   .form .form-items.delete-box {
-    padding: 5% 0%;
-    margin-top: 15%;
-    font-family: "maledpan", sans-serif;
+    padding: 0%;
+    padding-top: 20%;
+    margin-top: 0%;
   }
   .form .form-items.delete-box .msg {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    font-size: 1.4em;
-    margin-bottom: 5%;
-    color: #050505;
+    font-size: 1.1em;
+    margin-bottom: 15%;
   }
   .form .form-items label {
     width: 99%;
@@ -2256,39 +2217,18 @@ body {
     padding: 5%;
   }
   .form .form-items .file-preview {
-    width: 100%;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    padding: 10% 0%;
+    padding: 15% 0%;
     margin-bottom: 5%;
-    border-radius: 10px;
-    box-sizing: border-box;
-    border: 2px dashed #BBBBBB;
-    color: #333333;
   }
   .form .form-items .file-preview i {
-    display: block;
-    font-size: 3em;
+    font-size: 2.4em;
     margin-bottom: 2%;
-    color: #DDDDDD;
   }
   .form .form-items .file-preview p {
-    display: block;
-    font-size: 1.5em;
-    font-family: "maledpan", sans-serif;
+    font-size: 1.4em;
   }
   .form .form-items .file-preview .info {
-    font-size: 0.9em;
-    color: #999999;
-  }
-  .form .form-items .file-preview:hover {
-    cursor: pointer;
-    color: #666666;
-    background: #EFEFEF;
-  }
-  .form .form-items .file-preview:hover p {
-    text-decoration: underline;
+    font-size: 0.75em;
   }
   .form .form-items a.btn {
     width: 40%;
@@ -2358,7 +2298,7 @@ body {
     margin: 5%;
   }
   .dialog .head {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .dialog .head .text {
     padding: 3.5% 5%;
@@ -2401,7 +2341,7 @@ body {
   }
   .dialog .control .btn {
     font-size: 1.2em;
-    padding: 5%;
+    padding: 6% 5%;
   }
   .btn-create {
     bottom: 15px;

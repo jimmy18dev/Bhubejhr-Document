@@ -331,12 +331,6 @@
 		.btn-option{
 			font-size: 1em;
 			line-height: 1em;
-
-			i{
-				font-size: 1.2em;
-				margin-left: 5px;
-				margin-top: -1px;
-			}
 		}
 	}
 
@@ -401,24 +395,6 @@
 		margin-bottom: 0%;
 	}
 
-	textarea{
-		width: 92%;
-		float: left;
-		display: inline-block;
-		font-size: 1.1em;
-		line-height: 1.5em;
-		margin-top: 5%;
-		padding: 4%;
-		border-radius: 5px;
-		color: #333333;
-		background: @border_color;
-		border: 0;
-		resize: none;
-
-		&:hover{ cursor: pointer; }
-		&:focus{ color: #050505; }
-	}
-
 	.control{
 		position: fixed;
 		bottom: 0;
@@ -459,23 +435,25 @@
 	width: 90%;
 	margin: 5%;
 
+	.head{
+		margin-bottom: 5%;
+		h1{ font-size: 1.8em; margin-bottom: 5%; }
+		p{ line-height: 1.3em; }
+	}
+
 	.form-items{
 		margin-bottom: 5%;
 
 		&.middle{ margin-top: 0%; }
 		&.control{ padding: 5% 0%; }
 		&.delete-box{
-			padding: 5% 0%;
-			margin-top: 15%;
-			font-family: @topic_font;
+			padding: 0%;
+			padding-top: 20%;
+			margin-top: 0%;
 
 			.msg{
-				width: 100%;
-				float: left;
-				display: inline-block;
-				font-size: 1.4em;
-				margin-bottom: 5%;
-				color: #050505;
+				font-size: 1.1em;
+				margin-bottom: 15%;
 			}
 		}
 
@@ -525,41 +503,15 @@
 		}
 
 		.file-preview{
-			width: 100%;
-			float: left;
-			display: inline-block;
-			text-align: center;
-			padding: 10% 0%;
+			padding: 15% 0%;
 			margin-bottom: 5%;
-			border-radius: 10px;
-			box-sizing: border-box;
-			border: 2px dashed #BBBBBB;
-			color: #333333;
 
 			i{
-				display: block;
-				font-size: 3em;
+				font-size: 2.4em;
 				margin-bottom: 2%;
-				color: #DDDDDD;
 			}
-			p{
-				display: block;
-				font-size: 1.5em;
-				font-family: @topic_font;
-			}
-
-			.info{
-				font-size: 0.9em;
-				color: #999999;
-			}
-
-			&:hover{
-				cursor: pointer;
-				color: @fontcolor_normal;
-				background: #EFEFEF;
-
-				p{ text-decoration: underline; }
-			}
+			p{ font-size: 1.4em; }
+			.info{ font-size: 0.75em; }
 		}
 
 		a.btn{
@@ -640,7 +592,7 @@
 	margin: 5%;
 
 	.head{
-		font-size: 1.4em;
+		font-size: 1.2em;
 
 		.text{ padding: 3.5% 5%; }
 		.btn{ padding: 3.5% 5%; }
@@ -681,7 +633,7 @@
 	.control{
 		.btn{
 			font-size: 1.2em;
-			padding: 5%;
+			padding: 6% 5%;
 		}
 	}
 }
