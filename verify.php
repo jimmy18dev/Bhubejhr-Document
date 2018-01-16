@@ -33,18 +33,23 @@ if($user->verified == 'pending'){
 
 </head>
 <body>
-<div class="logout">
+<div class="announce">
 	<?php if($user->status == 'employee_verify'){?>
 	<h2>ส่งคำขอแล้ว</h2>
 	<p>ผู้ดูแลระบบกำลังตรวจสอบคำขอยืนยันตัวตนเจ้าหน้าที่ของคุณ หากคุณรอนานเกิน 24 ชั่วโมง กรุณาติดต่อที่ <strong>admin@cpa.go.th</strong></p>
 
-	<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+	<div class="control">
+		<a href="<?php echo DOMAIN;?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>กลับไปหน้าแรก</a>
+	</div>
 	<?php }else{?>
 	<h2>คำขอยืนตัวตนเจ้าหน้าที่</h2>
 	<p>กรุณาใส่ชื่อตำแหน่ง แผนกที่ทำงานเพื่อส่งให้ผู้ดูแลระบบตรวจสอบ</p>
 
 	<textarea id="bio" placeholder="ใส่ตำแหน่งและแผนก..."><?php echo $user->bio;?></textarea>
-	<button onclick="javascript:requestVerify();">ส่งคำขอ</button>
+	
+	<div class="control">
+		<button onclick="javascript:requestVerify();">ส่งคำขอ</button>
+	</div>
 	<?php }?>
 </div>
 

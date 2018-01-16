@@ -480,12 +480,13 @@ body {
   color: #999999;
 }
 .cover {
-  width: 100%
-	float: left;
+  width: 100%;
+  float: left;
   display: inline-block;
   height: 440px;
   overflow: hidden;
   position: relative;
+  background: #CADAAA;
 }
 .cover .filter {
   position: absolute;
@@ -1017,32 +1018,32 @@ body {
 .article .download .btn.btn-qrcode {
   color: #333333;
 }
-.logout {
+.announce {
   width: 30%;
   margin: 3% 35%;
   float: left;
   display: inline-block;
   margin-top: 14%;
 }
-.logout h2 {
-  font-size: 2.8em;
-  font-weight: normal;
-  color: #050505;
+.announce h2 {
+  font-size: 2.4em;
+  color: #333333;
   font-family: "maledpan", sans-serif;
   margin-bottom: 2%;
 }
-.logout p {
+.announce p {
   width: 100%;
   float: left;
   display: inline-block;
   font-family: "maledpan", sans-serif;
   font-size: 1.2em;
   color: #333333;
+  margin-bottom: 5%;
 }
-.logout p strong {
+.announce p strong {
   color: #050505;
 }
-.logout textarea {
+.announce textarea {
   width: 92%;
   float: left;
   display: inline-block;
@@ -1056,57 +1057,63 @@ body {
   border: 0;
   resize: none;
 }
-.logout textarea:hover {
+.announce textarea:hover {
   cursor: pointer;
 }
-.logout textarea:focus {
+.announce textarea:focus {
   color: #050505;
 }
-.logout a {
-  margin-top: 10%;
+.announce .control {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  border-top: 1px solid #e8e8e9;
+  padding-top: 5%;
+}
+.announce .control a {
+  width: 30%;
   float: left;
   display: inline-block;
   text-decoration: none;
-  color: #666666;
-  padding: 2.5% 3%;
+  color: #333333;
+  padding: 2.5% 0%;
   border-radius: 5px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "maledpan", sans-serif;
   line-height: 1em;
-  border: 1px solid #e8e8e9;
+  background: #EEEEEE;
+  text-align: center;
 }
-.logout a:hover {
+.announce .control a:hover {
   cursor: pointer;
 }
-.logout a:active {
+.announce .control a:active {
   background: #e8e8e9;
 }
-.logout a i {
+.announce .control a i {
   margin-right: 10px;
 }
-.logout a.right {
+.announce .control a.right {
   float: right;
   color: #FFFFFF;
   background: #28a646;
-  border: 1px solid #28a646;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.logout a.right:hover {
+.announce .control a.right:hover {
   background: #24953f;
 }
-.logout a.right i {
+.announce .control a.right i {
   margin: 0px;
   margin-left: 10px;
 }
-.logout button {
-  margin-top: 10%;
+.announce .control button {
   float: right;
   display: inline-block;
   text-decoration: none;
   color: #333333;
   padding: 3% 5%;
   border-radius: 5px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "maledpan", sans-serif;
   background: #28a646;
   color: #FFFFFF;
@@ -1114,10 +1121,10 @@ body {
   border: 0px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.logout button i {
+.announce .control button i {
   margin-left: 7px;
 }
-.logout button:hover {
+.announce .control button:hover {
   cursor: pointer;
   background: #24953f;
 }
@@ -2122,19 +2129,19 @@ body {
   .article .download .btn.btn-qrcode {
     float: left;
   }
-  .logout {
-    width: 92%;
-    margin: 0 4%;
-    margin-top: 40%;
+  .announce {
+    width: 90%;
+    margin: 5%;
   }
-  .logout h2 {
-    font-size: 2.2em;
-    margin-bottom: 3%;
+  .announce h2 {
+    font-size: 1.8em;
+    margin-bottom: 5%;
   }
-  .logout p {
-    font-size: 1.2em;
+  .announce p {
+    font-size: 1.1em;
+    margin-bottom: 0%;
   }
-  .logout textarea {
+  .announce textarea {
     width: 92%;
     float: left;
     display: inline-block;
@@ -2148,29 +2155,36 @@ body {
     border: 0;
     resize: none;
   }
-  .logout textarea:hover {
+  .announce textarea:hover {
     cursor: pointer;
   }
-  .logout textarea:focus {
+  .announce textarea:focus {
     color: #050505;
   }
-  .logout a {
-    margin-top: 10%;
-    padding: 4% 5%;
+  .announce .control {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    padding: 5% 0%;
+    margin: 0% 5%;
+  }
+  .announce .control a {
+    width: 48%;
+    padding: 4% 0%;
     font-size: 1.2em;
   }
-  .logout a i {
+  .announce .control a i {
     margin-right: 10px;
   }
-  .logout button {
-    margin-top: 10%;
+  .announce .control button {
     float: right;
     display: inline-block;
     text-decoration: none;
     color: #333333;
     padding: 3% 5%;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-family: "maledpan", sans-serif;
     background: #28a646;
     color: #FFFFFF;
@@ -2178,12 +2192,8 @@ body {
     border: 0px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  .logout button i {
+  .announce .control button i {
     margin-left: 7px;
-  }
-  .logout button:hover {
-    cursor: pointer;
-    background: #24953f;
   }
   .form {
     width: 92%;
@@ -2404,25 +2414,9 @@ body {
     padding: 5%;
   }
   .btn-create {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    float: left;
-    display: inline-block;
-    z-index: 999;
-    background: #004d40;
-    color: #FFFFFF;
-    line-height: 1em;
-    padding: 1.1% 1.35%;
-    border-radius: 50%;
-    font-size: 1.5em;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-  }
-  .btn-create:hover {
-    transform: scale(1.1);
+    bottom: 20px;
+    right: 20px;
+    padding: 4% 4.8%;
+    font-size: 1.3em;
   }
 }

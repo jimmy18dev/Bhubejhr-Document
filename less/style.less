@@ -322,12 +322,13 @@
 	}
 }
 .cover{
-	width: 100%
+	width: 100%;
 	float: left;
 	display: inline-block;
 	height: 440px;
 	overflow: hidden;
 	position: relative;
+	background: #CADAAA;
 
 	.filter{
 		position: absolute;
@@ -890,7 +891,7 @@
 	}
 }
 
-.logout{
+.announce{
 	width: 30%;
 	margin: 3% 35%;
 	float: left;
@@ -898,9 +899,8 @@
 	margin-top: 14%;
 
 	h2{
-		font-size: 2.8em;
-		font-weight: normal;
-		color: #050505;
+		font-size: 2.4em;
+		color: #333333;
 		font-family: @topic_font;
 		margin-bottom: 2%;
 	}
@@ -912,6 +912,7 @@
 		font-family: @topic_font;
 		font-size: 1.2em;
 		color: #333333;
+		margin-bottom: 5%;
 
 		strong{ color: #050505; }
 	}
@@ -934,57 +935,64 @@
 		&:focus{ color: #050505; }
 	}
 
-	a{
-		margin-top: 10%;
+	.control{
+		width: 100%;
 		float: left;
 		display: inline-block;
-		text-decoration: none;
-		color: #666666;
-		padding: 2.5% 3%;
-		border-radius: 5px;
-		font-size: 1.1em;
-		font-family: @topic_font;
-		line-height: 1em;
-		border: 1px solid @border_color;
+		border-top: 1px solid @border_color;
+		padding-top: 5%;
 
-		&:hover{ cursor: pointer; }
-		&:active{ background: @border_color; }
+		a{
+			width: 30%;
+			float: left;
+			display: inline-block;
+			text-decoration: none;
+			color: #333333;
+			padding: 2.5% 0%;
+			border-radius: 5px;
+			font-size: 1.2em;
+			font-family: @topic_font;
+			line-height: 1em;
+			background: #EEEEEE;
+			text-align: center;
 
-		i{ margin-right: 10px; }
+			&:hover{ cursor: pointer; }
+			&:active{ background: @border_color; }
 
-		&.right{
+			i{ margin-right: 10px; }
+
+			&.right{
+				float: right;
+				color: #FFFFFF;
+				background: @green_color;
+				box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+
+				&:hover{ background: @green_color_dark; }
+
+				i{ margin: 0px; margin-left: 10px; }
+			}
+		}
+
+		button{
 			float: right;
-			color: #FFFFFF;
+			display: inline-block;
+			text-decoration: none;
+			color: #333333;
+			padding: 3% 5%;
+			border-radius: 5px;
+			font-size: 1.2em;
+			font-family: @topic_font;
 			background: @green_color;
-			border: 1px solid @green_color;
+			color: #FFFFFF;
+			line-height: 1em;
+			border: 0px;
 			box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
 
-			&:hover{ background: @green_color_dark; }
+			i{ margin-left: 7px; }
 
-			i{ margin: 0px; margin-left: 10px; }
+			&:hover{ cursor: pointer; background: @green_color_dark; }
+			// &:active{ background: @border_color; }
 		}
-	}
-
-	button{
-		margin-top: 10%;
-		float: right;
-		display: inline-block;
-		text-decoration: none;
-		color: #333333;
-		padding: 3% 5%;
-		border-radius: 5px;
-		font-size: 1.1em;
-		font-family: @topic_font;
-		background: @green_color;
-		color: #FFFFFF;
-		line-height: 1em;
-		border: 0px;
-		box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
-
-		i{ margin-left: 7px; }
-
-		&:hover{ cursor: pointer; background: @green_color_dark; }
-		// &:active{ background: @border_color; }
 	}
 }
 

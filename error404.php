@@ -24,9 +24,12 @@ require_once 'autoload.php';
 
 </head>
 <body>
-<div class="logout">
+<div class="announce">
 	<h2>ไม่พบหน้าที่คุณต้องการ</h2>
-	<a href="<?php echo DOMAIN;?>">กลับไปหน้าแรก</a>
+	
+	<div class="control">
+		<a href="<?php echo DOMAIN;?>">กลับไปหน้าแรก</a>
+	</div>
 </div>
 </body>
 </html>
