@@ -1739,6 +1739,73 @@ body {
   transform: scale(1.1);
 }
 /* Other Device and Screen */
+@media only screen and (min-width: 1910px) {
+  .header {
+    width: 50%;
+    padding: 0px 25%;
+  }
+  .searchform {
+    width: 30%;
+    margin: 0% 35%;
+  }
+  .cover {
+    height: 600px;
+  }
+  .cover .welcome {
+    width: 30%;
+    margin: 0 35%;
+    padding-top: 12%;
+  }
+  .cover img {
+    margin-top: -270px;
+  }
+  .container {
+    width: 30%;
+    margin: 10% 35%;
+  }
+  .article {
+    width: 26%;
+    padding: 2%;
+    margin: 0% 35%;
+    margin-top: 11%;
+  }
+  .form {
+    width: 30%;
+    margin: 3% 35%;
+  }
+  .login .welcome {
+    width: 21%;
+    margin-left: 27%;
+    margin-right: 2%;
+    margin-top: 17%;
+  }
+  .login .welcome img {
+    width: 24%;
+    margin: 0% 38%;
+    margin-bottom: 5%;
+  }
+  .login .content {
+    width: 18%;
+    margin-right: 30%;
+    margin-left: 2%;
+    margin-top: 15%;
+  }
+  .overlay .icon-loading {
+    margin-top: 22%;
+    font-size: 3em;
+  }
+  .dialog {
+    width: 20%;
+    margin: 0% 40%;
+    margin-top: 10%;
+  }
+  .btn-create {
+    bottom: 70px;
+    right: 70px;
+    padding: 1% 1.15%;
+    font-size: 1.4em;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 519px) {
   .header {
     width: 100%;
