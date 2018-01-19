@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2017 at 07:14 AM
+-- Generation Time: Jan 16, 2018 at 07:30 AM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `edit_time` datetime DEFAULT NULL,
   `view` mediumint(8) NOT NULL DEFAULT '0',
   `download` mediumint(8) NOT NULL DEFAULT '0',
+  `secret` varchar(50) DEFAULT NULL,
   `privacy` varchar(20) DEFAULT 'member',
   `status` varchar(20) NOT NULL DEFAULT 'active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -110,8 +111,9 @@ CREATE TABLE IF NOT EXISTS `user` (
   `register_time` datetime NOT NULL,
   `edit_time` datetime DEFAULT NULL,
   `visit_time` datetime DEFAULT NULL,
-  `type` varchar(20) NOT NULL,
-  `status` varchar(20) DEFAULT 'active',
+  `verified` varchar(20) DEFAULT 'non-verified',
+  `type` varchar(20) NOT NULL DEFAULT 'guest',
+  `status` varchar(20) DEFAULT 'pending',
   `fb_id` varchar(20) DEFAULT NULL,
   `fb_fname` varchar(50) DEFAULT NULL,
   `fb_lname` varchar(50) DEFAULT NULL,
